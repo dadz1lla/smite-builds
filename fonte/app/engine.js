@@ -74,7 +74,7 @@
     "Dano por tick multiplicado pelo nº de ticks lido na descrição (\"N times\", \"every Xs for Ys\"); habilidades de área atingem em média +0,4 alvos extra. O dano de invocações não é contado.",
     "Efeitos no ataque a seguir a uma habilidade (Polynomicon, Hydra's Lament) só disparam se houver ataques básicos para isso.",
     "Sobreviver conta até 30s; a build final é melhorada trocando item a item até nenhuma troca ajudar, e a ordem de compra é a ordem em que cada item mais rende.",
-    "Build = starter + 3 itens core + 3 situacionais. O starter e os 3 core vêm dos dados de jogo (SmiteBrain, Master+, últimas 2 semanas, separados por aspeto): os itens mais escolhidos e que mais ganham com este deus neste role, com ou sem aspeto conforme a escolha; com menos de 20 jogos junta-se a média dos deuses do mesmo tipo de dano nesse role. Os 3 situacionais são escolhidos pela simulação contra as equipas, entre os itens que se jogam no role e os counters (anti-cura, anti-escudo, anti-crítico, proteção contra CC).",
+    "Build = starter + 3 itens core + 3 situacionais. O starter e os 3 core vêm dos dados de jogo (SmiteBrain, Master+, últimas 2 semanas, separados por aspeto): os itens mais escolhidos e que mais ganham com este deus neste role, com ou sem aspeto conforme a escolha; com menos de 20 jogos junta-se a média dos deuses do mesmo tipo de dano nesse role. Os 3 situacionais saem dos itens que os jogadores compram com este deus neste role (≥3% das builds; counters ≥1%), escolhidos pela simulação contra as equipas, com peso extra para os mais comprados.",
     "Objetivo: Otimizado ajusta o foco que recebe ao dano que a equipa adversária traz e o peso dano/sobrevivência ao que falta à sua equipa e ao que a adversária ameaça. Dano assume que não é o alvo principal (metade do foco) e passa 60% do peso da sobrevivência para o dano. Resistência assume que é o alvo (foco 1,5×, no mínimo 90% de 3 inimigos) e passa metade do peso do dano para a sobrevivência.",
     "Identidade do role: Solo é bruiser (no máximo 2 itens só defensivos), Jungle/Mid/Carry no máximo 1, Support sem limite."
   ];
@@ -92,7 +92,7 @@
       "Damage per tick multiplied by the number of ticks read from the description (\"N times\", \"every Xs for Ys\"); area abilities hit +0.4 extra targets on average. Summon damage is not counted.",
       "On-hit effects after an ability (Polynomicon, Hydra's Lament) only trigger if there are basic attacks to use them.",
       "Survival counts up to 30s; the final build is improved by swapping item by item until no swap helps, and the buy order is the order in which each item adds the most.",
-      "Build = starter + 3 core items + 3 situational items. The starter and the 3 core come from game data (SmiteBrain, Master+, last 2 weeks, split by aspect): the items picked most and winning most with this god in this role, with or without the aspect as chosen; with fewer than 20 games, the average of same-damage-type gods in that role is added. The 3 situational items are chosen by the simulation against the teams, among items played in the role plus counters (anti-heal, anti-shield, anti-crit, CC protection).",
+      "Build = starter + 3 core items + 3 situational items. The starter and the 3 core come from game data (SmiteBrain, Master+, last 2 weeks, split by aspect): the items picked most and winning most with this god in this role, with or without the aspect as chosen; with fewer than 20 games, the average of same-damage-type gods in that role is added. The 3 situational items come from what players buy with this god in this role (≥3% of builds; counters ≥1%), chosen by the simulation against the teams, with extra weight for the most bought.",
       "Objective: Optimised scales the focus you take with the enemy team's damage, and the damage/survival weight with what your team lacks and what the enemy threatens. Damage assumes you are not the main target (half the focus) and moves 60% of the survival weight to damage. Durability assumes you are the target (1.5× focus, at least 90% of 3 enemies) and moves half of the damage weight to survival.",
       "Role identity: Solo is a bruiser (at most 2 purely defensive items), Jungle/Mid/Carry at most 1, Support no limit."
   ];
@@ -797,6 +797,8 @@
     return this._rp[role] = set;
   };
   /* nota dos dados: a frequência manda (pick/10), a win rate só desempata (±3), para itens raros com amostra pequena não passarem à frente */
+  /* situacionais: mínimo de presença nas builds do deus e peso da frequência (pontos de % de ganho por cada 1% de builds, até 60%) */
+  const SIT_MIN = +(globalThis.__SM || 3), SIT_W = +(globalThis.__SW || 0.045);
   const rData = d => d.pick / 10 + Math.max(-3, Math.min(3, d.lift_s));
   Engine.prototype.buildBase = function (opt, ctx, ds) {
     const g = ctx.g, S = ds.src;
@@ -832,20 +834,30 @@
     const RP = this.rolePool(opt.role);
     // itens de ataque básico (velocidade/crítico) só entram num caminho de Força se os jogadores deste deus os usam
     const own = S.itens;
-    const pool = this.data.itens.filter(i => i.tier === "tier3" && allowed(i, path, g) && (RP.has(i.id) || (i.efeitos || []).some(f => COUNTER_FX.includes(f.t)))
-      && !(path === "forca" && kind(i) === "ataque" && !((own[i.id] || {}).pick >= 5))).concat(this.godItems(opt));
+    // situacionais: só entre os itens que os jogadores compram com este deus neste role (e aspeto) — ≥3% das builds,
+    // ou ≥1% se for um counter (anti-cura, anti-escudo, anti-crítico, proteção contra CC); a simulação escolhe o que serve à partida
+    const pk = id => (own[id] || {}).pick || 0;
+    const isCounter = i => (i.efeitos || []).some(f => COUNTER_FX.includes(f.t));
+    let pool = this.data.itens.filter(i => i.tier === "tier3" && (pk(i.id) >= SIT_MIN || (isCounter(i) && pk(i.id) >= 1)) && (allowed(i, path, g) || pk(i.id) >= 10))
+      .concat(this.godItems(opt).filter(i => pk(i.id) >= 1));
+    // poucos itens nos dados: junta os itens jogados no role, como antes
+    if (pool.length < 8) pool = pool.concat(this.data.itens.filter(i => i.tier === "tier3" && !pool.includes(i) && allowed(i, path, g) && (RP.has(i.id) || isCounter(i))
+      && !(path === "forca" && kind(i) === "ataque" && !(pk(i.id) >= 5))));
     const fixed = (starter ? [starter] : []).concat(core.map(c => c.it));
     const flex = [];
     const sc = arr => this.score(arr, path, ctxS, base);
+    // nota de cada candidato: ganho na simulação contra estas equipas (%) + peso da frequência nas builds dos jogadores
+    const selv = (set, it, ref) => (sc(set.concat(it)).val / ref - 1) * 100 + SIT_W * Math.min(pk(it.id), 60);
     while (fixed.length + flex.length < (starter ? 7 : 6)) {
-      const cur = sc(fixed.concat(flex)); let top = null;
-      for (const it of pool) { const set = fixed.concat(flex); if (!ok(set, it)) continue; const v = sc(set.concat(it)); const dlt = v.val - cur.val; if (!top || dlt > top.d) top = { it, d: dlt, sc: v, cur }; }
+      const set = fixed.concat(flex), ref = sc(set).val; let top = null;
+      for (const it of pool) { if (!ok(set, it)) continue; const v = selv(set, it, ref); if (!top || v > top.v) top = { it, v }; }
       if (!top) break; flex.push(top.it);
     }
     // revisão: cada ranhura de ajuste pode trocar; a base pode ceder um lugar a um counter se a simulação ganhar ≥4%
+    for (let k = 0; k < flex.length; k++) { const rest = fixed.concat(flex.filter((_, j) => j !== k)), ref = sc(rest).val;
+      let bi = flex[k], bv = selv(rest, flex[k], ref) + 1e-4;
+      for (const it of pool) { if (!ok(rest, it)) continue; const v = selv(rest, it, ref); if (v > bv) { bv = v; bi = it; } } flex[k] = bi; }
     let curV = sc(fixed.concat(flex)).val;
-    for (let k = 0; k < flex.length; k++) { const rest = fixed.concat(flex.filter((_, j) => j !== k)); let bi = null, bv = curV + 1e-4;
-      for (const it of pool) { if (!ok(rest, it)) continue; const v = sc(rest.concat(it)).val; if (v > bv) { bv = v; bi = it; } } if (bi) { flex[k] = bi; curV = bv; } }
     const trocas = [];
     const SWAP_FX = ["anti_heal", "anti_escudo", "anti_crit", "cc_block"];
     // 3 core + 3 situacionais sempre: os counters entram pelos lugares situacionais, o core não cede lugar
@@ -864,7 +876,7 @@
     while (rem.length) { const cur = sc(ord); let top = null; rem.forEach(it => { const v = sc(ord.concat(it)); const dlt = v.val - cur.val; if (!top || dlt > top.d) top = { it, d: dlt, sc: v, cur }; });
       ord.push(top.it); rem.splice(rem.indexOf(top.it), 1);
       const t = trocas.find(x => x.entra === top.it);
-      why[top.it.id] = [(t ? L(`Situacional: entra no lugar de ${t.sai.nome} (+${t.ganho}% na simulação contra estas equipas). `, `Situational: replaces ${t.sai.nome} (+${t.ganho}% in the simulation against these teams). `) : L("Situacional: escolhido pela simulação contra estas equipas, entre os itens que se jogam neste role. ", "Situational: chosen by the simulation against these teams, among the items played in this role. ")) + this.explain(top, ctx).join(" ")]; }
+      why[top.it.id] = [(t ? L(`Situacional: entra no lugar de ${t.sai.nome} (+${t.ganho}% na simulação contra estas equipas). `, `Situational: replaces ${t.sai.nome} (+${t.ganho}% in the simulation against these teams). `) : (pk(top.it.id) >= 1 ? L(`Situacional: comprado em ${Math.round(pk(top.it.id))}% das builds (${ds.txt}); escolhido para esta partida pela simulação contra estas equipas. `, `Situational: bought in ${Math.round(pk(top.it.id))}% of builds (${ds.txt}); picked for this match by the simulation against these teams. `) : L("Situacional: escolhido pela simulação contra estas equipas, entre os itens que se jogam neste role. ", "Situational: chosen by the simulation against these teams, among the items played in this role. "))) + this.explain(top, ctx).join(" ")]; }
     const final = this.score(ord, path, ctx, base);
     return { caminho: path, rotulo: PL(path), itens: ord, porque: why, score: final, base: true, fonteBase: ds.txt, nBase: coreItems.length + (starter ? 1 : 0), ajuste: adj.map(i => i.id), trocasBase: trocas.map(t => ({ sai: t.sai.nome, entra: t.entra.nome, ganho: t.ganho })) };
   };
