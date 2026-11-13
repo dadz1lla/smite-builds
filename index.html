@@ -363,9 +363,13 @@ article.build > p.hint{margin:6px 16px}
       heal, shield, cc, root, slow, desl, antiHeal, ccMed: ccN ? ccInst / ccN : 1, mitig: t.mitig_pct
     };
   };
+  /* role principal de um deus (dados de jogo): para Joust/Duel, onde não há roles fixos */
+  Engine.prototype.mainRole = function (id) { const c = this.data.comunidade && this.data.comunidade.deuses[id]; return (c && c.role) || "Mid"; };
+  /* tamanho das equipas por modo */
+  const TEAM_N = { Joust: 3, Duel: 1 };
   Engine.prototype.enemies = function (list, myRole) {
     const out = (list || []).map(x => typeof x === "string" ? { id: x } : x).filter(x => this.gods[x.id]).map(x => {
-      const g = this.gods[x.id], role = x.role || null;
+      const g = this.gods[x.id], role = x.role || this.mainRole(x.id);
       const key = [x.id, !!x.aspeto, role, x.estilo || ""].join("|");
       let sim = this._cacheEn[key], auto = !x.estilo;
       if (!sim) {
@@ -373,7 +377,7 @@ article.build > p.hint{margin:6px 16px}
         else (this.estStyle(x.id, role) || EST_ROLE[role] || ["hab", "ataque"]).forEach(es => { const s = this.enemySim(g, x.aspeto, role, es); if (!sim || s.total > sim.total) sim = s; });
         this._cacheEn[key] = sim;
       }
-      const lane = role && myRole && LANE[role] === LANE[myRole];
+      const lane = x.lane !== undefined ? !!x.lane : !!(x.role && myRole && LANE[x.role] === LANE[myRole]);
       return Object.assign({ id: x.id, nome: g.nome + (x.aspeto ? L(" (aspeto)", " (aspect)") : ""), role, auto, lane, wOff: lane ? 1.5 : 1, wIn: lane ? 1.5 : 1 }, sim);
     });
     const sIn = out.reduce((a, e) => a + e.wIn, 0) || 1, f = Math.min(out.length, ENGAGED) / sIn;
@@ -634,11 +638,11 @@ article.build > p.hint{margin:6px 16px}
   /* A equipa adversária: quanto dano traz e quanto aguenta, comparado com uma equipa típica com os mesmos roles.
      Muito dano inimigo → vale mais aguentar; inimigos muito resistentes e com pouco dano → vale mais dano (e penetração,
      que a simulação já escolhe item a item). */
-  Engine.prototype.enemyNeed = function (en) {
+  Engine.prototype.enemyNeed = function (en, modo) {
     if (!en.length) return null;
     let dmg = 0, ehp = 0, refD = 0, refE = 0, burst = 0;
     en.forEach(e => { dmg += e.total; ehp += e.hp * (1 + (e.pp + e.mp) / 200); const r = this.roleRef(e.role || "Mid"); refD += r.dmg; refE += r.ehp; });
-    const dmgRatio = dmg / refD, ehpRatio = ehp / refE, conf = Math.min(1, en.length / 5);
+    const dmgRatio = dmg / refD, ehpRatio = ehp / refE, conf = Math.min(1, en.length / (TEAM_N[modo] || 5));
     const ajuste = Math.max(-0.3, Math.min(0.3, 0.5 * ((ehpRatio - 1) - (dmgRatio - 1)))) * conf;
     const notas = [];
     if (dmgRatio > 1.1) notas.push(L(`traz ${Math.round((dmgRatio - 1) * 100)}% mais dano do que uma equipa típica com estes roles`, `brings ${Math.round((dmgRatio - 1) * 100)}% more damage than a typical team with these roles`));
@@ -677,7 +681,7 @@ article.build > p.hint{margin:6px 16px}
       const r = this.roleRef(e.role || "Mid"); refD += r.dmg; refE += r.ehp; });
     const dmgRatio = dmg / refD, frontRatio = ehp / refE, magShare = dmg ? mag / dmg : 0.5;
     // diferença entre o que falta de dano e o que falta de frente, limitada; com menos aliados escolhidos, efeito menor
-    const conf = Math.min(1, al.length / 4);
+    const conf = Math.min(1, al.length / Math.max(1, (TEAM_N[opt.modo] || 5) - 1));
     // o tipo de dano que eu trago e que falta à equipa vale mais (os inimigos não conseguem empilhar só um tipo de proteção)
     const meuMag = this.godKit(this.gods[opt.god], opt.aspeto).tipo === "magico";
     const falta = meuMag ? 1 - magShare : magShare; // parte do dano da equipa que já é do meu tipo
@@ -707,7 +711,7 @@ article.build > p.hint{margin:6px 16px}
     /* A minha equipa: o que já traz de dano (e de que tipo) e de linha da frente, comparado com o que uma equipa típica
        com esses roles traz. Falta dano → a build puxa para dano; falta quem aguente → puxa para resistência. Sem lista de compras por role. */
     const equipa = this.teamNeed(allies, opt);
-    const adversaria = this.enemyNeed(en);
+    const adversaria = this.enemyNeed(en, opt.modo);
     /* objetivos: "equipa" (o que falta à minha equipa), "adversaria" (o que a equipa inimiga ameaça e aguenta),
        "dano", "resistencia"; sem objetivo = otimizado: soma das leituras da equipa e da adversária */
     const obj = opt.objetivo || "otimizado";
@@ -715,6 +719,10 @@ article.build > p.hint{margin:6px 16px}
     const adj = obj === "equipa" ? aT : obj === "adversaria" ? aE : obj === "otimizado" ? aT + aE : 0;
     if (adj) { wo = Math.min(0.95, Math.max(0.1, wo + adj)); wd = 1 - wo; }
     if (opt.objetivo === "dano") { wo = wo + (1 - wo) * 0.6; wd = 1 - wo; } else if (opt.objetivo === "resistencia") { wo = wo * 0.5; wd = 1 - wo; }
+    /* foco recebido: Duel = o único inimigo bate só em si; Joust = menos alvos, foco ×5/3 (até 1,5); 5v5 = calibrado por role.
+       Depois o objetivo mexe-lhe (Otimizado: dano inimigo; Dano: metade; Resistência: ×1,5 com mínimo 0,9) — no Duel fica 1. */
+    const xp0 = opt.modo === "Joust" ? Math.min(1.5, (EXPOSE[opt.role] || 1) * 5 / 3) : (EXPOSE[opt.role] || 1);
+    const xpBase = (opt.modo === "Duel" ? 1 : obj === "resistencia" ? Math.max(xp0 * RES_XP_K, RES_XP_MIN) : xp0 * (obj === "otimizado" && adversaria ? Math.pow(Math.max(0.8, Math.min(1.8, adversaria.dmgRatio)), OTIM_XP_POW) : obj === "dano" ? DANO_XP_K : 1)) * +(globalThis.__XP || 1);
     let ccIn = 0, deslIn = 0, rootIn = 0, slowIn = 0, fis = 0, all = 0, ccW = 0, ccM = 0, antiHealIn = 0;
     en.forEach(e => { ccIn += e.cc * e.fIn; deslIn += e.desl * e.fIn; rootIn += e.root * e.fIn; slowIn += e.slow * e.fIn;
       const d = e.total * e.fIn; all += d; if (e.tipo !== "magico") fis += d; if (e.cc) { ccW += e.cc; ccM += e.ccMed * e.cc; } antiHealIn = Math.max(antiHealIn, e.antiHeal); });
@@ -723,7 +731,7 @@ article.build > p.hint{margin:6px 16px}
     const laneEn = en.find(e => e.lane) || null;
     const pr = opt.semDados ? null : this.prior(opt);
     return { equipa, adversaria, objetivo: obj, pathBias: equipa && (obj === "otimizado" || obj === "equipa") ? equipa.pathBias : null, g, kit, en, laneEn, bonusByPath: pr ? pr.byPath : null, fontePrior: pr ? pr.fonte : null, role: opt.role, wo, wd, allyBA, allyN: allies.length, ccIn, deslIn, rootIn, slowIn, ccMed: ccW ? ccM / ccW : 1.1,
-      fisIn: all ? fis / all : 0.5, antiHealIn, incBA, incAb, xp: (obj === "resistencia" ? Math.max((EXPOSE[opt.role] || 1) * RES_XP_K, RES_XP_MIN) : (EXPOSE[opt.role] || 1) * (obj === "otimizado" && adversaria ? Math.pow(Math.max(0.8, Math.min(1.8, adversaria.dmgRatio)), OTIM_XP_POW) : obj === "dano" ? DANO_XP_K : 1)) * +(globalThis.__XP || 1), perfil: this.profile(en) };
+      fisIn: all ? fis / all : 0.5, antiHealIn, incBA, incAb, xp: xpBase, perfil: this.profile(en) };
   };
 
   /* Ouro: os itens não custam todos o mesmo. Um item 40% mais caro chega mais tarde e atrasa os seguintes;
@@ -1193,6 +1201,7 @@ const STR={god:["Deus","God"],asp:["Com aspeto","With aspect"],role:["Role","Rol
   go:["Recomendar build","Recommend build"]};
 const OBJ_L={"Otimizado":["Otimizado","Optimised"],"Dano":["Dano","Damage"],"Resistência":["Resistência","Durability"]};
 const $=id=>document.getElementById(id);
+const pick=el=>{const b=el.querySelector('[aria-pressed="true"]');return b?b.dataset.v:null};
 const gods=D.deuses.slice().sort((a,b)=>a.nome.localeCompare(b.nome));
 const ROLES=["Solo","Jungle","Mid","Support","Carry"], MODOS=["Conquest","Joust","Arena","Assault","Duel"];
 function metaTxt(){$("meta").textContent=L(`dados do cliente · patch ${D.patch} · ${D.itens.length} itens · ${D.deuses.length} deuses`,`game client data · patch ${D.patch} · ${D.itens.length} items · ${D.deuses.length} gods`)}metaTxt();
@@ -1201,13 +1210,29 @@ opts($("god"),true);$("god").options[0].textContent=L("— escolher deus —","�
 function seg(el,list,val){el.innerHTML=list.map(x=>`<button type="button" aria-pressed="${x===val}" data-v="${x}">${OBJ_L[x]?L(...OBJ_L[x]):x}</button>`).join("");
   el.onclick=e=>{const b=e.target.closest("button");if(!b)return;[...el.children].forEach(c=>c.setAttribute("aria-pressed",c===b));stale()}}
 seg($("role"),ROLES,null); seg($("modo"),MODOS,"Conquest"); seg($("obj"),["Otimizado","Dano","Resistência"],"Otimizado");
-function teams(){const el=$("teams");el.innerHTML='<span></span><span class="hd" data-i="myteam">A sua equipa</span><span class="hd" data-i="enemies">Inimigos</span>';
-  ROLES.forEach(r=>{el.insertAdjacentHTML("beforeend",`<span class="rl">${r}</span>
-    <div class="slot" id="as-${r}"><select id="a-${r}" aria-label="${L("Aliado","Ally")} ${r}"></select><input type="checkbox" class="asp" id="aa-${r}" aria-label="${L("Aspeto do aliado","Ally aspect")} ${r}" title="${L("Aspeto ligado","Aspect on")}"></div>
-    <div class="slot en"><select id="e-${r}" aria-label="${L("Inimigo","Enemy")} ${r}"></select><input type="checkbox" class="asp" id="ea-${r}" aria-label="${L("Aspeto do inimigo","Enemy aspect")} ${r}" title="${L("Aspeto ligado","Aspect on")}"><select class="est" id="es-${r}" aria-label="${L("Estilo de build do inimigo","Enemy build style")} ${r}" title="${L("Estilo de build do inimigo","Enemy build style")}">${ESTS()}</select></div>`);
-    opts($("a-"+r),true);opts($("e-"+r),true)})}
+/* Linhas das equipas conforme o modo: 5v5 por role (Conquest, Arena, Assault), 3v3 no Joust, 1v1 no Duel. A primeira linha do Joust e a do Duel são a sua. */
+const MODE_N={Joust:3,Duel:1};
+const SLOTS=m=>m==="Duel"?[{k:"D1",lbl:"1v1",me:true}]:m==="Joust"?[1,2,3].map(i=>({k:"J"+i,lbl:String(i),me:i===1})):ROLES.map(r=>({k:r,lbl:r,role:r}));
+const curSlots=()=>SLOTS(pick($("modo")));
+const meKey=()=>{const S=curSlots(),m=S.find(x=>x.me);return m?m.k:pick($("role"))};
+const mainRole=id=>((D.comunidade&&D.comunidade.deuses[id])||{}).role||(D.deuses.find(g=>g.id===id)||{}).role||"Mid";
+const TKEEP={}; // escolhas das equipas guardadas por linha, para não se perderem ao trocar de modo
+function teams(){const el=$("teams");
+  const keep=TKEEP;el.querySelectorAll("select,input.asp").forEach(x=>keep[x.id]=x.type==="checkbox"?x.checked:x.value);
+  el.innerHTML='<span></span><span class="hd" data-i="myteam">A sua equipa</span><span class="hd" data-i="enemies">Inimigos</span>';
+  const S=curSlots();
+  S.forEach(({k,lbl})=>{el.insertAdjacentHTML("beforeend",`<span class="rl">${lbl}</span>
+    <div class="slot" id="as-${k}"><select id="a-${k}" aria-label="${L("Aliado","Ally")} ${lbl}"></select><input type="checkbox" class="asp" id="aa-${k}" aria-label="${L("Aspeto do aliado","Ally aspect")} ${lbl}" title="${L("Aspeto ligado","Aspect on")}"></div>
+    <div class="slot en"><select id="e-${k}" aria-label="${L("Inimigo","Enemy")} ${lbl}"></select><input type="checkbox" class="asp" id="ea-${k}" aria-label="${L("Aspeto do inimigo","Enemy aspect")} ${lbl}" title="${L("Aspeto ligado","Aspect on")}"><select class="est" id="es-${k}" aria-label="${L("Estilo de build do inimigo","Enemy build style")} ${lbl}" title="${L("Estilo de build do inimigo","Enemy build style")}">${ESTS()}</select></div>`);
+    opts($("a-"+k),true);opts($("e-"+k),true);
+    ["a-","e-","es-"].forEach(pf=>{const x=$(pf+k);if(keep[pf+k]!=null&&[...x.options].some(o=>o.value===keep[pf+k]))x.value=keep[pf+k]});
+    ["aa-","ea-"].forEach(pf=>{if(keep[pf+k])$(pf+k).checked=true});
+    combo($("a-"+k),L("aliado…","ally…")).dataset.ph="ally";combo($("e-"+k),L("inimigo…","enemy…")).dataset.ph="enemy";});
+  el.querySelectorAll("select,.asp").forEach(x=>x.addEventListener("change",stale));
+  el.querySelectorAll(".asp").forEach(b=>b.addEventListener("click",()=>setTimeout(stale,0)));
+  el.querySelectorAll("[data-i]").forEach(x=>{const t=STR2[x.dataset.i];if(t)x.textContent=L(...t)});
+  try{syncMe()}catch(e){}}
 const ESTS=()=>[["","auto","auto"],["crit","crítico","crit"],["ataque","ataque","attack"],["hab","habilidades","abilities"],["bruiser","bruiser","bruiser"],["tank","tanque","tank"]].map(([v,pt,en])=>`<option value="${v}">build: ${L(pt,en)}</option>`).join("");
-teams();
 /* Escolher deus a escrever: um campo de texto filtra a lista (sem acentos, por qualquer parte do nome); a <select> escondida continua a guardar o valor */
 const norm=t=>t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 function combo(sel,ph){const w=document.createElement("span");w.className="cb";sel.parentNode.insertBefore(w,sel);w.appendChild(sel);sel.hidden=true;
@@ -1231,13 +1256,14 @@ function combo(sel,ph){const w=document.createElement("span");w.className="cb";s
   inp.addEventListener("blur",()=>setTimeout(()=>{if(document.activeElement!==inp)close()},120));
   sel.addEventListener("change",show);show();return inp}
 {const gi=combo($("god"),L("Escreve o nome do deus…","Type the god's name…"));gi.dataset.ph="god";gi.id="god-q";document.querySelector('label[for="god"]').htmlFor="god-q";}
-ROLES.forEach(r=>{combo($("a-"+r),L("aliado…","ally…")).dataset.ph="ally";combo($("e-"+r),L("inimigo…","enemy…")).dataset.ph="enemy"});
-function syncMe(){const r=pick($("role")),gn=($("god").selectedOptions[0]||{}).textContent||"";
-  ROLES.forEach(x=>{const sel=$("a-"+x),box=$("aa-"+x),slot=$("as-"+x);let me=slot.querySelector(".me");
+const STR2={myteam:["A sua equipa","Your team"],enemies:["Inimigos","Enemies"]};
+teams();
+$("modo").addEventListener("click",e=>{if(e.target.closest("button"))teams()});
+function syncMe(){const r=meKey(),gn=($("god").selectedOptions[0]||{}).textContent||"";
+  curSlots().map(x=>x.k).forEach(x=>{const sel=$("a-"+x),box=$("aa-"+x),slot=$("as-"+x);let me=slot.querySelector(".me");
     const cbx=sel.closest(".cb")||sel;
     if(x===r){cbx.hidden=true;box.hidden=true;if(!me){me=document.createElement("span");me.className="me";slot.prepend(me)}me.textContent=gn+($("aspeto").checked?L(" (aspeto)"," (aspect)"):"")}
     else{cbx.hidden=false;box.hidden=false;if(me)me.remove()}})}
-const pick=el=>{const b=el.querySelector('[aria-pressed="true"]');return b?b.dataset.v:null};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function itemRow(i,n,b,full){
   const orig=b.base?(b.ajuste.includes(i.id)?`<span class="tag act" title="${L("escolhido pela simulação contra estas equipas","chosen by the simulation against these teams")}">${L("situacional","situational")}</span>`:`<span class="tag" title="${L("o que funciona nos dados de jogo deste deus neste role","what works in the game data for this god in this role")}">core</span>`):"";
@@ -1246,7 +1272,7 @@ function itemRow(i,n,b,full){
 function card(b,full){
   const gold=b.itens.reduce((a,i)=>a+(i.custo||0),0);
   return `<article class="build ${b.principal?"principal":""} ${full?"":"mini"}">
-  <div class="bhead"><h3>${esc(b.base?L("Core + situacional · ","Core + situational · ")+b.rotulo:b.rotulo)}</h3>${b.principal?`<span class="pill main">${L("Recomendada","Recommended")}</span>`:""}${b.livre?`<span class="pill exp" title="${L("só a simulação, sem base nos dados","simulation only, not based on game data")}">${L("build livre","free build")}</span>`:""}${b.experimental?`<span class="pill exp">${L("Experimental","Experimental")}</span>`:""}<span class="pill c-${b.confianca}">${L("confiança","confidence")} ${L(b.confianca,{alta:"high","média":"medium",baixa:"low"}[b.confianca]||b.confianca)}</span><span class="score">${b.relativo}% ${L("da melhor","of the best")}</span></div>
+  <div class="bhead"><h3>${esc(b.base?L("Core + situacional · ","Core + situational · ")+b.rotulo:b.rotulo)}</h3>${b.principal?`<span class="pill main">${L("Recomendada","Recommended")}</span>`:""}${b.livre?`<span class="pill exp" title="${L("só a simulação, sem base nos dados","simulation only, not based on game data")}">${L("build livre","free build")}</span>`:""}${b.experimental?`<span class="pill exp">${L("Experimental","Experimental")}</span>`:""}<span class="pill c-${b.confianca}">${L("confiança","confidence")} ${L(b.confianca,{alta:"high","média":"medium",baixa:"low"}[b.confianca]||b.confianca)}</span><span class="score">${Math.min(100,b.relativo)}% ${L("da melhor","of the best")}</span></div>
   ${full&&b.principal?`<ol class="quick" aria-label="${L("Build em resumo","Build summary")}">${b.ordem.map(i=>`<li class="${i.tier.startsWith("starter")?"st":""}${b.ajuste&&b.ajuste.includes(i.id)?" adj":""}">${esc(i.nome)}</li>`).join("")}</ol>`:""}
   ${full&&b.base?`<p class="hint">${L(`Core (starter + ${b.nBase-1} itens): ${esc(b.fonteBase)}, escolhidos pela frequência e pelas vitórias. Os itens situacionais são escolhidos pela simulação contra a tua equipa e a adversária, só entre itens que se jogam neste role e counters (anti-cura, anti-escudo, anti-crítico, proteção contra CC).`,`Core (starter + ${b.nBase-1} items): ${esc(b.fonteBase)}, picked by frequency and wins. The situational items are chosen by the simulation against your team and the enemy team, only among items played in this role plus counters (anti-heal, anti-shield, anti-crit, CC protection).`)}${b.trocasBase.length?L(" Itens core trocados por causa da partida: "," Core items swapped for this match: ")+b.trocasBase.map(t=>esc(t.sai)+" → "+esc(t.entra)+" (+"+t.ganho+"%)").join("; ")+".":""}</p>`:""}
   ${!full&&b.livre?`<p class="hint">${L("Só a simulação, sem base nos dados: para explorar ideias fora da meta.","Simulation only, not based on game data: for exploring off-meta ideas.")}</p>`:""}
@@ -1268,7 +1294,7 @@ function perfil(p){if(!p)return `<div><label>${L("Equipa inimiga","Enemy team")}
   return `<div><label>${L("Equipa inimiga, simulada a partir dos kits","Enemy team, simulated from their kits")}</label>
   <div class="threats"><span class="th">${L("Dano recebido","Damage taken")} ${P0(p.fis)} ${L("físico","physical")} · ${P0(1-p.fis)} ${L("mágico","magical")}</span><span class="th">${P0(p.ba)} ${L("de ataques básicos","basic attacks")}</span><span class="th">${P0(p.crit)} ${L("de críticos","crits")}</span><span class="th">${L("Cura","Healing")} ${N(p.cura)} / ${L("luta","fight")}</span><span class="th">${L("Escudos","Shields")} ${N(p.escudo)}</span><span class="th">${L("CC duro","Hard CC")} ~${S1(p.cc)}s ${L("em si","on you")}</span></div>
   <div class="tblwrap"><table class="en"><thead><tr><th>${L("Inimigo","Enemy")}</th><th>${L("Build assumida","Assumed build")}</th><th>${L("Dano 20s","Damage 20s")}</th><th>${L("Básicos","Basics")}</th><th>${L("Crítico","Crit")}</th><th>${L("Cura","Healing")}</th><th>${L("Escudo","Shield")}</th><th>${L("CC duro","Hard CC")}</th></tr></thead><tbody>
-  ${p.inimigos.map(x=>`<tr><th scope="row">${esc(x.nome)}${x.role?` <span class="kv">${x.role}${x.lane?L(" · a sua lane"," · your lane"):""}</span>`:""}</th><td>${x.estilo}${x.auto?' <span class="kv">auto</span>':""}</td><td>${N(x.dano)} <span class="kv">${x.tipo==="magico"?L("mág.","mag."):L("fís.","phys.")}</span></td><td>${P0(x.ba)}</td><td>${P0(x.crit)}</td><td>${N(x.cura)}</td><td>${N(x.escudo)}</td><td>${S1(x.cc)}s</td></tr>`).join("")}</tbody></table></div>
+  ${p.inimigos.map(x=>`<tr><th scope="row">${esc(x.nome)}${x.role?(MODE_N[pick($("modo"))]?` <span class="kv" title="${L("role principal do deus, usado para estimar a build","the god's main role, used to estimate its build")}">≈ ${x.role}</span>`:` <span class="kv">${x.role}${x.lane?L(" · a sua lane"," · your lane"):""}</span>`):""}</th><td>${x.estilo}${x.auto?' <span class="kv">auto</span>':""}</td><td>${N(x.dano)} <span class="kv">${x.tipo==="magico"?L("mág.","mag."):L("fís.","phys.")}</span></td><td>${P0(x.ba)}</td><td>${P0(x.crit)}</td><td>${N(x.cura)}</td><td>${N(x.escudo)}</td><td>${S1(x.cc)}s</td></tr>`).join("")}</tbody></table></div>
   <p class="hint">${L("Dano dos kits ao nível 20 com o pacote de itens assumido pelo estilo; CC já com 50% de acerto. São estes números, e não etiquetas, que decidem cada item.","Kit damage at level 20 with the item package assumed from the style; CC already at 50% hit rate. These numbers, not labels, decide each item.")}</p></div>`}
 function mechCmp(a,b){const m=a.mech,n=b.mech,l=[];
   if(Math.abs(m.healCut-n.healCut)>40)l.push(L(`cura inimiga cortada: ${N(m.healCut)} na sua, ${N(n.healCut)} na recomendada`,`enemy healing cut: ${N(m.healCut)} in yours, ${N(n.healCut)} in the recommended one`));
@@ -1340,8 +1366,8 @@ function run(e){{const g=$("go");if(g){g.classList.remove("pend");g.textContent=
   if(e)e.preventDefault();
   if(!$("god").value||!pick($("role"))){$("out").innerHTML=`<p class="empty">${L(`Escolha ${!$("god").value&&!pick($("role"))?"o deus e o role":!$("god").value?"o deus":"o role"} antes de recomendar.`,`Choose ${!$("god").value&&!pick($("role"))?"the god and the role":!$("god").value?"the god":"the role"} before recommending.`)}</p>`;return}
   const opt={god:$("god").value,aspeto:$("aspeto").checked,role:pick($("role")),modo:pick($("modo")),objetivo:{Dano:"dano","Resistência":"resistencia"}[pick($("obj"))],
-    aliados:ROLES.filter(r=>r!==pick($("role"))&&$("a-"+r).value).map(r=>({id:$("a-"+r).value,role:r,aspeto:$("aa-"+r).checked})),
-    inimigos:ROLES.filter(r=>$("e-"+r).value).map(r=>({id:$("e-"+r).value,role:r,aspeto:$("ea-"+r).checked,estilo:$("es-"+r).value}))};
+    aliados:curSlots().filter(x=>x.k!==meKey()&&$("a-"+x.k).value).map(x=>{const id=$("a-"+x.k).value;return {id,role:x.role||mainRole(id),aspeto:$("aa-"+x.k).checked}}),
+    inimigos:curSlots().filter(x=>$("e-"+x.k).value).map(x=>{const id=$("e-"+x.k).value,m=pick($("modo"));return {id,role:x.role||mainRole(id),aspeto:$("ea-"+x.k).checked,estilo:$("es-"+x.k).value,lane:m==="Duel"?true:m==="Joust"?false:undefined}})};
   syncMe();
   let r; try{r=E.recommend(opt);LAST={opt,r}}catch(err){$("out").innerHTML=`<p class="empty">${L("Não consegui calcular","Could not calculate")}: ${esc(err.message)}</p>`;return}
   const g=r.deus, k=r.kit;
@@ -1366,7 +1392,7 @@ function run(e){{const g=$("go");if(g){g.classList.remove("pend");g.textContent=
     <div class="cmpgrid" id="cmpsel"></div>
     <button class="go ghost" type="button" id="cmpgo">${L("Comparar","Compare")}</button>
     <div id="cmpout"></div></section>
-  <details><summary>${L("Como foi calculado (versão 3)","How it was calculated (version 3)")}</summary><ul>${r.pressupostos.map(p=>`<li>${esc(p)}</li>`).join("")}<li>${L(`Modo ${esc(r.modo)}: ainda sem regras próprias; a build é a mesma em todos os modos.`,`${esc(r.modo)} mode: no specific rules yet; the build is the same in every mode.`)}</li><li>${L('Valores dos itens e dos deuses: os do cliente; itens com "≠ notas" têm valores que diferem das patch notes.','Item and god values: from the game client; items marked "≠ notes" have values that differ from the patch notes.')}</li></ul></details>`;
+  <details><summary>${L("Como foi calculado (versão 3)","How it was calculated (version 3)")}</summary><ul>${r.pressupostos.map(p=>`<li>${esc(p)}</li>`).join("")}<li>${r.modo==="Duel"?L("Duel (1v1): um só inimigo, que concentra todo o dano em si; sem aliados.","Duel (1v1): a single enemy, who focuses all their damage on you; no allies."):r.modo==="Joust"?L("Joust (3v3): até 3 inimigos e 2 aliados; com menos alvos, o foco que recebe sobe 5/3 face ao Conquest (até 150%). Sem roles fixos: cada deus usa o seu role principal para estimar a build.","Joust (3v3): up to 3 enemies and 2 allies; with fewer targets, the focus you take rises 5/3 vs Conquest (up to 150%). No fixed roles: each god uses its main role to estimate its build."):L(`Modo ${esc(r.modo)} (5v5): equipas por role.`,`${esc(r.modo)} mode (5v5): teams by role.`)} ${L("Os dados de jogo e a identidade do role vêm do Conquest.","Game data and role identity come from Conquest.")}</li><li>${L('Valores dos itens e dos deuses: os do cliente; itens com "≠ notas" têm valores que diferem das patch notes.','Item and god values: from the game client; items marked "≠ notes" have values that differ from the patch notes.')}</li></ul></details>`;
   bindLeit(opt);
   if(window.innerWidth<860&&!KEEP){const a=document.querySelector("article.build.principal");if(a)a.scrollIntoView({behavior:"smooth",block:"start"});}
   cmpUI(); if(CMP.some(Boolean)&&$("cmpout"))compare();
@@ -1391,21 +1417,17 @@ function compare(){if(!LAST)return;const ids=[0,1,2,3,4,5,6].map(k=>$("c"+k).val
 /* Nada recalcula sozinho: escolhe-se tudo e só o botão "Recomendar build" calcula (no telemóvel cada cálculo demora segundos). */
 function stale(){try{syncMe()}catch(e){}const ex=$("ex");if(ex)ex.hidden=true;const g=$("go");if(g){g.classList.add("pend");g.textContent=L("Recomendar build ↻","Recommend build ↻");}const o=$("out");if(o&&o.firstElementChild)o.classList.add("velho");}
 ["god","aspeto"].forEach(id=>$(id).addEventListener("change",stale));
-document.querySelectorAll(".teams select,.teams .asp,.teams .est").forEach(s=>s.addEventListener("change",stale));
-document.querySelectorAll(".teams .asp").forEach(b=>b.addEventListener("click",()=>setTimeout(stale,0)));
+
 const intro=()=>`<p class="hint" style="padding:16px">${L("Escolha o deus, o role e as equipas e carregue em <b>Recomendar build</b>.","Choose the god, the role and the teams, then tap <b>Recommend build</b>.")}</p>`;
 $("out").innerHTML=intro();
 /* Trocar de idioma: muda os textos fixos e volta a mostrar o resultado no novo idioma (sem mexer nas escolhas) */
-const STR2={myteam:["A sua equipa","Your team"],enemies:["Inimigos","Enemies"]};
 function applyLang(){document.querySelectorAll("[data-i]").forEach(el=>{const t=STR[el.dataset.i]||STR2[el.dataset.i];if(t)el.textContent=L(...t)});
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===LANG));
   metaTxt();$("god").options[0].textContent=L("— escolher deus —","— choose god —");
   document.querySelectorAll("#obj button").forEach(b=>b.textContent=L(...OBJ_L[b.dataset.v]));
   const PH={god:L("Escreve o nome do deus…","Type the god's name…"),ally:L("aliado…","ally…"),enemy:L("inimigo…","enemy…")};
   document.querySelectorAll(".cb input").forEach(i=>{if(PH[i.dataset.ph])i.placeholder=PH[i.dataset.ph]});
-  ROLES.forEach(r=>{const es=$("es-"+r),v=es.value;es.innerHTML=ESTS();es.value=v;
-    $("a-"+r).setAttribute("aria-label",L("Aliado","Ally")+" "+r);$("e-"+r).setAttribute("aria-label",L("Inimigo","Enemy")+" "+r);
-    ["aa-","ea-"].forEach(p=>$(p+r).title=L("Aspeto ligado","Aspect on"))});
+  teams();
   try{syncMe()}catch(e){}
   const g=$("go");if(g)g.textContent=g.classList.contains("pend")?L("Recomendar build ↻","Recommend build ↻"):L("Recomendar build","Recommend build");
   document.title=L("SMITE 2 Build Analyst","SMITE 2 Build Analyst");}
