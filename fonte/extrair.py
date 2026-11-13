@@ -6,7 +6,7 @@ arr=json.load(open(f,encoding="utf-8"))
 t=arr[0]["text"] if isinstance(arr,list) else arr
 if t.lstrip().startswith('"'): t,_=json.JSONDecoder().raw_decode(t.lstrip())
 t=t.split("\n#PAD")[0]
-assert t.startswith("#LISTA "+role) and "#FIM "+role in t, "texto incompleto"
+assert ("#ROLE "+role in t[:40] or t.startswith("#LISTA "+role)) and "#FIM "+role in t, "texto incompleto"
 p=os.path.join(os.path.dirname(os.path.abspath(__file__)),"semana","raw_%s.txt"%role)
 open(p,"w",encoding="utf-8").write(t)
-print(p,len(t),"caracteres,",t.count("\n## "),"deuses; erros:",t.split("#ERROS",1)[1].split("\n",1)[0].strip() or "nenhum")
+print(p,len(t),"caracteres,",t.count("\n## "),"blocos; erros:",t.split("#ERROS",1)[1].split("\n",1)[0].strip() or "nenhum")

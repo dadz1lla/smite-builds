@@ -43,6 +43,7 @@ def resumo(g):
 for gid,g in D["deuses"].items():
     o=resumo(g); o["role"]=g["role"]; o["roles"]=g.get("roles",{g["role"]:1.0})
     o["por_role"]={rl:resumo(x) for rl,x in g.get("por_role",{}).items() if x["jogos"]>=1}
+    o["por_aspeto"]={rl:{k:resumo(x) for k,x in v.items() if x["jogos"]>=1} for rl,v in g.get("por_aspeto",{}).items()}
     out["deuses"][gid]=o
 json.dump(out,open(os.path.join(S,"app/comunidade.json"),"w",encoding="utf-8"),ensure_ascii=False,separators=(",",":"))
 print("viés por ranhura",bias)

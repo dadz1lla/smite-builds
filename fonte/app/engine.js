@@ -74,7 +74,7 @@
     "Dano por tick multiplicado pelo nº de ticks lido na descrição (\"N times\", \"every Xs for Ys\"); habilidades de área atingem em média +0,4 alvos extra. O dano de invocações não é contado.",
     "Efeitos no ataque a seguir a uma habilidade (Polynomicon, Hydra's Lament) só disparam se houver ataques básicos para isso.",
     "Sobreviver conta até 30s; a build final é melhorada trocando item a item até nenhuma troca ajudar, e a ordem de compra é a ordem em que cada item mais rende.",
-    "Build = starter + 3 itens core + 3 situacionais. O starter e os 3 core vêm dos dados de jogo (SmiteBrain, Master+): os itens mais escolhidos e que mais ganham com este deus neste role; com menos de 20 jogos junta-se a média dos deuses do mesmo tipo de dano nesse role. Os 3 situacionais são escolhidos pela simulação contra as equipas, entre os itens que se jogam no role e os counters (anti-cura, anti-escudo, anti-crítico, proteção contra CC).",
+    "Build = starter + 3 itens core + 3 situacionais. O starter e os 3 core vêm dos dados de jogo (SmiteBrain, Master+, últimas 2 semanas, separados por aspeto): os itens mais escolhidos e que mais ganham com este deus neste role, com ou sem aspeto conforme a escolha; com menos de 20 jogos junta-se a média dos deuses do mesmo tipo de dano nesse role. Os 3 situacionais são escolhidos pela simulação contra as equipas, entre os itens que se jogam no role e os counters (anti-cura, anti-escudo, anti-crítico, proteção contra CC).",
     "Objetivo: Otimizado ajusta o foco que recebe ao dano que a equipa adversária traz e o peso dano/sobrevivência ao que falta à sua equipa e ao que a adversária ameaça. Dano assume que não é o alvo principal (metade do foco) e passa 60% do peso da sobrevivência para o dano. Resistência assume que é o alvo (foco 1,5×, no mínimo 90% de 3 inimigos) e passa metade do peso do dano para a sobrevivência.",
     "Identidade do role: Solo é bruiser (no máximo 2 itens só defensivos), Jungle/Mid/Carry no máximo 1, Support sem limite."
   ];
@@ -92,7 +92,7 @@
       "Damage per tick multiplied by the number of ticks read from the description (\"N times\", \"every Xs for Ys\"); area abilities hit +0.4 extra targets on average. Summon damage is not counted.",
       "On-hit effects after an ability (Polynomicon, Hydra's Lament) only trigger if there are basic attacks to use them.",
       "Survival counts up to 30s; the final build is improved by swapping item by item until no swap helps, and the buy order is the order in which each item adds the most.",
-      "Build = starter + 3 core items + 3 situational items. The starter and the 3 core come from game data (SmiteBrain, Master+): the items picked most and winning most with this god in this role; with fewer than 20 games, the average of same-damage-type gods in that role is added. The 3 situational items are chosen by the simulation against the teams, among items played in the role plus counters (anti-heal, anti-shield, anti-crit, CC protection).",
+      "Build = starter + 3 core items + 3 situational items. The starter and the 3 core come from game data (SmiteBrain, Master+, last 2 weeks, split by aspect): the items picked most and winning most with this god in this role, with or without the aspect as chosen; with fewer than 20 games, the average of same-damage-type gods in that role is added. The 3 situational items are chosen by the simulation against the teams, among items played in the role plus counters (anti-heal, anti-shield, anti-crit, CC protection).",
       "Objective: Optimised scales the focus you take with the enemy team's damage, and the damage/survival weight with what your team lacks and what the enemy threatens. Damage assumes you are not the main target (half the focus) and moves 60% of the survival weight to damage. Durability assumes you are the target (1.5× focus, at least 90% of 3 enemies) and moves half of the damage weight to survival.",
       "Role identity: Solo is a bruiser (at most 2 purely defensive items), Jungle/Mid/Carry at most 1, Support no limit."
   ];
@@ -767,6 +767,10 @@
   Engine.prototype.dataSource = function (opt) {
     const CM = this.data.comunidade; if (!CM) return null;
     const own = CM.deuses[opt.god], R = own && own.por_role && own.por_role[opt.role];
+    // com aspeto / sem aspeto: as builds dessa versão, se houver jogos suficientes
+    const VA = own && own.por_aspeto && own.por_aspeto[opt.role] && own.por_aspeto[opt.role][opt.aspeto ? "aspeto" : "base"];
+    if (VA && VA.jogos >= 20) return { src: VA, jogos: VA.jogos, fonte: "deus", variante: opt.aspeto ? "aspeto" : "base",
+      txt: L(`${VA.jogos} jogos deste deus neste role, ${opt.aspeto ? "com aspeto" : "sem aspeto"}`, `${VA.jogos} games of this god in this role, ${opt.aspeto ? "with aspect" : "without aspect"}`) };
     if (R && R.jogos >= 20) return { src: R, jogos: R.jogos, fonte: "deus", txt: L(`${R.jogos} jogos deste deus neste role`, `${R.jogos} games of this god in this role`) };
     if (own && own.role === opt.role && own.jogos >= 20 && !R) return { src: own, jogos: own.jogos, fonte: "deus", txt: L(`${own.jogos} jogos deste deus (role principal)`, `${own.jogos} games of this god (main role)`) };
     // deuses do mesmo tipo de dano no mesmo role, mais os poucos jogos do próprio deus
@@ -954,7 +958,9 @@
 
   Engine.prototype.cruzamento = function (opt, ctx, builds) {
     let C = this.data.comunidade && this.data.comunidade.deuses[opt.god];
-    if (C && C.por_role && C.por_role[opt.role]) C = Object.assign({}, C.por_role[opt.role], { role: opt.role, porRole: true });
+    const CA = C && C.por_aspeto && C.por_aspeto[opt.role] && C.por_aspeto[opt.role][opt.aspeto ? "aspeto" : "base"];
+    if (CA && CA.jogos >= 20) C = Object.assign({}, CA, { role: opt.role, porRole: true, variante: opt.aspeto ? "aspeto" : "base" });
+    else if (C && C.por_role && C.por_role[opt.role]) C = Object.assign({}, C.por_role[opt.role], { role: opt.role, porRole: true });
     const P = builds[0];
     // a mesma simulação sem o sinal dos dados, para comparar
     let semDados = null;
