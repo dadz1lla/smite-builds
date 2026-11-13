@@ -1,0 +1,417 @@
+<title>SMITE 2 Build Analyst</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: painel de escolhas à esquerda, leitura da build à direita; em telemóvel empilha. Tom: bronze de forja sobre pedra fria. */
+:root{
+  --bg:#eef0f4; --panel:#ffffff; --ink:#1b1e26; --muted:#5d6475; --line:#d8dce5;
+  --bronze:#9a6a1f; --bronze-soft:#f3e7d2; --steel:#3c5a8a;
+  --ok:#2f7d4f; --warn:#a46a00; --crit:#b03a2e;
+  --chip:#e6e9f0;
+  --f-display:"Cinzel","Trajan Pro",Georgia,serif;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-data:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#13151b; --panel:#1c1f27; --ink:#e8e9ee; --muted:#9aa1b2; --line:#2e323d;
+  --bronze:#d4a55a; --bronze-soft:#2e2618; --steel:#8fb0e3; --ok:#6cc391; --warn:#e2ad4f; --crit:#ef7b6e; --chip:#262a34; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13151b; --panel:#1c1f27; --ink:#e8e9ee; --muted:#9aa1b2; --line:#2e323d;
+  --bronze:#d4a55a; --bronze-soft:#2e2618; --steel:#8fb0e3; --ok:#6cc391; --warn:#e2ad4f; --crit:#ef7b6e; --chip:#262a34; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.lang{display:inline-flex;gap:2px;background:var(--chip);border-radius:7px;padding:2px}
+.lang button{border:0;background:transparent;padding:4px 10px;border-radius:5px;cursor:pointer;font-size:.8rem;font-weight:600;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--panel);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+header.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:20px}
+h1{font-family:var(--f-display);font-weight:700;font-size:1.65rem;letter-spacing:.04em;margin:0}
+.meta{font-family:var(--f-data);font-size:.78rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:410px 1fr;gap:24px;align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:14px}
+label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;display:block;margin-bottom:4px}
+select,button{font:inherit;color:var(--ink)}
+select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:7px 8px}
+select:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--bronze);outline-offset:1px}
+.seg{display:flex;flex-wrap:wrap;gap:4px}
+.seg button{flex:1 1 auto;background:var(--chip);border:1px solid transparent;border-radius:6px;padding:6px 8px;cursor:pointer;font-size:.85rem}
+.seg button[aria-pressed="true"]{background:var(--bronze-soft);border-color:var(--bronze);color:var(--ink);font-weight:600}
+.teams{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px 8px;align-items:center}
+.teams .hd{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.teams .rl{font-size:.8rem;font-weight:600;color:var(--muted);padding-right:2px}
+.slot{display:flex;gap:4px;align-items:center;min-width:0}
+.slot select{font-size:.84rem;padding:5px;min-width:0;flex:1 1 auto}
+.slot.en{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px}
+.slot select.est{grid-column:1/3;font-size:.75rem;padding:3px 4px}
+.cb{position:relative;min-width:0;flex:1 1 auto;display:block}
+.cb input{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:7px 8px}
+.slot .cb input{font-size:.84rem;padding:5px}
+.cb input::placeholder{color:var(--muted)}
+.cb ul{position:absolute;z-index:20;left:0;top:calc(100% + 2px);min-width:100%;width:max-content;max-width:min(280px,80vw);max-height:260px;overflow-y:auto;margin:0;padding:4px;list-style:none;background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.cb li{padding:8px 10px;border-radius:5px;cursor:pointer;font-size:.9rem;white-space:nowrap}
+.cb li[aria-selected="true"],.cb li:hover{background:var(--bronze-soft)}
+.cb li.vazio{color:var(--muted);cursor:default;background:none}
+.slot .me{font-size:.84rem;font-weight:600;color:var(--bronze);padding:5px 6px;border:1px dashed var(--bronze);border-radius:6px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.asp{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:24px;height:24px;border-radius:5px;border:1px solid var(--line);background:var(--bg);cursor:pointer;position:relative}
+.asp::after{content:"A";position:absolute;inset:0;display:grid;place-items:center;font-size:.72rem;font-weight:700;color:var(--muted)}
+.asp:checked{background:var(--bronze-soft);border-color:var(--bronze)}
+.asp:checked::after{color:var(--bronze)}
+.hint{font-size:.76rem;color:var(--muted);margin:2px 0 0}
+.row{display:flex;gap:10px;align-items:center}
+.check{display:flex;gap:8px;align-items:center;font-size:.9rem}
+.go{background:var(--bronze);color:var(--panel);border:0;border-radius:8px;padding:10px 14px;font-weight:600;cursor:pointer}
+.example{font-size:.8rem;color:var(--muted);background:var(--chip);border-radius:6px;padding:6px 8px}
+.out{display:flex;flex-direction:column;gap:18px;min-width:0}
+.godline{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline}
+.godline h2{font-family:var(--f-display);font-size:1.5rem;margin:0;letter-spacing:.03em}
+.kv{font-family:var(--f-data);font-size:.8rem;color:var(--muted)}
+.bar{height:8px;border-radius:4px;background:var(--chip);overflow:hidden;display:flex;width:180px}
+.bar i{display:block;height:100%}
+.threats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+table.en td,table.en th{white-space:nowrap}
+.miss{margin:6px 0 0;padding-left:18px;display:grid;gap:8px}
+.th{border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.8rem;display:flex;gap:6px;align-items:center;background:var(--panel)}
+.dot{width:8px;height:8px;border-radius:50%}
+.s1{background:var(--muted)} .s2{background:var(--warn)} .s3{background:var(--crit)}
+.build{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.build.principal{border-color:var(--bronze)}
+.bhead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.bhead h3{margin:0;font-size:1.05rem}
+.pill{font-size:.72rem;border-radius:999px;padding:2px 8px;font-weight:600;letter-spacing:.03em;border:1px solid var(--line)}
+.pill.main{background:var(--bronze);color:var(--panel);border-color:var(--bronze)}
+.pill.exp{color:var(--steel);border-color:var(--steel)}
+.pill.c-alta{color:var(--ok);border-color:var(--ok)} .pill.c-média{color:var(--warn);border-color:var(--warn)} .pill.c-baixa{color:var(--crit);border-color:var(--crit)}
+.score{margin-left:auto;font-family:var(--f-data);font-size:.8rem;color:var(--muted)}
+ol.items{list-style:none;margin:0;padding:0}
+ol.items li{display:grid;grid-template-columns:28px 1fr auto;gap:4px 12px;padding:10px 16px;border-top:1px solid var(--line)}
+ol.items li:first-child{border-top:0}
+.n{font-family:var(--f-data);color:var(--bronze);font-weight:500;padding-top:1px}
+.iname{font-weight:600}
+.cost{font-family:var(--f-data);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.why{grid-column:2/4;font-size:.86rem;color:var(--muted);margin:0}
+.tagrow{display:flex;gap:4px;flex-wrap:wrap;grid-column:2/4}
+.tag{font-size:.68rem;background:var(--chip);border-radius:4px;padding:1px 6px;color:var(--muted)}
+.tag.act{color:var(--steel)}
+.sub{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+@media (max-width:560px){.sub{grid-template-columns:1fr}}
+.sub>div{padding:12px 16px;min-width:0}
+.sub>div+div{border-left:1px solid var(--line)}
+@media (max-width:560px){.sub>div+div{border-left:0;border-top:1px solid var(--line)}}
+.sub h4{margin:0 0 6px;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.sub p{margin:2px 0;font-size:.88rem}
+.total{font-family:var(--f-data);font-size:.82rem;color:var(--muted);padding:10px 16px;border-top:1px solid var(--line)}
+.others{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.mini ol.items li{padding:7px 14px}
+.mini .why{display:none}
+details{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+summary{cursor:pointer;font-weight:600}
+details ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:.88rem}
+.empty{color:var(--muted)}
+.excl{padding:12px 16px;border-top:1px solid var(--line);background:var(--bronze-soft)}
+.excl h4{margin:0 0 4px;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.excl p{margin:3px 0;font-size:.88rem}
+.split{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--chip);margin-top:8px}
+.split i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px}
+.sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.cmp{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.cmp h3{margin:0;font-size:1.05rem}
+.cmpgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px}
+.cmpgrid select{font-size:.85rem;padding:6px}
+.go.ghost{background:transparent;color:var(--bronze);border:1px solid var(--bronze);align-self:flex-start}
+.verdict{margin:0;font-size:.95rem}.verdict b{font-family:var(--f-data);font-size:1.3rem;color:var(--bronze)}
+.tblwrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right}
+th[scope=row],thead th:first-child{text-align:left;font-weight:500}
+thead th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.up{color:var(--ok)}.down{color:var(--crit)}
+ol.contrib{margin:0;padding-left:20px;font-size:.88rem}
+ol.contrib li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding:3px 0}
+@media (prefers-reduced-motion:no-preference){.build{animation:in .25s ease-out both}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
+.tablewrap{overflow-x:auto}.tablewrap table{border-collapse:collapse;font-size:.85rem}.tablewrap th,.tablewrap td{padding:4px 8px;border-bottom:1px solid var(--line, #ddd);text-align:left;vertical-align:top}
+.quick{display:flex;flex-wrap:wrap;gap:6px;margin:10px 16px 4px;padding:0;list-style:none;counter-reset:q 0}
+article.build > p.hint{margin:6px 16px}
+.quick li:not(.st){counter-increment:q}.quick li{background:var(--bronze-soft);color:var(--ink);border-radius:999px;padding:4px 10px;font-size:.85rem;font-weight:600}
+.quick li::before{content:counter(q) ". ";color:var(--bronze)}.quick li.st::before{content:"S · "}
+.quick li.adj{background:transparent;border:1px dashed var(--bronze)}
+.go.pend{box-shadow:0 0 0 3px var(--bronze-soft)}
+#out.velho{opacity:.45;transition:opacity .2s}
+@media (max-width:860px){#go{position:sticky;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 4px 14px rgba(0,0,0,.25)}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>SMITE 2 Build Analyst</h1>
+    <span class="meta" id="meta"></span>
+    <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="pt" aria-pressed="false">PT</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+  </header>
+  <div class="grid">
+    <form class="panel" id="f" autocomplete="off">
+      <div><label for="god" data-i="god">Deus</label><select id="god"></select></div>
+      <div class="check"><input type="checkbox" id="aspeto"><label for="aspeto" style="margin:0;text-transform:none;letter-spacing:0;font-size:.9rem;font-weight:500;color:var(--ink)" data-i="asp">Com aspeto</label></div>
+      <div><label id="l-role" data-i="role">Role</label><div class="seg" id="role" role="group" aria-labelledby="l-role"></div></div>
+      <div><label id="l-obj" data-i="obj">Objetivo</label><div class="seg" id="obj" role="group" aria-labelledby="l-obj"></div></div>
+      <div><label id="l-modo" data-i="modo">Modo</label><div class="seg" id="modo" role="group" aria-labelledby="l-modo"></div></div>
+      <div><label data-i="teams">Equipas por role</label>
+        <div class="teams" id="teams"></div>
+        <p class="hint" data-i="teamhint">O botão A liga o aspeto desse deus. Nos inimigos, o último campo diz o estilo de build que estão a fazer (auto = o que mais dano dá ao kit dentro do role). A sua linha é preenchida pelo deus e role escolhidos acima.</p></div>
+      <button class="go" type="submit" id="go" data-i="go">Recomendar build</button>
+      
+    </form>
+    <section class="out" id="out" aria-live="polite"></section>
+  </div>
+</div>
+
+<script>/*DATA*/</script>
+<script>/*ENGINE*/</script>
+<script>
+(function(){
+const D=window.SMITE_DATA, E=new SmiteEngine(D);
+/* Idioma PT/EN: guardado neste browser; por omissão segue o idioma do telemóvel */
+let LANG=(()=>{try{const v=localStorage.getItem("lang");if(v==="pt"||v==="en")return v}catch(e){}return (navigator.language||"").toLowerCase().startsWith("pt")?"pt":"en"})();
+globalThis.SMITE_LANG=LANG;document.documentElement.lang=LANG==="en"?"en":"pt-PT";
+const L=(pt,en)=>LANG==="en"?en:pt;
+const DS=()=>LANG==="en"?".":",";
+const STR={god:["Deus","God"],asp:["Com aspeto","With aspect"],role:["Role","Role"],obj:["Objetivo","Objective"],modo:["Modo","Mode"],teams:["Equipas por role","Teams by role"],
+  teamhint:["O botão A liga o aspeto desse deus. Nos inimigos, o último campo diz o estilo de build que estão a fazer (auto = o que mais dano dá ao kit dentro do role). A sua linha é preenchida pelo deus e role escolhidos acima.","The A button turns on that god's aspect. For enemies, the last field is the build style they are going for (auto = whatever gives their kit the most damage within the role). Your own row is filled in from the god and role chosen above."],
+  go:["Recomendar build","Recommend build"]};
+const OBJ_L={"Otimizado":["Otimizado","Optimised"],"Dano":["Dano","Damage"],"Resistência":["Resistência","Durability"]};
+const $=id=>document.getElementById(id);
+const pick=el=>{const b=el.querySelector('[aria-pressed="true"]');return b?b.dataset.v:null};
+const gods=D.deuses.slice().sort((a,b)=>a.nome.localeCompare(b.nome));
+const ROLES=["Solo","Jungle","Mid","Support","Carry"], MODOS=["Conquest","Joust","Arena","Assault","Duel"];
+function metaTxt(){$("meta").textContent=L(`dados do cliente · patch ${D.patch} · ${D.itens.length} itens · ${D.deuses.length} deuses`,`game client data · patch ${D.patch} · ${D.itens.length} items · ${D.deuses.length} gods`)}metaTxt();
+function opts(sel,blank){sel.innerHTML=(blank?'<option value="">—</option>':'')+gods.map(g=>`<option value="${g.id}">${g.nome}</option>`).join("")}
+opts($("god"),true);$("god").options[0].textContent=L("— escolher deus —","— choose god —");
+function seg(el,list,val){el.innerHTML=list.map(x=>`<button type="button" aria-pressed="${x===val}" data-v="${x}">${OBJ_L[x]?L(...OBJ_L[x]):x}</button>`).join("");
+  el.onclick=e=>{const b=e.target.closest("button");if(!b)return;[...el.children].forEach(c=>c.setAttribute("aria-pressed",c===b));stale()}}
+seg($("role"),ROLES,null); seg($("modo"),MODOS,"Conquest"); seg($("obj"),["Otimizado","Dano","Resistência"],"Otimizado");
+/* Linhas das equipas conforme o modo: 5v5 por role (Conquest, Arena, Assault), 3v3 no Joust, 1v1 no Duel. A primeira linha do Joust e a do Duel são a sua. */
+const MODE_N={Joust:3,Duel:1};
+const SLOTS=m=>m==="Duel"?[{k:"D1",lbl:"1v1",me:true}]:m==="Joust"?[1,2,3].map(i=>({k:"J"+i,lbl:String(i),me:i===1})):ROLES.map(r=>({k:r,lbl:r,role:r}));
+const curSlots=()=>SLOTS(pick($("modo")));
+const meKey=()=>{const S=curSlots(),m=S.find(x=>x.me);return m?m.k:pick($("role"))};
+const mainRole=id=>((D.comunidade&&D.comunidade.deuses[id])||{}).role||(D.deuses.find(g=>g.id===id)||{}).role||"Mid";
+const TKEEP={}; // escolhas das equipas guardadas por linha, para não se perderem ao trocar de modo
+function teams(){const el=$("teams");
+  const keep=TKEEP;el.querySelectorAll("select,input.asp").forEach(x=>keep[x.id]=x.type==="checkbox"?x.checked:x.value);
+  el.innerHTML='<span></span><span class="hd" data-i="myteam">A sua equipa</span><span class="hd" data-i="enemies">Inimigos</span>';
+  const S=curSlots();
+  S.forEach(({k,lbl})=>{el.insertAdjacentHTML("beforeend",`<span class="rl">${lbl}</span>
+    <div class="slot" id="as-${k}"><select id="a-${k}" aria-label="${L("Aliado","Ally")} ${lbl}"></select><input type="checkbox" class="asp" id="aa-${k}" aria-label="${L("Aspeto do aliado","Ally aspect")} ${lbl}" title="${L("Aspeto ligado","Aspect on")}"></div>
+    <div class="slot en"><select id="e-${k}" aria-label="${L("Inimigo","Enemy")} ${lbl}"></select><input type="checkbox" class="asp" id="ea-${k}" aria-label="${L("Aspeto do inimigo","Enemy aspect")} ${lbl}" title="${L("Aspeto ligado","Aspect on")}"><select class="est" id="es-${k}" aria-label="${L("Estilo de build do inimigo","Enemy build style")} ${lbl}" title="${L("Estilo de build do inimigo","Enemy build style")}">${ESTS()}</select></div>`);
+    opts($("a-"+k),true);opts($("e-"+k),true);
+    ["a-","e-","es-"].forEach(pf=>{const x=$(pf+k);if(keep[pf+k]!=null&&[...x.options].some(o=>o.value===keep[pf+k]))x.value=keep[pf+k]});
+    ["aa-","ea-"].forEach(pf=>{if(keep[pf+k])$(pf+k).checked=true});
+    combo($("a-"+k),L("aliado…","ally…")).dataset.ph="ally";combo($("e-"+k),L("inimigo…","enemy…")).dataset.ph="enemy";});
+  el.querySelectorAll("select,.asp").forEach(x=>x.addEventListener("change",stale));
+  el.querySelectorAll(".asp").forEach(b=>b.addEventListener("click",()=>setTimeout(stale,0)));
+  el.querySelectorAll("[data-i]").forEach(x=>{const t=STR2[x.dataset.i];if(t)x.textContent=L(...t)});
+  try{syncMe()}catch(e){}}
+const ESTS=()=>[["","auto","auto"],["crit","crítico","crit"],["ataque","ataque","attack"],["hab","habilidades","abilities"],["bruiser","bruiser","bruiser"],["tank","tanque","tank"]].map(([v,pt,en])=>`<option value="${v}">build: ${L(pt,en)}</option>`).join("");
+/* Escolher deus a escrever: um campo de texto filtra a lista (sem acentos, por qualquer parte do nome); a <select> escondida continua a guardar o valor */
+const norm=t=>t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+function combo(sel,ph){const w=document.createElement("span");w.className="cb";sel.parentNode.insertBefore(w,sel);w.appendChild(sel);sel.hidden=true;
+  const inp=document.createElement("input");inp.type="text";inp.placeholder=ph;inp.setAttribute("aria-label",sel.getAttribute("aria-label")||ph);inp.setAttribute("role","combobox");inp.setAttribute("aria-autocomplete","list");inp.setAttribute("aria-expanded","false");inp.autocomplete="off";inp.spellcheck=false;
+  const ul=document.createElement("ul");ul.setAttribute("role","listbox");ul.hidden=true;w.append(inp,ul);
+  const show=()=>{const o=[...sel.options].find(x=>x.value===sel.value);inp.value=o&&o.value?o.textContent:""};
+  let act=0,list=[];
+  const draw=full=>{const q=full?"":norm(inp.value.trim());const all=[...sel.options].filter(o=>o.value);
+    list=q?all.filter(o=>norm(o.textContent).startsWith(q)).concat(all.filter(o=>!norm(o.textContent).startsWith(q)&&norm(o.textContent).includes(q))):all;
+    if(sel.value&&!q)act=Math.max(0,list.findIndex(o=>o.value===sel.value));else act=0;
+    ul.innerHTML=list.length?list.map((o,i)=>`<li role="option" data-v="${o.value}" aria-selected="${i===act}">${o.textContent}</li>`).join(""):`<li class="vazio">${L("Nenhum deus com esse nome","No god with that name")}</li>`;
+    ul.hidden=false;inp.setAttribute("aria-expanded","true");const a=ul.children[act];if(a&&a.scrollIntoView)a.scrollIntoView({block:"nearest"})};
+  const close=()=>{ul.hidden=true;inp.setAttribute("aria-expanded","false");show()};
+  const choose=v=>{if(sel.value!==v){sel.value=v;sel.dispatchEvent(new Event("change",{bubbles:true}))}close();inp.blur()};
+  inp.addEventListener("focus",()=>{inp.select();draw(true)});
+  inp.addEventListener("input",()=>{if(!inp.value.trim()&&sel.value){sel.value="";sel.dispatchEvent(new Event("change",{bubbles:true}))}draw()});
+  inp.addEventListener("keydown",e=>{if(ul.hidden)return;
+    if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();act=Math.max(0,Math.min(list.length-1,act+(e.key==="ArrowDown"?1:-1)));[...ul.children].forEach((li,i)=>li.setAttribute("aria-selected",i===act));const a=ul.children[act];if(a)a.scrollIntoView({block:"nearest"})}
+    else if(e.key==="Enter"){e.preventDefault();if(list[act])choose(list[act].value)}else if(e.key==="Escape"){close();inp.blur()}});
+  ul.addEventListener("pointerdown",e=>{const li=e.target.closest("li[data-v]");if(!li)return;e.preventDefault();choose(li.dataset.v)});
+  inp.addEventListener("blur",()=>setTimeout(()=>{if(document.activeElement!==inp)close()},120));
+  sel.addEventListener("change",show);show();return inp}
+{const gi=combo($("god"),L("Escreve o nome do deus…","Type the god's name…"));gi.dataset.ph="god";gi.id="god-q";document.querySelector('label[for="god"]').htmlFor="god-q";}
+const STR2={myteam:["A sua equipa","Your team"],enemies:["Inimigos","Enemies"]};
+teams();
+$("modo").addEventListener("click",e=>{if(e.target.closest("button"))teams()});
+function syncMe(){const r=meKey(),gn=($("god").selectedOptions[0]||{}).textContent||"";
+  curSlots().map(x=>x.k).forEach(x=>{const sel=$("a-"+x),box=$("aa-"+x),slot=$("as-"+x);let me=slot.querySelector(".me");
+    const cbx=sel.closest(".cb")||sel;
+    if(x===r){cbx.hidden=true;box.hidden=true;if(!me){me=document.createElement("span");me.className="me";slot.prepend(me)}me.textContent=gn+($("aspeto").checked?L(" (aspeto)"," (aspect)"):"")}
+    else{cbx.hidden=false;box.hidden=false;if(me)me.remove()}})}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function itemRow(i,n,b,full){
+  const orig=b.base?(b.ajuste.includes(i.id)?`<span class="tag act" title="${L("escolhido pela simulação contra estas equipas","chosen by the simulation against these teams")}">${L("situacional","situational")}</span>`:`<span class="tag" title="${L("o que funciona nos dados de jogo deste deus neste role","what works in the game data for this god in this role")}">core</span>`):"";
+  const tags=orig+fxChips(i)+(i.ativo?`<span class="tag act">${L("ativo","active")}</span>`:"")+(i.exclusivo?`<span class="tag act" title="${L("item exclusivo do deus; stats da wiki por confirmar no cliente","god-exclusive item; wiki stats not yet confirmed in the client")}">${L("exclusivo · por confirmar","exclusive · unconfirmed")}</span>`:"")+(i.divergencias?`<span class="tag" title="${L("valores do cliente que não batem com as notas","client values that do not match the patch notes")}">${i.divergencias} ≠ ${L("notas","notes")}</span>`:"");
+  return `<li><span class="n">${n}</span><span class="iname">${esc(i.nome)}</span><span class="cost">${i.custo??"—"}</span>${full?`<p class="why">${(b.porque[i.id]||[]).map(esc).join(" ")}</p>`:""}${tags?`<div class="tagrow">${tags}</div>`:""}</li>`}
+function card(b,full){
+  const gold=b.itens.reduce((a,i)=>a+(i.custo||0),0);
+  return `<article class="build ${b.principal?"principal":""} ${full?"":"mini"}">
+  <div class="bhead"><h3>${esc(b.base?L("Core + situacional · ","Core + situational · ")+b.rotulo:b.rotulo)}</h3>${b.principal?`<span class="pill main">${L("Recomendada","Recommended")}</span>`:""}${b.livre?`<span class="pill exp" title="${L("só a simulação, sem base nos dados","simulation only, not based on game data")}">${L("build livre","free build")}</span>`:""}${b.experimental?`<span class="pill exp">${L("Experimental","Experimental")}</span>`:""}<span class="pill c-${b.confianca}">${L("confiança","confidence")} ${L(b.confianca,{alta:"high","média":"medium",baixa:"low"}[b.confianca]||b.confianca)}</span><span class="score">${Math.min(100,b.relativo)}% ${L("da melhor","of the best")}</span></div>
+  ${full&&b.principal?`<ol class="quick" aria-label="${L("Build em resumo","Build summary")}">${b.ordem.map(i=>`<li class="${i.tier.startsWith("starter")?"st":""}${b.ajuste&&b.ajuste.includes(i.id)?" adj":""}">${esc(i.nome)}</li>`).join("")}</ol>`:""}
+  ${full&&b.base?`<p class="hint">${L(`Core (starter + ${b.nBase-1} itens): ${esc(b.fonteBase)}, escolhidos pela frequência e pelas vitórias. Os itens situacionais são escolhidos pela simulação contra a tua equipa e a adversária, só entre itens que se jogam neste role e counters (anti-cura, anti-escudo, anti-crítico, proteção contra CC).`,`Core (starter + ${b.nBase-1} items): ${esc(b.fonteBase)}, picked by frequency and wins. The situational items are chosen by the simulation against your team and the enemy team, only among items played in this role plus counters (anti-heal, anti-shield, anti-crit, CC protection).`)}${b.trocasBase.length?L(" Itens core trocados por causa da partida: "," Core items swapped for this match: ")+b.trocasBase.map(t=>esc(t.sai)+" → "+esc(t.entra)+" (+"+t.ganho+"%)").join("; ")+".":""}</p>`:""}
+  ${!full&&b.livre?`<p class="hint">${L("Só a simulação, sem base nos dados: para explorar ideias fora da meta.","Simulation only, not based on game data: for exploring off-meta ideas.")}</p>`:""}
+  <ol class="items">${(full?b.ordem:b.itens).map((i,k)=>itemRow(i,k===0&&i.tier.startsWith("starter")?"S":k,b,full)).join("")}</ol>
+  ${full&&b.exclusivos?`<div class="excl"><h4>${L("Itens exclusivos do deus","God-exclusive items")}</h4><p class="hint">${L("Pode comprar mais do que um. As contas só veem os stats e os efeitos com número; as mudanças às habilidades ainda não entram, por isso o valor real está subestimado.","You can buy more than one. The maths only sees stats and numbered effects; ability changes are not counted yet, so the real value is underestimated.")}</p>${b.exclusivos.map(x=>`<p><b>${esc(x.item.nome)}</b> ${L("no lugar de","instead of")} ${esc(x.troca.nome)}: ${x.rel}% ${L("da nota desta build","of this build's score")} · ${x.item.custo} ${L("de ouro (mais barato que um tier 3)","gold (cheaper than a tier 3)")}</p>`).join("")}</div>`:""}
+  ${full?`<div class="sub"><div><h4>${L("Relíquias","Relics")}</h4>${b.reliquias.map(r=>`<p><b>${esc(r.item.nome)}</b> — ${esc(r.razao)}</p>`).join("")}</div>
+  <div><h4>${L("Consumíveis","Consumables")}</h4>${(LAST&&LAST.r.consumiveis||[]).map(c=>`<p><b>${esc(c.nome)}</b> — ${esc(c.razao)}</p>`).join("")}<h4 style="margin-top:10px">${L("Alternativas","Alternatives")}</h4>${b.alternativas.map(i=>`<p>${esc(i.nome)} <span class="cost">${i.custo}</span></p>`).join("")}</div></div>
+  <div class="total">${L(`Total ${N(gold)} de ouro · ${N(b.score.ev.total)} de dano em 20s · aguenta ${b.score.ev.T.toFixed(1).replace(".",DS())}s contra esta equipa (${N(b.score.ev.ehp)} de vida efetiva) · ${N(b.score.ev.heal)} de cura e lifesteal`,`Total ${N(gold)} gold · ${N(b.score.ev.total)} damage in 20s · survives ${b.score.ev.T.toFixed(1)}s against this team (${N(b.score.ev.ehp)} effective health) · ${N(b.score.ev.heal)} healing and lifesteal`)}${breakdown(b.score.ev)}</div>`:""}
+  </article>`}
+const N=x=>Math.round(x).toLocaleString(L("pt-PT","en-GB"));
+function breakdown(ev){const t=Math.max(1,ev.abil+ev.ba+ev.itens);
+  return `<div class="split" aria-label="${L("origem do dano","damage sources")}"><i style="width:${ev.abil/t*100}%;background:var(--steel)" title="${L("habilidades","abilities")}"></i><i style="width:${ev.ba/t*100}%;background:var(--bronze)" title="${L("ataques básicos","basic attacks")}"></i><i style="width:${ev.itens/t*100}%;background:var(--ok)" title="${L("passivas e ativos dos itens","item passives and actives")}"></i></div>
+  <div class="legend"><span><b class="sw" style="background:var(--steel)"></b>${L("Habilidades","Abilities")} ${N(ev.abil)}</span><span><b class="sw" style="background:var(--bronze)"></b>${L("Ataques básicos","Basic attacks")} ${N(ev.ba)}</span><span><b class="sw" style="background:var(--ok)"></b>${L("Passivas/ativos de itens","Item passives/actives")} ${N(ev.itens)}</span></div>`}
+const P0=x=>Math.round(x*100)+"%", S1=x=>x.toFixed(1).replace(".",DS());
+const FXL={anti_heal:e=>"anti-heal "+e.pct+"%",anti_escudo:e=>L("anti-escudo ","anti-shield ")+e.pct+"%",mitig_crit:e=>"-"+e.pct+L("% crítico","% crit"),cc_block:()=>L("bloqueia CC","blocks CC"),imune_slow:()=>L("imune a slows","slow immune"),anti_desloc:()=>L("imune a deslocamento","knockup/displacement immune"),imune:e=>L("imunidade ","immunity ")+S1(e.s)+"s",ba_red:()=>L("-dano de ataques","-attack damage"),aura:()=>"aura"};
+function fxChips(i){const seen=new Set();let h=(i.efeitos||[]).filter(e=>FXL[e.t]).map(e=>FXL[e.t](e)).filter(t=>!seen.has(t)&&seen.add(t)).map(t=>`<span class="tag">${esc(t)}</span>`).join("");
+  if(i.stats&&i.stats.tenacity)h+=`<span class="tag">tenacity ${i.stats.tenacity}%</span>`;return h}
+function perfil(p){if(!p)return `<div><label>${L("Equipa inimiga","Enemy team")}</label><p class="empty">${L("Escolha os inimigos: sem eles, a build é feita contra um alvo genérico (80 de proteções, 2 900 de vida) e dano recebido meio físico, meio mágico.","Pick the enemies: without them, the build is made against a generic target (80 protections, 2,900 health) and incoming damage half physical, half magical.")}</p></div>`;
+  return `<div><label>${L("Equipa inimiga, simulada a partir dos kits","Enemy team, simulated from their kits")}</label>
+  <div class="threats"><span class="th">${L("Dano recebido","Damage taken")} ${P0(p.fis)} ${L("físico","physical")} · ${P0(1-p.fis)} ${L("mágico","magical")}</span><span class="th">${P0(p.ba)} ${L("de ataques básicos","basic attacks")}</span><span class="th">${P0(p.crit)} ${L("de críticos","crits")}</span><span class="th">${L("Cura","Healing")} ${N(p.cura)} / ${L("luta","fight")}</span><span class="th">${L("Escudos","Shields")} ${N(p.escudo)}</span><span class="th">${L("CC duro","Hard CC")} ~${S1(p.cc)}s ${L("em si","on you")}</span></div>
+  <div class="tblwrap"><table class="en"><thead><tr><th>${L("Inimigo","Enemy")}</th><th>${L("Build assumida","Assumed build")}</th><th>${L("Dano 20s","Damage 20s")}</th><th>${L("Básicos","Basics")}</th><th>${L("Crítico","Crit")}</th><th>${L("Cura","Healing")}</th><th>${L("Escudo","Shield")}</th><th>${L("CC duro","Hard CC")}</th></tr></thead><tbody>
+  ${p.inimigos.map(x=>`<tr><th scope="row">${esc(x.nome)}${x.role?(MODE_N[pick($("modo"))]?` <span class="kv" title="${L("role principal do deus, usado para estimar a build","the god's main role, used to estimate its build")}">≈ ${x.role}</span>`:` <span class="kv">${x.role}${x.lane?L(" · a sua lane"," · your lane"):""}</span>`):""}</th><td>${x.estilo}${x.auto?' <span class="kv">auto</span>':""}</td><td>${N(x.dano)} <span class="kv">${x.tipo==="magico"?L("mág.","mag."):L("fís.","phys.")}</span></td><td>${P0(x.ba)}</td><td>${P0(x.crit)}</td><td>${N(x.cura)}</td><td>${N(x.escudo)}</td><td>${S1(x.cc)}s</td></tr>`).join("")}</tbody></table></div>
+  <p class="hint">${L("Dano dos kits ao nível 20 com o pacote de itens assumido pelo estilo; CC já com 50% de acerto. São estes números, e não etiquetas, que decidem cada item.","Kit damage at level 20 with the item package assumed from the style; CC already at 50% hit rate. These numbers, not labels, decide each item.")}</p></div>`}
+function mechCmp(a,b){const m=a.mech,n=b.mech,l=[];
+  if(Math.abs(m.healCut-n.healCut)>40)l.push(L(`cura inimiga cortada: ${N(m.healCut)} na sua, ${N(n.healCut)} na recomendada`,`enemy healing cut: ${N(m.healCut)} in yours, ${N(n.healCut)} in the recommended one`));
+  if(Math.abs(m.critCut-n.critCut)>40)l.push(L(`dano de críticos evitado: ${N(m.critCut)} contra ${N(n.critCut)}`,`crit damage avoided: ${N(m.critCut)} vs ${N(n.critCut)}`));
+  if(Math.abs(m.asCut-n.asCut)>40)l.push(L(`dano de ataques básicos evitado: ${N(m.asCut)} contra ${N(n.asCut)}`,`basic attack damage avoided: ${N(m.asCut)} vs ${N(n.asCut)}`));
+  if(Math.abs(m.ccEff-n.ccEff)>0.2)l.push(L(`CC duro sofrido: ${S1(m.ccEff)}s contra ${S1(n.ccEff)}s`,`hard CC taken: ${S1(m.ccEff)}s vs ${S1(n.ccEff)}s`));
+  if(Math.abs(m.shieldCut-n.shieldCut)>40)l.push(L(`escudos retirados: ${N(m.shieldCut)} contra ${N(n.shieldCut)}`,`shields removed: ${N(m.shieldCut)} vs ${N(n.shieldCut)}`));
+  return l.length?`<p>${L("Contra esta equipa","Against this team")}: ${l.map(esc).join("; ")}.</p>`:""}
+const SG=x=>(x>0?"+":"")+x.toFixed(1).replace(".",DS());
+function liftCls(x){return x>=1?"up":x<=-1?"down":""}
+function semBlk(c){return c.semDados?`<h4 style="margin-top:12px">${L("Só com a simulação (sem dados)","Simulation only (no data)")}</h4><p class="hint">${L(`A build recomendada vale ${c.semDados.rel}% desta pela simulação pura; ${c.semDados.iguais} de 7 itens iguais.`,`The recommended build scores ${c.semDados.rel}% of this one in the pure simulation; ${c.semDados.iguais} of 7 items in common.`)}</p><ol class="items">${c.semDados.itens.map((i,k)=>`<li><span class="n">${k===0?"S":k}</span><span class="iname">${esc(i.nome)}</span><span class="cost">${i.custo??"—"}</span></li>`).join("")}</ol>`:""}
+function cruz(c){if(!c)return `<section class="cmp"><h3>${L("Cruzamento com dados de jogo","Cross-check with game data")}</h3><p class="hint">${L("Sem dados de jogo para este role.","No game data for this role.")}</p></section>`;
+  if(c.soRole)return `<section class="cmp"><h3>${L("Cruzamento com dados de jogo","Cross-check with game data")}</h3><p class="hint">${L(`Ainda não li dados deste deus: a recomendação usa a média dos deuses de ${esc(c.role)} que já li (${Object.values(D.comunidade.deuses).filter(x=>x.role===c.role).length}), com 60% do peso. Itens típicos do role podem aparecer mesmo que o kit peça outra coisa: veja a build só com a simulação.`,`No data read for this god yet: the recommendation uses the average of the ${esc(c.role)} gods already read (${Object.values(D.comunidade.deuses).filter(x=>x.role===c.role).length}), at 60% weight. Typical role items may show up even if the kit asks for something else: see the simulation-only build.`)}</p>${semBlk(c)}</section>`;
+  const row=a=>`<tr><th scope="row">${esc(a.item.nome)}</th><td>${a.dados?a.dados.pick+"%":(a.starter?a.starter.pick+"% (starter)":"—")}</td><td class="${a.dados?liftCls(a.dados.lift_s):""}">${a.dados?SG(a.dados.lift_s):(a.starter?SG(a.starter.lift_s):"—")}</td></tr>`;
+  return `<section class="cmp" aria-labelledby="cz-h"><h3 id="cz-h">${L("Cruzamento com dados de jogo","Cross-check with game data")}</h3>
+  <p class="hint">${esc(c.fonte)} · ${c.porRole?L("filtrado por ","filtered by ")+esc(c.role)+" · ":""}${c.jogos} ${L("jogos ranked Master+","Master+ ranked games")} · ${esc(c.patch)} · ${L("win rate do deus","god win rate")} ${String(c.win).replace(".",DS())}% · ${L("lido a","read on")} ${esc(c.lido)}. ${c.mesmoRole?"":`<b>${L("Atenção:","Note:")}</b> ${L(`estes dados são sobretudo de ${esc(c.role)}, não de ${esc(pick($("role")))}.`,`this data is mostly from ${esc(c.role)}, not ${esc(pick($("role")))}.`)}`}</p>
+  <div class="tblwrap"><table><thead><tr><th>${L("Build do motor","Engine build")}</th><th>${L("Nas builds dos jogadores","In player builds")}</th><th>${L("Ganha acima do esperado","Wins above expected")}</th></tr></thead><tbody>${c.anot.map(row).join("")}</tbody></table></div>
+  ${c.faltam.length?`<h4 style="margin-top:12px">${L("Muito usados pelos jogadores e que o motor não pôs","Popular with players but not in the engine's build")}</h4><ul class="miss">${c.faltam.map(f=>`<li><b>${esc(f.item.nome)}</b> <span class="kv">${f.dados.pick}% ${L("das builds","of builds")} · ${SG(f.dados.lift_s)} pts</span><br>${L(`No lugar de ${esc(f.troca.nome)}, a build fica com ${f.rel}% da nota`,`Instead of ${esc(f.troca.nome)}, the build scores ${f.rel}%`)}: ${esc(f.porque)}</li>`).join("")}</ul>`:""}
+  ${semBlk(c)}
+  <p class="hint" style="margin-top:10px">${L("Relíquias mais usadas","Most used relics")}: ${c.topReliquias.map(x=>`${esc(x.nome)} ${x.pick}%`).join(" · ")}. ${L("Starters mais usados","Most used starters")}: ${c.topStarters.map(x=>`${esc(x.nome)} ${x.pick}%`).join(" · ")}.</p>
+  <details><summary>${L("Como leio estes números","How to read these numbers")}</summary><ul>${L(`
+   <li>"Nas builds dos jogadores" soma a percentagem de builds com o item em cada ranhura (só aparece o top 4 de cada ranhura, por isso itens menos usados ficam "—").</li>
+   <li>"Ganha acima do esperado" é a win rate das builds com o item menos a win rate do deus e menos o viés da ranhura: quem chega às últimas ranhuras já está a ganhar (viés medido: ${c.vies.map(v=>"+"+String(v).replace(".",DS())).join(" / ")} pts da ranhura 1 à 6). Com poucos jogos o valor é encolhido para zero.</li>
+   <li>É correlação, não causa: quem compra um item pode ganhar por outras razões. A recomendação junta a simulação dos itens e dos kits com este sinal; em baixo fica a build só com a simulação, para comparar.</li>
+   <li>O site não diz como obtém as partidas. Os dados foram lidos à mão, página a página, sem nomes de jogadores.</li>`,`
+   <li>"In player builds" adds up the share of builds with the item in each slot (only the top 4 per slot is shown, so less used items show "—").</li>
+   <li>"Wins above expected" is the win rate of builds with the item minus the god's win rate and minus the slot bias: players who reach the last slots are already winning (measured bias: ${c.vies.map(v=>"+"+String(v)).join(" / ")} pts from slot 1 to 6). With few games the value is shrunk towards zero.</li>
+   <li>It is correlation, not causation: players who buy an item may win for other reasons. The recommendation combines the item and kit simulation with this signal; the simulation-only build is shown below for comparison.</li>
+   <li>The site does not say how it collects matches. The data was read by hand, page by page, with no player names.</li>`)}</ul></details>
+  </section>`}
+function equipaBlk(q,ctx){const a=ctx.adversaria;const o=ctx.objetivo;
+  const NOME=L({otimizado:"Otimizado (a tua equipa e a adversária)",dano:"Dano",resistencia:"Resistência"},{otimizado:"Optimised (your team and the enemy team)",dano:"Damage",resistencia:"Durability"});
+  const lin=(t,x,vazio)=>`<li><b>${t}:</b> ${x?(x.notas.length?esc(x.notas.join("; "))+".":L("perto do típico.","close to typical.")):vazio}${x&&Math.abs(x.ajuste)>0.02?` <span class="kv">${x.ajuste>0?L("puxa para dano","leans to damage"):L("puxa para aguentar","leans to survival")} (${x.ajuste>0?"+":""}${Math.round(x.ajuste*100)} pts)</span>`:""}</li>`;
+  return `<section class="cmp" aria-labelledby="eq-h"><h3 id="eq-h">${L("Leitura das equipas","Team read")}</h3><ul>
+   ${lin(L("A tua equipa","Your team"),q,L("escolha os aliados para contar com o que já trazem.","pick your allies to account for what they already bring."))}
+   ${lin(L("A equipa adversária","The enemy team"),a,L("escolha os inimigos para contar com o que ameaçam e o que aguentam.","pick the enemies to account for their threat and how much they can take."))}</ul>
+   <p>${L("Objetivo","Objective")}: <b>${NOME[o]}</b> → ${L("peso","weight")} ${Math.round(ctx.wo*100)}% ${L("dano","damage")} / ${Math.round(ctx.wd*100)}% ${L("sobreviver","survival")}. ${L("Os itens são escolhidos pela simulação contra os inimigos escolhidos (anti-cura, penetração, proteções do tipo certo).","Items are chosen by the simulation against the chosen enemies (anti-heal, penetration, the right protection type).")}</p>
+   <p class="hint">${o==="dano"?L("Dano: assume que não és tu o alvo principal; os 3 itens situacionais vão para matar mais depressa.","Damage: assumes you are not the main target; the 3 situational items go towards killing faster."):o==="resistencia"?L("Resistência: assume que és tu o alvo da equipa adversária; os 3 itens situacionais vão para aguentar o foco.","Durability: assumes you are the enemy team's target; the 3 situational items go towards surviving the focus."):L("Otimizado: o foco que recebes depende do teu role e do dano que a equipa adversária traz; quanto mais dano trazem, mais a build puxa para aguentar.","Optimised: the focus you take depends on your role and the enemy team's damage; the more damage they bring, the more the build leans towards survival.")}</p>
+   <p><button type="button" id="btn-leit" class="go ghost">${L("Comparar as três leituras","Compare the three objectives")}</button> <span class="hint">${L("demora alguns segundos","takes a few seconds")}</span></p><div id="leit"></div></section>`}
+function leiturasHTML(LT){const m=LT[0];const pc=(a,b)=>{const v=Math.round((a/b-1)*100);return (v>0?"+":"")+v+"%"};
+  return `<div class="tablewrap"><table><thead><tr><th>${L("Leitura","Objective")}</th><th>${L("Peso dano","Damage weight")}</th><th>${L("Progresso para matar","Kill progress")}</th><th>${L("Tempo vivo","Time alive")}</th><th>Build</th></tr></thead><tbody>${LT.map((x,i)=>`<tr${i===0?' style="font-weight:600"':""}><td>${esc(x.nome)}</td><td>${Math.round(x.wo*100)}%</td><td>${i?pc(x.off,m.off):L("referência","baseline")}</td><td>${i?pc(Math.min(x.T,30),Math.min(m.T,30)):L("referência","baseline")}</td><td>${x.itens.map(esc).join(", ")}</td></tr>`).join("")}</tbody></table></div>
+  <p class="hint">${L("Cada build é medida contra a mesma equipa inimiga. O otimizado junta o que falta à tua equipa e o que a adversária ameaça; Dano e Resistência mostram o que ganhas e perdes ao puxar só para um lado.","Each build is measured against the same enemy team. Optimised combines what your team lacks and what the enemy threatens; Damage and Durability show what you gain and lose by leaning one way.")}</p>`}
+function analiseBlk(god,role){const A=window.SMITE_ANALISE;if(!A)return"";const x=A.pares.find(p=>p.god===god&&p.role===role);
+  if(!x)return `<section class="cmp"><h3>${L("A build dos jogadores, vista pela simulação","The players' build, through the simulation")}</h3><p class="hint">${L(`Não há dados de jogadores para ${esc(role)} com este deus (a página do site não tinha partidas, ou só itens por acabar).`,`No player data for ${esc(role)} with this god (the site page had no matches, or only unfinished items).`)}</p></section>`;
+  const V=L({coerente:["Faz sentido","A build dos jogadores fica a 90% ou mais da melhor build que a simulação encontra."],coerente_dados:["Faz sentido segundo os dados","A simulação prefere outros itens, mas os itens dos jogadores ganham acima da média do deus: provavelmente é a simulação que os subvaloriza."],melhoravel:["Dá para melhorar","Há trocas que a simulação acha melhores e que os próprios dados apoiam."],divergente:["A simulação discorda, sem apoio dos dados","As trocas vêm só da simulação; com estes dados não dá para confirmar."]},
+    {coerente:["Makes sense","The players' build is at 90% or more of the best build the simulation finds."],coerente_dados:["Makes sense according to the data","The simulation prefers other items, but the players' items win above the god's average: the simulation probably undervalues them."],melhoravel:["Can be improved","There are swaps the simulation rates higher that the data itself supports."],divergente:["The simulation disagrees, without data support","The swaps come from the simulation only; this data cannot confirm them."]})[x.veredicto];
+  const AP=L({dados:"apoiada pelos dados",contra:"os dados contrariam (o item que sai ganha acima da média)",sim:"só simulação",suspeita:"duvidosa: a simulação tende a sobrevalorizar este item"},{dados:"supported by the data",contra:"the data disagrees (the item going out wins above average)",sim:"simulation only",suspeita:"doubtful: the simulation tends to overvalue this item"});
+  const amostra=x.jogos<10?L("amostra muito pequena: indício, não conclusão","very small sample: a hint, not a conclusion"):x.jogos<80?L("amostra pequena","small sample"):L("amostra razoável","reasonable sample");
+  const dd=d=>d?` <span class="kv">${d.win}% ${L("vitórias em","wins in")} ~${d.n} builds</span>`:"";
+  return `<section class="cmp" aria-labelledby="an-h"><h3 id="an-h">${L("A build dos jogadores, vista pela simulação","The players' build, through the simulation")}</h3>
+  <p class="hint">${esc(role)} · ${x.jogos} ${L("jogos","games")} (${amostra}) · win rate ${String(x.win).replace(".",DS())}% · ${esc(x.patch)}${x.parcial?L(" · página com ranhuras em falta"," · page with missing slots"):""}</p>
+  <p><b>${V[0]}.</b> ${V[1]}</p>
+  <p class="hint">${L("Build típica (o item mais escolhido em cada ranhura","Typical build (the most picked item in each slot")}${x.nDados<6?L("; as ranhuras sem item final foram completadas pela simulação, marcadas com *","; slots with no finished item were filled by the simulation, marked with *"):""}): ${L("vale","scores")} <b>${x.rel}%</b> ${L("da melhor build da simulação para este kit.","of the simulation's best build for this kit.")}</p>
+  <ol class="items">${x.dados.map((i,k)=>`<li><span class="n">${k+1}</span><span class="iname">${esc(i.nome)}${i.ranhura==="sim"?" *":""}</span><span class="cost">${i.pick!=null?i.pick+"% · "+i.win+L("% V","% W"):i.win!=null?i.win+L("% V","% W"):""}</span></li>`).join("")}</ol>
+  ${x.trocas.length?`<h4 style="margin-top:12px">${L("O que dá para melhorar","What can be improved")}</h4><ul class="miss">${x.trocas.map(t=>`<li><b>${esc(t.sai)} → ${esc(t.entra)}</b> <span class="kv">+${String(t.ganho).replace(".",DS())}% ${L("na simulação","in the simulation")}</span><br>${esc(AP[t.apoio])}.${t.dados_sai?` ${L("Com","With")} ${esc(t.sai)}:`+dd(t.dados_sai):""}${t.dados_entra?` ${L("Com","With")} ${esc(t.entra)}:`+dd(t.dados_entra):` ${esc(t.entra)} ${L("quase não aparece nas builds deste role.","hardly appears in builds for this role.")}`}</li>`).join("")}</ul><p class="hint">${L(`Depois das trocas a build fica com ${x.depois}% da melhor da simulação.`,`After the swaps the build scores ${x.depois}% of the simulation's best.`)}</p>`:""}
+  <details><summary>${L("O que a análise de todos os deuses ensinou","What the analysis of all gods showed")}</summary><ul>${L(`
+   <li>Li ${A.pares.length} combinações deus/role com dados (algumas com 1 a 5 jogos) e comparei cada build típica com a simulação do kit e dos itens.</li>
+   <li>Itens que a simulação põe muitas vezes mas quase ninguém compra: ${A.sist.sobrevalorizados.map(esc).join(", ")}. Trato-os como suspeitos: o efeito deles pode estar sobrevalorizado no modelo.</li>
+   <li>Itens que a simulação tira muitas vezes e que ganham acima da média do deus: ${A.sist.subvalorizados.slice().sort((a,b)=>b.pares-a.pares).slice(0,10).map(s=>`${esc(s.nome)} (+${s.dwin} pts)`).join(", ")}. Provavelmente a simulação não apanha tudo o que fazem (passivas por fases, utilidade, timing).</li>
+   <li>É correlação: quem compra um item pode ganhar por outras razões. Por isso a recomendação junta os dois sinais em vez de seguir só um.</li>`,`
+   <li>I read ${A.pares.length} god/role combinations with data (some with 1 to 5 games) and compared each typical build with the simulation of the kit and items.</li>
+   <li>Items the simulation often picks but almost nobody buys: ${A.sist.sobrevalorizados.map(esc).join(", ")}. I treat them as suspect: their effect may be overvalued in the model.</li>
+   <li>Items the simulation often drops that win above the god's average: ${A.sist.subvalorizados.slice().sort((a,b)=>b.pares-a.pares).slice(0,10).map(s=>`${esc(s.nome)} (+${s.dwin} pts)`).join(", ")}. The simulation probably misses part of what they do (phased passives, utility, timing).</li>
+   <li>It is correlation: players who buy an item may win for other reasons. That is why the recommendation combines both signals instead of following just one.</li>`)}</ul></details>
+  </section>`}
+let LAST=null,KEEP=false;
+function bindLeit(opt){const b=document.getElementById("btn-leit");if(!b)return;b.onclick=()=>{b.disabled=true;b.textContent=L("A calcular…","Calculating…");setTimeout(()=>{try{document.getElementById("leit").innerHTML=leiturasHTML(E.leituras(opt));b.remove();}catch(err){b.textContent=L("Erro: ","Error: ")+err.message}},30)}}
+function run(e){{const g=$("go");if(g){g.classList.remove("pend");g.textContent=L("Recomendar build","Recommend build");}const o=$("out");if(o)o.classList.remove("velho");}
+  if(e)e.preventDefault();
+  if(!$("god").value||!pick($("role"))){$("out").innerHTML=`<p class="empty">${L(`Escolha ${!$("god").value&&!pick($("role"))?"o deus e o role":!$("god").value?"o deus":"o role"} antes de recomendar.`,`Choose ${!$("god").value&&!pick($("role"))?"the god and the role":!$("god").value?"the god":"the role"} before recommending.`)}</p>`;return}
+  const opt={god:$("god").value,aspeto:$("aspeto").checked,role:pick($("role")),modo:pick($("modo")),objetivo:{Dano:"dano","Resistência":"resistencia"}[pick($("obj"))],
+    aliados:curSlots().filter(x=>x.k!==meKey()&&$("a-"+x.k).value).map(x=>{const id=$("a-"+x.k).value;return {id,role:x.role||mainRole(id),aspeto:$("aa-"+x.k).checked}}),
+    inimigos:curSlots().filter(x=>$("e-"+x.k).value).map(x=>{const id=$("e-"+x.k).value,m=pick($("modo"));return {id,role:x.role||mainRole(id),aspeto:$("ea-"+x.k).checked,estilo:$("es-"+x.k).value,lane:m==="Duel"?true:m==="Joust"?false:undefined}})};
+  syncMe();
+  let r; try{r=E.recommend(opt);LAST={opt,r}}catch(err){$("out").innerHTML=`<p class="empty">${L("Não consegui calcular","Could not calculate")}: ${esc(err.message)}</p>`;return}
+  const g=r.deus, k=r.kit;
+  const noKit=!k.n?`<p class="empty">${L("Ainda não tenho os valores das habilidades deste deus a partir das capturas; a build usa só os stats base.","I don't have this god's ability values from the client captures yet; the build uses base stats only.")}</p>`:"";
+  $("out").innerHTML=`
+  <div class="godline"><h2>${esc(g.nome)}</h2>
+    <span class="kv">${L("dano","damage")} ${{fisico:L("físico","physical"),magico:L("mágico","magical")}[g.tipo_dano]||L("por confirmar","unconfirmed")}${g.alcance?" · "+g.alcance:""} · ${g.usa_mana?L("usa mana","uses mana"):L("não usa mana","no mana")}</span>
+    <span class="kv" title="${L("o que a build procura neste role","what the build aims for in this role")}">role: ${esc(r.identidade||"")}</span>
+    <span class="kv" title="${L("peso das escalas de Força e Inteligência nas habilidades","weight of Strength and Intelligence scalings in the abilities")}">kit ${k.str}% ${L("Força","Strength")} / ${k.int}% Int</span>
+    <span class="kv" title="${L("escala do ataque básico lida no cliente","basic attack scaling read from the client")}">${L("ataque básico","basic attack")} ${k.ba.ad??100}% AD + ${k.ba.str??100}% ${L("For","Str")} + ${k.ba.int??20}% Int</span>
+    ${k.passiva?`<span class="kv" title="${L("buff da passiva, contado a 50%","passive buff, counted at 50%")}">${L("passiva","passive")}: ${Object.entries(k.passiva).map(([a,v])=>"+"+v+(L({str:" For",int:" Int",as_pct:"% AS",pp:" prot. física",mp:" prot. mágica",prot:" proteções",ls_pct:"% LS",ad:" AD",pp_pct:"% prot. física",mp_pct:"% prot. mágica",prot_pct:"% proteções"},{str:" Str",int:" Int",as_pct:"% AS",pp:" phys. prot.",mp:" mag. prot.",prot:" protections",ls_pct:"% LS",ad:" AD",pp_pct:"% phys. prot.",mp_pct:"% mag. prot.",prot_pct:"% protections"})[a]||" "+a)).join(", ")}</span>`:""}
+    <span class="bar" aria-hidden="true"><i style="width:${k.str}%;background:var(--bronze)"></i><i style="width:${k.int}%;background:var(--steel)"></i></span></div>
+  ${noKit}
+  ${perfil(r.perfil)}
+  ${equipaBlk(r.ctx.equipa,r.ctx)}
+  ${card(r.builds[0],true)}
+  ${cruz(r.cruzamento)}
+  ${analiseBlk(opt.god,opt.role)}
+  ${r.builds.length>1?`<div><label>${L("Builds livres (só a simulação, experimentais)","Free builds (simulation only, experimental)")}</label><div class="others">${r.builds.slice(1).map(b=>card(b,false)).join("")}</div></div>`:""}
+  <section class="cmp" aria-labelledby="cmp-h"><h3 id="cmp-h">${L("Comparar com a minha build","Compare with my build")}</h3>
+    <p class="hint">${L("Escolha o starter e os 6 itens que fez. O motor dá nota às duas builds com as mesmas contas.","Pick the starter and the 6 items you built. The engine scores both builds with the same maths.")}</p>
+    <div class="cmpgrid" id="cmpsel"></div>
+    <button class="go ghost" type="button" id="cmpgo">${L("Comparar","Compare")}</button>
+    <div id="cmpout"></div></section>
+  <details><summary>${L("Como foi calculado (versão 3)","How it was calculated (version 3)")}</summary><ul>${r.pressupostos.map(p=>`<li>${esc(p)}</li>`).join("")}<li>${r.modo==="Duel"?L("Duel (1v1): um só inimigo, que concentra todo o dano em si; sem aliados.","Duel (1v1): a single enemy, who focuses all their damage on you; no allies."):r.modo==="Joust"?L("Joust (3v3): até 3 inimigos e 2 aliados; com menos alvos, o foco que recebe sobe 5/3 face ao Conquest (até 150%). Sem roles fixos: cada deus usa o seu role principal para estimar a build.","Joust (3v3): up to 3 enemies and 2 allies; with fewer targets, the focus you take rises 5/3 vs Conquest (up to 150%). No fixed roles: each god uses its main role to estimate its build."):L(`Modo ${esc(r.modo)} (5v5): equipas por role.`,`${esc(r.modo)} mode (5v5): teams by role.`)} ${L("Os dados de jogo e a identidade do role vêm do Conquest.","Game data and role identity come from Conquest.")}</li><li>${L('Valores dos itens e dos deuses: os do cliente; itens com "≠ notas" têm valores que diferem das patch notes.','Item and god values: from the game client; items marked "≠ notes" have values that differ from the patch notes.')}</li></ul></details>`;
+  bindLeit(opt);
+  if(window.innerWidth<860&&!KEEP){const a=document.querySelector("article.build.principal");if(a)a.scrollIntoView({behavior:"smooth",block:"start"});}
+  cmpUI(); if(CMP.some(Boolean)&&$("cmpout"))compare();
+}
+$("f").addEventListener("submit",run);
+const STARTERS_ALL=D.itens.filter(i=>i.tier==="starter_upgrade"||i.tier==="starter").sort((a,b)=>a.nome.localeCompare(b.nome));
+const T3=D.itens.filter(i=>i.tier==="tier3"||i.tier==="reliquia_upgrade").sort((a,b)=>a.nome.localeCompare(b.nome));
+let CMP=["","","","","","",""];
+function cmpUI(){const el=$("cmpsel");if(!el)return;const GI=(D.itens_deus||[]).filter(x=>x.deus===$("god").value);el.innerHTML=[0,1,2,3,4,5,6].map(k=>`<select id="c${k}" aria-label="${k?"Item "+k:"Starter"}"><option value="">${k?"Item "+k:"Starter"}</option>${(k?GI.concat(T3):STARTERS_ALL).map(i=>`<option value="${i.id}">${esc(i.nome)}</option>`).join("")}</select>`).join("");
+  CMP.forEach((v,k)=>{const s=$("c"+k);if(s&&[...s.options].some(o=>o.value===v))s.value=v});
+  $("cmpgo").onclick=compare}
+function compare(){if(!LAST)return;const ids=[0,1,2,3,4,5,6].map(k=>$("c"+k).value).filter(Boolean);CMP=[0,1,2,3,4,5,6].map(k=>$("c"+k).value);try{localStorage.setItem("cmp",JSON.stringify(CMP))}catch(e){}
+  if(!ids.length){$("cmpout").innerHTML=`<p class="empty">${L("Escolha pelo menos um item.","Pick at least one item.")}</p>`;return}
+  const c=E.compare(LAST.opt,ids,LAST.r.builds[0]),a=c.score.ev,b=c.rec.ev;
+  const row=(l,x,y)=>`<tr><th scope="row">${l}</th><td>${N(x)}</td><td>${N(y)}</td><td class="${x>=y?"up":"down"}">${x>=y?"+":""}${N((x/y-1)*100)}%</td></tr>`;
+  $("cmpout").innerHTML=`<p class="verdict"><b>${c.relativo}%</b> ${L("da nota da build recomendada · caminho","of the recommended build's score · path")} ${esc(c.rotulo.toLowerCase())}${c.ativos>3?` · <span class="down">${L(`tem ${c.ativos} itens ativos: o jogo só deixa 3`,`has ${c.ativos} active items: the game only allows 3`)}</span>`:""}</p>
+  <div class="tblwrap"><table><thead><tr><th></th><th>${L("A sua","Yours")}</th><th>${L("Recomendada","Recommended")}</th><th>${L("Diferença","Difference")}</th></tr></thead><tbody>
+  ${row(L("Dano em 20s","Damage in 20s"),a.total,b.total)}${row(L("Habilidades","Abilities"),a.abil,b.abil)}${row(L("Ataques básicos","Basic attacks"),a.ba,b.ba)}${row(L("Passivas/ativos de itens","Item passives/actives"),a.itens,b.itens)}${row(L("Tempo até morrer (s)","Time until death (s)"),a.T,b.T)}${row(L("Vida efetiva","Effective health"),a.ehp,b.ehp)}${row(L("Cura e lifesteal","Healing and lifesteal"),a.heal,b.heal)}</tbody></table></div>
+  ${mechCmp(a,b)}
+  <p class="hint">${L("Peso de cada item na sua build (quanto a nota desce sem ele):","Weight of each item in your build (how much the score drops without it):")}</p><ol class="contrib">${c.contrib.map(x=>`<li><span>${esc(x.item.nome)}</span><span class="cost">${(x.valor*100).toFixed(1)}</span></li>`).join("")}</ol>`}
+
+/* Nada recalcula sozinho: escolhe-se tudo e só o botão "Recomendar build" calcula (no telemóvel cada cálculo demora segundos). */
+function stale(){try{syncMe()}catch(e){}const ex=$("ex");if(ex)ex.hidden=true;const g=$("go");if(g){g.classList.add("pend");g.textContent=L("Recomendar build ↻","Recommend build ↻");}const o=$("out");if(o&&o.firstElementChild)o.classList.add("velho");}
+["god","aspeto"].forEach(id=>$(id).addEventListener("change",stale));
+
+const intro=()=>`<p class="hint" style="padding:16px">${L("Escolha o deus, o role e as equipas e carregue em <b>Recomendar build</b>.","Choose the god, the role and the teams, then tap <b>Recommend build</b>.")}</p>`;
+$("out").innerHTML=intro();
+/* Trocar de idioma: muda os textos fixos e volta a mostrar o resultado no novo idioma (sem mexer nas escolhas) */
+function applyLang(){document.querySelectorAll("[data-i]").forEach(el=>{const t=STR[el.dataset.i]||STR2[el.dataset.i];if(t)el.textContent=L(...t)});
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===LANG));
+  metaTxt();$("god").options[0].textContent=L("— escolher deus —","— choose god —");
+  document.querySelectorAll("#obj button").forEach(b=>b.textContent=L(...OBJ_L[b.dataset.v]));
+  const PH={god:L("Escreve o nome do deus…","Type the god's name…"),ally:L("aliado…","ally…"),enemy:L("inimigo…","enemy…")};
+  document.querySelectorAll(".cb input").forEach(i=>{if(PH[i.dataset.ph])i.placeholder=PH[i.dataset.ph]});
+  teams();
+  try{syncMe()}catch(e){}
+  const g=$("go");if(g)g.textContent=g.classList.contains("pend")?L("Recomendar build ↻","Recommend build ↻"):L("Recomendar build","Recommend build");
+  document.title=L("SMITE 2 Build Analyst","SMITE 2 Build Analyst");}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>{if(b.dataset.l===LANG)return;LANG=b.dataset.l;globalThis.SMITE_LANG=LANG;document.documentElement.lang=LANG==="en"?"en":"pt-PT";try{localStorage.setItem("lang",LANG)}catch(e){}
+  applyLang();if(LAST&&!$("out").classList.contains("velho")){KEEP=true;try{run()}finally{KEEP=false}}else if(!LAST)$("out").innerHTML=intro();}));
+applyLang();
+})();
+</script>
