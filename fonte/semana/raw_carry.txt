@@ -1,0 +1,1238 @@
+#ROLE carry corte 2026-10-30
+#LISTA
+artemis | Artemis | None | S | 59.81% | 4.88% | 627
+cupid | Cupid | None | S | 58.72% | 5.58% | 717
+izanami | Izanami | None | S | 59.68% | 3.46% | 444
+xbalanque | Xbalanque | None | A | 58.23% | 4.82% | 620
+rama | Rama | None | A | 57.45% | 5.07% | 651
+neith | Neith | Wind | B | 60.00% | 1.44% | 185
+ullr | Ullr | None | B | 56.02% | 6.46% | 830
+izanami | Izanami | The Sickle | B | 60.00% | 1.21% | 155
+cernunnos | Cernunnos | None | B | 56.45% | 3.38% | 434
+sol | Sol | None | C | 56.59% | 2.01% | 258
+medusa | Medusa | None | C | 54.91% | 3.73% | 479
+nut | Nut | None | C | 54.04% | 4.91% | 631
+apollo | Apollo | None | D | 52.38% | 6.05% | 777
+ishtar | Ishtar | None | D | 52.94% | 4.23% | 544
+hou-yi | Hou Yi | None | D | 51.57% | 9.19% | 1181
+anhur | Anhur | None | D | 51.61% | 6.75% | 868
+chiron | Chiron | None | D | 51.35% | 4.61% | 592
+hachiman | Hachiman | None | F | 47.56% | 6.54% | 841
+chronos | Chronos | None | F | 49.79% | 1.83% | 235
+anhur | Anhur | Pride | F | 51.54% | 1.01% | 130
+danzaburou | Danzaburou | None | F | 48.63% | 2.27% | 292
+jing-wei | Jing Wei | None | F | 47.84% | 2.52% | 324
+achilles | Achilles | None | — | 0.00% | 0.01% | 1
+agni | Agni | Combustion | — | 51.28% | 0.30% | 39
+agni | Agni | None | — | 100.00% | 0.02% | 2
+ah-puch | Ah Puch | The Death March | — | 100.00% | 0.01% | 1
+aladdin | Aladdin | None | — | 25.00% | 0.03% | 4
+amaterasu | Amaterasu | None | — | 75.00% | 0.03% | 4
+aphrodite | Aphrodite | Heartbreak | — | 25.00% | 0.03% | 4
+apollo | Apollo | Harmony | — | 40.00% | 0.04% | 5
+ares | Ares | Reverberation | — | 100.00% | 0.01% | 1
+ares | Ares | None | — | 0.00% | 0.01% | 1
+artemis | Artemis | The Wild | — | 42.86% | 0.38% | 49
+artio | Artio | The Denmother | — | 0.00% | 0.01% | 1
+atlas | Atlas | None | — | 50.00% | 0.06% | 8
+bacchus | Bacchus | Revelry | — | 33.33% | 0.02% | 3
+bacchus | Bacchus | None | — | 0.00% | 0.01% | 1
+bastet | Bastet | None | — | 100.00% | 0.01% | 1
+bellona | Bellona | None | — | 40.00% | 0.08% | 10
+cerberus | Cerberus | None | — | 100.00% | 0.01% | 1
+cernunnos | Cernunnos | Strife | — | 40.00% | 0.12% | 15
+chaac | Chaac | None | — | 100.00% | 0.01% | 1
+charon | Charon | None | — | 66.67% | 0.02% | 3
+chiron | Chiron | The Heroic Tutor | — | 55.56% | 0.07% | 9
+cu-chulainn | Cu Chulainn | The Warped | — | 33.33% | 0.05% | 6
+cupid | Cupid | Love | — | 100.00% | 0.02% | 2
+da-ji | Da Ji | Ferocity | — | 0.00% | 0.01% | 1
+da-ji | Da Ji | None | — | 66.67% | 0.02% | 3
+danzaburou | Danzaburou | Fellowship | — | 57.14% | 0.05% | 7
+discordia | Discordia | The Gilded Victor | — | 35.48% | 0.24% | 31
+eset | Eset | The Lifewarden | — | 0.00% | 0.01% | 1
+eset | Eset | None | — | 57.14% | 0.05% | 7
+geb | Geb | Calamity | — | 44.44% | 0.07% | 9
+geb | Geb | None | — | 100.00% | 0.01% | 1
+guan-yu | Guan Yu | The General | — | 100.00% | 0.01% | 1
+guan-yu | Guan Yu | None | — | 50.00% | 0.02% | 2
+hachiman | Hachiman | The Steel Wind | — | 53.49% | 0.33% | 43
+hades | Hades | None | — | 100.00% | 0.01% | 1
+hecate | Hecate | None | — | 100.00% | 0.01% | 1
+hel | Hel | Divergence | — | 14.29% | 0.05% | 7
+hel | Hel | None | — | 66.67% | 0.07% | 9
+hou-yi | Hou Yi | The Mark | — | 50.00% | 0.59% | 76
+hua-mulan | Hua Mulan | None | — | 0.00% | 0.01% | 1
+ishtar | Ishtar | The Passionate Storm | — | 58.23% | 0.61% | 79
+ix-chel | Ix Chel | None | — | 0.00% | 0.02% | 3
+janus | Janus | None | — | 100.00% | 0.02% | 2
+kali | Kali | Unbound Destruction | — | 58.06% | 0.48% | 62
+kukulkan | Kukulkan | None | — | 55.56% | 0.07% | 9
+kuzenbo | Kuzenbo | Spirits | — | 0.00% | 0.01% | 1
+kuzenbo | Kuzenbo | None | — | 0.00% | 0.01% | 1
+loki | Loki | None | — | 16.67% | 0.05% | 6
+mercury | Mercury | None | — | 100.00% | 0.02% | 2
+merlin | Merlin | None | — | 85.71% | 0.05% | 7
+morgan-le-fay | Morgan Le Fay | None | — | 50.00% | 0.03% | 4
+neith | Neith | None | — | 56.60% | 0.41% | 53
+ne-zha | Ne Zha | Righteous Flame | — | 100.00% | 0.01% | 1
+ne-zha | Ne Zha | None | — | 66.67% | 0.02% | 3
+nike | Nike | Victorious Conquest | — | 58.33% | 0.09% | 12
+nike | Nike | None | — | 0.00% | 0.01% | 1
+nox | Nox | Silent Night | — | 0.00% | 0.02% | 3
+nox | Nox | None | — | 20.00% | 0.04% | 5
+nut | Nut | The Cosmos | — | 72.73% | 0.09% | 11
+nu-wa | Nu Wa | Shining Mist | — | 35.71% | 0.11% | 14
+nu-wa | Nu Wa | None | — | 75.00% | 0.03% | 4
+pele | Pele | None | — | 33.33% | 0.02% | 3
+poseidon | Poseidon | The Trident | — | 56.60% | 0.41% | 53
+poseidon | Poseidon | None | — | 41.67% | 0.09% | 12
+princess-bari | Princess Bari | None | — | 49.18% | 0.47% | 61
+ra | Ra | None | — | 57.14% | 0.05% | 7
+rama | Rama | Precision | — | 36.36% | 0.09% | 11
+ratatoskr | Ratatoskr | The Thickbark | — | 0.00% | 0.01% | 1
+ratatoskr | Ratatoskr | None | — | 0.00% | 0.01% | 1
+ravana | Ravana | The Rakshasa King | — | 0.00% | 0.02% | 2
+scylla | Scylla | The Devourer | — | 25.00% | 0.03% | 4
+scylla | Scylla | None | — | 50.00% | 0.02% | 2
+sobek | Sobek | Prey | — | 100.00% | 0.01% | 1
+sol | Sol | Conflagration | — | 72.73% | 0.09% | 11
+susano | Susano | The Storm Front | — | 100.00% | 0.01% | 1
+susano | Susano | None | — | 50.00% | 0.02% | 2
+sylvanus | Sylvanus | Grover's Wrath | — | 66.67% | 0.09% | 12
+thanatos | Thanatos | None | — | 100.00% | 0.01% | 1
+the-morrigan | The Morrigan | Mischief | — | 56.00% | 0.19% | 25
+the-morrigan | The Morrigan | None | — | 40.74% | 0.21% | 27
+thor | Thor | None | — | 100.00% | 0.02% | 2
+tsukuyomi | Tsukuyomi | None | — | 62.50% | 0.06% | 8
+vulcan | Vulcan | Fortification | — | 50.00% | 0.02% | 2
+vulcan | Vulcan | None | — | 30.77% | 0.10% | 13
+xbalanque | Xbalanque | The Nightstalker | — | 53.33% | 0.12% | 15
+xing-tian | Xing Tian | None | — | 0.00% | 0.02% | 2
+yemoja | Yemoja | Downpour | — | 100.00% | 0.02% | 2
+yemoja | Yemoja | None | — | 100.00% | 0.01% | 1
+ymir | Ymir | None | — | 0.00% | 0.01% | 1
+zeus | Zeus | None | — | 50.00% | 0.75% | 96
+#DEUSES
+## artemis carry none | 588 | 62.1 | 2 semanas
+A: None
+R: Purification Beads 61.2 61; Aegis of Acceleration 34.9 65; Agility Relic 3.1 67; Phantom Shell 0.7 25; Blink Rune 0.2 100
+ST: Sharpshooter's Arrow 36.7 66; Hunter's Cowl 22.4 70; Death's Embrace 15.1 60; Gilded Arrow 11.9 49; Leather Cowl 8.3 51; Death's Toll 4.4 65; War Banner 0.5 33; War Flag 0.2 100; Bluestone Pendant 0.2 0; Sands of Time 0.2 0
+S1: Devourer's Gauntlet 60.4 63; Tyrfing 33.5 64; Avenging Blade 2.7 38; Sun Beam Bow 1 50; Dominance 0.7 75; Transcendence 0.5 67; Jotunn's Revenge 0.3 0; Berserker's Shield 0.2 0; Silverbranch Bow 0.2 0; Odysseus' Bow 0.2 100; Hastened Fatalis 0.2 100; Rage 0.2 100
+S2: Dagger of Frenzy 44.2 63; Odysseus' Bow 20.1 65; Sun Beam Bow 9.2 61; Tyrfing 8.5 56; Berserker's Shield 3.4 75; Dominance 2.9 59; Avenging Blade 1.9 45; Hastened Fatalis 1.5 78; Toxic Blade 1.4 63; Riptalon 1.2 43; The Executioner 1.2 29; Tekko-Kagi 1 83; Lernaean Bow 0.7 75; Rage 0.7 25; Blinking Abyss 0.3 100; Hydra's Lament 0.3 0; Demon Blade 0.3 0; Pendulum Blade 0.2 0; Qin's Blade 0.2 0; The Reaper 0.2 100; Silverbranch Bow 0.2 0; Shogun's Ofuda 0.2 100; Devourer's Gauntlet 0.2 100; Talisman of Purification 0.2 100
+S3: Dominance 22.1 63; The Executioner 19 61; Riptalon 13.1 61; Odysseus' Bow 12.8 63; Silverbranch Bow 8.3 63; Dagger of Frenzy 5.4 41; Hastened Fatalis 4.4 58; Sun Beam Bow 2.6 80; Berserker's Shield 2.6 80; Toxic Blade 2 67; Tyrfing 1.4 75; Musashi's Dual Swords 1.2 86; Deathbringer 1 67; Demon Blade 0.9 80; Rage 0.9 40; Qin's Blade 0.7 75; Tekko-Kagi 0.3 100; Hydra's Lament 0.2 0; Pendulum Blade 0.2 0; Shogun's Ofuda 0.2 100; Bragi's Harp 0.2 100; The Reaper 0.2 0; Talisman of Purification 0.2 100; Avenging Blade 0.2 0; Blinking Abyss 0.2 0
+S4: Silverbranch Bow 27.7 65; The Executioner 20.1 60; Riptalon 16.3 60; Dominance 8.7 53; Odysseus' Bow 6.6 62; Deathbringer 4.1 67; Hastened Fatalis 2.7 75; Berserker's Shield 1.9 64; Qin's Blade 1.7 70; Toxic Blade 1.7 60; Demon Blade 1.2 57; Manchu Bow 1.2 57; Hunter's Bow 0.7 100; Shogun's Ofuda 0.7 75; Musashi's Dual Swords 0.7 25; Bow 0.7 100; Dagger of Frenzy 0.5 100; Sun Beam Bow 0.5 67; Avenging Blade 0.3 50; The Crusher 0.3 0; Rage 0.3 50; Survivor's Sash 0.3 50; Blinking Abyss 0.2 0; Lernaean Bow 0.2 100; Xibalban Effigy 0.2 100; Shell of Rebuke 0.2 0; Skeggox 0.2 0; Bloodforge 0.2 100
+S5: Riptalon 18.5 75; Silverbranch Bow 16.3 60; The Executioner 10.7 54; Deathbringer 8.3 57; Hunter's Bow 5.8 62; Dominance 4.8 61; Bow 4.3 56; Manchu Bow 4.1 54; Odysseus' Bow 3.6 67; Hastened Fatalis 3.6 81; Qin's Blade 2.6 47; Cursed Sickle 1.7 50; Demon Blade 1.5 56; Axe 1.5 67; Survivor's Sash 1.4 63; Musashi's Dual Swords 1.2 86; Skeggox 1 50; Avenging Blade 1 67; Toxic Blade 1 50; Kopesh 1 17; Blinking Abyss 0.9 40; Berserker's Shield 0.9 60; Dagger of Frenzy 0.7 100; Shogun's Ofuda 0.5 67; Xibalban Effigy 0.5 33; Sun Beam Bow 0.5 67; Infused Axe 0.3 0; Lucerne Hammer 0.3 0; Gluttonous Grimoire 0.2 100; Breastplate of Valor 0.2 100; Bragi's Harp 0.2 100; Olmec Blue 0.2 0; Hussar's Wings 0.2 100; Bloodforge 0.2 100; Scythe 0.2 100; Talisman of Purification 0.2 100; Avatar's Parashu 0.2 100
+S6: Hunter's Bow 9.7 49; Manchu Bow 6.5 63; Silverbranch Bow 6.3 57; Riptalon 5.8 59; The Executioner 5.8 79; Deathbringer 5.1 67; Bow 3.1 61; Survivor's Sash 2.9 76; Axe 2.6 47; Blinking Abyss 2.6 80; Dominance 2.4 79; Qin's Blade 2.2 62; Odysseus' Bow 2 58; Hastened Fatalis 2 83; Kopesh 1.5 78; Skeggox 1.5 56; Infused Axe 1.2 57; Demon Blade 1 50; Berserker's Shield 0.9 80; Toxic Blade 0.9 80; Talisman of Purification 0.7 75; Mote of Chaos 0.5 67; Dagger of Frenzy 0.5 67; Avatar's Parashu 0.5 100; Cursed Sickle 0.5 0; Void Shard 0.5 0; Time-lock Aegis 0.5 67; Tyrfing 0.3 50; Musashi's Dual Swords 0.3 0; Medallion 0.3 50; Sabre 0.3 50; Titan's Bane 0.3 100; Magi's Cloak 0.3 50; Shogun's Ofuda 0.2 100; Olmec Blue 0.2 0; Scythe 0.2 100; Mantle of Discord 0.2 100; Avenging Blade 0.2 100; Circlet 0.2 100; Lernaean Bow 0.2 100; Bragi's Harp 0.2 0
+## artemis carry aspect-of-the-wild | 53 | 49.1 | 2 semanas
+A: Aspect of the Wild
+R: Aegis of Acceleration 66 40; Purification Beads 28.3 60; Agility Relic 5.7 100
+ST: Death's Embrace 28.3 80; Hunter's Cowl 26.4 43; Sharpshooter's Arrow 20.8 27; Leather Cowl 9.4 20; Bluestone Brooch 5.7 67; Gilded Arrow 3.8 0; Death's Toll 3.8 100; Pendulum of The Ages 1.9 0
+S1: Devourer's Gauntlet 58.5 35; Avenging Blade 18.9 70; Jotunn's Revenge 5.7 67; Tyrfing 5.7 33; Daybreak Gavel 5.7 100; The Reaper 1.9 0; Golden Blade 1.9 100; Berserker's Shield 1.9 100
+S2: Sun Beam Bow 30.2 31; Dagger of Frenzy 15.1 50; Transcendence 9.4 60; The Executioner 7.5 25; Dominance 7.5 25; Tyrfing 5.7 100; The Reaper 3.8 50; Odysseus' Bow 3.8 100; Berserker's Shield 3.8 50; Devourer's Gauntlet 3.8 100; Avenging Blade 3.8 100; Jotunn's Revenge 1.9 0; Riptalon 1.9 100; Vital Amplifier 1.9 0
+S3: Xibalban Effigy 24.5 31; Dominance 15.1 50; Sun Beam Bow 9.4 40; The Executioner 7.5 75; Odysseus' Bow 7.5 25; Dagger of Frenzy 5.7 100; Barbed Carver 3.8 50; Berserker's Shield 3.8 50; Tekko-Kagi 3.8 100; Hastened Fatalis 3.8 100; Riptalon 3.8 0; Heartseeker 1.9 0; Toxic Blade 1.9 100; Rage 1.9 100; Tyrfing 1.9 0; The Crusher 1.9 100; Demon Blade 1.9 0
+S4: Dominance 22.6 33; Xibalban Effigy 15.1 25; Odysseus' Bow 7.5 75; The Executioner 7.5 25; Silverbranch Bow 7.5 50; Hastened Fatalis 5.7 100; Sun Beam Bow 5.7 100; Heartseeker 3.8 50; Deathbringer 3.8 50; Dagger of Frenzy 3.8 100; Riptalon 3.8 50; Titan's Bane 1.9 100; Barbed Carver 1.9 0; Tyrfing 1.9 100; Shogun's Ofuda 1.9 100; Avatar's Parashu 1.9 0; Qin's Blade 1.9 0; Gauntlet of Thebes 1.9 0
+S5: Riptalon 17 33; Silverbranch Bow 11.3 50; The Executioner 9.4 80; Dominance 7.5 25; Manchu Bow 5.7 33; Sun Beam Bow 5.7 100; Odysseus' Bow 3.8 50; Avatar's Parashu 3.8 50; Demon Blade 3.8 0; Deathbringer 3.8 0; Gauntlet of Thebes 3.8 50; Hussar's Wings 3.8 50; The Crusher 1.9 0; Heartseeker 1.9 100; Titan's Bane 1.9 0; Stampede 1.9 100; Transcendence 1.9 100; Tekko-Kagi 1.9 100; Tyrfing 1.9 100; Skeggox 1.9 100; Dagger of Frenzy 1.9 0; Xibalban Effigy 1.9 100; Bow 1.9 0
+S6: Avatar's Parashu 11.3 50; Blinking Abyss 7.5 50; Qin's Blade 7.5 100; Skeggox 7.5 25; Riptalon 5.7 0; Manchu Bow 5.7 0; The Executioner 3.8 100; Mote of Chaos 3.8 0; Silverbranch Bow 3.8 100; Survivor's Sash 3.8 100; Axe 3.8 100; Hussar's Wings 3.8 50; Titan's Bane 1.9 0; Stalwart Sigil 1.9 100; Deathbringer 1.9 0; Shell of Rebuke 1.9 100; Bow 1.9 0; Tyrfing 1.9 0; Infused Axe 1.9 0; Gauntlet of Thebes 1.9 0; Kopesh 1.9 0; Odysseus' Bow 1.9 100
+## cupid carry none | 662 | 61.2 | 2 semanas
+A: None
+R: Purification Beads 69.8 61; Aegis of Acceleration 29.5 62; Agility Relic 0.5 100; Phantom Shell 0.3 100
+ST: Sharpshooter's Arrow 32.3 62; Hunter's Cowl 29.5 73; Leather Cowl 12.2 54; Death's Embrace 12.2 53; Gilded Arrow 9.1 43; Death's Toll 4.2 57; Bluestone Brooch 0.3 50; Archmage's Gem 0.2 0
+S1: Devourer's Gauntlet 68.3 61; Tyrfing 25.1 63; Avenging Blade 3.8 56; Transcendence 0.8 40; Sun Beam Bow 0.8 60; Bragi's Harp 0.6 75; Odysseus' Bow 0.3 50; Axe 0.2 100; Riptalon 0.2 100; Bloodforge 0.2 0
+S2: Dagger of Frenzy 47.7 61; Odysseus' Bow 14.7 69; Tyrfing 11.5 71; Sun Beam Bow 7.4 51; Berserker's Shield 5.4 56; Bragi's Harp 4.8 63; Riptalon 1.4 22; Vital Amplifier 1.4 56; Dominance 1.4 44; The Executioner 0.8 60; Toxic Blade 0.6 25; Avenging Blade 0.6 50; Silverbranch Bow 0.5 33; Devourer's Gauntlet 0.5 67; Shogun's Ofuda 0.3 50; Musashi's Dual Swords 0.2 100; Book of Thoth 0.2 0; Blinking Abyss 0.2 100; Hydra's Lament 0.2 0; Daybreak Gavel 0.2 0; Demon Blade 0.2 100; Rage 0.2 0; Bracer of The Abyss 0.2 100
+S3: The Executioner 23.9 57; Dominance 18.7 57; Odysseus' Bow 16.5 70; Riptalon 13.3 60; Dagger of Frenzy 8 58; Silverbranch Bow 5.6 73; Hastened Fatalis 2.4 75; Tyrfing 2.1 64; Bragi's Harp 2 77; Berserker's Shield 2 31; Toxic Blade 1.4 78; Sun Beam Bow 0.9 17; Vital Amplifier 0.8 80; Bracer of The Abyss 0.5 67; Tekko-Kagi 0.3 50; Qin's Blade 0.3 100; Rage 0.3 50; Musashi's Dual Swords 0.3 50; Deathbringer 0.3 0; Lernaean Bow 0.2 0; The Crusher 0.2 100; Avenging Blade 0.2 100; Demon Blade 0.2 100
+S4: Riptalon 22.5 64; The Executioner 22.1 62; Silverbranch Bow 20.4 64; Dominance 13 60; Odysseus' Bow 6 55; Deathbringer 2.7 44; Qin's Blade 2.3 73; Sun Beam Bow 1.8 67; Toxic Blade 1.2 75; Berserker's Shield 1.1 43; Demon Blade 1.1 57; Tyrfing 0.6 75; Hunter's Bow 0.6 25; Bragi's Harp 0.5 100; Bow 0.5 67; Hastened Fatalis 0.5 67; Musashi's Dual Swords 0.5 33; Blinking Abyss 0.3 0; Dagger of Frenzy 0.3 50; Time-lock Aegis 0.3 50; Bloodforge 0.2 100; Titan's Bane 0.2 0; Arondight 0.2 0; Bracer of The Abyss 0.2 100; Tekko-Kagi 0.2 100; Survivor's Sash 0.2 0; Avatar's Parashu 0.2 0; Manchu Bow 0.2 100; Axe 0.2 0; Gauntlet of Thebes 0.2 0; Avenging Blade 0.2 0; Talisman of Purification 0.2 0; Devourer's Gauntlet 0.2 0
+S5: Silverbranch Bow 24.5 65; The Executioner 12.8 73; Riptalon 11.9 63; Deathbringer 7.7 67; Dominance 7.4 57; Hunter's Bow 4.4 52; Qin's Blade 3.9 42; Manchu Bow 3.6 33; Odysseus' Bow 3.6 63; Bow 3.6 71; Toxic Blade 2 69; Demon Blade 1.4 56; Cursed Sickle 1.2 38; Musashi's Dual Swords 1.1 43; Survivor's Sash 1.1 86; Kopesh 0.9 67; Titan's Bane 0.8 40; Skeggox 0.8 0; Avenging Blade 0.8 40; Hastened Fatalis 0.6 75; Dagger of Frenzy 0.6 100; Tekko-Kagi 0.6 50; Bragi's Harp 0.6 50; Berserker's Shield 0.5 100; Blinking Abyss 0.3 50; Infused Axe 0.3 100; Magi's Cloak 0.3 50; Time-lock Aegis 0.3 0; Axe 0.3 50; Lernaean Bow 0.3 50; Sun Beam Bow 0.3 0; Tyrfing 0.3 100; Scythe 0.2 100; Mantle of Discord 0.2 0; The Reaper 0.2 0; Bloodforge 0.2 0; Avatar's Parashu 0.2 0; Barbed Carver 0.2 100; Talisman of Purification 0.2 100; Battle Axe 0.2 100; Shogun's Ofuda 0.2 0
+S6: Manchu Bow 8 55; Hunter's Bow 7.6 52; Riptalon 7.4 73; Deathbringer 6.5 72; Silverbranch Bow 5.9 69; Bow 5.1 56; Odysseus' Bow 4.2 68; The Executioner 4.1 70; Qin's Blade 3 70; Dominance 2.6 65; Skeggox 2 54; Kopesh 1.8 33; Infused Axe 1.7 64; Survivor's Sash 1.5 80; Time-lock Aegis 1.4 44; Demon Blade 1.4 78; Axe 1.4 44; Blinking Abyss 1.2 100; Talisman of Purification 1.1 71; Toxic Blade 1.1 57; Titan's Bane 1.1 86; Cursed Sickle 0.9 67; Berserker's Shield 0.8 80; Mote of Chaos 0.6 50; Musashi's Dual Swords 0.6 75; Hastened Fatalis 0.5 33; Lucerne Hammer 0.3 100; Sun Beam Bow 0.3 100; Dagger of Frenzy 0.3 50; Medallion 0.3 50; Hooked Sword 0.3 50; Void Shard 0.3 0; Bragi's Harp 0.2 0; Sabre 0.2 100; Olmec Blue 0.2 0; Heartseeker 0.2 0; Avatar's Parashu 0.2 0; Avenging Blade 0.2 0; Scythe 0.2 0; Lernaean Bow 0.2 100; Adamantine Sickle 0.2 100; Engraved Guard 0.2 0
+## cupid carry aspect-of-love | 2 | 100 | 2 semanas
+A: Aspect of Love
+R: Purification Beads 50 100; Aegis of Acceleration 50 100
+ST: Sharpshooter's Arrow 100 100
+S1: Devourer's Gauntlet 100 100
+S2: Dagger of Frenzy 100 100
+S3: The Executioner 100 100
+S4: Riptalon 50 100; Silverbranch Bow 50 100
+S5: Silverbranch Bow 50 100; Kopesh 50 100
+S6: Axe 50 100
+## izanami carry none | 443 | 60.5 | 2 semanas
+A: None
+R: Purification Beads 69.3 59; Aegis of Acceleration 29.1 62; Agility Relic 1.1 80; Blink Rune 0.2 100; Phantom Shell 0.2 100
+ST: Sharpshooter's Arrow 49.7 66; Hunter's Cowl 19.9 59; Gilded Arrow 15.6 58; Leather Cowl 7.9 60; Death's Embrace 5.2 35; Death's Toll 1.8 25
+S1: Devourer's Gauntlet 69.1 62; Tyrfing 26 55; Avenging Blade 1.8 50; Bragi's Harp 1.8 50; Sun Beam Bow 0.5 100; Dagger of Frenzy 0.5 100; Lernaean Bow 0.2 100; Bloodforge 0.2 100
+S2: Dagger of Frenzy 50.6 63; Tyrfing 14.4 56; Odysseus' Bow 12.9 56; Riptalon 3.6 63; Dominance 2.9 69; Berserker's Shield 2.5 45; Bragi's Harp 2.5 36; Hastened Fatalis 2 89; Rage 1.6 71; Sun Beam Bow 1.6 29; Toxic Blade 1.4 50; The Executioner 0.9 50; Devourer's Gauntlet 0.9 75; Tekko-Kagi 0.7 67; Avenging Blade 0.7 67; Transcendence 0.2 100; Silverbranch Bow 0.2 100; Demon Blade 0.2 100; Pharaoh's Curse 0.2 100
+S3: The Executioner 22.3 63; Dominance 18.1 66; Odysseus' Bow 13.3 61; Riptalon 11.3 62; Silverbranch Bow 10.4 57; Dagger of Frenzy 8.1 64; Hastened Fatalis 4.5 35; Tyrfing 3.2 79; Qin's Blade 1.6 86; Berserker's Shield 1.4 67; Toxic Blade 1.4 67; Sun Beam Bow 0.9 0; Bragi's Harp 0.9 0; Musashi's Dual Swords 0.9 25; Rage 0.7 0; Deathbringer 0.5 100; Tekko-Kagi 0.2 100; Survivor's Sash 0.2 0; Demon Blade 0.2 100
+S4: Silverbranch Bow 33.9 58; Riptalon 18.3 60; The Executioner 16.5 63; Dominance 9.3 59; Odysseus' Bow 5.6 72; Deathbringer 3.2 64; Hunter's Bow 2.3 70; Demon Blade 1.6 86; Dagger of Frenzy 1.6 29; Hastened Fatalis 1.4 33; Qin's Blade 1.4 50; Toxic Blade 0.9 75; Tyrfing 0.7 33; Survivor's Sash 0.7 67; Bow 0.7 100; Bragi's Harp 0.7 67; Scythe 0.2 100; Talisman of Purification 0.2 100; Kopesh 0.2 0; The Reaper 0.2 0; Medal of Disruption 0.2 100; Cursed Sickle 0.2 100; Musashi's Dual Swords 0.2 0
+S5: Silverbranch Bow 17.2 67; Deathbringer 14.9 68; The Executioner 13.8 54; Riptalon 12.4 58; Odysseus' Bow 5.6 56; Dominance 4.7 57; Qin's Blade 3.8 76; Hunter's Bow 3.8 47; Manchu Bow 3.4 47; Demon Blade 2.7 67; Cursed Sickle 2.5 82; Hastened Fatalis 1.8 63; Axe 1.4 33; Skeggox 1.1 20; Dagger of Frenzy 0.9 25; Berserker's Shield 0.9 50; Bow 0.9 100; Kopesh 0.9 75; Avatar's Parashu 0.9 75; Toxic Blade 0.9 0; Infused Axe 0.7 67; Musashi's Dual Swords 0.7 67; Titan's Bane 0.7 67; Blinking Abyss 0.7 67; Tyrfing 0.5 100; Sun Beam Bow 0.5 0; Time-lock Aegis 0.5 100; Avenging Blade 0.2 100; Survivor's Sash 0.2 100; Barbed Carver 0.2 0; Jotunn's Revenge 0.2 0; Mantle of Discord 0.2 100; Talisman of Purification 0.2 0
+S6: Silverbranch Bow 8.8 72; Riptalon 8.1 61; Deathbringer 7.4 76; Hunter's Bow 6.8 57; Manchu Bow 6.1 44; The Executioner 5 41; Bow 3.6 56; Dominance 2.9 92; Axe 2.9 54; Skeggox 2.9 85; Qin's Blade 2.7 50; Berserker's Shield 2.3 70; Infused Axe 1.8 50; Time-lock Aegis 1.8 63; Odysseus' Bow 1.8 25; Hastened Fatalis 1.4 50; Kopesh 1.4 67; Musashi's Dual Swords 1.4 50; Blinking Abyss 0.9 100; Toxic Blade 0.7 33; Magi's Cloak 0.7 100; Survivor's Sash 0.7 67; Cursed Sickle 0.7 33; Titan's Bane 0.7 67; Demon Blade 0.5 50; Talisman of Purification 0.5 100; Mote of Chaos 0.5 100; Shogun's Ofuda 0.5 100; The Reaper 0.2 100; Sun Beam Bow 0.2 0; Avenging Blade 0.2 100; Avatar's Parashu 0.2 0; Medal of Disruption 0.2 100; Olmec Blue 0.2 0
+## izanami carry aspect-of-the-sickle | 137 | 59.9 | fim
+A: Aspect of the Sickle
+R: Purification Beads 75.9 63; Aegis of Acceleration 24.1 52
+ST: Archmage's Gem 37.2 67; Pendulum of The Ages 28.5 46; Hunter's Cowl 10.2 79; Bluestone Brooch 7.3 60; Conduit Gem 4.4 50; Sands of Time 2.9 75; Leather Cowl 2.9 50; Sharpshooter's Arrow 2.9 100; Death's Toll 2.2 33; Gilded Arrow 1.5 0
+S1: Book of Thoth 20.4 71; Ancient Signet 19 58; Spear of Desolation 16.8 61; The Cosmic Horror 11.7 56; Tyrfing 8.8 67; Chronos' Pendant 7.3 40; Bragi's Harp 3.6 80; Bracer of The Abyss 2.9 25; Devourer's Gauntlet 2.2 67; Nimble Ring 1.5 50; The World Stone 1.5 50; Bancroft's Talon 0.7 100; Rod of Tahuti 0.7 0; Soul Gem 0.7 0; Blood-Bound Book 0.7 100; Doom Orb 0.7 100; Gem of Focus 0.7 0
+S2: Spear of Desolation 21.9 63; Chronos' Pendant 18.2 56; Bragi's Harp 9.5 69; Totem of Death 8.8 50; The World Stone 8 55; Ancient Signet 6.6 56; Book of Thoth 4.4 67; Tyrfing 3.6 80; Bracer of The Abyss 2.9 50; Polynomicon 2.9 50; The Cosmic Horror 2.2 67; Soul Gem 2.2 67; Damaru 2.2 67; Nimble Ring 1.5 50; Rod of Tahuti 1.5 50; Ancile 0.7 0; Omen Drum 0.7 100; Gem of Focus 0.7 100; Dagger of Frenzy 0.7 0; Spear Of The Magus 0.7 100
+S3: Rod of Tahuti 19 62; Spear of Desolation 10.2 57; The World Stone 8 82; Bracer of The Abyss 7.3 50; Polynomicon 6.6 56; Spear Of The Magus 6.6 44; Riptalon 5.8 63; Soul Gem 5.1 57; Omen Drum 5.1 29; Damaru 4.4 67; Ancient Signet 3.6 40; Totem of Death 2.9 100; Chronos' Pendant 2.2 33; Hastened Fatalis 2.2 100; Nimble Ring 2.2 100; Book of Thoth 2.2 67; Typhon's Heart 0.7 100; The Executioner 0.7 0; Dwarven Plate 0.7 0; The Cosmic Horror 0.7 0; Bragi's Harp 0.7 100; Dominance 0.7 100; Obsidian Shard 0.7 0; Tyrfing 0.7 100; Soul Reaver 0.7 100
+S4: Rod of Tahuti 25.5 57; Nimble Ring 9.5 85; Spear Of The Magus 9.5 69; Obsidian Shard 6.6 78; Polynomicon 5.1 57; Omen Drum 4.4 67; The Executioner 3.6 60; Spear of Desolation 3.6 60; Totem of Death 2.9 25; Damaru 2.9 50; Riptalon 2.9 75; Bracer of The Abyss 2.9 75; The World Stone 2.2 67; Soul Reaver 2.2 0; Soul Gem 2.2 33; Silverbranch Bow 1.5 50; Hastened Fatalis 1.5 50; Staff of Myrddin 1.5 0; Ancient Signet 0.7 100; Odysseus' Bow 0.7 100; Sphere of Negation 0.7 0; Gem of Focus 0.7 0; Dreamer's Idol 0.7 0; The Cosmic Horror 0.7 100; Bragi's Harp 0.7 0; Gluttonous Grimoire 0.7 100; Evil Eye 0.7 0; Tekko-Kagi 0.7 100; Hunter's Bow 0.7 0; Bow 0.7 100; Dominance 0.7 100
+S5: Rod of Tahuti 24.1 76; Obsidian Shard 16.8 57; Spear Of The Magus 8.8 33; Nimble Ring 8 82; The Executioner 3.6 80; Evil Eye 3.6 0; Manchu Bow 2.9 50; Dominance 2.9 75; Dreamer's Idol 2.2 33; Polynomicon 2.2 33; Divine Ruin 2.2 0; Void Shard 2.2 33; Silverbranch Bow 2.2 100; Gem 1.5 50; Ring of Dispel 1.5 100; Soul Gem 1.5 100; Soul Reaver 1.5 50; Bracer of The Abyss 1.5 100; Blinking Abyss 1.5 50; Genji's Guard 0.7 0; Gluttonous Grimoire 0.7 100; Time-lock Aegis 0.7 0; Omen Drum 0.7 0; Berserker's Shield 0.7 100; Odysseus' Bow 0.7 0; Damaru 0.7 100; Totem of Death 0.7 100; Titan's Bane 0.7 100; Riptalon 0.7 100; Spear of Desolation 0.7 100; Cursed Sickle 0.7 0; Survivor's Sash 0.7 0
+S6: Obsidian Shard 7.3 70; Evil Eye 7.3 30; Blinking Abyss 4.4 17; Dreamer's Idol 3.6 100; Spear Of The Magus 3.6 60; Soul Reaver 3.6 40; Polynomicon 2.9 50; Killing Stone 2.9 50; Divine Ruin 2.2 67; Rod of Tahuti 2.2 67; Enchanted Bracelet 2.2 67; Gem 2.2 33; Mote of Chaos 2.2 33; Odysseus' Bow 2.2 100; Staff of Myrddin 2.2 67; Bancroft's Talon 2.2 100; Time-lock Aegis 1.5 100; Nimble Ring 1.5 0; The World Stone 1.5 100; Hunter's Bow 1.5 50; Omen Drum 1.5 50; Bow 1.5 0; Soul Gem 1.5 100; Void Shard 1.5 100; Chronos' Pendant 0.7 100; Bragi's Harp 0.7 0; Doom Orb 0.7 100; Spear of Desolation 0.7 0; Magi's Cloak 0.7 100; Wish-Granting Pearl 0.7 100; Oracle Staff 0.7 100; The Executioner 0.7 100; Totem of Death 0.7 100; Blood-Bound Book 0.7 100; Talisman of Purification 0.7 0; The Cosmic Horror 0.7 100; Xibalban Effigy 0.7 100; Tekko-Kagi 0.7 0; Manchu Bow 0.7 100; Deathbringer 0.7 100; Hastened Fatalis 0.7 100
+## xbalanque carry none | 606 | 58.4 | 2 semanas
+A: None
+R: Purification Beads 56.4 54; Aegis of Acceleration 30.2 64; Agility Relic 12.9 65; Phantom Shell 0.5 67
+ST: Death's Embrace 69 61; Death's Toll 21.1 53; Sharpshooter's Arrow 5.3 59; Gilded Arrow 2.3 36; Hunter's Cowl 1.3 63; Leather Cowl 0.8 60; War Banner 0.2 100
+S1: Tyrfing 59.6 57; Devourer's Gauntlet 29 59; Transcendence 6.6 68; Avenging Blade 1.3 63; Odysseus' Bow 1 50; Dagger of Frenzy 0.8 100; Berserker's Shield 0.3 0; Riptalon 0.3 100; Sun Beam Bow 0.3 0; Dominance 0.3 0; Bloodforge 0.2 100; Axe 0.2 0
+S2: Odysseus' Bow 30.9 55; Berserker's Shield 18.5 65; Dagger of Frenzy 16.8 58; Tyrfing 9.6 64; Dominance 7.6 50; Bragi's Harp 3.5 57; Transcendence 2.8 59; Riptalon 2 50; The Executioner 1.8 64; Toxic Blade 1.5 100; Silverbranch Bow 1.5 78; Shogun's Ofuda 0.8 40; Rage 0.5 67; Hastened Fatalis 0.3 0; Bracer of The Abyss 0.3 100; Devourer's Gauntlet 0.3 0; Tekko-Kagi 0.2 0; Demon Blade 0.2 0; Time-lock Aegis 0.2 100; Avenging Blade 0.2 100; Leviathan's Hide 0.2 0; Lernaean Bow 0.2 0; Qin's Blade 0.2 0; Sun Beam Bow 0.2 100
+S3: Dominance 22.3 50; Silverbranch Bow 19.8 65; Odysseus' Bow 17.5 64; The Executioner 17.5 59; Riptalon 6.8 46; Dagger of Frenzy 4.1 56; Hastened Fatalis 2.3 57; Tyrfing 1.8 64; Berserker's Shield 1.7 80; Bragi's Harp 1.2 43; Toxic Blade 1.2 71; Bracer of The Abyss 0.8 60; Avenging Blade 0.7 50; Musashi's Dual Swords 0.5 67; Demon Blade 0.3 50; Devourer's Gauntlet 0.3 100; Qin's Blade 0.3 0; Transcendence 0.2 100; Axe 0.2 0; Shogun's Ofuda 0.2 100; Rage 0.2 0; Deathbringer 0.2 0; Tekko-Kagi 0.2 100
+S4: Silverbranch Bow 22.8 60; Dominance 18.2 66; Riptalon 16.2 59; The Executioner 14.4 47; Odysseus' Bow 12.9 69; Toxic Blade 2.6 44; Hastened Fatalis 2.1 62; Qin's Blade 2 58; Deathbringer 1.8 45; Berserker's Shield 1 33; Tyrfing 1 17; Bragi's Harp 0.8 60; Sun Beam Bow 0.8 40; Dagger of Frenzy 0.7 25; Hunter's Bow 0.5 33; Manchu Bow 0.3 50; Talisman of Purification 0.3 100; Demon Blade 0.3 50; Bow 0.2 0; Shell of Rebuke 0.2 0; Lernaean Bow 0.2 100; Draconic Scale 0.2 0; Bracer of The Abyss 0.2 100; Rage 0.2 0; Survivor's Sash 0.2 100; Titan's Bane 0.2 100
+S5: Silverbranch Bow 18.5 63; The Executioner 15 63; Riptalon 15 53; Odysseus' Bow 10.4 67; Dominance 7.3 57; Hunter's Bow 5 50; Manchu Bow 4.6 29; Bow 4 54; Qin's Blade 3.5 57; Hastened Fatalis 2.8 71; Survivor's Sash 1.5 56; Cursed Sickle 1.5 56; Deathbringer 1.5 89; Berserker's Shield 1 33; Dagger of Frenzy 0.8 80; Toxic Blade 0.8 60; Demon Blade 0.8 100; Bragi's Harp 0.8 80; Axe 0.7 100; Tyrfing 0.7 50; Musashi's Dual Swords 0.5 33; Kopesh 0.3 0; Bracer of The Abyss 0.3 100; Infused Axe 0.3 100; Blinking Abyss 0.3 50; Transcendence 0.3 50; Time-lock Aegis 0.2 0; Agility Greaves 0.2 0; Spirit Robe 0.2 0; Shogun's Ofuda 0.2 0; Lucerne Hammer 0.2 0; Void Shard 0.2 0; Sun Beam Bow 0.2 100; Skeggox 0.2 0; Titan's Bane 0.2 0; The Reaper 0.2 0; Avatar's Parashu 0.2 100
+S6: Hunter's Bow 10.4 62; Manchu Bow 9.9 48; Riptalon 8.6 67; The Executioner 8.1 69; Bow 6.9 50; Silverbranch Bow 5.9 50; Odysseus' Bow 4.5 48; Hastened Fatalis 2.6 63; Qin's Blade 2.3 64; Dominance 2 75; Deathbringer 1.7 60; Toxic Blade 1.7 70; Blinking Abyss 1.3 75; Dagger of Frenzy 1.3 75; Cursed Sickle 1.2 57; Survivor's Sash 0.8 60; Mote of Chaos 0.8 40; Axe 0.7 50; Demon Blade 0.7 100; Infused Axe 0.7 75; Avenging Blade 0.5 67; Skeggox 0.5 100; Bragi's Harp 0.5 67; Titan's Bane 0.3 100; Ragnarok's Wake 0.3 100; Mantle of Discord 0.3 100; Scythe 0.3 0; Avatar's Parashu 0.3 100; Shogun's Ofuda 0.3 100; Kopesh 0.3 50; Sun Beam Bow 0.3 50; Circlet 0.3 100; Musashi's Dual Swords 0.3 100; Transcendence 0.2 0; Magi's Cloak 0.2 0; Tyrfing 0.2 0; Time-lock Aegis 0.2 100; The World Stone 0.2 100; Talisman of Purification 0.2 100; Lucerne Hammer 0.2 100; Berserker's Shield 0.2 100; Lernaean Bow 0.2 0; Battle Axe 0.2 0; Agility Greaves 0.2 100; Medal of Disruption 0.2 0; Sabre 0.2 0
+## xbalanque carry aspect-of-the-nightstalker | 14 | 57.1 | 2 semanas
+A: Aspect of the Nightstalker
+R: Purification Beads 64.3 78; Aegis of Acceleration 28.6 25; Blink Rune 7.1 0
+ST: Pendulum of The Ages 57.1 50; Archmage's Gem 28.6 75; Sands of Time 14.3 50
+S1: Spear of Desolation 28.6 75; Book of Thoth 21.4 33; Doom Orb 14.3 100; Transcendence 14.3 50; The Cosmic Horror 7.1 0; Ancient Signet 7.1 100; Spear Of The Magus 7.1 0
+S2: Chronos' Pendant 21.4 100; Rod of Tahuti 14.3 50; The Cosmic Horror 14.3 50; Totem of Death 7.1 0; Doom Orb 7.1 0; Nimble Ring 7.1 0; Spear of Desolation 7.1 100; Staff of Myrddin 7.1 100; Book of Thoth 7.1 0; Jotunn's Revenge 7.1 100
+S3: Spear of Desolation 21.4 67; Blinking Abyss 14.3 50; Omen Drum 14.3 0; Rod of Tahuti 14.3 50; Book of Thoth 7.1 100; Totem of Death 7.1 100; Nimble Ring 7.1 100; Gem of Focus 7.1 0; The Crusher 7.1 100
+S4: Damaru 14.3 0; Rod of Tahuti 14.3 100; Obsidian Shard 14.3 50; Gem of Focus 7.1 0; Helm of Darkness 7.1 100; Staff of Myrddin 7.1 0; Spear Of The Magus 7.1 100; Divine Ruin 7.1 100; Omen Drum 7.1 100; Polynomicon 7.1 0; Heartseeker 7.1 100
+S5: Obsidian Shard 28.6 50; Rod of Tahuti 28.6 50; Gem of Focus 7.1 100; Void Shard 7.1 0; Damaru 7.1 100; Dreamer's Idol 7.1 100; Nimble Ring 7.1 0; Lucerne Hammer 7.1 100
+S6: Evil Eye 21.4 33; Void Shard 14.3 50; Helm of Darkness 7.1 0; Soul Reaver 7.1 100; Adroit Ring 7.1 0; Spear Of The Magus 7.1 100; Rod of Tahuti 7.1 0; Magi's Cloak 7.1 100
+## rama carry none | 610 | 57.5 | 2 semanas
+A: None
+R: Purification Beads 65.4 61; Aegis of Acceleration 33 51; Agility Relic 1.3 63; Blink Rune 0.2 100; Phantom Shell 0.2 100
+ST: Sharpshooter's Arrow 53.4 67; Hunter's Cowl 17.2 50; Gilded Arrow 15.7 46; Death's Embrace 6.1 59; Leather Cowl 5.2 38; Death's Toll 2.1 31; War Banner 0.2 0
+S1: Devourer's Gauntlet 79.8 59; Tyrfing 17.4 54; Avenging Blade 0.8 60; Dagger of Frenzy 0.5 33; Transcendence 0.3 50; Axe 0.3 50; Riptalon 0.3 50; Time-lock Aegis 0.2 100; Sun Beam Bow 0.2 0; Rage 0.2 100
+S2: Dagger of Frenzy 54.1 57; Toxic Blade 11.3 58; Tyrfing 8.9 59; Odysseus' Bow 5.7 60; Dominance 4.3 62; The Executioner 3.3 65; Berserker's Shield 2.5 67; Sun Beam Bow 2.1 54; Riptalon 1.5 44; Avenging Blade 1.3 63; Tekko-Kagi 1 67; Devourer's Gauntlet 0.7 25; Demon Blade 0.5 67; Silverbranch Bow 0.5 0; Hastened Fatalis 0.3 0; Musashi's Dual Swords 0.3 50; Bragi's Harp 0.3 50; Lernaean Bow 0.3 100; Qin's Blade 0.3 50; Shogun's Ofuda 0.2 100; The Reaper 0.2 0; Axe 0.2 0; Rage 0.2 0; Blinking Abyss 0.2 100
+S3: Dominance 36.2 57; The Executioner 14.8 66; Riptalon 12.8 53; Odysseus' Bow 10.3 56; Silverbranch Bow 6.9 57; Dagger of Frenzy 3.8 57; Tyrfing 2.3 50; Qin's Blade 1.8 64; Toxic Blade 1.8 55; Sun Beam Bow 1.6 70; Hastened Fatalis 1.5 56; Berserker's Shield 1.3 25; Demon Blade 1.3 63; Rage 1.1 29; Deathbringer 1 83; Musashi's Dual Swords 0.5 67; Avenging Blade 0.3 100; Hunter's Bow 0.2 100; Bow 0.2 0; Leviathan's Hide 0.2 100; Shogun's Ofuda 0.2 100
+S4: Riptalon 24.6 55; The Executioner 22.6 61; Silverbranch Bow 19.7 53; Dominance 11.1 60; Odysseus' Bow 7.5 63; Deathbringer 3.1 74; Demon Blade 2.5 53; Toxic Blade 1.5 56; Hastened Fatalis 0.8 60; Qin's Blade 0.8 100; Musashi's Dual Swords 0.8 40; Berserker's Shield 0.7 75; Dagger of Frenzy 0.7 75; Bow 0.5 33; Sun Beam Bow 0.5 0; Manchu Bow 0.3 0; Rage 0.3 50; Titan's Bane 0.2 100; Infused Axe 0.2 100; Circlet 0.2 0; Midgardian Mail 0.2 100; Gluttonous Grimoire 0.2 0; Shogun's Ofuda 0.2 0; Blinking Abyss 0.2 0; Avenging Blade 0.2 0; Axe 0.2 100; Hunter's Bow 0.2 100; Tyrfing 0.2 0; Survivor's Sash 0.2 0
+S5: Silverbranch Bow 18.9 66; Riptalon 16.2 65; Deathbringer 12.1 65; The Executioner 9.3 47; Demon Blade 6.6 55; Odysseus' Bow 5.4 58; Dominance 4.4 67; Hunter's Bow 3.1 47; Skeggox 2.8 47; Bow 2.3 50; Qin's Blade 2 58; Kopesh 2 42; Cursed Sickle 2 33; Manchu Bow 1.8 55; Toxic Blade 1.8 64; Berserker's Shield 1.5 33; Hastened Fatalis 1 50; Axe 0.8 60; Musashi's Dual Swords 0.8 60; Blinking Abyss 0.7 50; Infused Axe 0.5 0; Survivor's Sash 0.5 67; Olmec Blue 0.3 0; Titan's Bane 0.3 100; Avatar's Parashu 0.3 100; Tyrfing 0.3 0; Sun Beam Bow 0.3 50; Draconic Scale 0.2 0; Bloodforge 0.2 0; Magi's Cloak 0.2 0; Sabre 0.2 100; Rage 0.2 100; Scythe 0.2 0; Void Shard 0.2 0; Shogun's Ofuda 0.2 100; The Reaper 0.2 0; Avenging Blade 0.2 0; Time-lock Aegis 0.2 0; Hooked Sword 0.2 0
+S6: Hunter's Bow 7.9 50; Riptalon 7.2 68; Deathbringer 7.2 73; Silverbranch Bow 7 56; The Executioner 4.6 50; Odysseus' Bow 4.4 56; Manchu Bow 4.3 77; Bow 4.3 58; Kopesh 3.8 52; Qin's Blade 3.8 52; Skeggox 3 50; Dominance 2 67; Axe 2 58; Time-lock Aegis 1.6 70; Sabre 1.5 78; Infused Axe 1.5 44; Demon Blade 1.5 56; Hastened Fatalis 1.3 50; Berserker's Shield 1 83; Survivor's Sash 1 33; Musashi's Dual Swords 1 67; Titan's Bane 0.7 75; Blinking Abyss 0.5 67; Cursed Sickle 0.5 67; Shogun's Ofuda 0.3 50; Scythe 0.3 50; Talisman of Purification 0.3 50; Toxic Blade 0.3 0; Dagger of Frenzy 0.3 100; Sun Beam Bow 0.2 0; Xibalban Effigy 0.2 0; Hooked Sword 0.2 100; Shell of Rebuke 0.2 0; Mote of Chaos 0.2 100; Tyrfing 0.2 100; Avenging Blade 0.2 100; Medallion 0.2 0; Magi's Cloak 0.2 0; Hussar's Wings 0.2 100; Transcendence 0.2 100; Adamantine Sickle 0.2 100; Hide of the Nemean Lion 0.2 0; Rage 0.2 0; Bloodforge 0.2 100; Avatar's Parashu 0.2 0
+## rama carry aspect-of-precision | 10 | 40 | 2 semanas
+A: Aspect of Precision
+R: Purification Beads 70 29; Aegis of Acceleration 30 67
+ST: Sharpshooter's Arrow 40 50; Hunter's Cowl 40 50; Leather Cowl 10 0; Archmage's Gem 10 0
+S1: Devourer's Gauntlet 70 57; Lernaean Bow 10 0; Dagger of Frenzy 10 0; Transcendence 10 0
+S2: Odysseus' Bow 30 67; Dagger of Frenzy 20 50; Tyrfing 10 0; Jotunn's Revenge 10 0; Rage 10 0; Berserker's Shield 10 0; Dominance 10 100
+S3: Dominance 20 0; Tyrfing 10 100; Deathbringer 10 100; Qin's Blade 10 0; Riptalon 10 100; Hydra's Lament 10 0; Oath-Sworn Spear 10 0; The Executioner 10 0; Rage 10 100
+S4: Deathbringer 20 50; Demon Blade 20 100; The Executioner 20 50; Hastened Fatalis 10 0; Silverbranch Bow 10 0; Avatar's Parashu 10 0; Riptalon 10 0
+S5: Demon Blade 10 100; Qin's Blade 10 100; Dominance 10 0; Hunter's Bow 10 100; Manchu Bow 10 0; Heartseeker 10 0; Titan's Bane 10 0; Talisman of Purification 10 0; Odysseus' Bow 10 0; Riptalon 10 100
+S6: Deathbringer 20 50; Qin's Blade 10 100; The Executioner 10 100; Hunter's Bow 10 100; Manchu Bow 10 0; Infused Axe 10 0; Dominance 10 0
+## neith carry none | 50 | 54 | 2 semanas
+A: None
+R: Purification Beads 58 55; Aegis of Acceleration 42 52
+ST: Archmage's Gem 52 65; Bluestone Brooch 20 60; Conduit Gem 10 0; Pendulum of The Ages 6 33; Sands of Time 4 50; Bluestone Pendant 2 0; Leather Cowl 2 100; Death's Embrace 2 100; Gilded Arrow 2 0
+S1: Book of Thoth 32 50; Transcendence 28 57; Spear of Desolation 12 50; Ancient Signet 10 60; Chronos' Pendant 10 40; Devourer's Gauntlet 4 100; Tyrfing 4 50
+S2: Book of Thoth 24 42; Spear of Desolation 20 40; Chronos' Pendant 12 50; Jotunn's Revenge 8 50; The World Stone 8 75; Ancient Signet 6 33; The Crusher 6 100; Hydra's Lament 4 100; Rod of Tahuti 4 50; Tyrfing 2 100; Soul Gem 2 100; Toxic Blade 2 100; Dagger of Frenzy 2 0
+S3: Spear of Desolation 14 71; Rod of Tahuti 14 71; The World Stone 14 14; Ancient Signet 12 33; Heartseeker 8 100; Soul Gem 6 0; Chronos' Pendant 4 50; Jotunn's Revenge 4 100; The Crusher 4 0; Dreamer's Idol 4 100; Divine Ruin 4 100; Nimble Ring 2 0; Riptalon 2 100; Dagger of Frenzy 2 100; Polynomicon 2 0; Dominance 2 0; Barbed Carver 2 100
+S4: Rod of Tahuti 42 38; Titan's Bane 10 80; Soul Gem 6 33; Chronos' Pendant 4 100; The World Stone 4 100; Divine Ruin 4 50; Ancient Signet 4 50; Dreamer's Idol 4 50; Heartseeker 4 50; The Executioner 2 100; Spear of Desolation 2 100; The Crusher 2 100; Spear Of The Magus 2 100; Staff of Myrddin 2 0; Silverbranch Bow 2 100; Jotunn's Revenge 2 100; Obsidian Shard 2 0; Deathbringer 2 0
+S5: Obsidian Shard 20 50; Rod of Tahuti 12 50; Spear of Desolation 10 60; The World Stone 8 25; Ancient Signet 8 50; Heartseeker 6 67; Dreamer's Idol 6 67; Titan's Bane 6 67; Oath-Sworn Spear 4 100; Silverbranch Bow 2 100; Void Shard 2 0; Soul Reaver 2 0; Ring of Dispel 2 0; Killing Stone 2 100; Qin's Blade 2 100; Evil Eye 2 0; Jotunn's Revenge 2 100; Demon Blade 2 0; Spear Of The Magus 2 100
+S6: Obsidian Shard 12 67; Dreamer's Idol 8 25; The World Stone 6 100; Gem 4 50; Oracle Staff 4 50; Ancient Signet 4 50; Killing Stone 4 50; Void Shard 2 0; Ring of Dispel 2 100; Nimble Ring 2 100; Polynomicon 2 0; Dominance 2 100; Soul Reaver 2 100; Avatar's Parashu 2 100; Gem of Focus 2 100; Rod of Tahuti 2 100; Soul Gem 2 0; Spear of Desolation 2 0; Evil Eye 2 0; Riptalon 2 100; Titan's Bane 2 100; Magi's Cloak 2 0; Skeggox 2 100; Hunter's Bow 2 0; Chronos' Pendant 2 100; Divine Ruin 2 0; Axe 2 100
+## neith carry aspect-of-wind | 170 | 58.8 | 2 semanas
+A: Aspect of Wind
+R: Purification Beads 65.3 56; Aegis of Acceleration 31.2 64; Agility Relic 2.4 75; Phantom Shell 0.6 100; Blink Rune 0.6 0
+ST: Death's Embrace 29.4 68; Sharpshooter's Arrow 23.5 50; Hunter's Cowl 17.6 63; Death's Toll 10.6 61; Leather Cowl 8.8 40; Gilded Arrow 7.6 62; Pendulum of The Ages 1.2 50; Sands of Time 0.6 100; Bluestone Pendant 0.6 0
+S1: Devourer's Gauntlet 47.6 65; Tyrfing 27.6 49; Transcendence 15.3 58; Avenging Blade 3.5 50; Dominance 2.9 60; Bragi's Harp 1.2 50; Sun Beam Bow 0.6 100; Book of Thoth 0.6 0; Lernaean Bow 0.6 100
+S2: Dagger of Frenzy 25.3 67; Odysseus' Bow 19.4 55; Tyrfing 15.9 70; Sun Beam Bow 8.2 43; Dominance 7.6 38; Bragi's Harp 4.7 25; Transcendence 4.1 71; Book of Thoth 2.9 40; Riptalon 2.9 80; Devourer's Gauntlet 1.8 100; Avenging Blade 1.2 100; Mana Tome 1.2 50; Toxic Blade 1.2 50; Hastened Fatalis 1.2 50; Spear of Desolation 0.6 0; Berserker's Shield 0.6 100; Demon Blade 0.6 100; The Executioner 0.6 0
+S3: The Executioner 28.2 63; Odysseus' Bow 25.3 60; Silverbranch Bow 11.2 47; Dominance 10.6 72; Dagger of Frenzy 4.1 43; Sun Beam Bow 4.1 57; Riptalon 2.9 80; Berserker's Shield 2.4 75; Tyrfing 2.4 50; Bracer of The Abyss 1.8 0; Nimble Ring 1.2 0; Toxic Blade 1.2 50; Spear of Desolation 0.6 100; Bragi's Harp 0.6 0; Tekko-Kagi 0.6 100; Musashi's Dual Swords 0.6 0; Demon Blade 0.6 100; Qin's Blade 0.6 0; Transcendence 0.6 100; Ancient Signet 0.6 100
+S4: Silverbranch Bow 30 61; The Executioner 19.4 61; Riptalon 14.7 68; Dominance 8.2 50; Odysseus' Bow 7.1 50; Toxic Blade 2.9 40; Deathbringer 1.8 67; Bow 1.8 67; Hastened Fatalis 1.8 100; Sun Beam Bow 1.2 100; Bracer of The Abyss 1.2 0; Rod of Tahuti 1.2 50; Berserker's Shield 1.2 100; Qin's Blade 1.2 0; Musashi's Dual Swords 1.2 0; Tyrfing 1.2 50; Bragi's Harp 0.6 100; Avatar's Parashu 0.6 100; Nimble Ring 0.6 0; Rage 0.6 0; Manchu Bow 0.6 0; Dagger of Frenzy 0.6 100; Spear of Desolation 0.6 100
+S5: Silverbranch Bow 19.4 64; Riptalon 17.6 60; The Executioner 12.9 68; Dominance 10 59; Manchu Bow 5.3 33; Deathbringer 3.5 67; Odysseus' Bow 2.9 60; Qin's Blade 2.4 25; Hunter's Bow 2.4 75; Bow 2.4 25; Musashi's Dual Swords 2.4 75; Dagger of Frenzy 1.8 33; Rod of Tahuti 1.8 0; Hastened Fatalis 1.8 67; Cursed Sickle 1.8 100; Survivor's Sash 1.8 67; Demon Blade 1.2 100; The World Stone 1.2 100; Blinking Abyss 1.2 50; Bragi's Harp 0.6 0; Skeggox 0.6 100; Enchanted Bracelet 0.6 0; Bracer of The Abyss 0.6 0; Toxic Blade 0.6 0; The Crusher 0.6 0; Axe 0.6 100; Avenging Blade 0.6 100; Sun Beam Bow 0.6 100; Tekko-Kagi 0.6 100; Transcendence 0.6 0
+S6: Manchu Bow 9.4 69; Qin's Blade 6.5 55; Bow 5.9 30; Deathbringer 5.9 50; Hunter's Bow 5.3 78; Riptalon 4.7 63; Silverbranch Bow 3.5 50; Toxic Blade 2.4 75; Blinking Abyss 1.8 67; Sun Beam Bow 1.8 0; Cursed Sickle 1.8 33; Kopesh 1.8 33; Demon Blade 1.8 67; Skeggox 1.8 67; Survivor's Sash 1.8 67; Dominance 1.8 33; The Reaper 1.2 50; Infused Axe 1.2 100; Void Shard 1.2 0; The Executioner 1.2 100; Odysseus' Bow 1.2 50; Axe 1.2 50; Circlet 0.6 100; Jotunn's Revenge 0.6 0; Shogun's Ofuda 0.6 100; Xibalban Effigy 0.6 100; Killing Stone 0.6 100; Tyrfing 0.6 100; Talisman of Purification 0.6 100; Olmec Blue 0.6 100; Mote of Chaos 0.6 0; Transcendence 0.6 0; Berserker's Shield 0.6 0; Time-lock Aegis 0.6 0; Rod of Tahuti 0.6 100
+## ullr carry none | 750 | 56.1 | 2 semanas
+A: None
+R: Purification Beads 68.1 53; Aegis of Acceleration 31.3 63; Blink Rune 0.3 100; Phantom Shell 0.1 100; Agility Relic 0.1 0
+ST: Bumba's Hammer 69.5 61; Bumba's Cudgel 17.3 46; Bluestone Brooch 8.8 42; Bluestone Pendant 2.4 33; Sharpshooter's Arrow 0.7 20; Pendulum of The Ages 0.4 100; Archmage's Gem 0.4 67; Leather Cowl 0.3 100; Sands of Time 0.1 0; Death's Toll 0.1 0
+S1: Transcendence 94.3 56; Hydra's Lament 3.5 50; Jotunn's Revenge 2 67; Devourer's Gauntlet 0.3 100
+S2: Hydra's Lament 73.2 56; Jotunn's Revenge 20.5 56; Transcendence 4.8 61; Breastplate of Valor 0.3 50; The Crusher 0.3 0; Devourer's Gauntlet 0.3 50; Avenging Blade 0.3 50; Wyrmskin Hide 0.1 100; Tekko-Kagi 0.1 0; Oath-Sworn Spear 0.1 100
+S3: Jotunn's Revenge 61.2 56; Hydra's Lament 20.9 59; Heartseeker 5.6 45; Talisman of Purification 4.9 73; The Crusher 3.5 46; Avatar's Parashu 0.7 60; Pendulum Blade 0.5 25; Titan's Bane 0.5 0; Blinking Abyss 0.5 75; Transcendence 0.4 67; Oath-Sworn Spear 0.3 0; Avenging Blade 0.1 100; The Reaper 0.1 100; Tekko-Kagi 0.1 100; Breastplate of Valor 0.1 100; Barbed Carver 0.1 0; Dagger of Frenzy 0.1 100; Rage 0.1 100
+S4: Heartseeker 65.7 58; Titan's Bane 10.3 57; The Crusher 8.1 52; Jotunn's Revenge 2.7 40; Blinking Abyss 2 53; Pendulum Blade 1.3 70; The Reaper 1.2 56; Lucerne Hammer 1.1 25; Axe 0.9 71; Barbed Carver 0.9 57; Tekko-Kagi 0.9 43; Avatar's Parashu 0.8 67; Infused Axe 0.5 25; Talisman of Purification 0.5 0; Time-lock Aegis 0.4 67; Skeggox 0.4 100; Void Shard 0.3 50; Hydra's Lament 0.3 50; Riptalon 0.3 100; Avenging Blade 0.1 100; Caestus 0.1 0; The Executioner 0.1 100; Breastplate of Valor 0.1 0; Arondight 0.1 100; Gladiator's Shield 0.1 100; Dominance 0.1 0; Dagger of Frenzy 0.1 0; Magi's Cloak 0.1 0; Freya's Tears 0.1 100
+S5: Titan's Bane 34.9 59; Heartseeker 17.3 59; The Crusher 10.1 63; Lucerne Hammer 6.5 51; Void Shard 5.6 38; Blinking Abyss 5.5 59; Avatar's Parashu 2.9 59; Axe 2.3 47; Skeggox 2.1 44; Pendulum Blade 2 73; Infused Axe 1.7 23; The Reaper 1.3 40; Talisman of Purification 1.2 44; Mote of Chaos 1.1 50; Barbed Carver 0.9 100; Magi's Cloak 0.7 60; Deathbringer 0.7 40; Circlet 0.7 80; Time-lock Aegis 0.4 33; Dominance 0.4 67; Tekko-Kagi 0.3 0; The Executioner 0.1 0; Battle Axe 0.1 0; Kopesh 0.1 0; Oath-Sworn Spear 0.1 0; Caestus 0.1 0; Hydra's Lament 0.1 0; Adamantine Sickle 0.1 0; Silverbranch Bow 0.1 100
+S6: Blinking Abyss 10.1 68; Titan's Bane 8.3 53; Skeggox 7.5 46; Lucerne Hammer 5.6 50; Avatar's Parashu 5.3 68; Void Shard 4.9 70; The Crusher 4.5 56; Mote of Chaos 3.9 76; Axe 2.7 40; Time-lock Aegis 2 40; Talisman of Purification 2 60; Barbed Carver 1.9 71; Heartseeker 1.9 50; Jotunn's Revenge 1.3 40; Pendulum Blade 1.2 44; The Reaper 0.9 57; Magi's Cloak 0.7 60; Tekko-Kagi 0.7 80; Circlet 0.5 25; Infused Axe 0.4 33; Caestus 0.3 50; Dominance 0.3 0; Engraved Guard 0.3 50; Shifter's Shield 0.1 0; Adamantine Sickle 0.1 100; Shield 0.1 0; Berserker's Shield 0.1 0; Manchu Bow 0.1 0; Circe's Hexstone 0.1 100; Bow 0.1 100; Arondight 0.1 0
+## cernunnos carry none | 400 | 57.3 | 2 semanas
+A: None
+R: Purification Beads 68 59; Aegis of Acceleration 30.5 57; Blink Rune 1.3 0; Sundering Arc 0.3 0
+ST: Hunter's Cowl 33 65; Sharpshooter's Arrow 29 58; Leather Cowl 14.3 49; Gilded Arrow 10.5 38; Death's Embrace 9.8 64; Death's Toll 2.8 45; Archmage's Gem 0.3 100; Pendulum of The Ages 0.3 0; Bumba's Spear 0.3 100
+S1: Devourer's Gauntlet 82.5 58; Tyrfing 12.3 53; Bragi's Harp 2.3 78; Avenging Blade 0.8 100; Book of Thoth 0.5 50; Dominance 0.3 100; Dagger of Frenzy 0.3 0; Lernaean Bow 0.3 0; Spear of Desolation 0.3 0; Odysseus' Bow 0.3 100; Sun Beam Bow 0.3 0; Bracer of The Abyss 0.3 0
+S2: Dagger of Frenzy 45.8 53; Tyrfing 12.8 65; Bracer of The Abyss 11.3 69; Odysseus' Bow 8.3 48; Riptalon 3.3 46; Bragi's Harp 2.8 73; Dominance 2 63; Toxic Blade 2 63; Berserker's Shield 2 75; Qin's Blade 1.8 43; Vital Amplifier 1.5 83; Sun Beam Bow 1 50; Devourer's Gauntlet 1 50; The Executioner 0.8 100; Book of Thoth 0.8 67; Silverbranch Bow 0.5 50; Spear of Desolation 0.3 100; Leviathan's Hide 0.3 100; Barbed Carver 0.3 100; Rod of Tahuti 0.3 0; Avenging Blade 0.3 100; Tekko-Kagi 0.3 0; Nimble Ring 0.3 0; The Reaper 0.3 0; Hastened Fatalis 0.3 0; Blinking Abyss 0.3 0; Transcendence 0.3 0
+S3: The Executioner 23.3 65; Dominance 23.3 52; Riptalon 17.3 59; Odysseus' Bow 11.5 39; Silverbranch Bow 5 50; Dagger of Frenzy 4.3 82; Berserker's Shield 3.3 62; Tyrfing 2 63; Bracer of The Abyss 1.8 71; Sun Beam Bow 1.5 50; Toxic Blade 1.3 60; Hastened Fatalis 1 75; Qin's Blade 0.8 100; Rage 0.8 33; Shogun's Ofuda 0.5 100; Musashi's Dual Swords 0.5 0; Nimble Ring 0.3 100; Deathbringer 0.3 0; Vital Amplifier 0.3 100; Polynomicon 0.3 0; The Reaper 0.3 0; Tekko-Kagi 0.3 100; Shifter's Shield 0.3 100; Bragi's Harp 0.3 0; Demon Blade 0.3 100
+S4: Riptalon 24 50; The Executioner 15.8 56; Dominance 15.3 61; Silverbranch Bow 12 63; Berserker's Shield 10 63; Odysseus' Bow 4.3 65; Deathbringer 4 56; Qin's Blade 2.5 60; Toxic Blade 1.5 67; Titan's Bane 1.3 20; Nimble Ring 1.3 80; Dagger of Frenzy 1 25; Hunter's Bow 1 75; Hastened Fatalis 1 50; Tyrfing 0.5 50; Sun Beam Bow 0.5 100; Medallion 0.5 50; Demon Blade 0.5 50; Axe 0.5 0; Manchu Bow 0.5 50; Rod of Tahuti 0.3 100; Vital Amplifier 0.3 100; Olmec Blue 0.3 0; Bow 0.3 100; Rage 0.3 100; Engraved Guard 0.3 100; Gluttonous Grimoire 0.3 0; Cursed Sickle 0.3 100; Avenging Blade 0.3 100
+S5: Riptalon 19.8 63; Silverbranch Bow 14.3 54; The Executioner 11.5 54; Dominance 9 50; Deathbringer 8.3 52; Qin's Blade 4.8 74; Odysseus' Bow 4.3 94; Hunter's Bow 3.5 21; Manchu Bow 3 25; Demon Blade 2 75; Toxic Blade 2 63; Cursed Sickle 1.8 57; Survivor's Sash 1.3 80; Skeggox 1.3 20; Berserker's Shield 1 25; Gluttonous Grimoire 1 100; Bow 0.8 67; Axe 0.8 100; Sun Beam Bow 0.8 33; Bracer of The Abyss 0.8 67; Olmec Blue 0.8 67; Time-lock Aegis 0.8 67; Kopesh 0.5 100; Musashi's Dual Swords 0.5 50; Infused Axe 0.5 100; Avenging Blade 0.5 100; Dagger of Frenzy 0.5 0; Nimble Ring 0.5 50; Enchanted Bracelet 0.5 50; Obsidian Shard 0.3 100; Sabre 0.3 100; Hooked Sword 0.3 0; The World Stone 0.3 0; Scythe 0.3 100; Sash 0.3 100; Hastened Fatalis 0.3 0; Titan's Bane 0.3 0; Circle of Protection 0.3 100; Circlet 0.3 0; Rod of Tahuti 0.3 0; Blinking Abyss 0.3 100; Mote of Chaos 0.3 0; Talisman of Purification 0.3 0
+S6: Hunter's Bow 8.3 64; Manchu Bow 8 56; Deathbringer 6.8 67; Silverbranch Bow 5.5 73; Odysseus' Bow 3.3 46; The Reaper 3 67; Riptalon 3 58; Qin's Blade 2.8 55; Dominance 2.8 64; The Executioner 2.5 60; Bow 2.3 56; Kopesh 2 25; Skeggox 2 63; Blinking Abyss 1.8 71; Survivor's Sash 1.8 57; Time-lock Aegis 1.5 67; Mote of Chaos 1.5 50; Musashi's Dual Swords 1.3 40; Infused Axe 1.3 40; Dagger of Frenzy 1 75; Talisman of Purification 1 50; Axe 1 25; Cursed Sickle 1 75; Magi's Cloak 1 75; Demon Blade 0.8 100; Adamantine Sickle 0.8 33; Sun Beam Bow 0.8 100; Olmec Blue 0.8 0; Shell of Rebuke 0.5 50; Titan's Bane 0.5 100; Rod of Tahuti 0.5 50; Berserker's Shield 0.5 100; Vital Amplifier 0.3 100; Shifter's Shield 0.3 100; Evil Eye 0.3 100; Spear Of The Magus 0.3 0; Toxic Blade 0.3 100; Hastened Fatalis 0.3 100; Avenging Blade 0.3 0; Void Shard 0.3 100; Obsidian Shard 0.3 0; Lernaean Bow 0.3 0
+## cernunnos carry aspect-of-strife | 12 | 25 | 2 semanas
+A: Aspect of Strife
+R: Purification Beads 66.7 13; Blink Rune 16.7 100; Aegis of Acceleration 8.3 0; Agility Relic 8.3 0
+ST: Hunter's Cowl 100 25
+S1: Devourer's Gauntlet 100 25
+S2: Dagger of Frenzy 50 33; Vital Amplifier 33.3 25; Berserker's Shield 16.7 0
+S3: Riptalon 25 33; The Reaper 16.7 0; Berserker's Shield 16.7 0; Dagger of Frenzy 16.7 0; Vital Amplifier 8.3 0; Hastened Fatalis 8.3 100; Bracer of The Abyss 8.3 100
+S4: Riptalon 41.7 20; Gluttonous Grimoire 16.7 0; Vital Amplifier 8.3 0; Blinking Abyss 8.3 0; The Executioner 8.3 0; Dagger of Frenzy 8.3 100; Berserker's Shield 8.3 100
+S5: Riptalon 33.3 25; Avenging Blade 16.7 0; Blinking Abyss 8.3 0; Dominance 8.3 0; The Executioner 8.3 0; Bloodforge 8.3 0; Magi's Cloak 8.3 100; Agility Greaves 8.3 100
+S6: Magi's Cloak 16.7 0; Engraved Guard 8.3 0; Hastened Fatalis 8.3 0; Wyrmskin Hide 8.3 0; Barbed Carver 8.3 0; The Executioner 8.3 0; Axe 8.3 100; The Reaper 8.3 100
+## sol carry none | 247 | 55.1 | 2 semanas
+A: None
+R: Purification Beads 50.6 54; Aegis of Acceleration 45.7 58; Agility Relic 2.8 57; Phantom Shell 0.4 0; Blink Rune 0.4 0
+ST: Sharpshooter's Arrow 36.8 59; Gilded Arrow 23.1 42; Death's Embrace 13.8 65; Hunter's Cowl 13.8 53; Death's Toll 6.9 59; Leather Cowl 4 40; Conduit Gem 0.4 100; Archmage's Gem 0.4 100; Bumba's Spear 0.4 100; Pendulum of The Ages 0.4 100
+S1: Devourer's Gauntlet 74.5 54; Tyrfing 8.9 36; Bragi's Harp 4 60; Avenging Blade 2.8 86; Toxic Blade 2.4 50; Bracer of The Abyss 2 100; Book of Thoth 1.2 100; Spear of Desolation 0.8 50; Sun Beam Bow 0.8 50; Death Metal 0.4 100; Dominance 0.4 0; Vital Amplifier 0.4 100; Riptalon 0.4 0; Dagger of Frenzy 0.4 100; Daybreak Gavel 0.4 0
+S2: Dagger of Frenzy 26.3 52; Tyrfing 25.5 51; Odysseus' Bow 8.9 45; Bragi's Harp 8.9 73; Vital Amplifier 6.1 60; Riptalon 4 60; Berserker's Shield 4 50; Daybreak Gavel 3.6 56; Avenging Blade 1.6 75; Hastened Fatalis 1.6 0; Triton's Conch 1.2 67; Dominance 1.2 67; Bancroft's Talon 0.8 100; Toxic Blade 0.8 100; The Reaper 0.8 0; Rage 0.8 50; Book of Thoth 0.4 100; Ancient Signet 0.4 100; Transcendence 0.4 100; Rod of Tahuti 0.4 0; The World Stone 0.4 100; Devourer's Gauntlet 0.4 100; Nimble Ring 0.4 100; Death Metal 0.4 100; Shifter's Shield 0.4 0
+S3: Dominance 16.6 46; Riptalon 16.2 48; The Executioner 13.4 48; Odysseus' Bow 8.9 68; Bragi's Harp 8.1 55; Dagger of Frenzy 5.3 62; Bracer of The Abyss 4 60; Tyrfing 4 80; Vital Amplifier 3.2 75; Hastened Fatalis 2.8 57; Nimble Ring 2.4 83; Silverbranch Bow 2.4 33; Avenging Blade 2.4 33; Berserker's Shield 2 60; Rage 1.6 75; Sun Beam Bow 1.6 50; Demon Blade 0.8 50; Toxic Blade 0.8 50; Musashi's Dual Swords 0.8 100; Gluttonous Grimoire 0.8 0; Qin's Blade 0.4 0; Rod of Tahuti 0.4 100; Soul Gem 0.4 100; The Reaper 0.4 100
+S4: Riptalon 21.1 54; Silverbranch Bow 16.2 55; The Executioner 13.8 47; Dominance 13.4 55; Deathbringer 7.3 50; Odysseus' Bow 6.1 47; Bragi's Harp 3.2 50; Rod of Tahuti 2.4 100; Hastened Fatalis 2 60; Avenging Blade 2 40; Vital Amplifier 1.6 50; Berserker's Shield 1.2 67; Dagger of Frenzy 1.2 67; Demon Blade 1.2 100; Qin's Blade 1.2 33; Manchu Bow 0.8 100; Toxic Blade 0.8 50; Tyrfing 0.8 50; Bracer of The Abyss 0.8 100; Hunter's Bow 0.8 0; Nimble Ring 0.4 100; Daybreak Gavel 0.4 100; Kopesh 0.4 100; Shifter's Shield 0.4 100; Titan's Bane 0.4 100
+S5: Silverbranch Bow 15 46; Riptalon 13 50; The Executioner 12.1 60; Deathbringer 9.7 50; Dominance 6.9 59; Hunter's Bow 6.5 56; Manchu Bow 4.5 73; Odysseus' Bow 3.6 56; Qin's Blade 2.4 67; Bow 2.4 33; Bragi's Harp 2 40; Cursed Sickle 1.6 25; Skeggox 1.6 50; Titan's Bane 1.6 75; Toxic Blade 1.2 33; Demon Blade 1.2 33; Axe 1.2 67; Hastened Fatalis 1.2 100; Survivor's Sash 0.8 50; Sun Beam Bow 0.8 100; Bracer of The Abyss 0.8 50; Vital Amplifier 0.8 100; Avenging Blade 0.8 50; Obsidian Shard 0.8 100; Dagger of Frenzy 0.8 100; Void Shard 0.8 0; Talisman of Purification 0.4 0; Wish-Granting Pearl 0.4 100; Blinking Abyss 0.4 100; Kopesh 0.4 100; Musashi's Dual Swords 0.4 0; Rod of Tahuti 0.4 100; Olmec Blue 0.4 0; Enchanted Bracelet 0.4 100; Death Metal 0.4 100; Tyrfing 0.4 100; Lucerne Hammer 0.4 0; Shifter's Shield 0.4 100; Evil Eye 0.4 100; Daybreak Gavel 0.4 0
+S6: Manchu Bow 9.3 52; Hunter's Bow 6.5 81; Silverbranch Bow 6.1 80; Deathbringer 5.7 43; Riptalon 4.5 73; The Executioner 4 60; Kopesh 3.6 67; Dominance 3.2 75; Bow 3.2 50; Axe 2.4 50; Bragi's Harp 2 40; Skeggox 2 20; Talisman of Purification 1.6 75; Survivor's Sash 1.6 0; Berserker's Shield 1.6 25; Cursed Sickle 1.2 33; Time-lock Aegis 1.2 67; Mote of Chaos 1.2 33; Vital Amplifier 1.2 67; Hastened Fatalis 1.2 33; Qin's Blade 0.8 50; Toxic Blade 0.8 50; Dagger of Frenzy 0.8 0; Odysseus' Bow 0.8 50; Musashi's Dual Swords 0.8 0; Olmec Blue 0.8 100; Demon Blade 0.4 100; Death Metal 0.4 100; Freya's Tears 0.4 100; Bracer of The Abyss 0.4 100; Shogun's Ofuda 0.4 100; Killing Stone 0.4 100; Hooked Sword 0.4 0; Titan's Bane 0.4 0; Lucerne Hammer 0.4 0; Blinking Abyss 0.4 100; Void Shard 0.4 0; Tyrfing 0.4 100; Gem 0.4 100
+## sol carry aspect-of-conflagration | 8 | 75 | 2 semanas
+A: Aspect of Conflagration
+R: Aegis of Acceleration 87.5 86; Purification Beads 12.5 0
+ST: Archmage's Gem 75 83; Sharpshooter's Arrow 12.5 100; Sands of Time 12.5 0
+S1: Book of Thoth 37.5 100; Bancroft's Talon 25 50; Chronos' Pendant 12.5 100; Ancient Signet 12.5 0; Doom Orb 12.5 100
+S2: Soul Gem 25 50; Polynomicon 25 100; The World Stone 12.5 100; Gem of Focus 12.5 100; Devourer's Gauntlet 12.5 100; Breastplate of Valor 12.5 0
+S3: Rod of Tahuti 25 100; Spear Of The Magus 12.5 0; Ancient Signet 12.5 100; Nimble Ring 12.5 100; Spear of Desolation 12.5 100; Tyrfing 12.5 100; Chronos' Pendant 12.5 0
+S4: Rod of Tahuti 37.5 67; Spear of Desolation 12.5 100; Soul Gem 12.5 100; Obsidian Shard 12.5 100; Rage 12.5 100; Gem of Focus 12.5 0
+S5: Soul Gem 25 100; Nimble Ring 25 50; Rod of Tahuti 12.5 100; Spear of Desolation 12.5 100; Deathbringer 12.5 100; Helm of Radiance 12.5 0
+S6: Obsidian Shard 50 75; Ancient Signet 12.5 100; Soul Gem 12.5 100; Sphere of Negation 12.5 0
+## medusa carry none | 441 | 57.1 | 2 semanas
+A: None
+R: Purification Beads 51.7 56; Aegis of Acceleration 46.5 59; Phantom Shell 0.9 0; Agility Relic 0.7 100; Blink Rune 0.2 100
+ST: Sharpshooter's Arrow 32 61; Hunter's Cowl 31.3 65; Leather Cowl 11.8 48; Gilded Arrow 9.8 51; Bluestone Brooch 4.8 57; Death's Embrace 4.1 44; Bluestone Pendant 2 0; Death's Toll 2 11; Archmage's Gem 1.8 75; Conduit Gem 0.2 100; Pendulum of The Ages 0.2 100
+S1: Devourer's Gauntlet 71.4 56; Tyrfing 9.5 57; Avenging Blade 8.6 68; Transcendence 6.6 48; Jotunn's Revenge 1.4 50; Dagger of Frenzy 0.7 67; Barbed Carver 0.5 50; The Reaper 0.5 50; Demon Blade 0.2 100; Rage 0.2 100; Lernaean Bow 0.2 100; Eye of the Storm 0.2 100
+S2: Dagger of Frenzy 36.3 59; Barbed Carver 10 57; Avenging Blade 9.8 53; Tyrfing 8.4 62; Jotunn's Revenge 5.2 48; Transcendence 4.5 50; Berserker's Shield 4.5 55; Odysseus' Bow 3.9 65; Dominance 3.9 65; Riptalon 2.3 70; Bragi's Harp 1.6 43; Sun Beam Bow 1.4 33; Bracer of The Abyss 0.9 50; Hydra's Lament 0.9 50; Blinking Abyss 0.9 50; The Executioner 0.7 67; Hastened Fatalis 0.7 33; Toxic Blade 0.7 33; Silverbranch Bow 0.7 33; The Crusher 0.7 67; Tekko-Kagi 0.5 100; Book of Thoth 0.5 50; Rage 0.5 50; Deathbringer 0.2 100; Demon Blade 0.2 0; Avatar's Parashu 0.2 100; Damaru 0.2 100
+S3: Dominance 28.1 57; The Executioner 15.9 59; The Crusher 10.2 60; Odysseus' Bow 9.5 55; Riptalon 8.6 55; Dagger of Frenzy 5.2 61; Berserker's Shield 3.2 57; Barbed Carver 2.5 64; Heartseeker 2.3 40; Silverbranch Bow 1.6 71; Tyrfing 1.4 33; Bracer of The Abyss 1.4 67; Hydra's Lament 1.4 50; Bragi's Harp 0.9 50; Sun Beam Bow 0.7 33; The Reaper 0.7 67; Omen Drum 0.7 67; Hastened Fatalis 0.7 0; Bancroft's Talon 0.5 100; Musashi's Dual Swords 0.5 100; Avatar's Parashu 0.5 50; Toxic Blade 0.5 0; Deathbringer 0.5 100; Freya's Tears 0.2 0; Oath-Sworn Spear 0.2 0; Transcendence 0.2 100; Spear Of The Magus 0.2 100; Tekko-Kagi 0.2 0; Avenging Blade 0.2 0; Blinking Abyss 0.2 100; Bloodforge 0.2 100; Rage 0.2 100; Lernaean Bow 0.2 0; The World Stone 0.2 100; Demon Blade 0.2 100; Shogun's Ofuda 0.2 100
+S4: Riptalon 31.1 56; The Executioner 19.7 62; Dominance 9.3 56; Silverbranch Bow 9.1 57; Odysseus' Bow 4.5 55; Heartseeker 4.1 56; Titan's Bane 2.5 27; Dagger of Frenzy 1.8 50; Deathbringer 1.8 75; Tyrfing 1.8 25; Barbed Carver 1.6 71; The Crusher 1.4 33; Blinking Abyss 1.1 80; Bow 0.9 100; Oath-Sworn Spear 0.9 100; Hastened Fatalis 0.7 100; Avenging Blade 0.7 33; Avatar's Parashu 0.5 0; Musashi's Dual Swords 0.5 100; Berserker's Shield 0.5 100; Gluttonous Grimoire 0.5 0; Demon Blade 0.5 50; The Reaper 0.5 50; Jotunn's Revenge 0.5 50; Qin's Blade 0.5 50; Toxic Blade 0.5 100; Sun Beam Bow 0.5 50; Bloodforge 0.2 100; Hydra's Lament 0.2 100; Bragi's Harp 0.2 100; Hunter's Bow 0.2 0; Rage 0.2 0; Axe 0.2 100; Survivor's Sash 0.2 0; Totem of Death 0.2 100; The Cosmic Horror 0.2 0; Shogun's Ofuda 0.2 0; Tekko-Kagi 0.2 0
+S5: Silverbranch Bow 13.2 66; Riptalon 12.7 71; The Executioner 11.8 54; Deathbringer 8.8 46; Blinking Abyss 6.8 70; Hunter's Bow 3.9 41; Odysseus' Bow 2.9 77; Dominance 2.7 75; Bow 2.7 50; Heartseeker 2.5 73; Survivor's Sash 2 56; Manchu Bow 2 22; Titan's Bane 2 56; Demon Blade 1.6 57; Dagger of Frenzy 1.6 71; Toxic Blade 1.4 17; Berserker's Shield 1.4 67; Kopesh 1.4 33; Qin's Blade 1.4 33; Axe 1.1 40; Bragi's Harp 1.1 40; Skeggox 1.1 20; The Crusher 1.1 60; Gluttonous Grimoire 1.1 100; Cursed Sickle 0.9 50; Avatar's Parashu 0.9 25; Mote of Chaos 0.9 75; Sun Beam Bow 0.9 100; Bloodforge 0.7 100; Barbed Carver 0.7 33; Infused Axe 0.7 33; Tyrfing 0.7 67; Avenging Blade 0.7 0; Void Shard 0.7 33; Lucerne Hammer 0.5 0; Hastened Fatalis 0.5 50; Battle Axe 0.5 0; Sabre 0.2 100; Talisman of Purification 0.2 100; Oath-Sworn Spear 0.2 0; Pendulum Blade 0.2 0; Hydra's Lament 0.2 0; The Reaper 0.2 0; The Cosmic Horror 0.2 100; Totem of Death 0.2 0; Musashi's Dual Swords 0.2 0; Nimble Ring 0.2 100; Xibalban Effigy 0.2 100
+S6: Manchu Bow 7 45; Silverbranch Bow 6.6 69; Deathbringer 6.1 67; Hunter's Bow 5.7 52; Skeggox 3.6 31; Riptalon 3.2 57; Blinking Abyss 3.2 79; Avenging Blade 2.7 75; Kopesh 2.5 64; Bow 2.5 45; Dominance 2.5 55; The Executioner 2.3 70; Odysseus' Bow 2 67; Axe 2 44; Qin's Blade 1.8 75; Titan's Bane 1.8 75; Hastened Fatalis 1.6 57; Infused Axe 1.4 50; Mote of Chaos 1.1 40; The Reaper 1.1 80; Time-lock Aegis 0.9 25; The Crusher 0.9 75; Toxic Blade 0.9 50; Cursed Sickle 0.9 50; Survivor's Sash 0.9 50; Berserker's Shield 0.9 75; Avatar's Parashu 0.7 67; Olmec Blue 0.7 0; Sabre 0.7 100; Heartseeker 0.7 67; Bloodforge 0.7 100; Tekko-Kagi 0.7 67; Demon Blade 0.5 50; Void Shard 0.5 50; Lucerne Hammer 0.5 0; Musashi's Dual Swords 0.5 0; Bragi's Harp 0.5 100; Eye of the Storm 0.5 50; Battle Axe 0.5 100; Xibalban Effigy 0.2 100; Enchanted Bracelet 0.2 100; Scythe 0.2 100; Rod of Tahuti 0.2 100; Caestus 0.2 100; Magi's Cloak 0.2 0; Barbed Carver 0.2 100; Obsidian Shard 0.2 0; Medal of Defense 0.2 100; Pendulum Blade 0.2 100; Shogun's Ofuda 0.2 100; Bracer of The Abyss 0.2 100; Tyrfing 0.2 100; Dagger of Frenzy 0.2 100; Engraved Guard 0.2 100; Hydra's Lament 0.2 0
+## nut carry none | 604 | 53.8 | 2 semanas
+A: None
+R: Purification Beads 59.3 52; Aegis of Acceleration 40.4 57; Agility Relic 0.3 0
+ST: Death's Embrace 72.2 56; Death's Toll 20.9 46; Hunter's Cowl 2.3 71; Sharpshooter's Arrow 2 50; Archmage's Gem 0.8 20; Bluestone Brooch 0.5 100; Leather Cowl 0.3 50; Gilded Arrow 0.3 50; Sands of Time 0.2 0; Pendulum of The Ages 0.2 0; Conduit Gem 0.2 100; Bluestone Pendant 0.2 100
+S1: Tyrfing 79.6 54; Devourer's Gauntlet 15.1 54; Bragi's Harp 2.2 54; Spear of Desolation 1.3 63; Avenging Blade 0.7 25; Transcendence 0.2 100; Berserker's Shield 0.2 0; Death Metal 0.2 0; Ancient Signet 0.2 0; Riptalon 0.2 0; Mana Tome 0.2 0; Book of Thoth 0.2 100
+S2: Bragi's Harp 72.8 55; Tyrfing 12.7 52; Berserker's Shield 4.8 45; Barbed Carver 2 58; Toxic Blade 1 33; Avenging Blade 1 17; Bracer of The Abyss 0.8 40; Dagger of Frenzy 0.7 100; Book of Thoth 0.5 100; Spear of Desolation 0.5 33; Dominance 0.5 67; Qin's Blade 0.3 0; Riptalon 0.3 100; Chronos' Pendant 0.3 50; Staff of Myrddin 0.3 0; Ancient Signet 0.2 100; Shifter's Shield 0.2 100; The Executioner 0.2 100; Talisman of Purification 0.2 100; Nimble Ring 0.2 100; Rod of Tahuti 0.2 0; Devourer's Gauntlet 0.2 100; Odysseus' Bow 0.2 100
+S3: Barbed Carver 47.4 54; Avenging Blade 15.4 55; The Executioner 10.3 55; Riptalon 5.3 47; Berserker's Shield 4.1 52; Bragi's Harp 3.6 50; Odysseus' Bow 2.5 67; Dominance 2.5 47; Dagger of Frenzy 1.3 75; Silverbranch Bow 1 67; Rod of Tahuti 1 67; Bracer of The Abyss 0.8 40; Toxic Blade 0.7 25; Nimble Ring 0.7 50; Tyrfing 0.7 75; Shifter's Shield 0.5 67; Spear Of The Magus 0.3 0; Sun Beam Bow 0.3 100; Ethereal Staff 0.3 0; Manchu Bow 0.2 0; Polynomicon 0.2 100; Staff of Myrddin 0.2 0; Bloodforge 0.2 0; Qin's Blade 0.2 100; Hastened Fatalis 0.2 100; Agility Greaves 0.2 100; Deathbringer 0.2 0
+S4: The Executioner 39.6 54; Riptalon 16.7 48; Barbed Carver 10.8 66; Avenging Blade 9.3 50; Dominance 3.6 50; Berserker's Shield 3.3 55; Silverbranch Bow 3 56; Xibalban Effigy 2 75; Odysseus' Bow 1.7 60; Titan's Bane 1.2 43; Toxic Blade 1 50; Rod of Tahuti 1 33; Qin's Blade 0.8 40; Shifter's Shield 0.5 33; Hunter's Bow 0.5 0; Bragi's Harp 0.5 33; Survivor's Sash 0.5 100; Spear Of The Magus 0.3 50; Bracer of The Abyss 0.3 50; Nimble Ring 0.3 100; Ethereal Staff 0.3 100; Sun Beam Bow 0.2 100; Hastened Fatalis 0.2 100; Tyrfing 0.2 100; Deathbringer 0.2 0; Killing Stone 0.2 0; Skeggox 0.2 0; Axe 0.2 0; Manchu Bow 0.2 100; Bow 0.2 0; Shogun's Ofuda 0.2 0; The Reaper 0.2 0; Mantle of Discord 0.2 100; Obsidian Shard 0.2 100; Staff of Myrddin 0.2 0; Spectral Armor 0.2 100; Evil Eye 0.2 100; Musashi's Dual Swords 0.2 0
+S5: Riptalon 17.7 55; The Executioner 17.4 58; Silverbranch Bow 9.1 56; Avenging Blade 7.5 64; Berserker's Shield 5.5 52; Hunter's Bow 4.8 41; Barbed Carver 3.8 52; Shifter's Shield 3 50; Odysseus' Bow 3 67; Xibalban Effigy 2.8 53; Dominance 2.6 19; Bow 2 58; Manchu Bow 1.8 45; Survivor's Sash 1.7 80; Qin's Blade 1.5 33; Blinking Abyss 1.3 63; Battle Axe 1.2 29; Cursed Sickle 1 17; Obsidian Shard 0.8 40; Talisman of Purification 0.7 50; Scythe 0.7 75; Toxic Blade 0.7 25; Mantle of Discord 0.7 75; Time-lock Aegis 0.5 33; The Reaper 0.5 33; Titan's Bane 0.5 67; Deathbringer 0.5 67; Axe 0.5 33; Evil Eye 0.5 67; Ethereal Staff 0.5 100; Mana Tome 0.5 67; Engraved Guard 0.3 0; Dreamer's Idol 0.3 50; Hastened Fatalis 0.3 100; Bragi's Harp 0.3 50; Dagger of Frenzy 0.3 50; Bracer of The Abyss 0.3 100; Olmec Blue 0.3 0; Stalwart Sigil 0.2 100; Shogun's Ofuda 0.2 0; Infused Axe 0.2 100; Killing Stone 0.2 0; Skeggox 0.2 0; Shell of Rebuke 0.2 100; Veve Charm 0.2 0; Rage 0.2 0; Necronomicon 0.2 100; Spear Of The Magus 0.2 0; Bloodforge 0.2 0; Divine Ruin 0.2 100; Mote of Chaos 0.2 100; Tyrfing 0.2 100; Heartseeker 0.2 100; Void Shard 0.2 0
+S6: Riptalon 6.5 74; Hunter's Bow 6.1 57; Blinking Abyss 4.5 41; The Executioner 4.5 44; Manchu Bow 4.1 64; Silverbranch Bow 4 75; Skeggox 3.3 20; Berserker's Shield 3.3 45; Avenging Blade 3.1 63; Survivor's Sash 2.5 53; Qin's Blade 2.5 73; Bow 2.5 53; Odysseus' Bow 2.2 62; Barbed Carver 1.8 27; Time-lock Aegis 1.8 36; Cursed Sickle 1.7 60; Dominance 1.2 43; Avatar's Parashu 1.2 43; Mote of Chaos 1 50; Shifter's Shield 1 83; Toxic Blade 1 67; Engraved Guard 0.8 20; Medallion 0.7 75; Mantle of Discord 0.7 25; Hastened Fatalis 0.7 75; Xibalban Effigy 0.7 25; Axe 0.7 100; Shield 0.5 100; Shogun's Ofuda 0.5 67; Titan's Bane 0.5 100; Battle Axe 0.5 100; Void Shard 0.5 67; Shell of Rebuke 0.5 33; Talisman of Purification 0.3 100; Demon Blade 0.3 0; Infused Axe 0.3 0; Scythe 0.3 0; Dagger of Frenzy 0.3 50; Mana Tome 0.3 0; Olmec Blue 0.3 100; Heartseeker 0.3 100; Nimble Ring 0.2 100; Killing Stone 0.2 100; Ragnarok's Wake 0.2 100; Contagion 0.2 0; Spear Of The Magus 0.2 0; Bracer of The Abyss 0.2 0; Bragi's Harp 0.2 0; Triton's Conch 0.2 100; Plated Metal 0.2 0; Ethereal Staff 0.2 100; Deathbringer 0.2 0; Musashi's Dual Swords 0.2 0; Zither 0.2 0; Soul Gem 0.2 0; Tekko-Kagi 0.2 0; Erosion 0.2 0; Medal of Defense 0.2 0; Kopesh 0.2 100; Staff of Myrddin 0.2 100; Lucerne Hammer 0.2 100; Circle of Protection 0.2 100; The Reaper 0.2 0; Magi's Cloak 0.2 0; Stalwart Sigil 0.2 100; Agility Greaves 0.2 100
+## nut carry aspect-of-the-cosmos | 10 | 70 | 2 semanas
+A: Aspect of the Cosmos
+R: Aegis of Acceleration 80 75; Purification Beads 20 50
+ST: Death's Embrace 60 83; Death's Toll 40 50
+S1: Tyrfing 50 60; Bragi's Harp 50 80
+S2: Bragi's Harp 50 60; Tyrfing 50 80
+S3: Barbed Carver 100 70
+S4: The Executioner 50 80; Qin's Blade 20 50; Avenging Blade 20 100; Survivor's Sash 10 0
+S5: The Executioner 30 67; Riptalon 30 100; Qin's Blade 20 100; Bow 10 0; Cursed Sickle 10 0
+S6: Riptalon 30 100; Hunter's Bow 20 50; Time-lock Aegis 10 0
+## apollo carry none | 739 | 53.3 | 2 semanas
+A: None
+R: Purification Beads 62 53; Aegis of Acceleration 34.2 55; Agility Relic 3.8 50
+ST: Sharpshooter's Arrow 43.7 56; Hunter's Cowl 21.8 57; Gilded Arrow 11 40; Death's Embrace 10.8 54; Leather Cowl 7.7 46; Death's Toll 4.6 56; Bumba's Spear 0.4 67
+S1: Devourer's Gauntlet 73.2 53; Tyrfing 20.2 58; Avenging Blade 3.4 40; Transcendence 1.5 36; Dominance 0.5 75; Sun Beam Bow 0.4 67; Bragi's Harp 0.1 0; Golden Blade 0.1 0; Odysseus' Bow 0.1 100; The Crusher 0.1 0; The Reaper 0.1 100; Toxic Blade 0.1 100
+S2: Dagger of Frenzy 55.5 52; Odysseus' Bow 17.2 56; Tyrfing 9.6 54; Sun Beam Bow 2.7 60; Toxic Blade 2.3 65; Berserker's Shield 2.2 44; Dominance 1.8 54; Riptalon 1.6 83; The Executioner 1.4 50; Avenging Blade 1.1 63; Devourer's Gauntlet 0.8 83; Hastened Fatalis 0.8 50; Transcendence 0.5 0; Rage 0.4 33; Tekko-Kagi 0.4 33; Demon Blade 0.4 67; Qin's Blade 0.3 50; Bragi's Harp 0.3 50; Silverbranch Bow 0.1 0; Golden Blade 0.1 100; Time-lock Aegis 0.1 0; Lernaean Bow 0.1 0; Talisman of Purification 0.1 100; Agility Greaves 0.1 0
+S3: Dominance 30.7 53; The Executioner 19.8 58; Riptalon 12 43; Odysseus' Bow 11.9 49; Silverbranch Bow 8.5 63; Dagger of Frenzy 4.2 61; Hastened Fatalis 2.7 35; Tyrfing 2 47; Sun Beam Bow 1.8 38; Berserker's Shield 1.6 58; Toxic Blade 1.2 67; Demon Blade 0.9 71; Musashi's Dual Swords 0.8 83; Qin's Blade 0.4 33; Shogun's Ofuda 0.3 50; Titan's Bane 0.1 0; Ancile 0.1 100; Avenging Blade 0.1 100; Ancient Signet 0.1 0; Rage 0.1 100; Axe 0.1 0; Magi's Cloak 0.1 0; Deathbringer 0.1 100
+S4: Silverbranch Bow 30 53; The Executioner 19.8 52; Riptalon 16.2 51; Odysseus' Bow 8.4 60; Dominance 7.8 60; Deathbringer 5 59; Toxic Blade 1.8 38; Qin's Blade 1.5 36; Hastened Fatalis 1.5 73; Sun Beam Bow 1.1 75; Demon Blade 0.9 43; Hunter's Bow 0.8 50; Tyrfing 0.8 50; Bow 0.7 40; Dagger of Frenzy 0.7 40; Berserker's Shield 0.4 67; Infused Axe 0.3 50; Survivor's Sash 0.3 50; Musashi's Dual Swords 0.3 0; Titan's Bane 0.3 100; Shifter's Shield 0.1 100; Transcendence 0.1 0; Talisman of Purification 0.1 100; Rage 0.1 0; Bragi's Harp 0.1 0; Skeggox 0.1 0; Shogun's Ofuda 0.1 100; Gem 0.1 0; Cursed Sickle 0.1 0; Manchu Bow 0.1 0; Avenging Blade 0.1 100
+S5: Riptalon 16.9 58; Silverbranch Bow 16.8 53; The Executioner 11.9 52; Deathbringer 10.4 51; Odysseus' Bow 6.4 55; Hunter's Bow 5.1 42; Dominance 5 62; Manchu Bow 3.7 37; Qin's Blade 3.2 54; Bow 2.8 48; Demon Blade 2.3 41; Toxic Blade 1.6 75; Musashi's Dual Swords 1.5 64; Cursed Sickle 1.2 67; Hastened Fatalis 1.1 88; Survivor's Sash 1.1 63; Titan's Bane 0.9 43; Kopesh 0.9 57; Skeggox 0.8 17; Avenging Blade 0.7 40; Axe 0.7 80; Tekko-Kagi 0.5 50; Shogun's Ofuda 0.4 100; Dagger of Frenzy 0.4 100; The Reaper 0.3 0; Bragi's Harp 0.3 50; Berserker's Shield 0.3 100; Sabre 0.3 50; Sun Beam Bow 0.3 50; Blinking Abyss 0.3 50; Tyrfing 0.1 100; Medal of Disruption 0.1 100; Oracle Staff 0.1 0; Rage 0.1 100; Hooked Sword 0.1 0; Scythe 0.1 100; Bloodforge 0.1 0; Infused Axe 0.1 0; Talisman of Purification 0.1 0; Killing Stone 0.1 0; Circlet 0.1 0; Void Shard 0.1 0; Shifter's Shield 0.1 0; Olmec Blue 0.1 0
+S6: Riptalon 7.3 74; Manchu Bow 7.3 52; Hunter's Bow 6.8 64; Deathbringer 6.2 63; Silverbranch Bow 6.1 64; Odysseus' Bow 5 62; Qin's Blade 3.5 50; Bow 3.5 50; The Executioner 3.5 42; Dominance 3.4 48; Skeggox 2.6 63; Axe 2.2 69; Survivor's Sash 1.9 57; Hastened Fatalis 1.6 83; Toxic Blade 1.5 55; Blinking Abyss 1.5 45; Kopesh 1.4 50; Cursed Sickle 0.9 43; Berserker's Shield 0.9 57; Infused Axe 0.9 57; Dagger of Frenzy 0.8 33; Time-lock Aegis 0.8 17; Demon Blade 0.8 83; Void Shard 0.7 100; Sun Beam Bow 0.5 75; Titan's Bane 0.5 25; Lucerne Hammer 0.5 25; Mote of Chaos 0.4 33; Musashi's Dual Swords 0.4 67; Olmec Blue 0.3 50; Tyrfing 0.3 100; Lernaean Bow 0.3 0; Avenging Blade 0.3 100; Scythe 0.3 100; Talisman of Purification 0.3 50; Sabre 0.3 0; Kinetic Cuirass 0.1 0; Draconic Scale 0.1 100; Oracle Staff 0.1 0; Spectral Armor 0.1 0; Bragi's Harp 0.1 100; Mantle of Discord 0.1 0; Shell of Rebuke 0.1 0; Agility Greaves 0.1 100; Freya's Tears 0.1 100; Medallion 0.1 0; Circlet 0.1 100; Hooked Sword 0.1 100
+## apollo carry aspect-of-harmony | 4 | 50 | 2 semanas
+A: Aspect of Harmony
+R: Aegis of Acceleration 50 50; Blink Rune 25 100; Purification Beads 25 0
+ST: Death's Embrace 75 33; Sundering Axe 25 100
+S1: Golden Blade 50 50; Devourer's Gauntlet 25 100; Gauntlet of Thebes 25 0
+S2: Berserker's Shield 50 50; Dagger of Frenzy 25 100; Sun Beam Bow 25 0
+S3: Tyrfing 50 50; Dominance 25 100; The Executioner 25 0
+S4: Bragi's Harp 25 100; Odysseus' Bow 25 100; Berserker's Shield 25 0; Silverbranch Bow 25 0
+S5: The Executioner 50 100; Golden Blade 25 0; Avenging Blade 25 0
+S6: Mote of Chaos 25 100; Shell of Rebuke 25 100; Contagion 25 0; Medal of Disruption 25 0
+## ishtar carry none | 507 | 55.2 | 2 semanas
+A: None
+R: Purification Beads 60.4 53; Aegis of Acceleration 39.1 60; Agility Relic 0.6 33
+ST: Sharpshooter's Arrow 56.4 58; Hunter's Cowl 15.6 57; Gilded Arrow 13.6 30; Death's Embrace 5.9 67; Leather Cowl 5.7 69; Death's Toll 2.2 64; Bumba's Spear 0.4 50; Sundering Axe 0.2 0
+S1: Devourer's Gauntlet 73 56; Tyrfing 19.9 54; Avenging Blade 5.7 48; Dagger of Frenzy 0.6 33; Odysseus' Bow 0.4 50; The Executioner 0.2 0; Sun Beam Bow 0.2 100
+S2: Dagger of Frenzy 70.2 55; Odysseus' Bow 9.3 53; Tyrfing 6.5 61; Berserker's Shield 3.2 38; Toxic Blade 2 50; Riptalon 1.8 78; Bragi's Harp 1.6 88; Dominance 1.6 38; Hastened Fatalis 1 60; Avenging Blade 1 80; Silverbranch Bow 0.6 0; Devourer's Gauntlet 0.6 100; Tekko-Kagi 0.4 0; The Executioner 0.2 0; Sun Beam Bow 0.2 100
+S3: The Executioner 31.6 57; Dominance 29.4 53; Riptalon 10.8 56; Odysseus' Bow 10.1 53; Silverbranch Bow 7.7 59; Toxic Blade 2.2 55; Dagger of Frenzy 2 50; Tyrfing 1.6 63; Berserker's Shield 1.4 57; Hastened Fatalis 1.4 43; Demon Blade 0.8 50; Deathbringer 0.4 100; Sun Beam Bow 0.2 0; Shell of Rebuke 0.2 0; Qin's Blade 0.2 0; Bragi's Harp 0.2 100
+S4: Silverbranch Bow 26.8 58; Riptalon 21.7 59; The Executioner 16.4 47; Dominance 13.2 54; Deathbringer 5.9 43; Odysseus' Bow 5.1 65; Qin's Blade 3.2 50; Demon Blade 1.4 43; Manchu Bow 0.8 75; Hunter's Bow 0.8 50; Berserker's Shield 0.6 67; Sun Beam Bow 0.6 33; Bow 0.6 100; Avenging Blade 0.6 33; Hastened Fatalis 0.4 100; Rage 0.4 100; Musashi's Dual Swords 0.4 50; Tekko-Kagi 0.2 100; Titan's Bane 0.2 0; Dagger of Frenzy 0.2 100; Infused Axe 0.2 0; Toxic Blade 0.2 100; Mystical Mail 0.2 0
+S5: Riptalon 17.6 53; Deathbringer 17 62; Silverbranch Bow 13.2 57; The Executioner 9.5 52; Dominance 6.3 63; Manchu Bow 5.1 62; Odysseus' Bow 4.7 71; Qin's Blade 3.7 53; Demon Blade 3.6 61; Hunter's Bow 3.4 29; Kopesh 3.2 31; Bow 1.6 63; Axe 1.2 33; Berserker's Shield 1.2 33; Cursed Sickle 1.2 50; Survivor's Sash 1 20; Toxic Blade 1 60; Hastened Fatalis 0.8 75; Musashi's Dual Swords 0.8 50; Skeggox 0.6 33; Time-lock Aegis 0.4 50; Titan's Bane 0.4 100; Olmec Blue 0.4 50; Sun Beam Bow 0.4 50; Avenging Blade 0.4 50; The Reaper 0.2 100; Mote of Chaos 0.2 100; Dagger of Frenzy 0.2 100; Tekko-Kagi 0.2 100; Hooked Sword 0.2 0; Sabre 0.2 100; Infused Axe 0.2 0; Blinking Abyss 0.2 0
+S6: Deathbringer 9.1 65; Hunter's Bow 7.3 49; Riptalon 6.3 69; Odysseus' Bow 5.7 79; Manchu Bow 5.1 54; The Executioner 3.4 65; Skeggox 3.2 38; Dominance 3.2 63; Bow 2.8 50; Silverbranch Bow 2.8 57; Time-lock Aegis 2.8 29; Axe 2.6 38; Qin's Blade 2 70; Sabre 1.6 38; Cursed Sickle 1.6 38; Berserker's Shield 1.6 63; Infused Axe 1.6 63; Survivor's Sash 1.4 43; Demon Blade 1.4 71; Kopesh 1.2 50; Toxic Blade 1.2 83; Blinking Abyss 1.2 33; Musashi's Dual Swords 1.2 50; Avenging Blade 1 80; Mote of Chaos 0.8 50; Battle Axe 0.4 50; Dagger of Frenzy 0.4 100; Olmec Blue 0.4 100; Hastened Fatalis 0.4 100; Xibalban Effigy 0.2 0; Talisman of Purification 0.2 100; Shogun's Ofuda 0.2 100; Titan's Bane 0.2 100; Tyrfing 0.2 0; Medallion 0.2 0; Sun Beam Bow 0.2 100; Medal of Defense 0.2 0; Adamantine Sickle 0.2 100
+## ishtar carry aspect-of-the-passionate-storm | 74 | 58.1 | 2 semanas
+A: Aspect of the Passionate Storm
+R: Aegis of Acceleration 58.1 58; Purification Beads 40.5 60; Agility Relic 1.4 0
+ST: Sharpshooter's Arrow 31.1 57; Leather Cowl 17.6 62; Death's Embrace 16.2 58; Hunter's Cowl 14.9 64; Death's Toll 12.2 56; Gilded Arrow 8.1 50
+S1: Devourer's Gauntlet 78.4 60; Tyrfing 10.8 38; Avenging Blade 9.5 57; Transcendence 1.4 100
+S2: Dagger of Frenzy 39.2 55; Berserker's Shield 24.3 67; Demon Blade 12.2 56; Tyrfing 6.8 60; Odysseus' Bow 6.8 40; Rage 2.7 100; Riptalon 2.7 100; Tekko-Kagi 1.4 0; Dominance 1.4 100; Silverbranch Bow 1.4 0; Avenging Blade 1.4 0
+S3: Riptalon 27 65; Hastened Fatalis 25.7 58; Tyrfing 10.8 63; Dagger of Frenzy 9.5 57; Odysseus' Bow 9.5 57; Dominance 4.1 67; The Executioner 4.1 0; Berserker's Shield 4.1 67; Xibalban Effigy 2.7 50; Silverbranch Bow 1.4 0; Jotunn's Revenge 1.4 100
+S4: Riptalon 16.2 50; Deathbringer 13.5 60; Silverbranch Bow 13.5 70; Shogun's Ofuda 10.8 75; The Executioner 9.5 29; Qin's Blade 6.8 60; Hastened Fatalis 5.4 75; Odysseus' Bow 4.1 33; Titan's Bane 4.1 67; Dominance 2.7 0; Toxic Blade 2.7 100; Berserker's Shield 2.7 50; Demon Blade 1.4 0; Scythe 1.4 100; Bragi's Harp 1.4 0; Tyrfing 1.4 100; Golden Blade 1.4 100; Xibalban Effigy 1.4 100
+S5: The Executioner 23 76; Silverbranch Bow 16.2 50; Riptalon 9.5 57; Deathbringer 8.1 50; Hunter's Bow 5.4 25; Qin's Blade 5.4 50; Dominance 2.7 50; Berserker's Shield 2.7 50; Hastened Fatalis 2.7 100; Shogun's Ofuda 2.7 50; Manchu Bow 2.7 0; Magi's Cloak 2.7 100; Blinking Abyss 2.7 0; Survivor's Sash 2.7 50; Time-lock Aegis 1.4 0; Talisman of Purification 1.4 0; Titan's Bane 1.4 100; Medal of Disruption 1.4 100; Odysseus' Bow 1.4 100; Bloodforge 1.4 100; Barbed Carver 1.4 100; Kopesh 1.4 100
+S6: Hunter's Bow 5.4 25; The Executioner 5.4 75; Riptalon 5.4 75; Bow 5.4 0; Manchu Bow 4.1 33; Skeggox 4.1 33; Silverbranch Bow 4.1 100; Mantle of Discord 4.1 67; Qin's Blade 4.1 67; Time-lock Aegis 2.7 100; Blinking Abyss 2.7 50; Odysseus' Bow 2.7 100; Dominance 2.7 0; Cursed Sickle 2.7 0; Engraved Guard 1.4 100; Xibalban Effigy 1.4 0; Musashi's Dual Swords 1.4 100; Veve Charm 1.4 100; Heartseeker 1.4 100; Mana Tome 1.4 0; Deathbringer 1.4 100; Toxic Blade 1.4 100; Hastened Fatalis 1.4 0; Axe 1.4 100; Shogun's Ofuda 1.4 0; The Reaper 1.4 100
+## hou-yi carry none | 1131 | 53.1 | 2 semanas
+A: None
+R: Purification Beads 67.9 56; Aegis of Acceleration 31.6 48; Agility Relic 0.4 50; Phantom Shell 0.2 0
+ST: Sharpshooter's Arrow 59.3 59; Gilded Arrow 19.3 32; Hunter's Cowl 12 56; Leather Cowl 5 56; Death's Embrace 3.1 63; Death's Toll 1 9; War Banner 0.1 100; Pendulum of The Ages 0.1 100; Bumba's Cudgel 0.1 0
+S1: Devourer's Gauntlet 82.2 54; Tyrfing 11.3 51; Avenging Blade 4.2 45; Dagger of Frenzy 0.5 33; Transcendence 0.4 50; Toxic Blade 0.4 50; Bloodforge 0.3 67; Rage 0.2 50; Riptalon 0.2 50; Lernaean Bow 0.1 100; The Executioner 0.1 100; Tekko-Kagi 0.1 0; Dominance 0.1 0; Silverbranch Bow 0.1 0
+S2: Dagger of Frenzy 75.8 53; Odysseus' Bow 6.2 54; Tyrfing 5.8 48; Dominance 2 52; Toxic Blade 1.6 72; Berserker's Shield 1.5 47; Riptalon 1.4 44; The Executioner 0.9 80; Avenging Blade 0.8 67; Sun Beam Bow 0.7 63; Bragi's Harp 0.4 60; Rage 0.4 40; Silverbranch Bow 0.4 50; Qin's Blade 0.3 0; Tekko-Kagi 0.3 67; Blinking Abyss 0.3 67; Demon Blade 0.3 33; Time-lock Aegis 0.2 50; Jotunn's Revenge 0.2 50; Devourer's Gauntlet 0.2 100; Hastened Fatalis 0.1 0; Book of Thoth 0.1 0; Talisman of Purification 0.1 100; Titan's Bane 0.1 100; Lernaean Bow 0.1 0
+S3: Dominance 37.1 55; The Executioner 24.2 49; Riptalon 12.7 48; Odysseus' Bow 10.8 61; Dagger of Frenzy 3.2 47; Silverbranch Bow 2.4 52; Deathbringer 1.3 47; Musashi's Dual Swords 1.3 53; Tyrfing 1 64; Demon Blade 0.8 44; Berserker's Shield 0.7 63; Qin's Blade 0.6 43; Toxic Blade 0.6 43; Sun Beam Bow 0.5 50; Avenging Blade 0.5 83; Rage 0.5 67; Bloodforge 0.3 67; Hastened Fatalis 0.3 100; Blinking Abyss 0.2 50; Hydra's Lament 0.2 0; Bragi's Harp 0.2 0; Time-lock Aegis 0.1 100; The Crusher 0.1 100; Lernaean Bow 0.1 100; Devourer's Gauntlet 0.1 0; Talisman of Purification 0.1 0; Transcendence 0.1 100
+S4: Riptalon 23.2 55; The Executioner 20.8 51; Silverbranch Bow 18.1 57; Dominance 15.3 51; Deathbringer 8.6 62; Odysseus' Bow 3.4 42; Qin's Blade 1.7 42; Demon Blade 1.2 57; Musashi's Dual Swords 1.1 54; Dagger of Frenzy 0.9 50; Hastened Fatalis 0.7 88; Berserker's Shield 0.6 57; Bow 0.5 67; Manchu Bow 0.5 50; Survivor's Sash 0.5 33; Hunter's Bow 0.5 17; Toxic Blade 0.4 60; Titan's Bane 0.3 0; Scythe 0.2 50; Infused Axe 0.2 0; Avenging Blade 0.2 50; Tyrfing 0.2 50; Rage 0.2 50; Sun Beam Bow 0.1 0; The Crusher 0.1 0; Sabre 0.1 0; Heartseeker 0.1 100; Polynomicon 0.1 0; The Reaper 0.1 0; Time-lock Aegis 0.1 100; Axe 0.1 0
+S5: Deathbringer 18.7 58; Riptalon 13.5 61; Silverbranch Bow 13.4 53; The Executioner 10.9 59; Dominance 7.4 52; Qin's Blade 3.8 49; Hunter's Bow 3.7 33; Odysseus' Bow 3.6 49; Demon Blade 3.4 62; Bow 2.9 58; Manchu Bow 2.7 40; Axe 2.4 37; Kopesh 2.1 29; Skeggox 1.9 36; Musashi's Dual Swords 1.4 50; Infused Axe 1 9; Cursed Sickle 1 45; Titan's Bane 0.8 67; Toxic Blade 0.7 50; Survivor's Sash 0.6 29; Hastened Fatalis 0.6 43; Avenging Blade 0.4 60; Dagger of Frenzy 0.4 75; Blinking Abyss 0.3 67; Berserker's Shield 0.3 67; Tyrfing 0.3 0; Bloodforge 0.3 67; Scythe 0.2 50; Barbed Carver 0.2 50; Mote of Chaos 0.2 100; Avatar's Parashu 0.2 100; Circe's Hexstone 0.1 0; Time-lock Aegis 0.1 100; Heartseeker 0.1 0; Evil Eye 0.1 0; Talisman of Purification 0.1 100; Bragi's Harp 0.1 0; Shogun's Ofuda 0.1 100; Lucerne Hammer 0.1 100; Circlet 0.1 0
+S6: Deathbringer 9.3 58; Hunter's Bow 6.2 53; Riptalon 5.7 78; Silverbranch Bow 4.9 60; Skeggox 4.4 50; Manchu Bow 4.2 40; The Executioner 4 56; Bow 3.9 70; Kopesh 2.9 67; Axe 2.8 47; Qin's Blade 2.2 56; Dominance 2.2 64; Odysseus' Bow 2 57; Blinking Abyss 1.9 68; Demon Blade 1.9 50; Infused Axe 1.9 57; Musashi's Dual Swords 1.8 70; Time-lock Aegis 1.3 67; Mote of Chaos 1.1 67; Survivor's Sash 0.9 30; Hastened Fatalis 0.8 89; Cursed Sickle 0.8 33; Titan's Bane 0.8 67; Sabre 0.5 67; Avatar's Parashu 0.4 60; Dagger of Frenzy 0.4 80; Berserker's Shield 0.4 60; Olmec Blue 0.4 50; Talisman of Purification 0.4 25; Void Shard 0.3 67; Adamantine Sickle 0.3 33; Hooked Sword 0.3 33; Circlet 0.3 67; Toxic Blade 0.3 67; Bloodforge 0.3 67; Barbed Carver 0.2 100; Scythe 0.2 50; Lernaean Bow 0.1 0; Magi's Cloak 0.1 100; Sun Beam Bow 0.1 100; Tyrfing 0.1 0; Rage 0.1 100; Mantle of Discord 0.1 100
+## hou-yi carry aspect-of-the-mark | 73 | 53.4 | 2 semanas
+A: Aspect of the Mark
+R: Purification Beads 52.1 53; Aegis of Acceleration 46.6 53; Agility Relic 1.4 100
+ST: Sharpshooter's Arrow 64.4 57; Gilded Arrow 23.3 41; Hunter's Cowl 4.1 33; Death's Toll 2.7 0; Death's Embrace 2.7 100; Bumba's Spear 1.4 100; Leather Cowl 1.4 100
+S1: Devourer's Gauntlet 97.3 52; Odysseus' Bow 1.4 100; Tyrfing 1.4 100
+S2: Dagger of Frenzy 86.3 51; Transcendence 2.7 50; Tyrfing 2.7 100; Riptalon 2.7 50; Bragi's Harp 1.4 100; Odysseus' Bow 1.4 100; Berserker's Shield 1.4 0; Avenging Blade 1.4 100
+S3: Dominance 41.1 47; The Executioner 23.3 41; Riptalon 16.4 67; Odysseus' Bow 4.1 100; Deathbringer 2.7 100; Tyrfing 2.7 50; Dagger of Frenzy 2.7 50; Silverbranch Bow 2.7 50; Rage 1.4 100; Hastened Fatalis 1.4 0; Demon Blade 1.4 100
+S4: Riptalon 24.7 56; Deathbringer 17.8 38; Dominance 16.4 50; The Executioner 15.1 64; Silverbranch Bow 9.6 100; Odysseus' Bow 4.1 33; Musashi's Dual Swords 4.1 0; Demon Blade 2.7 100; Infused Axe 1.4 0; Manchu Bow 1.4 100; Qin's Blade 1.4 0; Avenging Blade 1.4 0
+S5: Deathbringer 30.1 64; Riptalon 13.7 70; The Executioner 9.6 57; Kopesh 8.2 50; Silverbranch Bow 6.8 20; Dominance 6.8 40; Manchu Bow 2.7 50; Hunter's Bow 2.7 0; Demon Blade 2.7 50; Musashi's Dual Swords 2.7 50; Skeggox 2.7 50; Survivor's Sash 1.4 100; Hooked Sword 1.4 0; Avenging Blade 1.4 100; Avatar's Parashu 1.4 100; Qin's Blade 1.4 0; Infused Axe 1.4 0; Titan's Bane 1.4 100; Scythe 1.4 0
+S6: Deathbringer 13.7 60; The Executioner 8.2 50; Riptalon 6.8 60; Hunter's Bow 5.5 50; Kopesh 5.5 25; Skeggox 5.5 50; Musashi's Dual Swords 5.5 50; Manchu Bow 4.1 67; Dominance 4.1 67; Axe 4.1 67; Bow 4.1 67; Hooked Sword 2.7 100; Silverbranch Bow 2.7 100; Demon Blade 2.7 100; Agility Greaves 1.4 0; Mote of Chaos 1.4 0; Blinking Abyss 1.4 100; Avatar's Parashu 1.4 0; Avenging Blade 1.4 100
+## anhur carry none | 807 | 52.5 | 2 semanas
+A: None
+R: Purification Beads 61.7 52; Aegis of Acceleration 36.7 53; Agility Relic 1.2 60; Blink Rune 0.2 50; Phantom Shell 0.1 100
+ST: Sharpshooter's Arrow 46.3 55; Hunter's Cowl 23.9 58; Gilded Arrow 12.6 35; Leather Cowl 9.7 50; Death's Embrace 5 65; Death's Toll 2 13; Bluestone Brooch 0.2 100; Archmage's Gem 0.1 100; Bumba's Golden Dagger 0.1 0
+S1: Devourer's Gauntlet 82.4 52; Tyrfing 10.7 62; Avenging Blade 5.3 44; Sun Beam Bow 0.4 33; Transcendence 0.4 33; Dominance 0.2 50; Lernaean Bow 0.1 0; Dagger of Frenzy 0.1 100; Tekko-Kagi 0.1 0; Odysseus' Bow 0.1 0; Jotunn's Revenge 0.1 100
+S2: Dagger of Frenzy 64.2 53; Tyrfing 7.9 48; Odysseus' Bow 5.7 52; Toxic Blade 4.6 57; Dominance 3.6 41; Avenging Blade 2.2 83; Berserker's Shield 2.1 65; The Executioner 1.9 47; Sun Beam Bow 1.2 50; Riptalon 1 38; Transcendence 0.9 43; Qin's Blade 0.7 17; Tekko-Kagi 0.6 80; Lernaean Bow 0.6 60; Jotunn's Revenge 0.6 40; Blinking Abyss 0.5 50; Devourer's Gauntlet 0.5 75; Demon Blade 0.2 50; Mercury's Talaria 0.2 50; Bragi's Harp 0.2 50; Silverbranch Bow 0.1 100; Time-lock Aegis 0.1 0; Hydra's Lament 0.1 100
+S3: Dominance 35.4 56; The Executioner 21.8 54; Riptalon 11.3 52; Odysseus' Bow 11 52; Dagger of Frenzy 6.2 42; Silverbranch Bow 4.1 52; Tyrfing 1.5 33; Berserker's Shield 1.5 58; Demon Blade 1.1 56; Toxic Blade 1 63; Qin's Blade 0.7 0; Deathbringer 0.6 0; Avenging Blade 0.6 80; Sun Beam Bow 0.4 0; Rage 0.4 100; Mercury's Talaria 0.4 33; Lernaean Bow 0.2 100; Musashi's Dual Swords 0.2 50; Tekko-Kagi 0.2 100; Avatar's Parashu 0.2 50; Transcendence 0.2 50; The Reaper 0.1 100; Bloodforge 0.1 0; Jotunn's Revenge 0.1 100; Combat Boots 0.1 0; Titan's Bane 0.1 0; Hastened Fatalis 0.1 0
+S4: Riptalon 24.5 56; The Executioner 24.3 59; Dominance 14.4 46; Silverbranch Bow 11.8 52; Deathbringer 8.4 51; Odysseus' Bow 5.8 45; Qin's Blade 2.2 50; Demon Blade 1 63; Hunter's Bow 1 25; Toxic Blade 1 50; Titan's Bane 0.7 50; Berserker's Shield 0.6 60; Dagger of Frenzy 0.6 20; Survivor's Sash 0.5 0; Hastened Fatalis 0.5 25; Bow 0.4 67; Tyrfing 0.4 67; Heartseeker 0.4 100; Musashi's Dual Swords 0.4 67; Tekko-Kagi 0.2 0; Avenging Blade 0.2 100; Manchu Bow 0.1 0; Axe 0.1 100; Avatar's Parashu 0.1 0; Time-lock Aegis 0.1 0; Rage 0.1 0
+S5: Riptalon 18.3 55; Silverbranch Bow 17 55; Deathbringer 14.9 57; The Executioner 10.3 61; Dominance 6.3 47; Odysseus' Bow 4.3 51; Manchu Bow 4.1 39; Hunter's Bow 3.8 32; Bow 2.2 11; Cursed Sickle 2 50; Skeggox 1.7 29; Kopesh 1.7 43; Qin's Blade 1.5 75; Berserker's Shield 1.2 80; Survivor's Sash 1.1 67; Axe 1 25; Titan's Bane 1 75; Musashi's Dual Swords 0.9 86; Toxic Blade 0.7 50; Blinking Abyss 0.6 40; Demon Blade 0.5 25; Dagger of Frenzy 0.4 33; Olmec Blue 0.4 33; Avenging Blade 0.4 67; Avatar's Parashu 0.4 67; Bloodforge 0.4 67; Time-lock Aegis 0.2 0; Lucerne Hammer 0.2 50; Scythe 0.2 50; Magi's Cloak 0.2 50; Infused Axe 0.2 0; The Reaper 0.2 50; Tekko-Kagi 0.2 100; Hydra's Lament 0.1 100; Devourer's Gauntlet 0.1 100; Battle Axe 0.1 0; Sabre 0.1 100; Sun Beam Bow 0.1 100; Circlet 0.1 100; Draconic Scale 0.1 100; Hastened Fatalis 0.1 100
+S6: Deathbringer 7.9 59; Hunter's Bow 7.2 59; Silverbranch Bow 5.5 57; Manchu Bow 5.5 52; Riptalon 4.3 54; Qin's Blade 4.1 58; The Executioner 3.6 59; Bow 3.5 39; Odysseus' Bow 2.7 64; Blinking Abyss 2.7 45; Kopesh 2.5 75; Skeggox 2.2 61; Axe 2.2 56; Dominance 1.9 60; Mote of Chaos 1.5 42; Time-lock Aegis 1.4 45; Musashi's Dual Swords 1.2 50; Titan's Bane 1.2 80; Cursed Sickle 1.1 33; Infused Axe 1.1 67; Bloodforge 1 38; Berserker's Shield 1 75; Demon Blade 0.9 29; Dagger of Frenzy 0.6 40; Survivor's Sash 0.6 40; Avenging Blade 0.6 80; Toxic Blade 0.6 80; Lucerne Hammer 0.4 67; Hastened Fatalis 0.4 33; Barbed Carver 0.4 67; Avatar's Parashu 0.2 50; Hooked Sword 0.2 50; Olmec Blue 0.2 50; Talisman of Purification 0.2 0; The Reaper 0.2 100; Shogun's Ofuda 0.2 50; Xibalban Effigy 0.1 0; Circle of Protection 0.1 100; Spectral Armor 0.1 100; Battle Axe 0.1 0; Scythe 0.1 0; Circlet 0.1 0; The Crusher 0.1 100; Contagion 0.1 100; Circe's Hexstone 0.1 100
+## anhur carry aspect-of-pride | 121 | 54.5 | 2 semanas
+A: Aspect of Pride
+R: Purification Beads 55.4 55; Aegis of Acceleration 42.1 57; Agility Relic 2.5 0
+ST: Sharpshooter's Arrow 37.2 60; Hunter's Cowl 30.6 62; Leather Cowl 16.5 40; Gilded Arrow 9.1 27; Death's Embrace 3.3 75; Death's Toll 0.8 100; Bluestone Pendant 0.8 0; Bumba's Golden Dagger 0.8 100; Pendulum of The Ages 0.8 0
+S1: Devourer's Gauntlet 75.2 63; Tyrfing 14.9 22; Avenging Blade 3.3 0; Dominance 0.8 100; Lernaean Bow 0.8 100; Jotunn's Revenge 0.8 0; Toxic Blade 0.8 0; Dagger of Frenzy 0.8 100; Sun Beam Bow 0.8 100; Bloodforge 0.8 0; Transcendence 0.8 100
+S2: Dagger of Frenzy 39.7 56; Tyrfing 19.8 50; Toxic Blade 11.6 43; Odysseus' Bow 9.9 42; Rage 5 67; Berserker's Shield 3.3 100; Sun Beam Bow 1.7 100; Riptalon 1.7 100; Runeforged Hammer 0.8 0; Hastened Fatalis 0.8 0; Avenging Blade 0.8 0; Demon Blade 0.8 100; Arondight 0.8 0; Transcendence 0.8 100; Silverbranch Bow 0.8 100; Qin's Blade 0.8 0; The Reaper 0.8 100
+S3: Dominance 24.8 57; Odysseus' Bow 24 66; The Executioner 18.2 36; Dagger of Frenzy 9.1 55; Silverbranch Bow 7.4 56; Riptalon 6.6 50; Toxic Blade 2.5 33; Deathbringer 2.5 67; Berserker's Shield 1.7 50; Tyrfing 0.8 100; Leviathan's Hide 0.8 100; Musashi's Dual Swords 0.8 100; Demon Blade 0.8 0
+S4: Silverbranch Bow 24 55; Riptalon 21.5 58; The Executioner 18.2 55; Dominance 13.2 56; Odysseus' Bow 6.6 50; Qin's Blade 4.1 40; Deathbringer 4.1 40; Toxic Blade 1.7 100; Jotunn's Revenge 0.8 0; Demon Blade 0.8 0; Berserker's Shield 0.8 100; Tyrfing 0.8 100; Shogun's Ofuda 0.8 100; Hastened Fatalis 0.8 0; Manchu Bow 0.8 0; Dagger of Frenzy 0.8 100
+S5: Riptalon 19 70; Silverbranch Bow 16.5 80; The Executioner 14 65; Odysseus' Bow 5.8 29; Deathbringer 5.8 43; Manchu Bow 5 17; Demon Blade 5 50; Qin's Blade 3.3 0; Hunter's Bow 3.3 50; Survivor's Sash 2.5 33; Toxic Blade 2.5 0; Bow 2.5 67; Skeggox 1.7 0; Musashi's Dual Swords 1.7 50; Berserker's Shield 1.7 50; Cursed Sickle 0.8 100; Ring 0.8 0; Tekko-Kagi 0.8 100; Hastened Fatalis 0.8 0; Heartseeker 0.8 0; Sun Beam Bow 0.8 0; Bloodforge 0.8 100; Axe 0.8 100; Titan's Bane 0.8 100; Bragi's Harp 0.8 100; Dagger of Frenzy 0.8 100; Infused Axe 0.8 0
+S6: Hunter's Bow 13.2 38; Manchu Bow 6.6 50; Deathbringer 6.6 63; The Executioner 5.8 86; Riptalon 5 50; Silverbranch Bow 5 67; Bow 4.1 40; Odysseus' Bow 3.3 75; Dominance 3.3 50; Qin's Blade 3.3 100; Kopesh 3.3 25; Musashi's Dual Swords 2.5 33; Demon Blade 1.7 100; Infused Axe 1.7 0; Toxic Blade 1.7 0; Blinking Abyss 1.7 50; Berserker's Shield 1.7 50; Mote of Chaos 0.8 100; Survivor's Sash 0.8 100; Time-lock Aegis 0.8 0; Skeggox 0.8 100; Scythe 0.8 100; Axe 0.8 0; Olmec Blue 0.8 0; Barbed Carver 0.8 100
+## chiron carry none | 506 | 54.9 | 2 semanas
+A: None
+R: Purification Beads 50.2 57; Aegis of Acceleration 49.2 52; Phantom Shell 0.4 100; Agility Relic 0.2 100
+ST: Bluestone Brooch 48.2 59; Hunter's Cowl 14.6 64; Pendulum of The Ages 12.5 54; Bluestone Pendant 9.9 46; Sands of Time 4 15; Archmage's Gem 4 60; Leather Cowl 3.8 53; Death's Embrace 1 40; Sharpshooter's Arrow 0.8 50; Conduit Gem 0.6 0; Death's Toll 0.4 50; Gilded Arrow 0.2 0; Bumba's Hammer 0.2 0
+S1: Transcendence 76.9 54; Devourer's Gauntlet 15.6 66; Jotunn's Revenge 4.5 35; Tyrfing 2.4 50; Odysseus' Bow 0.4 0; Avenging Blade 0.2 100
+S2: Jotunn's Revenge 64.8 54; Transcendence 6.3 53; Tekko-Kagi 4.2 71; Dagger of Frenzy 3.8 47; Dominance 3.4 65; Devourer's Gauntlet 3 60; Tyrfing 2.6 62; Hydra's Lament 2.6 31; The Crusher 2.4 67; Avenging Blade 1.8 56; Daybreak Gavel 1.6 38; Odysseus' Bow 1 40; Arondight 0.8 50; Blinking Abyss 0.4 100; Berserker's Shield 0.4 100; Barbed Carver 0.2 100; Vital Amplifier 0.2 100; Avatar's Parashu 0.2 100; Toxic Blade 0.2 0; Silverbranch Bow 0.2 100; Heartseeker 0.2 0
+S3: The Crusher 31.2 54; Heartseeker 22.5 54; Avatar's Parashu 12.1 49; Dominance 9.5 60; Jotunn's Revenge 5.7 66; Odysseus' Bow 3 73; Hydra's Lament 2.8 79; Tekko-Kagi 2.4 58; Riptalon 2.2 55; The Executioner 2 50; Barbed Carver 1.2 17; Titan's Bane 1.2 50; Daybreak Gavel 0.6 67; Avenging Blade 0.6 0; Tyrfing 0.6 67; Oath-Sworn Spear 0.4 0; Dagger of Frenzy 0.4 100; Toxic Blade 0.2 100; Berserker's Shield 0.2 0; Infused Axe 0.2 0; Devourer's Gauntlet 0.2 0; Time-lock Aegis 0.2 100; The Reaper 0.2 0; Shifter's Shield 0.2 0; Silverbranch Bow 0.2 100; Bloodforge 0.2 0
+S4: Heartseeker 39.3 56; The Crusher 13.4 44; Avatar's Parashu 12.6 56; Titan's Bane 10.3 60; Bloodforge 5.1 62; Dominance 2.8 50; The Executioner 2.4 58; Qin's Blade 1.8 78; Odysseus' Bow 1.8 78; Lucerne Hammer 1.4 43; Riptalon 1.2 33; Silverbranch Bow 1.2 83; Infused Axe 0.8 25; Skeggox 0.8 0; Pendulum Blade 0.6 33; Toxic Blade 0.6 67; Berserker's Shield 0.4 50; Barbed Carver 0.4 100; Axe 0.4 0; Jotunn's Revenge 0.4 100; Hydra's Lament 0.2 100; Pharaoh's Curse 0.2 100; Void Shard 0.2 0; Avenging Blade 0.2 100; Vital Amplifier 0.2 0; Dagger of Frenzy 0.2 0; Hastened Fatalis 0.2 100; Time-lock Aegis 0.2 0; Transcendence 0.2 100; Xibalban Effigy 0.2 100; Talisman of Purification 0.2 0; Oath-Sworn Spear 0.2 100
+S5: Titan's Bane 19.6 60; Avatar's Parashu 11.9 68; The Crusher 10.7 61; Heartseeker 10.5 53; Skeggox 7.3 30; Odysseus' Bow 5.7 52; Void Shard 5.3 37; Lucerne Hammer 3.8 42; Silverbranch Bow 3.2 75; Axe 3 53; Hunter's Bow 2.6 54; Infused Axe 2.4 33; Riptalon 1.8 67; The Executioner 1.8 67; Manchu Bow 0.8 75; Pendulum Blade 0.8 50; Jotunn's Revenge 0.8 50; Talisman of Purification 0.6 33; Toxic Blade 0.6 67; Time-lock Aegis 0.6 33; Dominance 0.6 67; Survivor's Sash 0.4 50; Blinking Abyss 0.4 100; Scythe 0.4 100; Bloodforge 0.4 100; Oath-Sworn Spear 0.4 50; The Reaper 0.4 50; Demon Blade 0.2 100; Olmec Blue 0.2 0; Hydra's Lament 0.2 0; Avenging Blade 0.2 100; Berserker's Shield 0.2 0; Circlet 0.2 0; Bow 0.2 0; Arondight 0.2 100; Shield 0.2 100; Ancile 0.2 100; The World Stone 0.2 100; Magi's Cloak 0.2 0; Barbed Carver 0.2 100; Qin's Blade 0.2 100
+S6: Skeggox 9.9 48; Titan's Bane 7.9 70; Avatar's Parashu 7.3 62; Lucerne Hammer 5.1 58; Hunter's Bow 3.2 69; Void Shard 2.8 29; Manchu Bow 2.8 43; The Crusher 2.6 54; Silverbranch Bow 2.6 62; Axe 2 40; Talisman of Purification 2 50; Bow 1.6 88; Blinking Abyss 1.4 71; Time-lock Aegis 1.4 29; Dominance 1.2 50; Survivor's Sash 1.2 67; Pendulum Blade 1.2 33; Infused Axe 1 80; Barbed Carver 0.8 50; Qin's Blade 0.8 75; Riptalon 0.8 75; Circlet 0.6 33; Heartseeker 0.6 67; Oath-Sworn Spear 0.6 100; Shield 0.6 67; Odysseus' Bow 0.6 100; The Executioner 0.6 33; Arondight 0.4 50; The Reaper 0.4 100; Caestus 0.4 50; Breastplate of Valor 0.4 100; Cursed Sickle 0.2 100; Bloodforge 0.2 100; Avenging Blade 0.2 0; Hydra's Lament 0.2 100; Hussar's Wings 0.2 0; Deathbringer 0.2 100; Captain's Ring 0.2 100; Veve Charm 0.2 0; Freya's Tears 0.2 100; Magi's Cloak 0.2 0; Rune 0.2 100; Tekko-Kagi 0.2 0; Bowl Drum 0.2 100; Daybreak Gavel 0.2 100; Eye of the Storm 0.2 100; Jotunn's Revenge 0.2 100; Mote of Chaos 0.2 0; Mantle of Discord 0.2 100
+## chiron carry aspect-of-the-heroic-tutor | 9 | 55.6 | 2 semanas
+A: Aspect of the Heroic Tutor
+R: Purification Beads 77.8 43; Aegis of Acceleration 22.2 100
+ST: Hunter's Cowl 44.4 25; Sharpshooter's Arrow 33.3 67; Leather Cowl 11.1 100; Death's Embrace 11.1 100
+S1: Devourer's Gauntlet 55.6 60; Tyrfing 44.4 50
+S2: Odysseus' Bow 44.4 50; Dagger of Frenzy 33.3 67; Berserker's Shield 11.1 100; Tyrfing 11.1 0
+S3: Riptalon 33.3 67; Dominance 22.2 50; The Executioner 22.2 0; Toxic Blade 11.1 100; Silverbranch Bow 11.1 100
+S4: The Executioner 11.1 100; Qin's Blade 11.1 0; Breastplate of Valor 11.1 100; Berserker's Shield 11.1 100; Silverbranch Bow 11.1 100; Riptalon 11.1 0; Dominance 11.1 100; Bragi's Harp 11.1 0; Odysseus' Bow 11.1 0
+S5: Silverbranch Bow 33.3 33; Deathbringer 22.2 50; Shogun's Ofuda 11.1 100; Sun Beam Bow 11.1 100; Odysseus' Bow 11.1 100; Qin's Blade 11.1 0
+S6: The Executioner 44.4 75; Qin's Blade 22.2 50; Musashi's Dual Swords 11.1 0; Shifter's Shield 11.1 0
+## hachiman carry none | 767 | 48.9 | 2 semanas
+A: None
+R: Purification Beads 57.8 47; Aegis of Acceleration 41.3 51; Agility Relic 0.8 33; Phantom Shell 0.1 0
+ST: Sharpshooter's Arrow 61.7 52; Gilded Arrow 18.5 37; Hunter's Cowl 11.7 53; Leather Cowl 5.1 44; Death's Embrace 2.2 59; Death's Toll 0.5 0; Bumba's Golden Dagger 0.1 100; War Banner 0.1 0
+S1: Devourer's Gauntlet 83.8 48; Tyrfing 10 55; Avenging Blade 5.1 49; Dagger of Frenzy 0.4 33; Dominance 0.1 0; Tekko-Kagi 0.1 100; Sun Beam Bow 0.1 100; Bloodforge 0.1 0; The Reaper 0.1 0
+S2: Dagger of Frenzy 77.1 49; Tyrfing 5.1 49; Odysseus' Bow 4.6 34; Riptalon 2.5 53; Rage 2.3 39; Dominance 1.7 77; The Executioner 1.2 56; Berserker's Shield 1 50; Avenging Blade 0.9 71; Blinking Abyss 0.9 71; Silverbranch Bow 0.8 33; Toxic Blade 0.5 25; Tekko-Kagi 0.4 33; Sun Beam Bow 0.3 50; Time-lock Aegis 0.1 0; Demon Blade 0.1 100; Lernaean Bow 0.1 100; Agility Greaves 0.1 0; Qin's Blade 0.1 100; Talisman of Purification 0.1 0
+S3: Dominance 46 50; The Executioner 23.1 40; Odysseus' Bow 10.6 54; Riptalon 8 49; Silverbranch Bow 3.7 61; Dagger of Frenzy 2 60; Demon Blade 1 38; Sun Beam Bow 0.9 71; Musashi's Dual Swords 0.8 50; Deathbringer 0.7 40; Toxic Blade 0.7 100; Tyrfing 0.7 60; Rage 0.5 75; Qin's Blade 0.5 50; Berserker's Shield 0.5 50; Tekko-Kagi 0.1 100; Lernaean Bow 0.1 0; Bow 0.1 0; Avenging Blade 0.1 100
+S4: Riptalon 24.1 48; Silverbranch Bow 24.1 52; The Executioner 15.3 50; Dominance 11.9 51; Deathbringer 8.7 51; Odysseus' Bow 3.9 47; Demon Blade 1.7 62; Musashi's Dual Swords 1.3 50; Hunter's Bow 1.3 30; Manchu Bow 1 13; Avenging Blade 1 50; Toxic Blade 1 75; Qin's Blade 0.8 33; Rage 0.4 0; Berserker's Shield 0.4 67; Titan's Bane 0.4 33; Bow 0.4 67; Lernaean Bow 0.3 0; Dagger of Frenzy 0.3 0; Infused Axe 0.3 0; Survivor's Sash 0.3 0; Skeggox 0.1 0; Sun Beam Bow 0.1 100; Talisman of Purification 0.1 100; Cursed Sickle 0.1 0; Tyrfing 0.1 0; Axe 0.1 0; Shogun's Ofuda 0.1 100; Time-lock Aegis 0.1 0; Hastened Fatalis 0.1 100
+S5: Deathbringer 19.9 55; Riptalon 14.6 46; Silverbranch Bow 14.5 50; The Executioner 11 60; Hunter's Bow 5.6 40; Odysseus' Bow 4.6 54; Dominance 4 52; Manchu Bow 3.8 31; Qin's Blade 2.9 55; Cursed Sickle 2.3 39; Bow 1.8 64; Musashi's Dual Swords 1.8 64; Axe 1.4 45; Kopesh 1.4 18; Skeggox 1.4 55; Demon Blade 1.3 20; Survivor's Sash 1.2 22; Infused Axe 1 0; Berserker's Shield 0.9 43; Toxic Blade 0.7 60; Talisman of Purification 0.4 33; Titan's Bane 0.4 67; Avenging Blade 0.4 67; Dagger of Frenzy 0.4 33; Sabre 0.4 0; Tyrfing 0.3 0; Shogun's Ofuda 0.3 100; Rage 0.3 50; Mote of Chaos 0.1 100; Hooked Sword 0.1 0; Time-lock Aegis 0.1 0; Bragi's Harp 0.1 100; Circlet 0.1 0; Scythe 0.1 0; Battle Axe 0.1 100; Sun Beam Bow 0.1 0
+S6: Deathbringer 9.6 53; Hunter's Bow 7.6 40; Manchu Bow 7 44; Riptalon 6 52; The Executioner 4.6 69; Silverbranch Bow 4.4 44; Skeggox 3.5 56; Bow 3.1 54; Odysseus' Bow 2.5 58; Kopesh 2.3 28; Dominance 2.3 56; Qin's Blade 2.3 39; Survivor's Sash 1.6 50; Musashi's Dual Swords 1.6 67; Time-lock Aegis 1.4 82; Axe 1.4 45; Mote of Chaos 1.3 30; Blinking Abyss 0.9 43; Dagger of Frenzy 0.9 57; Demon Blade 0.7 80; Berserker's Shield 0.7 80; Titan's Bane 0.7 60; Avenging Blade 0.5 50; Cursed Sickle 0.5 75; Infused Axe 0.5 75; Hastened Fatalis 0.5 75; Toxic Blade 0.4 33; Tekko-Kagi 0.3 50; Shogun's Ofuda 0.3 50; Talisman of Purification 0.3 50; Engraved Guard 0.1 0; Scythe 0.1 0; Avatar's Parashu 0.1 100; The Reaper 0.1 0; Lucerne Hammer 0.1 0; Ragnarok's Wake 0.1 100; Sabre 0.1 0; Mantle of Discord 0.1 100; Shell of Rebuke 0.1 0; Sun Beam Bow 0.1 0; Olmec Blue 0.1 0
+## hachiman carry aspect-of-the-steel-wind | 37 | 51.4 | 2 semanas
+A: Aspect of the Steel Wind
+R: Aegis of Acceleration 59.5 59; Purification Beads 27 40; Agility Relic 10.8 25; Phantom Shell 2.7 100
+ST: Archmage's Gem 29.7 45; Conduit Gem 24.3 56; Bluestone Brooch 13.5 40; Hunter's Cowl 10.8 100; Bluestone Pendant 8.1 33; Sharpshooter's Arrow 5.4 50; Bumba's Hammer 5.4 50; Bumba's Cudgel 2.7 0
+S1: Jotunn's Revenge 40.5 53; Transcendence 32.4 33; The Crusher 10.8 75; Tyrfing 5.4 100; Devourer's Gauntlet 5.4 50; Hydra's Lament 2.7 100; Barbed Carver 2.7 0
+S2: Jotunn's Revenge 35.1 31; Transcendence 24.3 56; Hydra's Lament 8.1 33; Barbed Carver 8.1 67; The Crusher 5.4 50; Odysseus' Bow 5.4 100; Rage 5.4 100; Pendulum Blade 2.7 0; Arondight 2.7 100; Dagger of Frenzy 2.7 100
+S3: The Crusher 21.6 38; Pendulum Blade 21.6 13; Barbed Carver 16.2 67; Hydra's Lament 13.5 40; Jotunn's Revenge 8.1 67; Titan's Bane 5.4 100; Silverbranch Bow 2.7 100; Riptalon 2.7 100; Musashi's Dual Swords 2.7 100; Heartseeker 2.7 100; Blinking Abyss 2.7 100
+S4: Heartseeker 48.6 33; Titan's Bane 18.9 57; The Crusher 8.1 33; Dominance 8.1 67; Lucerne Hammer 2.7 100; The Executioner 2.7 100; Deathbringer 2.7 100; Jotunn's Revenge 2.7 100; Barbed Carver 2.7 100; Axe 2.7 100
+S5: Titan's Bane 21.6 13; Heartseeker 13.5 60; Blinking Abyss 13.5 80; Lucerne Hammer 10.8 50; Infused Axe 5.4 50; Agility Greaves 2.7 0; Scythe 2.7 100; Riptalon 2.7 100; Void Shard 2.7 100; Demon Blade 2.7 0; Dominance 2.7 100; Deathbringer 2.7 100; Avatar's Parashu 2.7 0; Talisman of Purification 2.7 100; Skeggox 2.7 100; Mote of Chaos 2.7 0; Circlet 2.7 100
+S6: Blinking Abyss 16.2 33; The Crusher 5.4 50; Mote of Chaos 5.4 0; Void Shard 5.4 0; Adamantine Sickle 2.7 100; Barbed Carver 2.7 100; Axe 2.7 100; Heartseeker 2.7 100; Qin's Blade 2.7 100; Arondight 2.7 100; Titan's Bane 2.7 100; Avatar's Parashu 2.7 100; Skeggox 2.7 100; The Reaper 2.7 100
+## chronos carry none | 216 | 49.1 | 2 semanas
+A: None
+R: Purification Beads 71.3 47; Aegis of Acceleration 25.5 53; Blink Rune 1.9 75; Agility Relic 0.9 50; Phantom Shell 0.5 100
+ST: Pendulum of The Ages 61.6 46; Sands of Time 8.3 56; Archmage's Gem 6.9 67; Sharpshooter's Arrow 6 69; Death's Embrace 4.2 67; Hunter's Cowl 3.7 50; Conduit Gem 2.8 17; Leather Cowl 2.3 20; Death's Toll 2.3 60; Gilded Arrow 0.9 50; Bumba's Golden Dagger 0.5 0; Bumba's Hammer 0.5 0
+S1: Book of Thoth 45.8 44; Spear of Desolation 31.9 54; Bragi's Harp 5.1 45; Tyrfing 3.7 50; Polynomicon 2.8 33; Chronos' Pendant 2.8 67; Bracer of The Abyss 1.9 75; Devourer's Gauntlet 1.9 75; Doom Orb 1.4 67; Bancroft's Talon 0.5 0; Ancient Signet 0.5 0; Silverbranch Bow 0.5 0; Necronomicon 0.5 0; Gem of Focus 0.5 100; The Executioner 0.5 100
+S2: Polynomicon 36.6 53; Spear of Desolation 13.4 31; Bracer of The Abyss 11.1 54; Nimble Ring 9.3 60; Book of Thoth 8.8 58; Rod of Tahuti 4.2 33; Chronos' Pendant 3.2 14; Dagger of Frenzy 2.8 67; Berserker's Shield 1.4 33; Odysseus' Bow 1.4 67; Tyrfing 0.9 0; Gem of Focus 0.9 50; Bragi's Harp 0.9 50; Toxic Blade 0.5 100; Genji's Guard 0.5 0; Hastened Fatalis 0.5 100; The Executioner 0.5 0; Sun Beam Bow 0.5 100; Talisman of Purification 0.5 100; Riptalon 0.5 100; Shield 0.5 100; Necronomicon 0.5 0; Bancroft's Talon 0.5 0; Shifter's Shield 0.5 0
+S3: Nimble Ring 37.5 52; Rod of Tahuti 28.7 47; Polynomicon 11.1 38; Bracer of The Abyss 4.2 22; Spear of Desolation 2.3 60; The Executioner 2.3 100; Wish-Granting Pearl 1.9 50; Bragi's Harp 1.4 67; Riptalon 1.4 33; Gem of Focus 0.9 50; Silverbranch Bow 0.9 100; Sun Beam Bow 0.9 100; Dominance 0.9 100; Chronos' Pendant 0.5 0; Ethereal Staff 0.5 0; Leviathan's Hide 0.5 0; Odysseus' Bow 0.5 0; Book of Thoth 0.5 100; Breastplate of Valor 0.5 0; Bancroft's Talon 0.5 100; Spear Of The Magus 0.5 0; Qin's Blade 0.5 0; Shifter's Shield 0.5 100; Soul Gem 0.5 100; Dagger of Frenzy 0.5 0
+S4: Nimble Ring 31.5 47; Rod of Tahuti 29.2 57; Wish-Granting Pearl 6.9 53; Polynomicon 5.1 45; The Executioner 5.1 55; Obsidian Shard 3.2 29; Silverbranch Bow 2.3 60; Blinking Abyss 1.9 25; Spear of Desolation 1.9 50; Gem of Focus 1.4 0; Deathbringer 0.9 50; Evil Eye 0.9 50; Bracer of The Abyss 0.9 50; Bragi's Harp 0.9 50; Hastened Fatalis 0.9 0; Divine Ruin 0.5 0; Spear Of The Magus 0.5 100; Riptalon 0.5 0; Berserker's Shield 0.5 0; Golden Blade 0.5 0; Qin's Blade 0.5 100; Killing Stone 0.5 0; Xibalban Effigy 0.5 0; Tyrfing 0.5 100; Hunter's Bow 0.5 0; Ancient Signet 0.5 100; Tekko-Kagi 0.5 100; Blood-Bound Book 0.5 100; Dominance 0.5 100; Bow 0.5 0
+S5: Obsidian Shard 19.9 51; Dreamer's Idol 11.6 64; Rod of Tahuti 9.7 57; Evil Eye 6 54; Nimble Ring 5.1 18; Blinking Abyss 3.7 50; Polynomicon 3.7 38; Killing Stone 3.2 43; The Executioner 2.8 33; Spear Of The Magus 2.8 67; Void Shard 2.3 20; Gem of Focus 1.9 75; Silverbranch Bow 1.9 75; Bracer of The Abyss 1.9 25; Mantle of Discord 1.4 0; Dagger of Frenzy 1.4 67; Survivor's Sash 1.4 67; Hastened Fatalis 1.4 67; Mote of Chaos 0.9 50; Berserker's Shield 0.9 50; Dominance 0.9 0; Bow 0.9 50; Oracle Staff 0.9 50; Odysseus' Bow 0.9 100; Toxic Blade 0.9 100; Cursed Sickle 0.9 50; Gem 0.9 0; Qin's Blade 0.9 50; Sun Beam Bow 0.9 100; Medal of Disruption 0.5 0; Talisman of Purification 0.5 0; Necronomicon 0.5 0; Shogun's Ofuda 0.5 0; Shell of Rebuke 0.5 0; Mercury's Talaria 0.5 0; Adroit Ring 0.5 100; Engraved Guard 0.5 100; Hunter's Bow 0.5 0; Ring 0.5 0; Bragi's Harp 0.5 0; Deathbringer 0.5 100; Wish-Granting Pearl 0.5 0; Soul Gem 0.5 100; Manchu Bow 0.5 0; Magi's Cloak 0.5 100
+S6: Blinking Abyss 11.1 63; Obsidian Shard 7.9 41; Killing Stone 7.4 44; Evil Eye 4.6 20; Rod of Tahuti 4.2 56; Dreamer's Idol 3.7 38; Void Shard 3.7 50; Mote of Chaos 2.8 50; Hunter's Bow 2.8 50; Gem of Focus 2.3 80; Nimble Ring 2.3 60; Bow 1.9 75; Polynomicon 1.9 50; Bracer of The Abyss 1.4 100; Talisman of Purification 1.4 67; Magi's Cloak 1.4 33; Time-lock Aegis 0.9 0; Deathbringer 0.9 50; Dagger of Frenzy 0.9 100; Xibalban Effigy 0.9 50; Riptalon 0.9 50; Dwarven Plate 0.5 100; Medal of Defense 0.5 0; The Executioner 0.5 0; Jade Scepter 0.5 0; Toxic Blade 0.5 100; Silverbranch Bow 0.5 100; Ring of Dispel 0.5 0; Stalwart Sigil 0.5 0; Qin's Blade 0.5 0; Survivor's Sash 0.5 100; Hastened Fatalis 0.5 100; Reliquary 0.5 100; Mantle of Discord 0.5 100; Spear of Desolation 0.5 100
+## danzaburou carry none | 273 | 50.5 | 2 semanas
+A: None
+R: Purification Beads 56.8 45; Aegis of Acceleration 41.4 58; Blink Rune 1.8 40
+ST: Hunter's Cowl 19.4 62; Archmage's Gem 18.7 55; Sharpshooter's Arrow 10.6 48; Death's Embrace 9.9 67; Pendulum of The Ages 9.2 48; Leather Cowl 8.1 32; Gilded Arrow 6.6 33; Conduit Gem 6.2 59; Sands of Time 2.9 25; Bluestone Brooch 2.9 38; Bumba's Hammer 2.2 33; Death's Toll 1.8 40; Bumba's Cudgel 0.7 50; Bumba's Spear 0.4 0; Bluestone Pendant 0.4 0
+S1: Devourer's Gauntlet 37.7 53; Transcendence 28.6 49; Book of Thoth 11.4 42; Tyrfing 8.1 41; Avenging Blade 4 64; Jotunn's Revenge 3.7 60; Polynomicon 2.6 57; Spear of Desolation 2.2 67; Ancient Signet 0.7 50; Bragi's Harp 0.7 0; The World Stone 0.4 100
+S2: Dagger of Frenzy 17.9 61; Jotunn's Revenge 12.5 50; Book of Thoth 12.1 58; Transcendence 10.3 61; Tyrfing 7.7 52; Odysseus' Bow 6.2 35; Dominance 5.9 31; Berserker's Shield 4 64; Spear of Desolation 4 36; Chronos' Pendant 2.6 29; Gluttonous Grimoire 2.6 57; Bragi's Harp 1.8 0; The World Stone 1.8 40; Hydra's Lament 1.5 50; Avenging Blade 1.5 50; Riptalon 0.7 100; Ancient Signet 0.7 50; Toxic Blade 0.7 50; The Executioner 0.7 0; Blinking Abyss 0.4 0; Polynomicon 0.4 0; Silverbranch Bow 0.4 100; Barbed Carver 0.4 0; Vital Amplifier 0.4 100; Lernaean Bow 0.4 0; Daybreak Gavel 0.4 100; Soul Gem 0.4 0; Devourer's Gauntlet 0.4 0; Sun Beam Bow 0.4 100; Nimble Ring 0.4 100; Shifter's Shield 0.4 0; Rod of Tahuti 0.4 100
+S3: The Executioner 12.8 57; Dominance 9.5 35; Odysseus' Bow 9.5 62; Polynomicon 6.6 61; Hydra's Lament 4.8 54; Book of Thoth 4.8 54; Spear of Desolation 4.8 54; Jotunn's Revenge 4.4 50; Rod of Tahuti 3.3 56; Heartseeker 3.3 67; The Crusher 3.3 22; Dagger of Frenzy 3.3 33; Chronos' Pendant 2.9 38; Bragi's Harp 2.9 50; Tyrfing 2.6 43; Riptalon 2.6 43; Berserker's Shield 2.2 83; The World Stone 1.8 0; Silverbranch Bow 1.8 80; Barbed Carver 1.8 60; Toxic Blade 1.8 60; Tekko-Kagi 1.5 25; Bracer of The Abyss 1.1 67; Rage 1.1 0; Nimble Ring 0.7 100; Qin's Blade 0.7 50; Avenging Blade 0.7 0; The Reaper 0.7 100; Deathbringer 0.4 100; Gluttonous Grimoire 0.4 0; Ancient Signet 0.4 100; Soul Gem 0.4 0; Demon Blade 0.4 100; Hastened Fatalis 0.4 0; Bloodforge 0.4 0
+S4: Dominance 12.5 68; Riptalon 10.6 45; The Executioner 9.5 58; Polynomicon 9.2 44; Silverbranch Bow 8.8 50; Rod of Tahuti 7.7 52; Heartseeker 6.6 67; Titan's Bane 4.4 58; Nimble Ring 4.4 33; Odysseus' Bow 3.7 40; Jotunn's Revenge 3.7 50; Obsidian Shard 2.2 50; The World Stone 1.8 60; Spear of Desolation 1.8 60; Deathbringer 1.5 25; Dagger of Frenzy 1.1 33; The Crusher 1.1 33; Evil Eye 0.7 50; Hydra's Lament 0.7 50; Soul Gem 0.7 50; Bracer of The Abyss 0.7 0; Musashi's Dual Swords 0.7 0; Avatar's Parashu 0.7 0; Demon Blade 0.4 100; Bloodforge 0.4 100; Book of Thoth 0.4 100; Necronomicon 0.4 100; Transcendence 0.4 0; The Reaper 0.4 100; Ancient Signet 0.4 0; Barbed Carver 0.4 0; Cursed Sickle 0.4 0; Bragi's Harp 0.4 100; Oath-Sworn Spear 0.4 0; Soul Reaver 0.4 0; Avenging Blade 0.4 0; Vital Amplifier 0.4 0
+S5: Rod of Tahuti 12.8 51; Silverbranch Bow 10.6 59; Riptalon 7.3 60; The Executioner 7 47; Dominance 5.5 33; Titan's Bane 4.8 62; Manchu Bow 4 55; Polynomicon 4 55; Obsidian Shard 3.7 30; The Crusher 2.9 50; Deathbringer 2.9 25; Nimble Ring 2.2 67; Odysseus' Bow 1.8 20; Heartseeker 1.8 20; Evil Eye 1.5 50; Bow 1.5 25; Hunter's Bow 1.5 25; Avatar's Parashu 1.1 100; Dreamer's Idol 1.1 67; Toxic Blade 1.1 67; Kopesh 1.1 33; Hastened Fatalis 1.1 100; Tyrfing 1.1 33; Qin's Blade 1.1 67; Skeggox 0.7 50; Blinking Abyss 0.7 50; Daybreak Gavel 0.7 50; Time-lock Aegis 0.7 50; Demon Blade 0.7 50; Spear Of The Magus 0.7 0; Dagger of Frenzy 0.7 50; Hydra's Lament 0.7 50; Tekko-Kagi 0.7 100; Berserker's Shield 0.7 100; Killing Stone 0.7 0; Void Shard 0.7 100; Gluttonous Grimoire 0.7 50; Death Metal 0.4 100; Musashi's Dual Swords 0.4 100; Bloodforge 0.4 100; Magi's Cloak 0.4 100; Oracle Staff 0.4 100; Chronos' Pendant 0.4 100; Soul Gem 0.4 0; The World Stone 0.4 0; Talisman of Purification 0.4 100; Scythe 0.4 0; Jotunn's Revenge 0.4 0; Gem 0.4 0; Bragi's Harp 0.4 100; Transcendence 0.4 100; Survivor's Sash 0.4 100; Gem of Focus 0.4 0; Spear of Desolation 0.4 0; Infused Axe 0.4 0
+S6: Obsidian Shard 5.1 36; Riptalon 4.8 62; Skeggox 4.4 67; Deathbringer 4 55; Manchu Bow 3.7 60; Hunter's Bow 3.3 33; Blinking Abyss 2.6 71; The Executioner 2.2 50; Void Shard 2.2 33; Avatar's Parashu 2.2 17; Rod of Tahuti 1.8 60; Qin's Blade 1.8 20; Infused Axe 1.8 40; Evil Eye 1.8 0; Silverbranch Bow 1.5 50; Lucerne Hammer 1.5 75; Titan's Bane 1.5 50; Bow 1.5 75; Dominance 1.5 75; Dagger of Frenzy 1.1 33; Divine Ruin 1.1 33; Killing Stone 1.1 67; Survivor's Sash 1.1 33; Dreamer's Idol 1.1 0; Axe 1.1 67; Soul Reaver 1.1 67; Nimble Ring 0.7 100; Chronos' Pendant 0.7 100; Talisman of Purification 0.7 50; Spear Of The Magus 0.7 50; Kopesh 0.7 100; Polynomicon 0.7 50; Odysseus' Bow 0.7 50; Ragnarok's Wake 0.4 100; Legionnaire Armor 0.4 100; Spectral Armor 0.4 0; Berserker's Shield 0.4 100; Breastplate of Valor 0.4 100; Enchanted Bracelet 0.4 0; The Reaper 0.4 100; Heartseeker 0.4 100; Demon Blade 0.4 0; Draconic Scale 0.4 0; Sun Beam Bow 0.4 0; Bragi's Harp 0.4 0; Scythe 0.4 0; Sabre 0.4 0; Arondight 0.4 100; Gem 0.4 0; Lernaean Bow 0.4 100; Toxic Blade 0.4 100; The World Stone 0.4 0
+## danzaburou carry aspect-of-fellowship | 9 | 55.6 | 2 semanas
+A: Aspect of Fellowship
+R: Purification Beads 88.9 50; Aegis of Acceleration 11.1 100
+ST: Death's Embrace 44.4 75; Hunter's Cowl 22.2 50; Leather Cowl 22.2 0; Death's Toll 11.1 100
+S1: Tyrfing 22.2 50; Devourer's Gauntlet 22.2 100; Sun Beam Bow 22.2 50; Spear of Desolation 11.1 0; Bracer of The Abyss 11.1 0; Bragi's Harp 11.1 100
+S2: Dagger of Frenzy 33.3 67; Bragi's Harp 22.2 50; Transcendence 11.1 100; Nimble Ring 11.1 0; Toxic Blade 11.1 0; Book of Thoth 11.1 100
+S3: Odysseus' Bow 33.3 33; Toxic Blade 11.1 100; Berserker's Shield 11.1 100; Rod of Tahuti 11.1 0; Dominance 11.1 100; The Executioner 11.1 0; Nimble Ring 11.1 100
+S4: Riptalon 22.2 100; Silverbranch Bow 22.2 50; Titan's Bane 22.2 50; Dominance 11.1 100; Obsidian Shard 11.1 0; Rod of Tahuti 11.1 0
+S5: The Executioner 33.3 67; Musashi's Dual Swords 11.1 100; Odysseus' Bow 11.1 100; Bow 11.1 0; Nimble Ring 11.1 0; Riptalon 11.1 0; Survivor's Sash 11.1 100
+S6: Bracer of The Abyss 11.1 100; Demon Blade 11.1 100; Mote of Chaos 11.1 0; Silverbranch Bow 11.1 100; The Executioner 11.1 0
+## jing-wei carry none | 299 | 50.5 | 2 semanas
+A: None
+R: Purification Beads 53.2 57; Aegis of Acceleration 45.8 43; Agility Relic 1 67
+ST: Sharpshooter's Arrow 75.9 57; Gilded Arrow 18.4 24; Hunter's Cowl 4 67; Death's Toll 0.7 0; Leather Cowl 0.7 50; Bumba's Golden Dagger 0.3 0
+S1: Devourer's Gauntlet 93.6 51; Tyrfing 3.3 50; Avenging Blade 1 33; Rage 0.7 50; Lernaean Bow 0.7 50; Dominance 0.3 0; Golden Blade 0.3 0
+S2: Dagger of Frenzy 88.3 50; Dominance 2.3 71; Tyrfing 2 33; Odysseus' Bow 1.3 25; Rage 1.3 75; Demon Blade 1 33; Berserker's Shield 0.7 50; The Executioner 0.7 50; Riptalon 0.7 50; Hydra's Lament 0.7 100; Deathbringer 0.3 0; Blinking Abyss 0.3 0; Musashi's Dual Swords 0.3 100
+S3: Dominance 43.1 49; The Executioner 23.7 48; Musashi's Dual Swords 5.7 47; Deathbringer 5.7 71; Riptalon 4.7 43; Demon Blade 4.3 46; Rage 2.3 86; Silverbranch Bow 2.3 43; Odysseus' Bow 2.3 29; Dagger of Frenzy 1.3 75; Hydra's Lament 1.3 75; Berserker's Shield 0.7 100; Blinking Abyss 0.7 50; Toxic Blade 0.3 100; Avenging Blade 0.3 100; Tyrfing 0.3 0; Kinetic Cuirass 0.3 0; Bow 0.3 0
+S4: Deathbringer 29.1 53; Riptalon 19.7 49; Silverbranch Bow 18.4 55; Dominance 10.7 41; The Executioner 8 67; Musashi's Dual Swords 5 60; Demon Blade 2.3 43; Hunter's Bow 1 0; Skeggox 0.7 0; Hydra's Lament 0.7 100; Kopesh 0.7 0; Manchu Bow 0.7 0; Bow 0.3 100; Hastened Fatalis 0.3 0; Infused Axe 0.3 0; Odysseus' Bow 0.3 0; Lernaean Bow 0.3 0; Toxic Blade 0.3 100; Sun Beam Bow 0.3 100; Rage 0.3 0; Qin's Blade 0.3 0
+S5: Riptalon 29.4 51; Deathbringer 27.1 58; Dominance 8 67; The Executioner 5.7 53; Kopesh 3.7 36; Silverbranch Bow 3.7 36; Demon Blade 3 44; Musashi's Dual Swords 2.7 63; Hunter's Bow 2.3 29; Cursed Sickle 2 50; Axe 1.7 20; Skeggox 1.7 20; Manchu Bow 1.3 0; Infused Axe 1 33; Qin's Blade 1 67; Survivor's Sash 1 33; Odysseus' Bow 0.7 50; Bow 0.7 0; Scythe 0.3 100; Berserker's Shield 0.3 0; Toxic Blade 0.3 0; Avatar's Parashu 0.3 100; Dagger of Frenzy 0.3 100; Blinking Abyss 0.3 100; Avenging Blade 0.3 0; Olmec Blue 0.3 0; Spirit Robe 0.3 0; Titan's Bane 0.3 100
+S6: Deathbringer 10.7 50; Blinking Abyss 7 71; Musashi's Dual Swords 6.7 60; Hunter's Bow 5.7 59; Skeggox 5.7 47; The Executioner 5 47; Riptalon 4.7 64; Silverbranch Bow 4 58; Kopesh 3 56; Axe 2.7 50; Bow 2.7 25; Manchu Bow 2.3 43; Demon Blade 2 83; Mote of Chaos 2 50; Dominance 1.3 50; Survivor's Sash 1.3 75; Infused Axe 1 33; Magi's Cloak 1 100; Hooked Sword 0.7 50; Time-lock Aegis 0.7 0; Avatar's Parashu 0.7 50; Scythe 0.7 0; Sun Beam Bow 0.3 0; Cursed Sickle 0.3 100; Berserker's Shield 0.3 100; Hastened Fatalis 0.3 100; Titan's Bane 0.3 0; Shell of Rebuke 0.3 100; Toxic Blade 0.3 100; Dagger of Frenzy 0.3 0; Ragnarok's Wake 0.3 100; Hydra's Lament 0.3 100
+## achilles carry none | 1 | 0 | 2 semanas
+A: None
+R: Aegis of Acceleration 100 0
+ST: Leather Cowl 100 0
+S1: Jotunn's Revenge 100 0
+S2: Transcendence 100 0
+S3: The Crusher 100 0
+S4: Titan's Bane 100 0
+S5: Infused Axe 100 0
+S6: 
+## agni carry none | 3 | 100 | 2 semanas
+A: None
+R: Purification Beads 66.7 100; Aegis of Acceleration 33.3 100
+ST: Pendulum of The Ages 66.7 100; Archmage's Gem 33.3 100
+S1: Spear of Desolation 66.7 100; Book of Thoth 33.3 100
+S2: Book of Thoth 33.3 100; The World Stone 33.3 100; Rod of Tahuti 33.3 100
+S3: Soul Gem 33.3 100; Rod of Tahuti 33.3 100; Spear of Desolation 33.3 100
+S4: Obsidian Shard 66.7 100; Rod of Tahuti 33.3 100
+S5: Blinking Abyss 33.3 100; Dreamer's Idol 33.3 100; Nimble Ring 33.3 100
+S6: Soul Gem 33.3 100; Oracle Staff 33.3 100
+## agni carry aspect-of-combustion | 35 | 57.1 | 2 semanas
+A: Aspect of Combustion
+R: Purification Beads 68.6 63; Aegis of Acceleration 31.4 45
+ST: Sharpshooter's Arrow 40 71; Hunter's Cowl 14.3 80; Gilded Arrow 11.4 25; Death's Embrace 11.4 50; Leather Cowl 8.6 0; Bluestone Brooch 8.6 33; Bluestone Pendant 2.9 100; Pendulum of The Ages 2.9 100
+S1: Devourer's Gauntlet 60 52; Tyrfing 17.1 67; Avenging Blade 14.3 60; Bragi's Harp 5.7 50; Book of Thoth 2.9 100
+S2: Dagger of Frenzy 37.1 62; Bracer of The Abyss 11.4 75; Bragi's Harp 11.4 50; Lernaean Bow 8.6 33; Dominance 8.6 67; Odysseus' Bow 5.7 0; Riptalon 5.7 50; Tyrfing 2.9 100; Deathbringer 2.9 0; Devourer's Gauntlet 2.9 100; Spear of Desolation 2.9 100
+S3: Riptalon 22.9 63; The Executioner 17.1 67; Dominance 17.1 67; Odysseus' Bow 11.4 50; Toxic Blade 5.7 100; Bracer of The Abyss 2.9 0; Bancroft's Talon 2.9 0; Barbed Carver 2.9 100; Rage 2.9 0; Musashi's Dual Swords 2.9 100; Dagger of Frenzy 2.9 0; Heartseeker 2.9 0; Tyrfing 2.9 0; Nimble Ring 2.9 100
+S4: The Executioner 17.1 0; Dominance 14.3 60; Riptalon 14.3 60; Titan's Bane 8.6 100; Odysseus' Bow 8.6 67; Deathbringer 8.6 67; Qin's Blade 5.7 50; Toxic Blade 2.9 0; Bragi's Harp 2.9 100; Heartseeker 2.9 100; Obsidian Shard 2.9 100; The Reaper 2.9 100; Barbed Carver 2.9 0; Silverbranch Bow 2.9 100; Rod of Tahuti 2.9 100
+S5: Riptalon 14.3 80; Silverbranch Bow 14.3 40; Deathbringer 8.6 67; Manchu Bow 5.7 0; Dominance 5.7 50; Xibalban Effigy 5.7 100; Odysseus' Bow 5.7 50; Musashi's Dual Swords 5.7 50; Nimble Ring 2.9 0; Hastened Fatalis 2.9 100; Void Shard 2.9 100; Avatar's Parashu 2.9 0; Heartseeker 2.9 0; Survivor's Sash 2.9 0; Blinking Abyss 2.9 100; Shogun's Ofuda 2.9 100; Barbed Carver 2.9 0; Qin's Blade 2.9 100; Obsidian Shard 2.9 100; Axe 2.9 100
+S6: Deathbringer 11.4 75; Dominance 8.6 100; Silverbranch Bow 8.6 67; Manchu Bow 5.7 50; Hunter's Bow 5.7 50; Bow 2.9 0; Titan's Bane 2.9 100; Sabre 2.9 100; Death Metal 2.9 100; Lernaean Bow 2.9 0; Infused Axe 2.9 0; Toxic Blade 2.9 100; Demon Blade 2.9 100; Oracle Staff 2.9 100; Barbed Carver 2.9 0; Talisman of Purification 2.9 0; Skeggox 2.9 0
+## aladdin carry none | 4 | 25 | 2 semanas
+A: None
+R: Aegis of Acceleration 50 50; Purification Beads 50 0
+ST: Archmage's Gem 100 25
+S1: Genie's Lamp 75 33; Chronos' Pendant 25 0
+S2: Ancient Signet 25 100; Book of Thoth 25 0; Spear of Desolation 25 0; Doom Orb 25 0
+S3: Spear of Desolation 50 50; Book of Thoth 25 0; Rod of Tahuti 25 0
+S4: Polynomicon 75 33; Rod of Tahuti 25 0
+S5: Rod of Tahuti 50 50; Obsidian Shard 50 0
+S6: Void Shard 25 100; Soul Gem 25 0; Polynomicon 25 0; Spear of Desolation 25 0
+## amaterasu carry none | 3 | 100 | 2 semanas
+A: None
+R: Purification Beads 66.7 100; Aegis of Acceleration 33.3 100
+ST: Warrior's Axe 33.3 100; Death's Embrace 33.3 100; Sharpshooter's Arrow 33.3 100
+S1: Golden Blade 66.7 100; Berserker's Shield 33.3 100
+S2: Berserker's Shield 66.7 100; Golden Blade 33.3 100
+S3: Shell of Rebuke 33.3 100; The Executioner 33.3 100; Kinetic Cuirass 33.3 100
+S4: Kinetic Cuirass 66.7 100; Regrowth Striders 33.3 100
+S5: Spirit Robe 33.3 100; Freya's Tears 33.3 100; Stampede 33.3 100
+S6: Medal of Defense 66.7 100; Spirit Robe 33.3 100
+## aphrodite carry aspect-of-heartbreak | 3 | 33.3 | 2 semanas
+A: Aspect of Heartbreak
+R: Aegis of Acceleration 100 33
+ST: Conduit Gem 33.3 0; Bluestone Brooch 33.3 100; Pendulum of The Ages 33.3 0
+S1: Book of Thoth 66.7 50; Spear of Desolation 33.3 0
+S2: Staff of Myrddin 33.3 0; Spear of Desolation 33.3 100; Book of Thoth 33.3 0
+S3: Rod of Tahuti 33.3 0; The Cosmic Horror 33.3 100; Chronos' Pendant 33.3 0
+S4: Blinking Abyss 33.3 0; Totem of Death 33.3 100; Rod of Tahuti 33.3 0
+S5: Soul Reaver 33.3 0; Rod of Tahuti 33.3 100; Obsidian Shard 33.3 0
+S6: Staff of Myrddin 33.3 100; Divine Ruin 33.3 0
+## ares carry none | 1 | 0 | fim
+A: None
+R: Blink Rune 100 0
+ST: War Banner 100 0
+S1: Gauntlet of Thebes 100 0
+S2: Freya's Tears 100 0
+S3: Stampede 100 0
+S4: Shogun's Ofuda 100 0
+S5: Midgardian Mail 100 0
+S6: Void Shield 100 0
+## ares carry aspect-of-reverberation | 1 | 100 | fim
+A: Aspect of Reverberation
+R: Blink Rune 100 100
+ST: Hunter's Cowl 100 100
+S1: Devourer's Gauntlet 100 100
+S2: Breastplate of Valor 100 100
+S3: Sanguine Lash 100 100
+S4: Freya's Tears 100 100
+S5: Draconic Scale 100 100
+S6: Shell of Rebuke 100 100
+## artio carry aspect-of-the-denmother | 1 | 0 | 2 semanas
+A: Aspect of the Denmother
+R: Purification Beads 100 0
+ST: Conduit Gem 100 0
+S1: Chronos' Pendant 100 0
+S2: Rod of Asclepius 100 0
+S3: Divine Ruin 100 0
+S4: Spear Of The Magus 100 0
+S5: Rod of Tahuti 100 0
+S6: 
+## atlas carry none | 9 | 44.4 | 2 semanas
+A: None
+R: Aegis of Acceleration 55.6 40; Purification Beads 44.4 50
+ST: Death's Embrace 88.9 38; Death's Toll 11.1 100
+S1: Tyrfing 100 44
+S2: Bragi's Harp 100 44
+S3: Berserker's Shield 66.7 50; Odysseus' Bow 22.2 50; Toxic Blade 11.1 0
+S4: The Executioner 55.6 40; Riptalon 33.3 67; Silverbranch Bow 11.1 0
+S5: The Executioner 33.3 67; Silverbranch Bow 22.2 50; Riptalon 11.1 0; Qin's Blade 11.1 0; Ethereal Staff 11.1 0; Hunter's Bow 11.1 100
+S6: Qin's Blade 33.3 100; Riptalon 11.1 0; Toxic Blade 11.1 0
+## bacchus carry none | 1 | 0 | 2 semanas
+A: None
+R: Phantom Shell 100 0
+ST: Bumba's Hammer 100 0
+S1: Berserker's Shield 100 0
+S2: Tyrfing 100 0
+S3: Riptalon 100 0
+S4: The Executioner 100 0
+S5: Dagger of Frenzy 100 0
+S6: Mote of Chaos 100 0
+## bacchus carry aspect-of-revelry | 3 | 33.3 | 2 semanas
+A: Aspect of Revelry
+R: Agility Relic 66.7 50; Aegis of Acceleration 33.3 0
+ST: Hunter's Cowl 66.7 50; Death's Embrace 33.3 0
+S1: Devourer's Gauntlet 100 33
+S2: Berserker's Shield 66.7 50; Shifter's Shield 33.3 0
+S3: Berserker's Shield 33.3 0; Kinetic Cuirass 33.3 100; Leviathan's Hide 33.3 0
+S4: Stampede 33.3 0; Shell of Rebuke 33.3 100; Kinetic Cuirass 33.3 0
+S5: Shogun's Ofuda 66.7 50; Shell of Rebuke 33.3 0
+S6: Golden Blade 33.3 0; Medal of Defense 33.3 0
+## bastet carry none | 1 | 100 | fim
+A: None
+R: Blink Rune 100 100
+ST: Bluestone Brooch 100 100
+S1: Jotunn's Revenge 100 100
+S2: Pendulum Blade 100 100
+S3: The Crusher 100 100
+S4: Barbed Carver 100 100
+S5: Heartseeker 100 100
+S6: 
+## bellona carry none | 10 | 40 | 2 semanas
+A: None
+R: Agility Relic 90 44; Purification Beads 10 0
+ST: Hunter's Cowl 90 44; Death's Embrace 10 0
+S1: Devourer's Gauntlet 50 40; Tyrfing 40 50; Golden Blade 10 0
+S2: Berserker's Shield 80 50; Odysseus' Bow 10 0; Kinetic Cuirass 10 0
+S3: Vital Amplifier 30 33; Toxic Blade 20 100; Tekko-Kagi 10 100; Demon Blade 10 0; Contagion 10 0; Shogun's Ofuda 10 0; Sanguine Lash 10 0
+S4: Hastened Fatalis 20 50; The Executioner 20 0; Phoenix Feather 10 100; Shell of Rebuke 10 100; Kinetic Cuirass 10 0; Vital Amplifier 10 100; Hussar's Wings 10 0; Hide of the Nemean Lion 10 0
+S5: Riptalon 20 50; Kinetic Cuirass 20 0; Shell of Rebuke 10 100; Contagion 10 100; Umbral Link 10 0; The Executioner 10 100; Infused Axe 10 0; Toxic Blade 10 0
+S6: Dominance 20 50; Manchu Bow 20 0; Kinetic Cuirass 10 100; Phoenix Feather 10 100; Contagion 10 0
+## cerberus carry none | 1 | 100 | fim
+A: None
+R: Aegis of Acceleration 100 100
+ST: Bluestone Brooch 100 100
+S1: Shifter's Shield 100 100
+S2: Freya's Tears 100 100
+S3: Kinetic Cuirass 100 100
+S4: Sundering Echo 100 100
+S5: Hussar's Wings 100 100
+S6: Ring of Dispel 100 100
+## chaac carry none | 1 | 100 | fim
+A: None
+R: Aegis of Acceleration 100 100
+ST: Pendulum of The Ages 100 100
+S1: Devourer's Gauntlet 100 100
+S2: Book of Thoth 100 100
+S3: Rod of Tahuti 100 100
+S4: Spear of Desolation 100 100
+S5: Spear Of The Magus 100 100
+S6: Killing Stone 100 100
+## charon carry none | 3 | 66.7 | 2 semanas
+A: None
+R: Purification Beads 66.7 100; Aegis of Acceleration 33.3 0
+ST: Hunter's Cowl 33.3 100; Sharpshooter's Arrow 33.3 100; Gilded Arrow 33.3 0
+S1: Devourer's Gauntlet 100 67
+S2: Toxic Blade 66.7 50; Dagger of Frenzy 33.3 100
+S3: Riptalon 33.3 100; Silverbranch Bow 33.3 100; Hastened Fatalis 33.3 0
+S4: Dominance 33.3 100; Hastened Fatalis 33.3 100; Riptalon 33.3 0
+S5: Skeggox 33.3 100; Riptalon 33.3 100; Bow 33.3 0
+S6: Bow 33.3 0
+## cu-chulainn carry aspect-of-the-warped | 5 | 40 | fim
+A: Aspect of the Warped
+R: Purification Beads 40 0; Sundering Arc 20 100; Blink Rune 20 100; Agility Relic 20 0
+ST: Hunter's Cowl 40 50; Bluestone Brooch 20 0; Leather Cowl 20 0; Archmage's Gem 20 100
+S1: Devourer's Gauntlet 100 40
+S2: Riptalon 40 50; Jotunn's Revenge 40 0; Transcendence 20 100
+S3: Dagger of Frenzy 40 50; Berserker's Shield 20 0; Riptalon 20 0; Jotunn's Revenge 20 100
+S4: Kinetic Cuirass 40 50; Berserker's Shield 40 0; Xibalban Effigy 20 100
+S5: Berserker's Shield 20 100; Titan's Bane 20 0; Veve Charm 20 0; Pendulum Blade 20 100; Kinetic Cuirass 20 0
+S6: Barbed Carver 20 100; Skeggox 20 0; Shield 20 0; Lucerne Hammer 20 100; Infused Axe 20 0
+## da-ji carry none | 2 | 50 | 2 semanas
+A: None
+R: Sundering Arc 50 0; Aegis of Acceleration 50 100
+ST: Leather Cowl 50 0; Hunter's Cowl 50 100
+S1: Jotunn's Revenge 100 50
+S2: Hydra's Lament 100 50
+S3: Barbed Carver 50 0; Heartseeker 50 100
+S4: Heartseeker 50 0; Titan's Bane 50 100
+S5: Lucerne Hammer 50 0; Sundering Echo 50 100
+S6: Blinking Abyss 50 100
+## da-ji carry aspect-of-ferocity | 1 | 0 | 2 semanas
+A: Aspect of Ferocity
+R: Blink Rune 100 0
+ST: Gilded Arrow 100 0
+S1: Tekko-Kagi 100 0
+S2: Demon Blade 100 0
+S3: Deathbringer 100 0
+S4: Riptalon 100 0
+S5: Magi's Cloak 100 0
+S6: 
+## discordia carry aspect-of-the-gilded-victor | 29 | 37.9 | 2 semanas
+A: Aspect of the Gilded Victor
+R: Purification Beads 44.8 38; Aegis of Acceleration 37.9 27; Agility Relic 13.8 75; Blink Rune 3.4 0
+ST: Hunter's Cowl 31 44; Death's Embrace 20.7 50; Sharpshooter's Arrow 20.7 33; Leather Cowl 13.8 50; Gilded Arrow 10.3 0; Death's Toll 3.4 0
+S1: Tyrfing 44.8 31; Bragi's Harp 31 56; Devourer's Gauntlet 13.8 50; Bracer of The Abyss 6.9 0; Blood-Bound Book 3.4 0
+S2: Bragi's Harp 37.9 27; Tyrfing 27.6 50; Nimble Ring 6.9 0; Bracer of The Abyss 6.9 50; Dagger of Frenzy 6.9 50; Rod of Tahuti 3.4 0; Avenging Blade 3.4 0; Odysseus' Bow 3.4 100; Book of Thoth 3.4 100
+S3: Odysseus' Bow 17.2 40; Dagger of Frenzy 17.2 0; The Executioner 10.3 67; Riptalon 10.3 67; Berserker's Shield 6.9 50; Bragi's Harp 6.9 0; Barbed Carver 6.9 0; Rod of Tahuti 3.4 0; Qin's Blade 3.4 0; Silverbranch Bow 3.4 100; Toxic Blade 3.4 100; Bracer of The Abyss 3.4 100; Polynomicon 3.4 0; Tyrfing 3.4 100
+S4: The Executioner 27.6 50; Riptalon 20.7 0; Dominance 13.8 75; Nimble Ring 6.9 50; Bracer of The Abyss 6.9 50; Titan's Bane 6.9 0; Spear of Desolation 3.4 0; Silverbranch Bow 3.4 100; Dagger of Frenzy 3.4 0; Odysseus' Bow 3.4 100; Necronomicon 3.4 0
+S5: Silverbranch Bow 20.7 67; Manchu Bow 10.3 33; Dominance 10.3 0; Riptalon 6.9 50; The Executioner 6.9 0; Hunter's Bow 6.9 50; Deathbringer 3.4 0; Blinking Abyss 3.4 100; Avenging Blade 3.4 100; Shogun's Ofuda 3.4 0; Qin's Blade 3.4 0; Skeggox 3.4 0; Odysseus' Bow 3.4 0; Obsidian Shard 3.4 100; Dreamer's Idol 3.4 0; Hastened Fatalis 3.4 100
+S6: Manchu Bow 10.3 67; Riptalon 6.9 100; Cursed Sickle 6.9 100; Obsidian Shard 3.4 0; Hastened Fatalis 3.4 100; Survivor's Sash 3.4 0; Skeggox 3.4 0; Blinking Abyss 3.4 0; Silverbranch Bow 3.4 0; Time-lock Aegis 3.4 100; Axe 3.4 0; Odysseus' Bow 3.4 0; The Executioner 3.4 0; Infused Axe 3.4 0
+## eset carry none | 5 | 40 | 2 semanas
+A: None
+R: Aegis of Acceleration 80 25; Purification Beads 20 100
+ST: Pendulum of The Ages 40 100; Sharpshooter's Arrow 20 0; Leather Cowl 20 0; Hunter's Cowl 20 0
+S1: Devourer's Gauntlet 60 0; Gem of Focus 20 100; Spear of Desolation 20 100
+S2: Dagger of Frenzy 40 0; Bracer of The Abyss 20 0; Book of Thoth 20 100; Doom Orb 20 100
+S3: Riptalon 40 0; Dominance 20 0; Polynomicon 20 100; The World Stone 20 100
+S4: Titan's Bane 40 0; Rod of Tahuti 40 100; Deathbringer 20 0
+S5: Xibalban Effigy 40 0; Hunter's Bow 20 0; Magi's Cloak 20 100; Obsidian Shard 20 100
+S6: Cursed Sickle 20 0; Soul Gem 20 100; Manchu Bow 20 0; Soul Reaver 20 100
+## eset carry aspect-of-the-lifewarden | 1 | 0 | 2 semanas
+A: Aspect of the Lifewarden
+R: Phantom Shell 100 0
+ST: Gilded Arrow 100 0
+S1: Bragi's Harp 100 0
+S2: Dagger of Frenzy 100 0
+S3: Deathbringer 100 0
+S4: Bow 100 0
+S5: Kopesh 100 0
+S6: 
+## geb carry none | 1 | 100 | 2 semanas
+A: None
+R: Purification Beads 100 100
+ST: Selflessness 100 100
+S1: Gauntlet of Thebes 100 100
+S2: Chandra's Grace 100 100
+S3: Genji's Guard 100 100
+S4: Shell of Rebuke 100 100
+S5: Stampede 100 100
+S6: 
+## geb carry aspect-of-calamity | 8 | 50 | 2 semanas
+A: Aspect of Calamity
+R: Purification Beads 50 25; Agility Relic 50 75
+ST: Sharpshooter's Arrow 75 67; Gilded Arrow 25 0
+S1: Devourer's Gauntlet 50 50; Sun Beam Bow 25 50; Tyrfing 25 50
+S2: Dagger of Frenzy 75 50; Odysseus' Bow 12.5 0; Tyrfing 12.5 100
+S3: Odysseus' Bow 25 50; Dominance 25 100; Riptalon 12.5 0; Tyrfing 12.5 0; Bragi's Harp 12.5 0; Hydra's Lament 12.5 100
+S4: Dominance 25 0; The Executioner 25 50; Deathbringer 25 100; Riptalon 12.5 0; Demon Blade 12.5 100
+S5: Riptalon 37.5 67; Deathbringer 12.5 0; Bragi's Harp 12.5 100; Axe 12.5 0; Musashi's Dual Swords 12.5 100; Silverbranch Bow 12.5 0
+S6: Musashi's Dual Swords 25 50; Kopesh 12.5 0; Hunter's Bow 12.5 100; Axe 12.5 0; Dominance 12.5 100; Deathbringer 12.5 100
+## guan-yu carry none | 2 | 50 | fim
+A: None
+R: Sundering Arc 50 100; Purification Beads 50 0
+ST: Pendulum of The Ages 50 100; Death's Toll 50 0
+S1: Helm of Radiance 50 100; Tyrfing 50 0
+S2: Prophetic Cloak 50 100; Dagger of Frenzy 50 0
+S3: Nimble Ring 50 100; Berserker's Shield 50 0
+S4: Rod of Tahuti 50 100; Riptalon 50 0
+S5: Shogun's Ofuda 50 0
+S6: The Executioner 50 0
+## guan-yu carry aspect-of-the-general | 1 | 100 | fim
+A: Aspect of the General
+R: Phantom Shell 100 100
+ST: Bluestone Brooch 100 100
+S1: Daybreak Gavel 100 100
+S2: Contagion 100 100
+S3: Shifter's Shield 100 100
+S4: Freya's Tears 100 100
+S5: Talisman of Purification 100 100
+S6: 
+## hades carry none | 2 | 100 | 2 semanas
+A: None
+R: Blink Rune 50 100; Purification Beads 50 100
+ST: Bumba's Hammer 50 100; Archmage's Gem 50 100
+S1: Polynomicon 50 100; Book of Thoth 50 100
+S2: Chronos' Pendant 50 100; Bancroft's Talon 50 100
+S3: Obsidian Shard 50 100; Blood-Bound Book 50 100
+S4: Rod of Tahuti 50 100; Obsidian Shard 50 100
+S5: Dreamer's Idol 50 100; Spear of Desolation 50 100
+S6: Chronos' Pendant 50 100
+## hecate carry none | 1 | 100 | 2 semanas
+A: None
+R: Purification Beads 100 100
+ST: Archmage's Gem 100 100
+S1: The World Stone 100 100
+S2: Spear of Desolation 100 100
+S3: Spear Of The Magus 100 100
+S4: Rod of Tahuti 100 100
+S5: Obsidian Shard 100 100
+S6: Soul Gem 100 100
+## hel carry none | 7 | 71.4 | 2 semanas
+A: None
+R: Aegis of Acceleration 42.9 67; Phantom Shell 28.6 100; Purification Beads 28.6 50
+ST: Archmage's Gem 42.9 67; Conduit Gem 28.6 50; Sands of Time 28.6 100
+S1: Book of Thoth 42.9 67; Doom Orb 28.6 100; Polynomicon 28.6 50
+S2: Book of Thoth 28.6 100; Spear of Desolation 28.6 100; Freya's Tears 14.3 100; Soul Gem 14.3 0; Chronos' Pendant 14.3 0
+S3: Rod of Tahuti 42.9 67; Spear of Desolation 14.3 100; Obsidian Shard 14.3 100; Gem of Focus 14.3 0; Soul Gem 14.3 100
+S4: Rod of Tahuti 28.6 100; Obsidian Shard 14.3 0; Spear of Desolation 14.3 100; Soul Gem 14.3 100; Ancient Signet 14.3 0; Gem 14.3 100
+S5: Obsidian Shard 42.9 100; Soul Reaver 14.3 100; Spear of Desolation 14.3 0; Spear Of The Magus 14.3 100; Evil Eye 14.3 0
+S6: Ancient Signet 14.3 100; Gem of Focus 14.3 100
+## hel carry aspect-of-divergence | 7 | 14.3 | 2 semanas
+A: Aspect of Divergence
+R: Aegis of Acceleration 57.1 0; Purification Beads 28.6 0; Agility Relic 14.3 100
+ST: Gilded Arrow 28.6 0; Archmage's Gem 28.6 50; Pendulum of The Ages 14.3 0; Hunter's Cowl 14.3 0; Death's Toll 14.3 0
+S1: Spear of Desolation 28.6 50; Devourer's Gauntlet 28.6 0; Book of Thoth 28.6 0; Avenging Blade 14.3 0
+S2: Rod of Tahuti 14.3 0; Blinking Abyss 14.3 0; Dagger of Frenzy 14.3 0; Tyrfing 14.3 0; Nimble Ring 14.3 100; Chronos' Pendant 14.3 0; Bracer of The Abyss 14.3 0
+S3: Rod of Tahuti 28.6 50; Doom Orb 14.3 0; Dagger of Frenzy 14.3 0; Tyrfing 14.3 0; Riptalon 14.3 0; Spear of Desolation 14.3 0
+S4: Soul Gem 14.3 0; The Executioner 14.3 0; Bragi's Harp 14.3 0; Dominance 14.3 0; Bracer of The Abyss 14.3 100; Rod of Tahuti 14.3 0; Nimble Ring 14.3 0
+S5: Obsidian Shard 28.6 50; Survivor's Sash 14.3 0; Odysseus' Bow 14.3 0; Deathbringer 14.3 0; Ethereal Staff 14.3 0; Dagger of Frenzy 14.3 0
+S6: The World Stone 14.3 0; Engraved Guard 14.3 0; Riptalon 14.3 0; Dagger of Frenzy 14.3 100
+## hua-mulan carry none | 1 | 0 | fim
+A: None
+R: Phantom Shell 100 0
+ST: Bluestone Pendant 100 0
+S1: Devourer's Gauntlet 100 0
+S2: Jotunn's Revenge 100 0
+S3: Breastplate of Valor 100 0
+S4: Kinetic Cuirass 100 0
+S5: Pendulum Blade 100 0
+S6: 
+## ix-chel carry none | 3 | 0 | 2 semanas
+A: None
+R: Purification Beads 66.7 0; Aegis of Acceleration 33.3 0
+ST: Pendulum of The Ages 33.3 0; Bluestone Pendant 33.3 0; Archmage's Gem 33.3 0
+S1: Book of Thoth 66.7 0; Spear of Desolation 33.3 0
+S2: The World Stone 66.7 0; Soul Gem 33.3 0
+S3: Rod of Tahuti 33.3 0; Gem of Focus 33.3 0; Spear of Desolation 33.3 0
+S4: Obsidian Shard 33.3 0; Rod of Tahuti 33.3 0; Talisman of Purification 33.3 0
+S5: Blinking Abyss 33.3 0; Soul Reaver 33.3 0; Obsidian Shard 33.3 0
+S6: Time-lock Aegis 33.3 0; Rod of Tahuti 33.3 0
+## janus carry none | 2 | 100 | 2 semanas
+A: None
+R: Purification Beads 100 100
+ST: Pendulum of The Ages 100 100
+S1: Book of Thoth 50 100; Spear of Desolation 50 100
+S2: Chronos' Pendant 50 100; Soul Gem 50 100
+S3: Soul Gem 50 100; The World Stone 50 100
+S4: Rod of Tahuti 100 100
+S5: Obsidian Shard 50 100; Void Shard 50 100
+S6: Staff of Myrddin 50 100
+## kali carry aspect-of-unbound-destruction | 61 | 57.4 | 2 semanas
+A: Aspect of Unbound Destruction
+R: Purification Beads 50.8 55; Agility Relic 29.5 61; Aegis of Acceleration 19.7 58
+ST: Death's Embrace 42.6 46; Hunter's Cowl 29.5 67; Death's Toll 11.5 86; Sharpshooter's Arrow 9.8 17; Leather Cowl 4.9 100; Bumba's Spear 1.6 100
+S1: Tyrfing 82 62; Devourer's Gauntlet 13.1 38; Dominance 1.6 0; Bragi's Harp 1.6 0; Sun Beam Bow 1.6 100
+S2: Odysseus' Bow 39.3 54; Berserker's Shield 26.2 69; Hastened Fatalis 18 36; Tyrfing 6.6 75; Dominance 3.3 50; Devourer's Gauntlet 3.3 50; Sun Beam Bow 1.6 100; Shogun's Ofuda 1.6 100
+S3: Silverbranch Bow 44.3 70; Odysseus' Bow 18 45; Hastened Fatalis 11.5 43; The Executioner 8.2 40; Riptalon 4.9 100; Dominance 4.9 33; Dagger of Frenzy 1.6 0; The Reaper 1.6 100; Tyrfing 1.6 0; Sun Beam Bow 1.6 0; Qin's Blade 1.6 100
+S4: Silverbranch Bow 24.6 47; The Executioner 23 64; Odysseus' Bow 19.7 67; Riptalon 9.8 50; Hastened Fatalis 9.8 50; Qin's Blade 3.3 0; Toxic Blade 3.3 100; Hunter's Bow 1.6 100; Dominance 1.6 100; Survivor's Sash 1.6 100; Dagger of Frenzy 1.6 0
+S5: Riptalon 19.7 58; The Executioner 18 45; Silverbranch Bow 14.8 44; Qin's Blade 11.5 57; Hunter's Bow 9.8 67; Hastened Fatalis 8.2 80; Odysseus' Bow 6.6 50; Bow 6.6 75; Dominance 3.3 50; Survivor's Sash 1.6 100
+S6: Hunter's Bow 9.8 50; Bow 9.8 83; Manchu Bow 8.2 60; Riptalon 6.6 100; The Executioner 6.6 75; Odysseus' Bow 4.9 100; Silverbranch Bow 3.3 100; Hastened Fatalis 3.3 0; Magi's Cloak 3.3 50; Toxic Blade 3.3 0; Hussar's Wings 1.6 0; Survivor's Sash 1.6 100; Bragi's Harp 1.6 100; Agility Greaves 1.6 0; Dagger of Frenzy 1.6 0; Cursed Sickle 1.6 0; Sun Beam Bow 1.6 0; Scythe 1.6 100; Dominance 1.6 0; Blinking Abyss 1.6 100
+## kukulkan carry none | 9 | 55.6 | 2 semanas
+A: None
+R: Purification Beads 66.7 50; Aegis of Acceleration 33.3 67
+ST: Archmage's Gem 66.7 33; Pendulum of The Ages 22.2 100; Conduit Gem 11.1 100
+S1: Book of Thoth 100 56
+S2: Gem of Focus 33.3 33; Spear of Desolation 33.3 67; Typhon's Heart 11.1 100; Chronos' Pendant 11.1 0; Doom Orb 11.1 100
+S3: Polynomicon 44.4 75; Soul Gem 22.2 50; Ancient Signet 11.1 0; Chronos' Pendant 11.1 100; Soul Reaver 11.1 0
+S4: Rod of Tahuti 77.8 57; Totem of Death 11.1 100; Blinking Abyss 11.1 0
+S5: Obsidian Shard 66.7 50; The Cosmic Horror 11.1 100; Rod of Tahuti 11.1 0; Blinking Abyss 11.1 100
+S6: Obsidian Shard 22.2 100; Blinking Abyss 22.2 50; Freya's Tears 11.1 0; Screeching Gargoyle 11.1 0
+## kuzenbo carry none | 1 | 0 | fim
+A: None
+R: Purification Beads 100 0
+ST: Archmage's Gem 100 0
+S1: Bancroft's Talon 100 0
+S2: Ancient Signet 100 0
+S3: Spear of Desolation 100 0
+S4: Spear Of The Magus 100 0
+S5: Blinking Abyss 100 0
+S6: 
+## kuzenbo carry aspect-of-spirits | 1 | 0 | 2 semanas
+A: Aspect of Spirits
+R: Purification Beads 100 0
+ST: Archmage's Gem 100 0
+S1: Bancroft's Talon 100 0
+S2: Soul Gem 100 0
+S3: Sanguine Lash 100 0
+S4: Umbral Link 100 0
+S5: Stygian Anchor 100 0
+S6: Blinking Abyss 100 0
+## loki carry none | 5 | 0 | 2 semanas
+A: None
+R: Aegis of Acceleration 40 0; Sundering Arc 20 0; Purification Beads 20 0; Blink Rune 20 0
+ST: Archmage's Gem 40 0; Hunter's Cowl 20 0; Conduit Gem 20 0; Bumba's Hammer 20 0
+S1: Hydra's Lament 80 0; Jotunn's Revenge 20 0
+S2: Barbed Carver 40 0; Jotunn's Revenge 20 0; Hydra's Lament 20 0; The Reaper 20 0
+S3: The Crusher 40 0; Arondight 20 0; Transcendence 20 0; Barbed Carver 20 0
+S4: The Crusher 40 0; Heartseeker 40 0; Barbed Carver 20 0
+S5: Heartseeker 40 0; Bloodforge 20 0; Skeggox 20 0; Titan's Bane 20 0
+S6: Titan's Bane 20 0; Pendulum Blade 20 0
+## mercury carry none | 2 | 100 | 2 semanas
+A: None
+R: Aegis of Acceleration 50 100; Purification Beads 50 100
+ST: Gilded Arrow 50 100; Hunter's Cowl 50 100
+S1: Devourer's Gauntlet 50 100; Tyrfing 50 100
+S2: Dagger of Frenzy 50 100; Bragi's Harp 50 100
+S3: Musashi's Dual Swords 50 100; Dagger of Frenzy 50 100
+S4: Dominance 50 100; Odysseus' Bow 50 100
+S5: Deathbringer 50 100; Silverbranch Bow 50 100
+S6: Riptalon 50 100
+## merlin carry none | 6 | 83.3 | 2 semanas
+A: None
+R: Purification Beads 50 100; Aegis of Acceleration 50 67
+ST: Archmage's Gem 33.3 50; Bluestone Brooch 33.3 100; Sands of Time 16.7 100; Gilded Arrow 16.7 100
+S1: The World Stone 33.3 100; The Cosmic Horror 16.7 100; Book of Thoth 16.7 100; Tyrfing 16.7 100; Chronos' Pendant 16.7 0
+S2: Spear of Desolation 50 67; Totem of Death 16.7 100; Chronos' Pendant 16.7 100; Bracer of The Abyss 16.7 100
+S3: Soul Gem 33.3 100; Omen Drum 16.7 100; Spear of Desolation 16.7 100; Bragi's Harp 16.7 100; Rod of Tahuti 16.7 0
+S4: Rod of Tahuti 33.3 100; Damaru 16.7 100; Evil Eye 16.7 100; Nimble Ring 16.7 100; Obsidian Shard 16.7 0
+S5: Soul Reaver 33.3 100; Rod of Tahuti 16.7 100; Blinking Abyss 16.7 100; Dominance 16.7 100; Soul Gem 16.7 0
+S6: Spear Of The Magus 33.3 100; Evil Eye 16.7 100; Skeggox 16.7 100
+## morgan-le-fay carry none | 4 | 50 | fim
+A: None
+R: Blink Rune 50 50; Purification Beads 50 50
+ST: Archmage's Gem 25 0; Sharpshooter's Arrow 25 100; Sands of Time 25 0; Hunter's Cowl 25 100
+S1: Chronos' Pendant 25 0; Devourer's Gauntlet 25 100; Spear of Desolation 25 0; Bragi's Harp 25 100
+S2: Spear of Desolation 25 0; Bracer of The Abyss 25 100; The World Stone 25 0; Odysseus' Bow 25 100
+S3: Rod of Tahuti 25 0; Silverbranch Bow 25 100; Gem of Focus 25 0; Hastened Fatalis 25 100
+S4: Soul Gem 25 0; Deathbringer 25 100; Rod of Tahuti 25 0; Silverbranch Bow 25 100
+S5: Spear Of The Magus 50 0; Riptalon 25 100; Hunter's Bow 25 100
+S6: Obsidian Shard 25 0; Musashi's Dual Swords 25 100
+## ne-zha carry none | 3 | 66.7 | 2 semanas
+A: None
+R: Aegis of Acceleration 66.7 100; Blink Rune 33.3 0
+ST: Hunter's Cowl 33.3 100; Archmage's Gem 33.3 100; Bluestone Brooch 33.3 0
+S1: Jotunn's Revenge 66.7 50; Hydra's Lament 33.3 100
+S2: Rage 33.3 100; The Crusher 33.3 100; Pendulum Blade 33.3 0
+S3: Deathbringer 100 67
+S4: Avenging Blade 33.3 100; The Reaper 33.3 100; Sundering Echo 33.3 0
+S5: Jotunn's Revenge 33.3 100; Blinking Abyss 33.3 100; Heartseeker 33.3 0
+S6: Skeggox 33.3 100; Avatar's Parashu 33.3 100; Titan's Bane 33.3 0
+## ne-zha carry aspect-of-righteous-flame | 1 | 100 | fim
+A: Aspect of Righteous Flame
+R: Sundering Arc 100 100
+ST: Bluestone Brooch 100 100
+S1: Jotunn's Revenge 100 100
+S2: Breastplate of Valor 100 100
+S3: Genji's Guard 100 100
+S4: Kinetic Cuirass 100 100
+S5: Hide of the Nemean Lion 100 100
+S6: Battle Axe 100 100
+## nike carry none | 1 | 0 | fim
+A: None
+R: Sundering Arc 100 0
+ST: Bluestone Brooch 100 0
+S1: Mystical Mail 100 0
+S2: Shifter's Shield 100 0
+S3: Contagion 100 0
+S4: Kinetic Cuirass 100 0
+S5: Jotunn's Revenge 100 0
+S6: Medallion 100 0
+## nike carry aspect-of-victorious-conquest | 11 | 63.6 | 2 semanas
+A: Aspect of Victorious Conquest
+R: Aegis of Acceleration 54.5 67; Purification Beads 27.3 67; Sundering Arc 9.1 0; Blink Rune 9.1 100
+ST: Archmage's Gem 72.7 75; Bluestone Brooch 18.2 50; Sundering Axe 9.1 0
+S1: Jotunn's Revenge 54.5 83; Devourer's Gauntlet 27.3 33; Transcendence 18.2 50
+S2: Transcendence 63.6 71; Jotunn's Revenge 18.2 50; Pendulum Blade 9.1 0; Blinking Abyss 9.1 100
+S3: The Crusher 54.5 83; Heartseeker 27.3 33; Jotunn's Revenge 9.1 0; Avenging Blade 9.1 100
+S4: Heartseeker 36.4 50; The Crusher 18.2 100; Titan's Bane 9.1 100; Avatar's Parashu 9.1 100; Xibalban Effigy 9.1 0; Blinking Abyss 9.1 0; Arondight 9.1 100
+S5: Blinking Abyss 18.2 50; Heartseeker 18.2 100; Barbed Carver 18.2 100; Avatar's Parashu 18.2 0; Mote of Chaos 9.1 100; Hydra's Lament 9.1 0; Skeggox 9.1 100
+S6: Skeggox 27.3 100; Avatar's Parashu 18.2 50; Magi's Cloak 9.1 100; Runeforged Hammer 9.1 0; Heartseeker 9.1 100; Void Shard 9.1 0
+## nox carry none | 4 | 25 | fim
+A: None
+R: Purification Beads 75 33; Aegis of Acceleration 25 0
+ST: Pendulum of The Ages 75 0; Archmage's Gem 25 100
+S1: Chronos' Pendant 75 33; Book of Thoth 25 0
+S2: Bancroft's Talon 25 0; Ancient Signet 25 0; Soul Reaver 25 100; Gem of Focus 25 0
+S3: Chronos' Pendant 25 0; The World Stone 25 0; Freya's Tears 25 100; Ancient Signet 25 0
+S4: Obsidian Shard 50 0; Rod of Tahuti 50 50
+S5: Oracle Staff 25 0; Evil Eye 25 0; Spear Of The Magus 25 100; Obsidian Shard 25 0
+S6: Soul Reliquary 25 0; Soul Reaver 25 0
+## nox carry aspect-of-silent-night | 2 | 0 | fim
+A: Aspect of Silent Night
+R: Purification Beads 100 0
+ST: Death's Embrace 50 0; Sharpshooter's Arrow 50 0
+S1: Tyrfing 50 0; Devourer's Gauntlet 50 0
+S2: Bragi's Harp 50 0; Riptalon 50 0
+S3: The Executioner 100 0
+S4: Sun Beam Bow 50 0; Demon Blade 50 0
+S5: Hastened Fatalis 50 0; Silverbranch Bow 50 0
+S6: Deathbringer 50 0
+## nu-wa carry none | 4 | 75 | 2 semanas
+A: None
+R: Aegis of Acceleration 50 100; Purification Beads 50 50
+ST: Archmage's Gem 50 100; Pendulum of The Ages 25 100; Bluestone Pendant 25 0
+S1: Ancient Signet 50 100; Chronos' Pendant 25 100; Soul Gem 25 0
+S2: Chronos' Pendant 25 100; Ancient Signet 25 100; Soul Gem 25 100; Soul Reaver 25 0
+S3: Spear of Desolation 25 100; Divine Ruin 25 100; Talisman of Purification 25 100; Chronos' Pendant 25 0
+S4: Rod of Tahuti 50 100; Obsidian Shard 50 50
+S5: Obsidian Shard 50 100; Soul Reaver 25 100; Divine Ruin 25 0
+S6: Soul Gem 25 100; Ring of Dispel 25 100; Leviathan's Hide 25 100
+## nu-wa carry aspect-of-shining-mist | 12 | 41.7 | 2 semanas
+A: Aspect of Shining Mist
+R: Purification Beads 50 33; Aegis of Acceleration 50 50
+ST: Sharpshooter's Arrow 50 50; Gilded Arrow 25 0; Death's Embrace 16.7 100; Hunter's Cowl 8.3 0
+S1: Devourer's Gauntlet 41.7 60; Tyrfing 33.3 25; Hastened Fatalis 8.3 0; Hydra's Lament 8.3 100; Dagger of Frenzy 8.3 0
+S2: Dagger of Frenzy 66.7 25; Devourer's Gauntlet 8.3 100; Rage 8.3 100; Toxic Blade 8.3 100; Odysseus' Bow 8.3 0
+S3: Riptalon 41.7 40; Dominance 25 33; Demon Blade 16.7 50; Odysseus' Bow 8.3 0; Dagger of Frenzy 8.3 100
+S4: Silverbranch Bow 33.3 0; Deathbringer 33.3 75; Odysseus' Bow 8.3 100; Riptalon 8.3 100; Titan's Bane 8.3 0; Dominance 8.3 0
+S5: The Executioner 25 67; Hunter's Bow 16.7 0; Skeggox 16.7 0; Riptalon 8.3 100; Titan's Bane 8.3 100; Kopesh 8.3 100; Deathbringer 8.3 0; Bow 8.3 0
+S6: Manchu Bow 16.7 0; Musashi's Dual Swords 8.3 100; Demon Blade 8.3 100; Riptalon 8.3 100; Agility Greaves 8.3 100; Kopesh 8.3 0
+## pele carry none | 3 | 33.3 | 2 semanas
+A: None
+R: Aegis of Acceleration 66.7 50; Purification Beads 33.3 0
+ST: Hunter's Cowl 66.7 0; Bluestone Brooch 33.3 100
+S1: Barbed Carver 66.7 0; Devourer's Gauntlet 33.3 100
+S2: The Reaper 33.3 0; Oath-Sworn Spear 33.3 100; Devourer's Gauntlet 33.3 0
+S3: Oath-Sworn Spear 33.3 0; The Reaper 33.3 100; The Crusher 33.3 0
+S4: Avenging Blade 33.3 0; The Crusher 33.3 100; The Reaper 33.3 0
+S5: Heartseeker 33.3 0; Titan's Bane 33.3 100; Skeggox 33.3 0
+S6: Lucerne Hammer 33.3 0; Mote of Chaos 33.3 100; Skeggox 33.3 0
+## poseidon carry none | 13 | 38.5 | 2 semanas
+A: None
+R: Purification Beads 84.6 36; Aegis of Acceleration 15.4 50
+ST: Pendulum of The Ages 38.5 60; Conduit Gem 15.4 100; Archmage's Gem 15.4 0; Death's Embrace 7.7 0; Hunter's Cowl 7.7 0; Sharpshooter's Arrow 7.7 0; Sands of Time 7.7 0
+S1: Spear of Desolation 38.5 40; The World Stone 15.4 50; Book of Thoth 15.4 50; Bracer of The Abyss 7.7 100; Bragi's Harp 7.7 0; Tyrfing 7.7 0; Bancroft's Talon 7.7 0
+S2: The World Stone 30.8 50; Spear of Desolation 23.1 67; Hastened Fatalis 7.7 0; Rod of Tahuti 7.7 100; Odysseus' Bow 7.7 0; Nimble Ring 7.7 0; Chronos' Pendant 7.7 0; Bracer of The Abyss 7.7 0
+S3: Nimble Ring 61.5 50; Silverbranch Bow 15.4 0; Doom Orb 15.4 50; Bancroft's Talon 7.7 0
+S4: Rod of Tahuti 38.5 60; Blinking Abyss 23.1 67; Talisman of Purification 7.7 0; The Executioner 7.7 0; Bracer of The Abyss 7.7 0; Polynomicon 7.7 0; Gem of Focus 7.7 0
+S5: Rod of Tahuti 23.1 33; Obsidian Shard 15.4 100; Riptalon 7.7 0; Bracer of The Abyss 7.7 0; Blinking Abyss 7.7 0; The World Stone 7.7 100; Toxic Blade 7.7 0; Spear Of The Magus 7.7 0; Typhon's Heart 7.7 100; Void Shard 7.7 0
+S6: Obsidian Shard 23.1 67; Mote of Chaos 15.4 50; Axe 7.7 0; Oracle Staff 7.7 100; Typhon's Heart 7.7 0; Polynomicon 7.7 0
+## poseidon carry aspect-of-the-trident | 50 | 58 | 2 semanas
+A: Aspect of the Trident
+R: Aegis of Acceleration 54 67; Purification Beads 36 44; Agility Relic 10 60
+ST: Sharpshooter's Arrow 40 70; Hunter's Cowl 14 57; Gilded Arrow 12 33; Death's Embrace 10 40; Archmage's Gem 8 50; Leather Cowl 6 100; Death's Toll 6 33; Bluestone Brooch 2 0; Conduit Gem 2 100
+S1: Devourer's Gauntlet 68 56; Spear of Desolation 10 60; Tyrfing 10 60; Bracer of The Abyss 6 67; Book of Thoth 4 100; Dagger of Frenzy 2 0
+S2: Dagger of Frenzy 42 62; Bracer of The Abyss 10 60; Odysseus' Bow 10 80; Berserker's Shield 8 25; Tyrfing 8 50; Bragi's Harp 4 50; Book of Thoth 4 0; The World Stone 2 100; Dominance 2 100; Bancroft's Talon 2 100; Riptalon 2 100; Musashi's Dual Swords 2 0; The Executioner 2 0; Spear of Desolation 2 100
+S3: Dominance 24 58; Riptalon 16 75; Nimble Ring 8 25; Hastened Fatalis 8 50; Odysseus' Bow 8 50; Dagger of Frenzy 6 33; Musashi's Dual Swords 4 0; The Executioner 4 100; Bracer of The Abyss 4 0; Rod of Tahuti 2 100; Shogun's Ofuda 2 0; Spear Of The Magus 2 100; Circlet 2 100; Necronomicon 2 100; Totem of Death 2 100; Spear of Desolation 2 100; Bragi's Harp 2 100; The World Stone 2 100
+S4: The Executioner 26 69; Silverbranch Bow 26 46; Dominance 8 75; Nimble Ring 6 100; Rod of Tahuti 6 67; Deathbringer 6 0; Riptalon 4 100; Bragi's Harp 4 50; Hastened Fatalis 2 0; Manchu Bow 2 100; Titan's Bane 2 0; Survivor's Sash 2 0; Death Metal 2 0; Obsidian Shard 2 100; Shogun's Ofuda 2 100
+S5: Silverbranch Bow 20 80; Hastened Fatalis 10 60; Deathbringer 8 50; Rod of Tahuti 8 75; Dominance 6 67; Riptalon 6 100; The Executioner 6 33; Hunter's Bow 6 33; Manchu Bow 4 0; Obsidian Shard 2 100; Toxic Blade 2 0; Bragi's Harp 2 100; Axe 2 100; Xibalban Effigy 2 0; Gem of Focus 2 0; Lucerne Hammer 2 0; Odysseus' Bow 2 0; Nimble Ring 2 100; Bow 2 100; Shogun's Ofuda 2 0; The World Stone 2 0; Survivor's Sash 2 100
+S6: Deathbringer 14 86; Riptalon 8 25; Qin's Blade 6 67; Hunter's Bow 6 33; Manchu Bow 4 50; Nimble Ring 4 100; Obsidian Shard 4 50; Survivor's Sash 4 100; Skeggox 4 50; Musashi's Dual Swords 2 100; Avenging Blade 2 0; Silverbranch Bow 2 100; Spear of Desolation 2 0; Ring of Dispel 2 100; Evil Eye 2 100; Shogun's Ofuda 2 100; Bow 2 0; Bracer of The Abyss 2 0; Blinking Abyss 2 0; Berserker's Shield 2 0; The Executioner 2 100
+## princess-bari carry none | 58 | 48.3 | 2 semanas
+A: None
+R: Aegis of Acceleration 50 48; Purification Beads 46.6 48; Agility Relic 3.4 50
+ST: Sharpshooter's Arrow 22.4 46; Archmage's Gem 17.2 60; Hunter's Cowl 15.5 56; Pendulum of The Ages 10.3 50; Leather Cowl 6.9 100; Conduit Gem 6.9 0; Bluestone Brooch 5.2 33; Bluestone Pendant 3.4 50; Gilded Arrow 3.4 0; Sands of Time 3.4 50; Death's Toll 1.7 100; Death's Embrace 1.7 0; Blood-soaked Shroud 1.7 0
+S1: Devourer's Gauntlet 34.5 60; Chronos' Pendant 25.9 40; Tyrfing 17.2 50; Spear of Desolation 10.3 33; Soul Gem 3.4 50; Book of Thoth 3.4 100; Barbed Carver 1.7 0; Jotunn's Revenge 1.7 0; Avenging Blade 1.7 0
+S2: Spear of Desolation 25.9 47; Dagger of Frenzy 15.5 56; Bragi's Harp 8.6 40; Tyrfing 6.9 75; Odysseus' Bow 6.9 75; Jotunn's Revenge 5.2 33; Barbed Carver 5.2 33; The World Stone 5.2 0; Soul Gem 3.4 50; Gem of Focus 3.4 0; Nimble Ring 1.7 100; Silverbranch Bow 1.7 0; Hastened Fatalis 1.7 100; Bloodforge 1.7 100; Berserker's Shield 1.7 0; Transcendence 1.7 100; Toxic Blade 1.7 0; Chronos' Pendant 1.7 100
+S3: The World Stone 17.2 50; The Executioner 10.3 33; Dominance 8.6 80; Riptalon 8.6 60; Soul Gem 8.6 40; Rod of Tahuti 6.9 25; Odysseus' Bow 5.2 33; Bracer of The Abyss 5.2 33; Heartseeker 3.4 0; Pendulum Blade 1.7 100; Bragi's Harp 1.7 100; Berserker's Shield 1.7 0; Nimble Ring 1.7 0; Tyrfing 1.7 0; Spear of Desolation 1.7 0; Jotunn's Revenge 1.7 100; Demon Blade 1.7 100; The Reaper 1.7 0; Chronos' Pendant 1.7 100; Qin's Blade 1.7 100; Dagger of Frenzy 1.7 100; Oath-Sworn Spear 1.7 100; Hastened Fatalis 1.7 100; Divine Ruin 1.7 0
+S4: Rod of Tahuti 24.1 50; The Executioner 19 45; Silverbranch Bow 10.3 67; Riptalon 6.9 75; Obsidian Shard 5.2 33; Dominance 5.2 67; Heartseeker 3.4 100; Titan's Bane 3.4 0; Nimble Ring 3.4 0; Talisman of Purification 1.7 0; Odysseus' Bow 1.7 0; Spear of Desolation 1.7 0; The World Stone 1.7 100; Polynomicon 1.7 0; Bloodforge 1.7 0; The Crusher 1.7 100; Blinking Abyss 1.7 100; Avenging Blade 1.7 100; Shifter's Shield 1.7 0; Circe's Hexstone 1.7 0
+S5: Silverbranch Bow 13.8 63; Soul Gem 12.1 57; Qin's Blade 6.9 75; Riptalon 6.9 50; Obsidian Shard 5.2 33; Dominance 5.2 0; Rod of Tahuti 5.2 33; Blinking Abyss 5.2 33; Heartseeker 3.4 50; The World Stone 3.4 100; The Executioner 3.4 100; The Crusher 1.7 100; Spear of Desolation 1.7 100; Ring of Dispel 1.7 0; Draconic Scale 1.7 0; Gem 1.7 100; Hunter's Bow 1.7 0; Deathbringer 1.7 0; Time-lock Aegis 1.7 100; Titan's Bane 1.7 100; Killing Stone 1.7 0; Skeggox 1.7 0; Shell of Rebuke 1.7 100; Cursed Sickle 1.7 0; Evil Eye 1.7 0; Talisman of Purification 1.7 0; Barbed Carver 1.7 0; Shifter's Shield 1.7 0
+S6: The Executioner 6.9 50; Dreamer's Idol 6.9 50; Time-lock Aegis 5.2 33; Blinking Abyss 5.2 0; Evil Eye 3.4 50; Divine Ruin 3.4 100; Deathbringer 3.4 100; Survivor's Sash 3.4 50; Riptalon 3.4 50; Manchu Bow 1.7 0; Rod of Tahuti 1.7 100; Engraved Guard 1.7 0; Dominance 1.7 100; Skeggox 1.7 0; Nimble Ring 1.7 100; Ancient Signet 1.7 100; Obsidian Shard 1.7 0; Dagger of Frenzy 1.7 100; Avatar's Parashu 1.7 100; Spear Of The Magus 1.7 0
+## ra carry none | 7 | 57.1 | 2 semanas
+A: None
+R: Aegis of Acceleration 42.9 33; Purification Beads 42.9 67; Agility Relic 14.3 100
+ST: Hunter's Cowl 42.9 100; Pendulum of The Ages 28.6 50; Archmage's Gem 14.3 0; Conduit Gem 14.3 0
+S1: Book of Thoth 42.9 67; Spear of Desolation 28.6 50; Ancient Signet 14.3 0; Nimble Ring 14.3 100
+S2: Spear of Desolation 42.9 67; Bancroft's Talon 14.3 100; The Executioner 14.3 0; Soul Gem 14.3 0; Book of Thoth 14.3 100
+S3: Nimble Ring 28.6 100; Soul Reaver 14.3 0; Book of Thoth 14.3 0; Divine Ruin 14.3 0; Gem of Focus 14.3 100; Obsidian Shard 14.3 100
+S4: Rod of Tahuti 57.1 50; Obsidian Shard 28.6 50; Shogun's Ofuda 14.3 100
+S5: Obsidian Shard 14.3 100; Nimble Ring 14.3 0; Gem of Focus 14.3 0; Berserker's Shield 14.3 100; Ancient Signet 14.3 0; Rod of Tahuti 14.3 100; Soul Gem 14.3 100
+S6: Bracer of The Abyss 14.3 100; Void Shard 14.3 0; Rod of Tahuti 14.3 0; Spear Of The Magus 14.3 100; Enchanted Bracelet 14.3 100
+## ratatoskr carry none | 1 | 0 | 2 semanas
+A: None
+R: Purification Beads 100 0
+ST: Bumba's Golden Dagger 100 0
+S1: Briskberry Acorn 100 0
+S2: Magic Acorn 100 0
+S3: Thistlethorn Acorn 100 0
+S4: Jotunn's Revenge 100 0
+S5: Hydra's Lament 100 0
+S6: The Crusher 100 0
+## ratatoskr carry aspect-of-the-thickbark | 1 | 0 | 2 semanas
+A: Aspect of the Thickbark
+R: Sundering Arc 100 0
+ST: Bluestone Pendant 100 0
+S1: Ashwhorl Acorn 100 0
+S2: Briskberry Acorn 100 0
+S3: Thistlethorn Acorn 100 0
+S4: Legionnaire Armor 100 0
+S5: Captain's Ring 100 0
+S6: 
+## ravana carry aspect-of-the-rakshasa-king | 1 | 0 | 2 semanas
+A: Aspect of the Rakshasa King
+R: Blink Rune 100 0
+ST: Death's Embrace 100 0
+S1: Devourer's Gauntlet 100 0
+S2: Berserker's Shield 100 0
+S3: Shell of Rebuke 100 0
+S4: The Executioner 100 0
+S5: Hide of the Nemean Lion 100 0
+S6: 
+## scylla carry none | 2 | 50 | 2 semanas
+A: None
+R: Aegis of Acceleration 50 100; Purification Beads 50 0
+ST: Archmage's Gem 100 50
+S1: Spear of Desolation 50 100; Book of Thoth 50 0
+S2: Necronomicon 50 100; Chronos' Pendant 50 0
+S3: Rod of Tahuti 100 50
+S4: Polynomicon 50 100; Obsidian Shard 50 0
+S5: Obsidian Shard 50 100; Polynomicon 50 0
+S6: Divine Ruin 50 0
+## scylla carry aspect-of-the-devourer | 4 | 25 | 2 semanas
+A: Aspect of the Devourer
+R: Aegis of Acceleration 50 0; Purification Beads 25 0; Agility Relic 25 100
+ST: Death's Embrace 50 50; Archmage's Gem 25 0; Hunter's Cowl 25 0
+S1: Tyrfing 50 0; Ancient Signet 25 0; Bragi's Harp 25 100
+S2: Bragi's Harp 50 0; Chronos' Pendant 25 0; Tyrfing 25 100
+S3: Dagger of Frenzy 50 0; Staff of Myrddin 25 0; The Executioner 25 100
+S4: Silverbranch Bow 50 50; Obsidian Shard 25 0; Riptalon 25 0
+S5: Rod of Tahuti 25 0; Odysseus' Bow 25 100; Qin's Blade 25 0; Survivor's Sash 25 0
+S6: Spear Of The Magus 25 0; Blinking Abyss 25 0; Hunter's Bow 25 0
+## sobek carry aspect-of-prey | 1 | 100 | 2 semanas
+A: Aspect of Prey
+R: Sundering Arc 100 100
+ST: Sundering Axe 100 100
+S1: Mystical Mail 100 100
+S2: Prophetic Cloak 100 100
+S3: Gladiator's Shield 100 100
+S4: Kinetic Cuirass 100 100
+S5: Contagion 100 100
+S6: Freya's Tears 100 100
+## susano carry none | 2 | 50 | 2 semanas
+A: None
+R: Purification Beads 100 50
+ST: Bluestone Brooch 50 0; Bumba's Hammer 50 100
+S1: Jotunn's Revenge 100 50
+S2: Hydra's Lament 100 50
+S3: Titan's Bane 50 0; The Crusher 50 100
+S4: Blinking Abyss 50 0; Barbed Carver 50 100
+S5: Time-lock Aegis 50 0; Magi's Cloak 50 100
+S6: Avatar's Parashu 50 0; Heartseeker 50 100
+## susano carry aspect-of-the-storm-front | 1 | 100 | 2 semanas
+A: Aspect of the Storm Front
+R: Purification Beads 100 100
+ST: Bumba's Cudgel 100 100
+S1: Devourer's Gauntlet 100 100
+S2: Transcendence 100 100
+S3: Hydra's Lament 100 100
+S4: Runeforged Hammer 100 100
+S5: Skeggox 100 100
+S6: 
+## sylvanus carry aspect-of-grovers-wrath | 10 | 60 | 2 semanas
+A: Aspect of Grover's Wrath
+R: Aegis of Acceleration 60 50; Purification Beads 40 75
+ST: Death's Embrace 70 43; Leather Cowl 10 100; Sharpshooter's Arrow 10 100; Death's Toll 10 100
+S1: Tyrfing 70 57; Devourer's Gauntlet 30 67
+S2: Bragi's Harp 70 57; Shogun's Ofuda 10 0; Bracer of The Abyss 10 100; Toxic Blade 10 100
+S3: Berserker's Shield 40 50; Riptalon 20 100; Circe's Hexstone 10 100; Barbed Carver 10 0; Qin's Blade 10 0; The Executioner 10 100
+S4: Shogun's Ofuda 40 50; Berserker's Shield 10 100; Time-lock Aegis 10 0; Toxic Blade 10 0; Lucerne Hammer 10 100; Demon Blade 10 100; Stampede 10 100
+S5: The Executioner 20 0; Spirit Robe 20 50; Riptalon 10 100; Freya's Tears 10 100; Void Shard 10 100; Sphere of Negation 10 0; Dominance 10 100; Magi's Cloak 10 100
+S6: Spirit Robe 10 100; Qin's Blade 10 0; Helm of Darkness 10 0; Blinking Abyss 10 0
+## thanatos carry none | 1 | 100 | 2 semanas
+A: None
+R: Purification Beads 100 100
+ST: Bumba's Hammer 100 100
+S1: Hydra's Lament 100 100
+S2: The Reaper 100 100
+S3: The Crusher 100 100
+S4: Titan's Bane 100 100
+S5: Avatar's Parashu 100 100
+S6: Pendulum Blade 100 100
+## the-morrigan carry none | 24 | 37.5 | 2 semanas
+A: None
+R: Purification Beads 83.3 45; Aegis of Acceleration 12.5 0; Agility Relic 4.2 0
+ST: Archmage's Gem 54.2 38; Conduit Gem 12.5 67; Pendulum of The Ages 8.3 0; Hunter's Cowl 8.3 50; Death's Embrace 4.2 0; Leather Cowl 4.2 0; Gilded Arrow 4.2 0; Bumba's Hammer 4.2 100
+S1: Book of Thoth 37.5 22; The World Stone 25 67; Tyrfing 12.5 0; Spear of Desolation 12.5 33; Polynomicon 4.2 0; Ancient Signet 4.2 100; Chronos' Pendant 4.2 100
+S2: Spear of Desolation 16.7 25; The World Stone 16.7 25; Gem of Focus 12.5 33; Ancient Signet 8.3 100; Polynomicon 8.3 50; Bragi's Harp 8.3 0; Book of Thoth 8.3 50; Necronomicon 8.3 50; Soul Gem 4.2 100; Chronos' Pendant 4.2 0; Odysseus' Bow 4.2 0
+S3: Polynomicon 37.5 33; Spear of Desolation 25 50; Rod of Tahuti 8.3 100; Nimble Ring 8.3 50; Odysseus' Bow 4.2 0; Silverbranch Bow 4.2 0; Dagger of Frenzy 4.2 0; The World Stone 4.2 0; Soul Gem 4.2 0
+S4: Rod of Tahuti 29.2 29; Polynomicon 20.8 60; Book of Thoth 8.3 100; Ancient Signet 8.3 0; The World Stone 8.3 50; Sun Beam Bow 4.2 0; Soul Gem 4.2 100; Divine Ruin 4.2 0; Riptalon 4.2 0; Silverbranch Bow 4.2 0; Spear of Desolation 4.2 0
+S5: Rod of Tahuti 45.8 36; Obsidian Shard 20.8 20; Toxic Blade 8.3 0; Doom Orb 4.2 100; Spear of Desolation 4.2 100; Book of Thoth 4.2 100; Ancient Signet 4.2 100; Spear Of The Magus 4.2 0; The Executioner 4.2 0
+S6: Ancient Signet 16.7 25; The World Stone 12.5 67; Doom Orb 8.3 100; Rod of Tahuti 4.2 100; Riptalon 4.2 0; Obsidian Shard 4.2 100; Mote of Chaos 4.2 0; Infused Axe 4.2 0; Evil Eye 4.2 0; Void Shard 4.2 0; Time-lock Aegis 4.2 0
+## the-morrigan carry aspect-of-mischief | 31 | 48.4 | 2 semanas
+A: Aspect of Mischief
+R: Aegis of Acceleration 77.4 42; Purification Beads 22.6 71
+ST: Sharpshooter's Arrow 61.3 58; Gilded Arrow 22.6 14; Pendulum of The Ages 16.1 60
+S1: Bragi's Harp 74.2 39; Tyrfing 9.7 100; Spear of Desolation 6.5 0; Book of Thoth 6.5 100; Ancient Signet 3.2 100
+S2: Odysseus' Bow 80.6 44; Rod of Tahuti 6.5 0; Spear of Desolation 3.2 100; Chronos' Pendant 3.2 100; Bragi's Harp 3.2 100; The World Stone 3.2 100
+S3: Hastened Fatalis 77.4 42; Polynomicon 9.7 33; The Executioner 3.2 100; The World Stone 3.2 100; Odysseus' Bow 3.2 100; Rod of Tahuti 3.2 100
+S4: The Executioner 74.2 43; Obsidian Shard 12.9 50; Silverbranch Bow 6.5 50; Rod of Tahuti 3.2 100; Qin's Blade 3.2 100
+S5: Silverbranch Bow 67.7 52; Manchu Bow 9.7 0; Ancient Signet 6.5 0; Musashi's Dual Swords 3.2 100; The World Stone 3.2 100; Polynomicon 3.2 100; Blinking Abyss 3.2 100; Qin's Blade 3.2 0
+S6: Musashi's Dual Swords 9.7 67; Blinking Abyss 6.5 0; Qin's Blade 6.5 50; Manchu Bow 6.5 0; Kopesh 6.5 50; Dominance 6.5 100; Deathbringer 3.2 100; Void Shard 3.2 100; Ancient Signet 3.2 100; Bow 3.2 0; Hunter's Bow 3.2 100; Polynomicon 3.2 100; Riptalon 3.2 100; The Executioner 3.2 0; Skeggox 3.2 0
+## thor carry none | 2 | 100 | 2 semanas
+A: None
+R: Purification Beads 100 100
+ST: Bumba's Cudgel 100 100
+S1: Jotunn's Revenge 100 100
+S2: Hydra's Lament 50 100; Transcendence 50 100
+S3: The Reaper 50 100; Hydra's Lament 50 100
+S4: Shifter's Shield 50 100; Heartseeker 50 100
+S5: Titan's Bane 50 100; The Crusher 50 100
+S6: Skeggox 50 100
+## tsukuyomi carry none | 7 | 57.1 | 2 semanas
+A: None
+R: Purification Beads 85.7 50; Aegis of Acceleration 14.3 100
+ST: Bluestone Brooch 42.9 67; Bumba's Hammer 42.9 67; Archmage's Gem 14.3 0
+S1: Transcendence 42.9 33; Jotunn's Revenge 28.6 100; Barbed Carver 14.3 0; Hydra's Lament 14.3 100
+S2: Transcendence 42.9 67; Jotunn's Revenge 28.6 100; Book of Thoth 14.3 0; Hydra's Lament 14.3 0
+S3: Avatar's Parashu 28.6 0; Hydra's Lament 28.6 100; Book of Thoth 28.6 50; Barbed Carver 14.3 100
+S4: Heartseeker 42.9 0; Book of Thoth 28.6 100; The Crusher 14.3 100; Titan's Bane 14.3 100
+S5: Heartseeker 42.9 100; Skeggox 14.3 0; The Reaper 14.3 100; Titan's Bane 14.3 0; The Crusher 14.3 0
+S6: Lucerne Hammer 28.6 50; Avatar's Parashu 14.3 100; Titan's Bane 14.3 100; Blinking Abyss 14.3 0; Skeggox 14.3 0
+## vulcan carry none | 15 | 33.3 | 2 semanas
+A: None
+R: Aegis of Acceleration 53.3 63; Purification Beads 46.7 0
+ST: Archmage's Gem 40 50; Pendulum of The Ages 33.3 40; Conduit Gem 13.3 0; Bluestone Brooch 6.7 0; Sands of Time 6.7 0
+S1: Book of Thoth 93.3 36; Spear of Desolation 6.7 0
+S2: Chronos' Pendant 40 17; Gem of Focus 26.7 50; Spear of Desolation 26.7 50; Necronomicon 6.7 0
+S3: Gem of Focus 26.7 25; Rod of Tahuti 20 67; Spear of Desolation 20 33; Chronos' Pendant 13.3 50; The World Stone 13.3 0; Soul Gem 6.7 0
+S4: Rod of Tahuti 40 17; Obsidian Shard 20 33; Freya's Tears 13.3 50; Soul Gem 13.3 100; Thermal Mod 6.7 0; Oracle Staff 6.7 0
+S5: Obsidian Shard 26.7 50; Rod of Tahuti 20 67; Freya's Tears 13.3 0; Evil Eye 13.3 0; Shield 6.7 100; Seismic Mod 6.7 0; Soul Gem 6.7 0; Soul Reliquary 6.7 0
+S6: Soul Gem 13.3 50; Sage's Ring 6.7 100; Blinking Abyss 6.7 0; Ragnarok's Wake 6.7 0; Mantle of Discord 6.7 0; Adroit Ring 6.7 100; Captain's Ring 6.7 0; Gem of Focus 6.7 100; Void Shard 6.7 0; Breastplate of Valor 6.7 0; Efficiency Mod 6.7 0; Soul Reaver 6.7 100; Shrapnel Mod 6.7 0
+## vulcan carry aspect-of-fortification | 4 | 25 | 2 semanas
+A: Aspect of Fortification
+R: Aegis of Acceleration 75 33; Purification Beads 25 0
+ST: Archmage's Gem 50 0; Pendulum of The Ages 25 100; Sands of Time 25 0
+S1: Book of Thoth 100 25
+S2: Chronos' Pendant 50 50; Breastplate of Valor 50 0
+S3: The World Stone 100 25
+S4: Genji's Guard 50 0; Rod of Tahuti 25 100; Divine Ruin 25 0
+S5: Wish-Granting Pearl 50 0; Obsidian Shard 25 100; Shrapnel Mod 25 0
+S6: Blinking Abyss 25 100; Surplus Mod 25 0; Evil Eye 25 0; Rod of Tahuti 25 0
+## xing-tian carry none | 2 | 0 | 2 semanas
+A: None
+R: Sundering Arc 50 0; Aegis of Acceleration 50 0
+ST: Bluestone Pendant 50 0; Selflessness 50 0
+S1: Chronos' Pendant 50 0; Yogi's Necklace 50 0
+S2: Breastplate of Valor 50 0; Stampede 50 0
+S3: Shifter's Shield 50 0; Shell of Rebuke 50 0
+S4: Void Stone 50 0; Sage's Ring 50 0
+S5: Killing Stone 50 0; Captain's Ring 50 0
+S6: 
+## yemoja carry none | 1 | 100 | 2 semanas
+A: None
+R: Aegis of Acceleration 100 100
+ST: Gilded Arrow 100 100
+S1: Avenging Blade 100 100
+S2: Dagger of Frenzy 100 100
+S3: Dominance 100 100
+S4: The Executioner 100 100
+S5: Silverbranch Bow 100 100
+S6: 
+## yemoja carry aspect-of-downpour | 1 | 100 | 2 semanas
+A: Aspect of Downpour
+R: Purification Beads 100 100
+ST: Sharpshooter's Arrow 100 100
+S1: Avenging Blade 100 100
+S2: Dagger of Frenzy 100 100
+S3: Musashi's Dual Swords 100 100
+S4: Dominance 100 100
+S5: Deathbringer 100 100
+S6: Stalwart Sigil 100 100
+## ymir carry none | 1 | 0 | 2 semanas
+A: None
+R: Agility Relic 100 0
+ST: Hunter's Cowl 100 0
+S1: Axe 100 0
+S2: Barbed Carver 100 0
+S3: Dagger of Frenzy 100 0
+S4: Berserker's Shield 100 0
+S5: Riptalon 100 0
+S6: Hastened Fatalis 100 0
+## zeus carry none | 88 | 47.7 | 2 semanas
+A: None
+R: Purification Beads 55.7 35; Aegis of Acceleration 39.8 66; Agility Relic 4.5 50
+ST: Hunter's Cowl 43.2 66; Sharpshooter's Arrow 23.9 43; Leather Cowl 12.5 18; Gilded Arrow 6.8 17; Death's Embrace 5.7 60; Conduit Gem 4.5 25; Archmage's Gem 1.1 0; Death's Toll 1.1 100; Blood-soaked Shroud 1.1 0
+S1: Devourer's Gauntlet 56.8 50; Tyrfing 11.4 40; Bracer of The Abyss 10.2 44; The Reaper 6.8 83; Spear of Desolation 5.7 20; Bancroft's Talon 4.5 0; Golden Blade 1.1 100; Book of Thoth 1.1 100; Bragi's Harp 1.1 100; Blood-Bound Book 1.1 0
+S2: Dagger of Frenzy 28.4 44; Bracer of The Abyss 22.7 55; Berserker's Shield 8 71; The Reaper 8 43; Tyrfing 6.8 83; Bragi's Harp 4.5 50; Spear of Desolation 2.3 50; The World Stone 2.3 0; Riptalon 2.3 0; Blinking Abyss 2.3 50; Helm of Radiance 1.1 0; Doom Orb 1.1 0; Bancroft's Talon 1.1 100; Book of Thoth 1.1 0; Staff of Myrddin 1.1 0; The Executioner 1.1 0; Soul Gem 1.1 0; Xibalban Effigy 1.1 100; Odysseus' Bow 1.1 100; Nimble Ring 1.1 0; Dominance 1.1 0
+S3: Riptalon 42 62; Dominance 15.9 43; The Executioner 6.8 67; Dagger of Frenzy 5.7 40; Nimble Ring 4.5 50; Berserker's Shield 3.4 0; Soul Gem 2.3 0; Rage 2.3 100; Bragi's Harp 2.3 50; Hastened Fatalis 2.3 0; Odysseus' Bow 2.3 0; Silverbranch Bow 2.3 50; Blood-Bound Book 1.1 0; Devourer's Gauntlet 1.1 100; Sphere of Negation 1.1 0; Time-lock Aegis 1.1 0; The World Stone 1.1 0; Death Metal 1.1 0; Blinking Abyss 1.1 0
+S4: Silverbranch Bow 18.2 50; Xibalban Effigy 14.8 62; Riptalon 10.2 33; The Executioner 6.8 33; Rod of Tahuti 5.7 40; Dominance 5.7 60; Hastened Fatalis 5.7 60; Shogun's Ofuda 4.5 25; Avenging Blade 3.4 33; Deathbringer 3.4 67; Berserker's Shield 3.4 33; Titan's Bane 2.3 100; Bragi's Harp 1.1 100; Sphere of Negation 1.1 0; Tekko-Kagi 1.1 100; Odysseus' Bow 1.1 100; Gem of Focus 1.1 0; Talisman of Purification 1.1 100; Rage 1.1 0; Soul Gem 1.1 0; Chronos' Pendant 1.1 0; Axe 1.1 100; Bancroft's Talon 1.1 0; Manchu Bow 1.1 0; Musashi's Dual Swords 1.1 100; Gluttonous Grimoire 1.1 0
+S5: Silverbranch Bow 15.9 57; Riptalon 13.6 50; Dominance 11.4 60; The Executioner 6.8 67; Shifter's Shield 5.7 60; Manchu Bow 4.5 50; Deathbringer 3.4 33; Musashi's Dual Swords 3.4 33; Titan's Bane 3.4 67; Avenging Blade 3.4 67; Bow 2.3 0; Battle Axe 2.3 50; Hunter's Bow 2.3 50; Rod of Tahuti 2.3 0; Hastened Fatalis 2.3 0; Hussar's Wings 2.3 0; Typhon's Heart 1.1 0; Enchanted Bracelet 1.1 0; Gem of Focus 1.1 100; Ring of Dispel 1.1 0; Obsidian Shard 1.1 0; Xibalban Effigy 1.1 100; Talisman of Purification 1.1 100; Engraved Guard 1.1 0; Axe 1.1 100; Shogun's Ofuda 1.1 0; Dagger of Frenzy 1.1 100; Sphere of Negation 1.1 0; Bracer of The Abyss 1.1 0
+S6: Manchu Bow 6.8 50; Dominance 6.8 50; Skeggox 5.7 80; Void Shard 4.5 25; Titan's Bane 4.5 100; Bow 3.4 33; Deathbringer 3.4 33; Axe 2.3 50; Silverbranch Bow 2.3 100; Hastened Fatalis 2.3 50; Riptalon 2.3 100; Hunter's Bow 2.3 0; Talisman of Purification 2.3 100; Musashi's Dual Swords 2.3 50; Survivor's Sash 2.3 50; Shogun's Ofuda 2.3 50; Engraved Guard 1.1 0; Shield 1.1 0; Cursed Sickle 1.1 0; Evil Eye 1.1 100; Scythe 1.1 100; Nimble Ring 1.1 100; Berserker's Shield 1.1 0; Ring 1.1 0; Obsidian Shard 1.1 0; Bracer of The Abyss 1.1 100; Odysseus' Bow 1.1 100; Mote of Chaos 1.1 100; Sash 1.1 0; Dagger of Frenzy 1.1 0; Toxic Blade 1.1 100; Kinetic Cuirass 1.1 0; Mantle of Discord 1.1 0; Kopesh 1.1 0; Killing Stone 1.1 0
+#ERROS 
+#FIM carry
