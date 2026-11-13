@@ -177,6 +177,12 @@ article.build > p.hint{margin:6px 16px}
      (kb_src/casos_teste): quem joga Jungle/Mid/Carry escolhe lutas e recebe muito menos foco do que "3 inimigos em cima". */
   const ROLE_W = globalThis.__RW || { Solo: [0.7, 0.3], Jungle: [0.85, 0.15], Mid: [0.9, 0.1], Support: [0.25, 0.75], Carry: [0.9, 0.1] };
   const BA_UP = { Carry: 0.6, Jungle: 0.45, Solo: 0.45, Mid: 0.3, Support: 0.3 };
+  /* objetivo Resistência = "contar que sou o alvo": o foco inimigo sobe, para a defesa passar a valer também nos roles de trás */
+  /* Otimizado: o foco que se recebe sobe (ou desce) com o dano que a equipa adversária traz face ao típico */
+  const OTIM_XP_POW = +(globalThis.__OP || 3);
+  /* Dano: "não sou eu o alvo" — o foco recebido desce */
+  const DANO_XP_K = +(globalThis.__DK || 0.5);
+  const RES_XP_K = +(globalThis.__RK || 1.5), RES_XP_MIN = +(globalThis.__RM || 0.9);
   const EXPOSE = globalThis.__EX || { Solo: 1.5, Support: 1.1, Jungle: 0.2, Mid: 0.25, Carry: 0.2 }; // fração do foco inimigo (3 inimigos) que recai sobre o role — calibrado
   const LANE = { Solo: "solo", Mid: "mid", Jungle: "jungle", Carry: "duo", Support: "duo" };
   const AOE_EXTRA = 0.4; // pressuposto: uma habilidade de área atinge em média +0,4 alvos extra numa luta
@@ -529,7 +535,7 @@ article.build > p.hint{margin:6px 16px}
     // sem inimigos: equipa típica (ordem de grandeza da média dos kits simulados): 3 inimigos, metade físico, metade mágico
     const srcs = ctx.en.length ? ctx.en : [{ tipo: "fisico", abil: 2600, ba: 3400, critPart: 600, pen: 10, pen_pct: 10, fIn: 1.5 }, { tipo: "magico", abil: 3600, ba: 1200, critPart: 0, pen: 15, pen_pct: 10, fIn: 1.5 }];
     const IN = incoming(srcs, false);
-    const xp = (EXPOSE[ctx.role] || 1) * +(globalThis.__XP || 1);
+    const xp = ctx.xp ?? (EXPOSE[ctx.role] || 1) * +(globalThis.__XP || 1);
     let inc = IN.inc * xp, incRaw = IN.incRaw * xp; const critCut = IN.critCut, asCut = IN.asCut, physCut = IN.physCut;
     // tempo até morrer: vida + escudos contra (dano recebido/s − cura/s); a cura nunca anula mais de 75% do dano
     const incR = Math.max(1, inc) / W, healR = heal * (1 - ctx.antiHealIn / 100) / W;
@@ -679,7 +685,7 @@ article.build > p.hint{margin:6px 16px}
     const laneEn = en.find(e => e.lane) || null;
     const pr = opt.semDados ? null : this.prior(opt);
     return { equipa, adversaria, objetivo: obj, pathBias: equipa && (obj === "otimizado" || obj === "equipa") ? equipa.pathBias : null, g, kit, en, laneEn, bonusByPath: pr ? pr.byPath : null, fontePrior: pr ? pr.fonte : null, role: opt.role, wo, wd, allyBA, allyN: allies.length, ccIn, deslIn, rootIn, slowIn, ccMed: ccW ? ccM / ccW : 1.1,
-      fisIn: all ? fis / all : 0.5, antiHealIn, incBA, incAb, xp: (EXPOSE[opt.role] || 1) * +(globalThis.__XP || 1), perfil: this.profile(en) };
+      fisIn: all ? fis / all : 0.5, antiHealIn, incBA, incAb, xp: (obj === "resistencia" ? Math.max((EXPOSE[opt.role] || 1) * RES_XP_K, RES_XP_MIN) : (EXPOSE[opt.role] || 1) * (obj === "otimizado" && adversaria ? Math.pow(Math.max(0.8, Math.min(1.8, adversaria.dmgRatio)), OTIM_XP_POW) : obj === "dano" ? DANO_XP_K : 1)) * +(globalThis.__XP || 1), perfil: this.profile(en) };
   };
 
   /* Ouro: os itens não custam todos o mesmo. Um item 40% mais caro chega mais tarde e atrasa os seguintes;
@@ -1215,12 +1221,13 @@ function cruz(c){if(!c)return `<section class="cmp"><h3>Cruzamento com dados de 
    <li>O site não diz como obtém as partidas. Os dados foram lidos à mão, página a página, sem nomes de jogadores.</li></ul></details>
   </section>`}
 function equipaBlk(q,ctx){const a=ctx.adversaria;const o=ctx.objetivo;
-  const NOME={otimizado:"Otimizado (mix da equipa e da adversária)",equipa:"Pela equipa",adversaria:"Pela equipa adversária",dano:"Dano",resistencia:"Resistência"};
+  const NOME={otimizado:"Otimizado (a tua equipa e a adversária)",equipa:"Pela equipa",adversaria:"Pela equipa adversária",dano:"Dano",resistencia:"Resistência"};
   const lin=(t,x,vazio)=>`<li><b>${t}:</b> ${x?(x.notas.length?esc(x.notas.join("; "))+".":"perto do típico."):vazio}${x&&Math.abs(x.ajuste)>0.02?` <span class="kv">${x.ajuste>0?"puxa para dano":"puxa para aguentar"} (${x.ajuste>0?"+":""}${Math.round(x.ajuste*100)} pts)</span>`:""}</li>`;
   return `<section class="cmp" aria-labelledby="eq-h"><h3 id="eq-h">Leitura das equipas</h3><ul>
    ${lin("A tua equipa",q,"escolha os aliados para contar com o que já trazem.")}
    ${lin("A equipa adversária",a,"escolha os inimigos para contar com o que ameaçam e o que aguentam.")}</ul>
    <p>Objetivo: <b>${NOME[o]}</b> → peso ${Math.round(ctx.wo*100)}% dano / ${Math.round(ctx.wd*100)}% sobreviver. Os itens são escolhidos pela simulação contra os inimigos escolhidos (anti-cura, penetração, proteções do tipo certo).</p>
+   <p class="hint">${o==="dano"?"Dano: assume que não és tu o alvo principal; os 3 itens situacionais vão para matar mais depressa.":o==="resistencia"?"Resistência: assume que és tu o alvo da equipa adversária; os 3 itens situacionais vão para aguentar o foco.":"Otimizado: o foco que recebes depende do teu role e do dano que a equipa adversária traz; quanto mais dano trazem, mais a build puxa para aguentar."}</p>
    <p><button type="button" id="btn-leit" class="go ghost">Comparar as três leituras</button> <span class="hint">demora alguns segundos</span></p><div id="leit"></div></section>`}
 function leiturasHTML(L){const m=L[0];const pc=(a,b)=>{const v=Math.round((a/b-1)*100);return (v>0?"+":"")+v+"%"};
   return `<div class="tablewrap"><table><thead><tr><th>Leitura</th><th>Peso dano</th><th>Progresso para matar</th><th>Tempo vivo</th><th>Build</th></tr></thead><tbody>${L.map((x,i)=>`<tr${i===0?' style="font-weight:600"':""}><td>${esc(x.nome)}</td><td>${Math.round(x.wo*100)}%</td><td>${i?pc(x.off,m.off):"referência"}</td><td>${i?pc(Math.min(x.T,30),Math.min(m.T,30)):"referência"}</td><td>${x.itens.map(esc).join(", ")}</td></tr>`).join("")}</tbody></table></div>
