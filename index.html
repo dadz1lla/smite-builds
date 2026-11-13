@@ -131,10 +131,10 @@ ol.contrib{margin:0;padding-left:20px;font-size:.88rem}
 ol.contrib li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding:3px 0}
 @media (prefers-reduced-motion:no-preference){.build{animation:in .25s ease-out both}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
 .tablewrap{overflow-x:auto}.tablewrap table{border-collapse:collapse;font-size:.85rem}.tablewrap th,.tablewrap td{padding:4px 8px;border-bottom:1px solid var(--line, #ddd);text-align:left;vertical-align:top}
-.quick{display:flex;flex-wrap:wrap;gap:6px;margin:10px 16px 4px;padding:0;list-style:none;counter-reset:q -1}
+.quick{display:flex;flex-wrap:wrap;gap:6px;margin:10px 16px 4px;padding:0;list-style:none;counter-reset:q 0}
 article.build > p.hint{margin:6px 16px}
-.quick li{counter-increment:q;background:var(--bronze-soft);color:var(--ink);border-radius:999px;padding:4px 10px;font-size:.85rem;font-weight:600}
-.quick li::before{content:counter(q) ". ";color:var(--bronze)}.quick li:first-child::before{content:"S · "}
+.quick li:not(.st){counter-increment:q}.quick li{background:var(--bronze-soft);color:var(--ink);border-radius:999px;padding:4px 10px;font-size:.85rem;font-weight:600}
+.quick li::before{content:counter(q) ". ";color:var(--bronze)}.quick li.st::before{content:"S · "}
 .quick li.adj{background:transparent;border:1px dashed var(--bronze)}
 .go.pend{box-shadow:0 0 0 3px var(--bronze-soft)}
 #out.velho{opacity:.45;transition:opacity .2s}
@@ -743,6 +743,7 @@ article.build > p.hint{margin:6px 16px}
       let v = this.score([up], path, ctx, base).val;
       if (!best || v > best.v) best = { v, up };
     });
+    if (!best) (STARTERS[opt.role] || []).forEach(sid => { const up = this.items[UPG[sid]]; if (!up) return; starterCands.push(up); const v = this.score([up], path, ctx, base).val; if (!best || v > best.v) best = { v, up }; });
     const chosen = best ? [best.up] : [], why = {};
     if (best) why[best.up.id] = [`Starter de ${opt.role}: o que mais rende neste caminho contra esta equipa, contando a passiva.`];
     const nStarter = chosen.length;
@@ -931,7 +932,14 @@ article.build > p.hint{margin:6px 16px}
     const stc = (S.starters || []).map(x => ({ x, it: this.items[x.id] })).filter(o => o.it).map(o => ({ ...o, up: o.it.tier === "starter_upgrade" ? o.it : this.items[UPG[o.it.id]] }))
       .filter(o => o.up && allowed(o.up, path, g) && (STARTERS[opt.role] || []).some(s => UPG[s] === o.up.id || s === o.it.id));
     stc.sort((a, b) => rData(b.x) - rData(a.x));
-    const starter = stc.length ? stc[0].up : null;
+    // sem starter válido nos dados: o starter do role que mais rende na simulação (primeiro os do caminho, depois qualquer um do role)
+    let starter = stc.length ? stc[0].up : null, stSim = false;
+    if (!starter) {
+      const ups = (STARTERS[opt.role] || []).map(sid => this.items[UPG[sid]]).filter(Boolean);
+      const cands = ups.filter(u => allowed(u, path, g)).length ? ups.filter(u => allowed(u, path, g)) : ups;
+      let bst = null; cands.forEach(u => { const v = this.score([u], path, ctx, this.evaluate([], path, ctx)).val; if (!bst || v > bst.v) bst = { u, v }; });
+      if (bst) { starter = bst.u; stSim = true; }
+    }
     // base
     const nCore = 3; // 3 itens core (dados) + 3 situacionais (simulação contra as equipas)
     const cand = Object.entries(S.itens).map(([id, d]) => ({ it: this.items[id], d })).filter(o => o.it && o.it.tier === "tier3" && allowed(o.it, path, g) && o.d.pick >= 8)
@@ -967,7 +975,8 @@ article.build > p.hint{margin:6px 16px}
     const adj = flex.concat(trocas.map(t => t.entra));
     const ord = (starter ? [starter] : []).concat(coreItems);
     const why = {};
-    if (starter) { const x = stc[0].x; why[starter.id] = [`Core: o starter de ${Math.round(x.pick)}% das builds (${ds.txt})${Math.abs(x.lift_s) >= 1 ? `, ${x.lift_s > 0 ? "+" : ""}${x.lift_s.toFixed(1).replace(".", ",")} pts de vitória face à média` : ""}.`]; }
+    if (starter && stSim) why[starter.id] = [`Starter de ${opt.role}: os dados deste deus não têm um starter deste role para este caminho; escolhido pela simulação.`];
+    else if (starter) { const x = stc[0].x; why[starter.id] = [`Core: o starter de ${Math.round(x.pick)}% das builds (${ds.txt})${Math.abs(x.lift_s) >= 1 ? `, ${x.lift_s > 0 ? "+" : ""}${x.lift_s.toFixed(1).replace(".", ",")} pts de vitória face à média` : ""}.`]; }
     core.filter(c => !c.trocado).forEach(c => why[c.it.id] = [`Core: em ${Math.round(c.d.pick)}% das builds (${ds.txt}), normalmente por volta da ${Math.round(c.d.slot || 3)}.ª compra${Math.abs(c.d.lift_s) >= 1 ? `; quem o faz ganha ${c.d.lift_s > 0 ? "+" : ""}${c.d.lift_s.toFixed(1).replace(".", ",")} pts face à média` : ""}.`]);
     const rem = adj.slice();
     while (rem.length) { const cur = sc(ord); let top = null; rem.forEach(it => { const v = sc(ord.concat(it)); const dlt = v.val - cur.val; if (!top || dlt > top.d) top = { it, d: dlt, sc: v, cur }; });
@@ -1157,7 +1166,7 @@ function card(b,full){
   const gold=b.itens.reduce((a,i)=>a+(i.custo||0),0);
   return `<article class="build ${b.principal?"principal":""} ${full?"":"mini"}">
   <div class="bhead"><h3>${esc(b.base?"Core + situacional · "+b.rotulo:b.rotulo)}</h3>${b.principal?'<span class="pill main">Recomendada</span>':""}${b.livre?'<span class="pill exp" title="só a simulação, sem base nos dados">build livre</span>':""}${b.experimental?'<span class="pill exp">Experimental</span>':""}<span class="pill c-${b.confianca}">confiança ${b.confianca}</span><span class="score">${b.relativo}% da melhor</span></div>
-  ${full&&b.principal?`<ol class="quick" aria-label="Build em resumo">${b.ordem.map(i=>`<li${b.ajuste&&b.ajuste.includes(i.id)?' class="adj"':""}>${esc(i.nome)}</li>`).join("")}</ol>`:""}
+  ${full&&b.principal?`<ol class="quick" aria-label="Build em resumo">${b.ordem.map(i=>`<li class="${i.tier.startsWith("starter")?"st":""}${b.ajuste&&b.ajuste.includes(i.id)?" adj":""}">${esc(i.nome)}</li>`).join("")}</ol>`:""}
   ${full&&b.base?`<p class="hint">Core (starter + ${b.nBase-1} itens): ${esc(b.fonteBase)}, escolhidos pela frequência e pelas vitórias. Os itens situacionais são escolhidos pela simulação contra a tua equipa e a adversária, só entre itens que se jogam neste role e counters (anti-cura, anti-escudo, anti-crítico, proteção contra CC).${b.trocasBase.length?" Itens core trocados por causa da partida: "+b.trocasBase.map(t=>esc(t.sai)+" → "+esc(t.entra)+" (+"+t.ganho+"%)").join("; ")+".":""}</p>`:""}
   ${!full&&b.livre?`<p class="hint">Só a simulação, sem base nos dados: para explorar ideias fora da meta.</p>`:""}
   <ol class="items">${(full?b.ordem:b.itens).map((i,k)=>itemRow(i,k===0&&i.tier.startsWith("starter")?"S":k,b,full)).join("")}</ol>
