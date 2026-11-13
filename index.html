@@ -52,6 +52,14 @@ select:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid 
 .slot select{font-size:.84rem;padding:5px;min-width:0;flex:1 1 auto}
 .slot.en{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px}
 .slot select.est{grid-column:1/3;font-size:.75rem;padding:3px 4px}
+.cb{position:relative;min-width:0;flex:1 1 auto;display:block}
+.cb input{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:7px 8px}
+.slot .cb input{font-size:.84rem;padding:5px}
+.cb input::placeholder{color:var(--muted)}
+.cb ul{position:absolute;z-index:20;left:0;top:calc(100% + 2px);min-width:100%;width:max-content;max-width:min(280px,80vw);max-height:260px;overflow-y:auto;margin:0;padding:4px;list-style:none;background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.cb li{padding:8px 10px;border-radius:5px;cursor:pointer;font-size:.9rem;white-space:nowrap}
+.cb li[aria-selected="true"],.cb li:hover{background:var(--bronze-soft)}
+.cb li.vazio{color:var(--muted);cursor:default;background:none}
 .slot .me{font-size:.84rem;font-weight:600;color:var(--bronze);padding:5px 6px;border:1px dashed var(--bronze);border-radius:6px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .asp{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:24px;height:24px;border-radius:5px;border:1px solid var(--line);background:var(--bg);cursor:pointer;position:relative}
 .asp::after{content:"A";position:absolute;inset:0;display:grid;place-items:center;font-size:.72rem;font-weight:700;color:var(--muted)}
@@ -1158,10 +1166,35 @@ function teams(){const el=$("teams");el.innerHTML='<span></span><span class="hd"
     <div class="slot en"><select id="e-${r}" aria-label="Inimigo ${r}"></select><input type="checkbox" class="asp" id="ea-${r}" aria-label="Aspeto do inimigo ${r}" title="Aspeto ligado"><select class="est" id="es-${r}" aria-label="Estilo de build do inimigo ${r}" title="Estilo de build do inimigo"><option value="">build: auto</option><option value="crit">build: crítico</option><option value="ataque">build: ataque</option><option value="hab">build: habilidades</option><option value="bruiser">build: bruiser</option><option value="tank">build: tanque</option></select></div>`);
     opts($("a-"+r),true);opts($("e-"+r),true)})}
 teams();
+/* Escolher deus a escrever: um campo de texto filtra a lista (sem acentos, por qualquer parte do nome); a <select> escondida continua a guardar o valor */
+const norm=t=>t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+function combo(sel,ph){const w=document.createElement("span");w.className="cb";sel.parentNode.insertBefore(w,sel);w.appendChild(sel);sel.hidden=true;
+  const inp=document.createElement("input");inp.type="text";inp.placeholder=ph;inp.setAttribute("aria-label",sel.getAttribute("aria-label")||ph);inp.setAttribute("role","combobox");inp.setAttribute("aria-autocomplete","list");inp.setAttribute("aria-expanded","false");inp.autocomplete="off";inp.spellcheck=false;
+  const ul=document.createElement("ul");ul.setAttribute("role","listbox");ul.hidden=true;w.append(inp,ul);
+  const show=()=>{const o=[...sel.options].find(x=>x.value===sel.value);inp.value=o&&o.value?o.textContent:""};
+  let act=0,list=[];
+  const draw=full=>{const q=full?"":norm(inp.value.trim());const all=[...sel.options].filter(o=>o.value);
+    list=q?all.filter(o=>norm(o.textContent).startsWith(q)).concat(all.filter(o=>!norm(o.textContent).startsWith(q)&&norm(o.textContent).includes(q))):all;
+    if(sel.value&&!q)act=Math.max(0,list.findIndex(o=>o.value===sel.value));else act=0;
+    ul.innerHTML=list.length?list.map((o,i)=>`<li role="option" data-v="${o.value}" aria-selected="${i===act}">${o.textContent}</li>`).join(""):'<li class="vazio">Nenhum deus com esse nome</li>';
+    ul.hidden=false;inp.setAttribute("aria-expanded","true");const a=ul.children[act];if(a&&a.scrollIntoView)a.scrollIntoView({block:"nearest"})};
+  const close=()=>{ul.hidden=true;inp.setAttribute("aria-expanded","false");show()};
+  const choose=v=>{if(sel.value!==v){sel.value=v;sel.dispatchEvent(new Event("change",{bubbles:true}))}close();inp.blur()};
+  inp.addEventListener("focus",()=>{inp.select();draw(true)});
+  inp.addEventListener("input",()=>{if(!inp.value.trim()&&sel.value){sel.value="";sel.dispatchEvent(new Event("change",{bubbles:true}))}draw()});
+  inp.addEventListener("keydown",e=>{if(ul.hidden)return;
+    if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();act=Math.max(0,Math.min(list.length-1,act+(e.key==="ArrowDown"?1:-1)));[...ul.children].forEach((li,i)=>li.setAttribute("aria-selected",i===act));const a=ul.children[act];if(a)a.scrollIntoView({block:"nearest"})}
+    else if(e.key==="Enter"){e.preventDefault();if(list[act])choose(list[act].value)}else if(e.key==="Escape"){close();inp.blur()}});
+  ul.addEventListener("pointerdown",e=>{const li=e.target.closest("li[data-v]");if(!li)return;e.preventDefault();choose(li.dataset.v)});
+  inp.addEventListener("blur",()=>setTimeout(()=>{if(document.activeElement!==inp)close()},120));
+  sel.addEventListener("change",show);show();return inp}
+{const gi=combo($("god"),"Escreve o nome do deus…");gi.id="god-q";document.querySelector('label[for="god"]').htmlFor="god-q";}
+ROLES.forEach(r=>{combo($("a-"+r),"aliado…");combo($("e-"+r),"inimigo…")});
 function syncMe(){const r=pick($("role")),gn=($("god").selectedOptions[0]||{}).textContent||"";
   ROLES.forEach(x=>{const sel=$("a-"+x),box=$("aa-"+x),slot=$("as-"+x);let me=slot.querySelector(".me");
-    if(x===r){sel.hidden=true;box.hidden=true;if(!me){me=document.createElement("span");me.className="me";slot.prepend(me)}me.textContent=gn+($("aspeto").checked?" (aspeto)":"")}
-    else{sel.hidden=false;box.hidden=false;if(me)me.remove()}})}
+    const cbx=sel.closest(".cb")||sel;
+    if(x===r){cbx.hidden=true;box.hidden=true;if(!me){me=document.createElement("span");me.className="me";slot.prepend(me)}me.textContent=gn+($("aspeto").checked?" (aspeto)":"")}
+    else{cbx.hidden=false;box.hidden=false;if(me)me.remove()}})}
 const pick=el=>{const b=el.querySelector('[aria-pressed="true"]');return b?b.dataset.v:null};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function itemRow(i,n,b,full){
@@ -1305,7 +1338,7 @@ function compare(){if(!LAST)return;const ids=[0,1,2,3,4,5,6].map(k=>$("c"+k).val
   <p class="hint">Peso de cada item na sua build (quanto a nota desce sem ele):</p><ol class="contrib">${c.contrib.map(x=>`<li><span>${esc(x.item.nome)}</span><span class="cost">${(x.valor*100).toFixed(1)}</span></li>`).join("")}</ol>`}
 
 /* Nada recalcula sozinho: escolhe-se tudo e só o botão "Recomendar build" calcula (no telemóvel cada cálculo demora segundos). */
-function stale(){const ex=$("ex");if(ex)ex.hidden=true;const g=$("go");if(g){g.classList.add("pend");g.textContent="Recomendar build ↻";}const o=$("out");if(o&&o.firstElementChild)o.classList.add("velho");}
+function stale(){try{syncMe()}catch(e){}const ex=$("ex");if(ex)ex.hidden=true;const g=$("go");if(g){g.classList.add("pend");g.textContent="Recomendar build ↻";}const o=$("out");if(o&&o.firstElementChild)o.classList.add("velho");}
 ["god","aspeto"].forEach(id=>$(id).addEventListener("change",stale));
 document.querySelectorAll(".teams select,.teams .asp,.teams .est").forEach(s=>s.addEventListener("change",stale));
 document.querySelectorAll(".teams .asp").forEach(b=>b.addEventListener("click",()=>setTimeout(stale,0)));
