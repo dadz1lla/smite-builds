@@ -74,7 +74,8 @@
     "Dano por tick multiplicado pelo nº de ticks lido na descrição (\"N times\", \"every Xs for Ys\"); habilidades de área atingem em média +0,4 alvos extra. O dano de invocações não é contado.",
     "Efeitos no ataque a seguir a uma habilidade (Polynomicon, Hydra's Lament) só disparam se houver ataques básicos para isso.",
     "Sobreviver conta até 30s; a build final é melhorada trocando item a item até nenhuma troca ajudar, e a ordem de compra é a ordem em que cada item mais rende.",
-    "Build = starter + 3 itens core + 3 situacionais. O starter e os 3 core vêm dos dados de jogo (SmiteBrain, Master+, últimas 2 semanas, separados por aspeto): os itens mais escolhidos e que mais ganham com este deus neste role, com ou sem aspeto conforme a escolha; com menos de 20 jogos junta-se a média dos deuses do mesmo tipo de dano nesse role. Os 3 situacionais saem dos itens que os jogadores compram com este deus neste role (≥3% das builds; counters ≥1%), escolhidos pela simulação contra as equipas, com peso extra para os mais comprados.",
+    "Build: a mais usada pelos jogadores Master+ deste deus neste role, com ou sem aspeto conforme a escolha, nas últimas 2 semanas (SmiteBrain, separador Builds, build a build). Cada build lida tem os itens por ordem de compra, o starter, a relíquia, o resultado e os 5 inimigos. As builds contra equipas parecidas com a escolhida contam mais: peso = (1 + inimigos iguais)^1,5 × semelhança da composição² (tipo de dano e role principal de cada inimigo). A build é montada ranhura a ranhura: em cada ranhura, o item mais comprado nessa posição pelas builds que começaram da mesma forma (se houver pelo menos 15); senão pelas que têm os mesmos itens; senão por todas. Com menos de 25 builds na versão escolhida, juntam-se as da outra versão com 40% do peso. Sem builds suficientes, volta ao método anterior (3 itens core dos dados + 3 situacionais da simulação).",
+
     "Objetivo: Otimizado ajusta o foco que recebe ao dano que a equipa adversária traz e o peso dano/sobrevivência ao que falta à sua equipa e ao que a adversária ameaça. Dano assume que não é o alvo principal (metade do foco) e passa 60% do peso da sobrevivência para o dano. Resistência assume que é o alvo (foco 1,5×, no mínimo 90% de 3 inimigos) e passa metade do peso do dano para a sobrevivência.",
     "Identidade do role: Solo é bruiser (no máximo 2 itens só defensivos), Jungle/Mid/Carry no máximo 1, Support sem limite."
   ];
@@ -92,7 +93,8 @@
       "Damage per tick multiplied by the number of ticks read from the description (\"N times\", \"every Xs for Ys\"); area abilities hit +0.4 extra targets on average. Summon damage is not counted.",
       "On-hit effects after an ability (Polynomicon, Hydra's Lament) only trigger if there are basic attacks to use them.",
       "Survival counts up to 30s; the final build is improved by swapping item by item until no swap helps, and the buy order is the order in which each item adds the most.",
-      "Build = starter + 3 core items + 3 situational items. The starter and the 3 core come from game data (SmiteBrain, Master+, last 2 weeks, split by aspect): the items picked most and winning most with this god in this role, with or without the aspect as chosen; with fewer than 20 games, the average of same-damage-type gods in that role is added. The 3 situational items come from what players buy with this god in this role (≥3% of builds; counters ≥1%), chosen by the simulation against the teams, with extra weight for the most bought.",
+      "Build: the most played by Master+ players of this god in this role, with or without the aspect as chosen, over the last 2 weeks (SmiteBrain, Builds tab, build by build). Each build read has the items in purchase order, the starter, the relic, the result and the 5 enemies. Builds against teams similar to the chosen one count more: weight = (1 + same enemies)^1.5 × composition similarity² (damage type and main role of each enemy). The build is assembled slot by slot: in each slot, the item bought most in that position by builds that started the same way (if there are at least 15); otherwise by those with the same items; otherwise by all. With fewer than 25 builds in the chosen version, those of the other version are added at 40% weight. Without enough builds, it falls back to the previous method (3 core items from data + 3 situational from the simulation).",
+
       "Objective: Optimised scales the focus you take with the enemy team's damage, and the damage/survival weight with what your team lacks and what the enemy threatens. Damage assumes you are not the main target (half the focus) and moves 60% of the survival weight to damage. Durability assumes you are the target (1.5× focus, at least 90% of 3 enemies) and moves half of the damage weight to survival.",
       "Role identity: Solo is a bruiser (at most 2 purely defensive items), Jungle/Mid/Carry at most 1, Support no limit."
   ];
@@ -754,7 +756,7 @@
     b.ordem = b.itens.slice(); // ordem de compra = ordem em que a simulação os escolheu (o que mais rende primeiro)
     const by = {}; b.itens.forEach(i => by[i.id] = 1);
     const head = b.itens.slice(0, b.itens.length - 1);
-    b.alternativas = this.data.itens.filter(i => i.tier === "tier3" && !by[i.id] && allowed(i, b.caminho, ctx.g) && !(i.unico && head.some(c => c.unico === i.unico)))
+    b.alternativas = b.dados ? [] : this.data.itens.filter(i => i.tier === "tier3" && !by[i.id] && allowed(i, b.caminho, ctx.g) && !(i.unico && head.some(c => c.unico === i.unico)))
       .map(i => ({ i, v: this.score(head.concat(i), b.caminho, ctx).val })).sort((a, c) => c.v - a.v).slice(0, 3).map(x => x.i);
     return b;
   };
@@ -881,6 +883,100 @@
     return { caminho: path, rotulo: PL(path), itens: ord, porque: why, score: final, base: true, fonteBase: ds.txt, nBase: coreItems.length + (starter ? 1 : 0), ajuste: adj.map(i => i.id), trocasBase: trocas.map(t => ({ sai: t.sai.nome, entra: t.entra.nome, ganho: t.ganho })) };
   };
 
+
+  /* ---------- Build dos jogadores (SmiteBrain, build a build) ----------
+     Cada build lida tem: itens por ordem de compra, starter, relíquia, vitória/derrota e os 5 inimigos.
+     Para o deus, role e aspeto escolhidos, cada build pesa conforme a equipa contra quem foi jogada se parece com a escolhida:
+       peso = (1 + inimigos iguais)^1,5 × semelhança da composição² (tipo de dano e role principal de cada inimigo).
+     A build mostrada é a mais usada ranhura a ranhura: na ranhura k, o item mais comprado nessa posição pelas builds que
+     começaram como esta (mesma ordem); se forem poucas, pelas que têm os mesmos itens; se ainda forem poucas, por todas. */
+  Engine.prototype.setBuilds = function (J) { this.BJ = J; this._bc = {}; this.BJ.idx = {}; };
+  const B36 = s => parseInt(s, 36);
+  const OBJ_EXP = +(globalThis.__OE || 2);
+  Engine.prototype.jogos = function (god, role, v) {
+    const J = this.BJ; if (!J) return [];
+    const k = god + "|" + role + "|" + v; if (this._bc[k]) return this._bc[k];
+    const raw = J.B[k]; const out = [];
+    if (raw) raw.split(";").forEach(t => { const [vv, st, rel, its, en, d] = t.split(",");
+      out.push({ v: +vv, s: st ? J.I[B36(st)] : null, r: rel ? J.I[B36(rel)] : null, it: its ? its.split(".").map(x => J.I[B36(x)]) : [], en: en ? en.split(".").map(x => J.G[B36(x)]) : [], d }); });
+    return (this._bc[k] = out);
+  };
+  Engine.prototype.itemJ = function (id) {
+    if (!id) return null; if (this.items[id]) return this.items[id];
+    this._gi = this._gi || {}; if (this._gi[id]) return this._gi[id];
+    const gi = (this.data.itens_deus || []).find(x => x.id === id);
+    const nome = gi ? gi.nome : String(id).replace(/^x:/, "");
+    return (this._gi[id] = { id, nome, tier: "deus", custo: gi ? gi.custo : null, stats: {}, efeitos: [], exclusivo: true, confianca: "alta" });
+  };
+  Engine.prototype.buildJogos = function (opt, ctx) {
+    if (!this.BJ) return null;
+    const va = opt.aspeto ? "aspeto" : "base", vo = opt.aspeto ? "base" : "aspeto";
+    let A = this.jogos(opt.god, opt.role, va).map(b => Object.assign({ w0: 1 }, b)), mistura = false;
+    if (A.length < 25) { const O = this.jogos(opt.god, opt.role, vo); if (O.length) { A = A.concat(O.map(b => Object.assign({ w0: 0.4 }, b))); mistura = O.length > 0; } }
+    if (A.length < 8) return null;
+    const nAsp = this.jogos(opt.god, opt.role, va).length;
+    const E = (opt.inimigos || []).map(x => typeof x === "string" ? x : x.id).filter(id => this.gods[id]);
+    const RL = ["Solo", "Jungle", "Mid", "Support", "Carry"];
+    const vec = ids => { const v = [0, 0, 0, 0, 0, 0]; ids.forEach(id => { const g = this.gods[id]; if (!g) return; if (g.tipo_dano === "magico") v[0]++; const r = RL.indexOf(this.mainRole(id)); if (r >= 0) v[1 + r]++; });
+      const n = ids.length || 1; return v.map(x => x / n); };
+    const vE = vec(E);
+    const defShare = b => { let d = 0, n = 0; b.it.forEach(id => { const it = this.items[id]; if (!it) return; n++; const st = it.stats || {};
+      const off = st.str || st.int || st.ad || st.as_pct || st.crit_pct || st.adapt_int || st.adapt_str; const def = st.hp || st.pp || st.mp || st.prot; if (def && !off) d++; }); return n ? d / n : 0; };
+    const obj = opt.objetivo || "otimizado";
+    let iguais2 = 0, iguais1 = 0;
+    A.forEach(b => { let w = b.w0;
+      if (E.length) { const ov = b.en.filter(e => E.includes(e)).length; const vb = vec(b.en); const dist = vb.reduce((a, x, i) => a + Math.abs(x - vE[i]), 0);
+        w *= Math.pow(1 + ov, 1.5) * Math.pow(1 / (1 + dist), 2); if (ov >= 2) iguais2++; if (ov >= 1) iguais1++; b.ov = ov; }
+      // objetivo: Dano favorece as builds com menos itens defensivos, Resistência as que têm mais (sem mexer no resto)
+      if (obj === "dano") w *= Math.pow(1.05 - defShare(b), OBJ_EXP); else if (obj === "resistencia") w *= Math.pow(0.1 + defShare(b), OBJ_EXP);
+      b.w = w; });
+    const eff = C => { let s = 0, q = 0; C.forEach(b => { s += b.w; q += b.w * b.w; }); return q ? s * s / q : 0; };
+    const ok = (set, id) => { const it = this.itemJ(id); if (!it || set.includes(id)) return false;
+      if (it.unico && set.some(x => (this.itemJ(x) || {}).unico === it.unico)) return false;
+      if (it.ativo && set.filter(x => (this.itemJ(x) || {}).ativo).length >= 3) return false; return true; };
+    const moda = (C, get, excl) => { const m = {}; C.forEach(b => { const x = get(b); if (!x || (excl && excl(x))) return; const a = m[x] = m[x] || { w: 0, wv: 0, n: 0 }; a.w += b.w; a.wv += b.w * b.v; a.n++; });
+      const tot = C.reduce((a, b) => a + b.w, 0); return Object.entries(m).map(([id, a]) => ({ id, pick: a.w / tot * 100, win: a.wv / a.w * 100, n: a.n })).sort((x, y) => y.pick - x.pick); };
+    const chosen = [], info = {};
+    for (let k = 0; k < 6; k++) {
+      // segue a ordem exata enquanto houver jogos que a sustentem (≥15 builds e amostra efetiva ≥8); senão alarga
+      const chega = C => C.length >= 15 && eff(C) >= 8;
+      let C = A.filter(b => b.it.length > k && chosen.every((c, j) => b.it[j] === c)), nivel = "ordem";
+      if (!chega(C)) { C = A.filter(b => b.it.length > k && chosen.every(c => b.it.includes(c))); nivel = "itens"; }
+      if (!chega(C)) { C = A.filter(b => b.it.length > k); nivel = "todas"; }
+      let top = moda(C, b => b.it[k], id => !ok(chosen, id))[0];
+      if (top && top.n < 3 && nivel !== "todas") { C = A.filter(b => b.it.length > k); nivel = "todas"; top = moda(C, b => b.it[k], id => !ok(chosen, id))[0]; }
+      if (!top) { const T = moda(A, b => b.it.find(id => ok(chosen, id)), null)[0]; if (!T) break; top = T; nivel = "todas"; }
+      chosen.push(top.id); info[top.id] = { k: k + 1, pick: top.pick, win: top.win, n: top.n, nivel, alt: moda(C, b => b.it[k], id => !ok(chosen, id)).slice(0, 2) };
+    }
+    if (chosen.length < 3) return null;
+    const stT = moda(A, b => b.s)[0], relT = moda(A, b => b.r);
+    const starter = stT ? this.itemJ(stT.id) : null;
+    const itens = (starter ? [starter] : []).concat(chosen.map(id => this.itemJ(id)));
+    // caminho (para as contas de dano e o resto da página): o que melhor serve estes itens
+    let best = null; this.paths(ctx.kit).forEach(p => { const v = this.score(itens, p, ctx).val; if (!best || v > best.v) best = { p, v }; });
+    const path = best ? best.p : "forca";
+    const pc = x => Math.round(x); const fmt = x => pc(x) + "%";
+    const why = {};
+    if (starter) why[starter.id] = [L(`Starter de ${fmt(stT.pick)} destas builds (${fmt(stT.win)} de vitórias).`, `Starter in ${fmt(stT.pick)} of these builds (${fmt(stT.win)} wins).`)];
+    const NIV = { ordem: L("das builds que começaram assim", "of builds that started this way"), itens: L("das builds com os mesmos itens", "of builds with the same items"), todas: L("de todas as builds", "of all builds") };
+    chosen.forEach(id => { const x = info[id];
+      why[id] = [L(`${x.k}.º item em ${fmt(x.pick)} ${NIV[x.nivel]} (${x.n} jogos, ${fmt(x.win)} de vitórias).`, `Item #${x.k} in ${fmt(x.pick)} ${NIV[x.nivel]} (${x.n} games, ${fmt(x.win)} wins).`)
+        + (x.alt.length ? L(" Alternativa: ", " Alternative: ") + x.alt.map(a => (this.itemJ(a.id) || {}).nome + " " + fmt(a.pick)).join(", ") + "." : "")]; });
+    // jogos com exatamente esta ordem nos 3 primeiros itens
+    const tres = A.filter(b => chosen.slice(0, 3).every((c, j) => b.it[j] === c));
+    const winT = tres.length ? tres.reduce((a, b) => a + b.v, 0) / tres.length * 100 : null;
+    const reliquias = relT.slice(0, 2).map(r => ({ item: this.itemJ(r.id), razao: L(`em ${fmt(r.pick)} destas builds (${fmt(r.win)} de vitórias).`, `in ${fmt(r.pick)} of these builds (${fmt(r.win)} wins).`) }));
+    const alternativas = moda(A, b => b.it.find(id => !chosen.includes(id) && this.items[id] && this.items[id].tier === "tier3"), null).slice(0, 3).map(x => this.items[x.id]).filter(Boolean);
+    const ASP = this.BJ.L && this.BJ.L[opt.god + "|" + opt.role];
+    const fonte = L(`${nAsp} builds Master+ deste deus no ${opt.role} ${opt.aspeto ? "com aspeto" : "sem aspeto"}, de ${this.BJ.corte} a ${this.BJ.lido_em}`, `${nAsp} Master+ builds of this god in ${opt.role} ${opt.aspeto ? "with aspect" : "without aspect"}, ${this.BJ.corte} to ${this.BJ.lido_em}`)
+      + (mistura ? L(`, mais ${A.length - nAsp} da outra versão (poucos jogos nesta)`, `, plus ${A.length - nAsp} from the other version (few games in this one)`) : "");
+    const contra = E.length ? L(`Contra a equipa escolhida: ${iguais1} jogos com pelo menos um dos mesmos inimigos e ${iguais2} com dois ou mais; as builds contra equipas parecidas contam mais.`,
+      `Against the chosen team: ${iguais1} games with at least one of the same enemies and ${iguais2} with two or more; builds against similar teams count more.`) : L("Sem equipa adversária escolhida: todas as builds contam o mesmo.", "No enemy team chosen: every build counts the same.");
+    const sc = this.score(itens, path, ctx);
+    return { caminho: path, rotulo: PL(path), itens, porque: why, score: sc, dados: true, fonteBase: fonte, contra, jogos: A.length,
+      tres: tres.length, winTres: winT, reliquiasDados: reliquias, alternativasDados: alternativas, aspetos: ASP || null, ajuste: [], base: false, trocasBase: [] };
+  };
+
   Engine.prototype.recommend = function (opt) {
     const g = this.gods[opt.god];
     if (!g) throw new Error(L("Deus desconhecido", "Unknown god"));
@@ -890,15 +986,22 @@
        desse deus mostram o caminho); se só há a média de outros deuses do role, conta só a simulação do kit, para os dados
        de outros deuses não empurrarem um mago para uma build física (ou o contrário). */
     const ctxSim = Object.assign({}, ctx, { bonusByPath: null });
-    const builds = this.paths(ctx.kit).map(p => { const b = this.build(opt, p, ctx); b.simVal = this.score(b.itens, p, ctxSim).val; return b; })
+    const bj0 = opt.livre ? null : this.buildJogos(opt, ctx);
+    const builds = bj0 ? [] : this.paths(ctx.kit).map(p => { const b = this.build(opt, p, ctx); b.simVal = this.score(b.itens, p, ctxSim).val; return b; })
       .sort((a, b) => b.simVal - a.simVal)
       .filter(b => { const k = b.itens.map(i => i.id).sort().join(); if (seen.has(k)) return false; seen.add(k); return true; });
     builds.forEach(b => this.finish(b, opt, ctx, builds[0].score.val));
     builds.forEach(b => b.relativo = Math.round(b.simVal / builds[0].simVal * 100));
     const normal = builds.filter(b => !b.experimental);
-    if (builds[0].experimental && normal.length && normal[0].relativo >= 85) { builds.splice(builds.indexOf(normal[0]), 1); builds.unshift(normal[0]); }
-    const ds = opt.livre ? null : this.dataSource(opt);
-    if (ds) {
+    if (builds.length && builds[0].experimental && normal.length && normal[0].relativo >= 85) { builds.splice(builds.indexOf(normal[0]), 1); builds.unshift(normal[0]); }
+    const ds = opt.livre || bj0 ? null : this.dataSource(opt);
+    const bj = bj0;
+    if (bj) {
+      bj.simVal = this.score(bj.itens, bj.caminho, ctxSim).val; this.finish(bj, opt, ctx, bj.score.val);
+      bj.reliquias = bj.reliquiasDados.length ? bj.reliquiasDados : bj.reliquias; if (bj.alternativasDados.length) bj.alternativas = bj.alternativasDados;
+      bj.relativo = 100; bj.confianca = bj.jogos >= 80 ? "alta" : bj.jogos >= 25 ? "média" : "baixa"; bj.experimental = false;
+      builds.length = 0; builds.push(bj);
+    } else if (ds) {
       const bb = this.buildBase(opt, ctx, ds); bb.simVal = this.score(bb.itens, bb.caminho, ctxSim).val;
       this.finish(bb, opt, ctx, bb.score.val); bb.relativo = Math.round(bb.simVal / builds[0].simVal * 100);
       builds.forEach(b => b.livre = true);
@@ -906,7 +1009,7 @@
     }
     builds[0].principal = true;
     const P = builds[0], gi = this.godItems(opt).filter(x => !P.itens.some(i => i.id === x.id));
-    if (gi.length) {
+    if (gi.length && !P.dados) {
       const full = this.score(P.itens, P.caminho, ctx).val;
       const weakest = P.itens.slice(1).map(i => ({ i, v: full - this.score(P.itens.filter(x => x !== i), P.caminho, ctx).val })).sort((a, b) => a.v - b.v)[0];
       P.exclusivos = gi.map(x => {
@@ -914,7 +1017,7 @@
         return { item: x, troca: weakest.i, rel: Math.round(v / full * 100) };
       });
     }
-    const cruz = this.cruzamento(opt, ctx, builds);
+    const cruz = builds[0].dados ? null : this.cruzamento(opt, ctx, builds);
     const tot = ctx.kit.str + ctx.kit.int;
     const consumiveis = [];
     const team = [opt.god].concat((opt.aliados || []).map(x => typeof x === "string" ? x : x.id));

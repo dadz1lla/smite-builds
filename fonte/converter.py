@@ -35,7 +35,8 @@ gid=lambda slug:(slug.replace("-","_") if slug.replace("-","_") in ids else None
 dia=sys.argv[1] if len(sys.argv)>1 else datetime.date.today().isoformat()
 V={}; listas={}; desconhecidos=set(); avisos=[]
 for r,R in ROLES.items():
-    p=os.path.join(B,"semana","raw_%s.txt"%r)
+    p=os.path.join(B,"semana","agg_%s.txt"%r)   # gerado por builds_conv.py a partir das builds individuais
+    if not os.path.exists(p): p=os.path.join(B,"semana","raw_%s.txt"%r)
     if not os.path.exists(p): avisos.append("falta "+r); continue
     t=open(p,encoding="utf-8").read()
     corte=re.search(r"corte (\S+)",t).group(1)

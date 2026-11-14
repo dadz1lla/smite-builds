@@ -4,6 +4,7 @@
 set -e
 cd "$(dirname "$0")"
 DIA=${1:-$(date -u +%F)}
+python3 builds_conv.py "$DIA"
 python3 converter.py "$DIA"
 python3 db/comunidade.py >/dev/null
 python3 juntar.py
