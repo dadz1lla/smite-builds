@@ -898,9 +898,11 @@
     const k = god + "|" + role + "|" + v; if (this._bc[k]) return this._bc[k];
     const raw = J.B[k]; const out = [];
     if (raw) raw.split(";").forEach(t => { const [vv, st, rel, its, en, d] = t.split(",");
-      out.push({ v: +vv, s: st ? J.I[B36(st)] : null, r: rel ? J.I[B36(rel)] : null, it: its ? its.split(".").map(x => J.I[B36(x)]) : [], en: en ? en.split(".").map(x => J.G[B36(x)]) : [], d }); });
+      out.push({ v: +vv, s: st ? J.I[B36(st)] : null, r: rel ? J.I[B36(rel)] : null, it: its ? its.split(".").map(x => J.I[B36(x)]).filter(id => this.tier3J(id)) : [], en: en ? en.split(".").map(x => J.G[B36(x)]) : [], d }); });
     return (this._bc[k] = out);
   };
+  // só itens acabados contam na build: Tier III ou itens do próprio deus (ex.: bolotas do Ratatoskr); Tier I/II são jogos que acabaram a meio
+  Engine.prototype.tier3J = function (id) { const it = this.items[id]; return it ? it.tier === "tier3" : !!id; };
   Engine.prototype.itemJ = function (id) {
     if (!id) return null; if (this.items[id]) return this.items[id];
     this._gi = this._gi || {}; if (this._gi[id]) return this._gi[id];
@@ -931,7 +933,7 @@
       if (obj === "dano") w *= Math.pow(1.05 - defShare(b), OBJ_EXP); else if (obj === "resistencia") w *= Math.pow(0.1 + defShare(b), OBJ_EXP);
       b.w = w; });
     const eff = C => { let s = 0, q = 0; C.forEach(b => { s += b.w; q += b.w * b.w; }); return q ? s * s / q : 0; };
-    const ok = (set, id) => { const it = this.itemJ(id); if (!it || set.includes(id)) return false;
+    const ok = (set, id) => { const it = this.itemJ(id); if (!it || set.includes(id) || !this.tier3J(id)) return false;
       if (it.unico && set.some(x => (this.itemJ(x) || {}).unico === it.unico)) return false;
       if (it.ativo && set.filter(x => (this.itemJ(x) || {}).ativo).length >= 3) return false; return true; };
     const moda = (C, get, excl) => { const m = {}; C.forEach(b => { const x = get(b); if (!x || (excl && excl(x))) return; const a = m[x] = m[x] || { w: 0, wv: 0, n: 0 }; a.w += b.w; a.wv += b.w * b.v; a.n++; });
