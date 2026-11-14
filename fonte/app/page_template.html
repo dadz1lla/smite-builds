@@ -151,7 +151,7 @@ article.build > p.hint{margin:6px 16px}
   <div class="grid">
     <form class="panel" id="f" autocomplete="off">
       <div><label for="god" data-i="god">Deus</label><select id="god"></select></div>
-      <div class="check"><input type="checkbox" id="aspeto"><label for="aspeto" style="margin:0;text-transform:none;letter-spacing:0;font-size:.9rem;font-weight:500;color:var(--ink)" data-i="asp">Com aspeto</label></div>
+      <div class="check"><input type="checkbox" id="aspeto" autocomplete="off"><label for="aspeto" style="margin:0;text-transform:none;letter-spacing:0;font-size:.9rem;font-weight:500;color:var(--ink)" data-i="asp">Com aspeto</label></div>
       <div><label id="l-role" data-i="role">Role</label><div class="seg" id="role" role="group" aria-labelledby="l-role"></div></div>
       <div><label id="l-obj" data-i="obj">Objetivo</label><div class="seg" id="obj" role="group" aria-labelledby="l-obj"></div></div>
       <div><label id="l-modo" data-i="modo">Modo</label><div class="seg" id="modo" role="group" aria-labelledby="l-modo"></div></div>
@@ -174,7 +174,7 @@ const D=window.SMITE_DATA, E=new SmiteEngine(D);
 window.BUILDS_PRONTO=fetch("builds.json").then(r=>r.ok?r.json():null).then(j=>{if(j&&j.B){E.setBuilds(j);window.BUILDS_INFO=j.lido_em}return !!j}).catch(()=>false);
 /* aquecimento: um cálculo escondido logo a seguir a abrir, para o primeiro "Recomendar build" já sair rápido (não mexe na página) */
 window.BUILDS_PRONTO.then(()=>{const f=()=>{try{const g=D.deuses.find(x=>x.id==="zeus")||D.deuses[0];const en=D.deuses.slice(0,5).filter(x=>x.id!==g.id).map(x=>({id:x.id}));
-  ["otimizado","dano","resistencia"].forEach(o=>E.recommend({god:g.id,role:"Mid",aspeto:false,objetivo:o,inimigos:en}))}catch(e){}};(window.requestIdleCallback||setTimeout)(f,{timeout:1500})});
+  E.recommend({god:g.id,role:"Mid",aspeto:false,inimigos:en})}catch(e){}};setTimeout(()=>window.requestIdleCallback?requestIdleCallback(f):f(),2500)});
 /* Idioma PT/EN: guardado neste browser; por omissão segue o idioma do telemóvel */
 let LANG=(()=>{try{const v=localStorage.getItem("lang");if(v==="pt"||v==="en")return v}catch(e){}return (navigator.language||"").toLowerCase().startsWith("pt")?"pt":"en"})();
 globalThis.SMITE_LANG=LANG;document.documentElement.lang=LANG==="en"?"en":"pt-PT";
@@ -206,8 +206,8 @@ function teams(){const el=$("teams");
   el.innerHTML='<span></span><span class="hd" data-i="myteam">A sua equipa</span><span class="hd" data-i="enemies">Inimigos</span>';
   const S=curSlots();
   S.forEach(({k,lbl})=>{el.insertAdjacentHTML("beforeend",`<span class="rl">${lbl}</span>
-    <div class="slot" id="as-${k}"><select id="a-${k}" aria-label="${L("Aliado","Ally")} ${lbl}"></select><input type="checkbox" class="asp" id="aa-${k}" aria-label="${L("Aspeto do aliado","Ally aspect")} ${lbl}" title="${L("Aspeto ligado","Aspect on")}"></div>
-    <div class="slot en"><select id="e-${k}" aria-label="${L("Inimigo","Enemy")} ${lbl}"></select><input type="checkbox" class="asp" id="ea-${k}" aria-label="${L("Aspeto do inimigo","Enemy aspect")} ${lbl}" title="${L("Aspeto ligado","Aspect on")}"><select class="est" id="es-${k}" aria-label="${L("Estilo de build do inimigo","Enemy build style")} ${lbl}" title="${L("Estilo de build do inimigo","Enemy build style")}">${ESTS()}</select></div>`);
+    <div class="slot" id="as-${k}"><select id="a-${k}" aria-label="${L("Aliado","Ally")} ${lbl}"></select><input type="checkbox" class="asp" autocomplete="off" id="aa-${k}" aria-label="${L("Aspeto do aliado","Ally aspect")} ${lbl}" title="${L("Aspeto ligado","Aspect on")}"></div>
+    <div class="slot en"><select id="e-${k}" aria-label="${L("Inimigo","Enemy")} ${lbl}"></select><input type="checkbox" class="asp" autocomplete="off" id="ea-${k}" aria-label="${L("Aspeto do inimigo","Enemy aspect")} ${lbl}" title="${L("Aspeto ligado","Aspect on")}"><select class="est" id="es-${k}" aria-label="${L("Estilo de build do inimigo","Enemy build style")} ${lbl}" title="${L("Estilo de build do inimigo","Enemy build style")}">${ESTS()}</select></div>`);
     opts($("a-"+k),true);opts($("e-"+k),true);
     ["a-","e-","es-"].forEach(pf=>{const x=$(pf+k);if(keep[pf+k]!=null&&[...x.options].some(o=>o.value===keep[pf+k]))x.value=keep[pf+k]});
     ["aa-","ea-"].forEach(pf=>{if(keep[pf+k])$(pf+k).checked=true});
@@ -402,6 +402,9 @@ function compare(){if(!LAST)return;const ids=[0,1,2,3,4,5,6].map(k=>$("c"+k).val
 
 /* Nada recalcula sozinho: escolhe-se tudo e só o botão "Recomendar build" calcula (no telemóvel cada cálculo demora segundos). */
 function stale(){try{syncMe()}catch(e){}const ex=$("ex");if(ex)ex.hidden=true;const g=$("go");if(g){g.classList.add("pend");g.textContent=L("Recomendar build ↻","Recommend build ↻");}const o=$("out");if(o&&o.firstElementChild)o.classList.add("velho");}
+/* o aspeto nunca vem ligado por omissão: ao mudar de deus (o meu, um aliado ou um inimigo) volta a ficar desligado */
+$("god").addEventListener("change",()=>{$("aspeto").checked=false;try{syncMe()}catch(e){}});
+document.addEventListener("change",e=>{const m=e.target&&e.target.id&&e.target.id.match(/^([ae])-(.+)$/);if(m&&e.target.tagName==="SELECT"){const b=$(m[1]+"a-"+m[2]);if(b)b.checked=false}},true);
 ["god","aspeto"].forEach(id=>$(id).addEventListener("change",stale));
 
 const intro=()=>`<p class="hint" style="padding:16px">${L("Escolha o deus, o role e as equipas e carregue em <b>Recomendar build</b>.","Choose the god, the role and the teams, then tap <b>Recommend build</b>.")}</p>`;
