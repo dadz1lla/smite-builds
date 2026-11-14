@@ -1079,8 +1079,9 @@ article.build > p.hint{margin:6px 16px}
       out.push({ v: +vv, s: st ? J.I[B36(st)] : null, r: rel ? J.I[B36(rel)] : null, it: its ? its.split(".").map(x => J.I[B36(x)]).filter(id => this.tier3J(id)) : [], en: en ? en.split(".").map(x => J.G[B36(x)]) : [], d }); });
     return (this._bc[k] = out);
   };
-  // só itens acabados contam na build: Tier III ou itens do próprio deus (ex.: bolotas do Ratatoskr); Tier I/II são jogos que acabaram a meio
-  Engine.prototype.tier3J = function (id) { const it = this.items[id]; return it ? it.tier === "tier3" : !!id; };
+  // só itens acabados contam na build: Tier III, relíquias evoluídas compradas como item, ou itens do próprio deus (ex.: bolotas do
+  // Ratatoskr); Tier I/II são jogos que acabaram a meio
+  Engine.prototype.tier3J = function (id) { const it = this.items[id]; return it ? (it.tier === "tier3" || it.tier === "reliquia_upgrade") : !!id; };
   Engine.prototype.itemJ = function (id) {
     if (!id) return null; if (this.items[id]) return this.items[id];
     this._gi = this._gi || {}; if (this._gi[id]) return this._gi[id];
@@ -1129,7 +1130,7 @@ article.build > p.hint{margin:6px 16px}
       chosen.push(top.id); info[top.id] = { k: k + 1, pick: top.pick, win: top.win, n: top.n, nivel, alt: moda(C, b => b.it[k], id => !ok(chosen, id)).slice(0, 2) };
     }
     if (chosen.length < 3) return null;
-    const stT = moda(A, b => b.s)[0], relT = moda(A, b => b.r);
+    const stT = moda(A, b => b.s)[0], relT = moda(A, b => b.r, id => chosen.includes(id));
     const starter = stT ? this.itemJ(stT.id) : null;
     const itens = (starter ? [starter] : []).concat(chosen.map(id => this.itemJ(id)));
     // caminho (para as contas de dano e o resto da página): o que melhor serve estes itens
