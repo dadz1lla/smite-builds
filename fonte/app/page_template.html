@@ -171,10 +171,10 @@ article.build > p.hint{margin:6px 16px}
 (function(){
 const D=window.SMITE_DATA, E=new SmiteEngine(D);
 /* builds dos jogadores (SmiteBrain, build a build): ficheiro à parte, guardado pelo telemóvel para funcionar sem internet */
-window.BUILDS_PRONTO=fetch("builds.json").then(r=>r.ok?r.json():null).then(j=>{if(j&&j.B){E.setBuilds(j);window.BUILDS_INFO=j.lido_em}return !!j}).catch(()=>false);
-/* aquecimento: um cálculo escondido logo a seguir a abrir, para o primeiro "Recomendar build" já sair rápido (não mexe na página) */
-window.BUILDS_PRONTO.then(()=>{const f=()=>{try{const g=D.deuses.find(x=>x.id==="zeus")||D.deuses[0];const en=D.deuses.slice(0,5).filter(x=>x.id!==g.id).map(x=>({id:x.id}));
-  E.recommend({god:g.id,role:"Mid",aspeto:false,inimigos:en})}catch(e){}};setTimeout(()=>window.requestIdleCallback?requestIdleCallback(f):f(),2500)});
+/* dados de jogo agregados e análise antiga (extra.json) e builds dos jogadores (builds.json): carregam em segundo plano,
+   para o ecrã aparecer logo; o botão espera por eles. O telemóvel guarda os dois para funcionar sem internet. */
+const EXTRA=fetch("extra.json").then(r=>r.ok?r.json():null).then(x=>{if(x){D.comunidade=x.comunidade;window.SMITE_ANALISE=x.analise}return !!x}).catch(()=>false);
+window.BUILDS_PRONTO=Promise.all([EXTRA,fetch("builds.json").then(r=>r.ok?r.json():null).then(j=>{if(j&&j.B){E.setBuilds(j);window.BUILDS_INFO=j.lido_em}return !!j}).catch(()=>false)]).then(v=>{window.__DADOS_OK=true;return v[1]});
 /* Idioma PT/EN: guardado neste browser; por omissão segue o idioma do telemóvel */
 let LANG=(()=>{try{const v=localStorage.getItem("lang");if(v==="pt"||v==="en")return v}catch(e){}return (navigator.language||"").toLowerCase().startsWith("pt")?"pt":"en"})();
 globalThis.SMITE_LANG=LANG;document.documentElement.lang=LANG==="en"?"en":"pt-PT";
@@ -349,7 +349,7 @@ let LAST=null,KEEP=false;
 function bindLeit(opt){const b=document.getElementById("btn-leit");if(!b)return;b.onclick=()=>{b.disabled=true;b.textContent=L("A calcular…","Calculating…");setTimeout(()=>{try{document.getElementById("leit").innerHTML=leiturasHTML(E.leituras(opt));b.remove();}catch(err){b.textContent=L("Erro: ","Error: ")+err.message}},30)}}
 function run(e){{const g=$("go");if(g){g.classList.remove("pend");g.textContent=L("Recomendar build","Recommend build");}const o=$("out");if(o)o.classList.remove("velho");}
   if(e)e.preventDefault();
-  if(!E.BJ&&window.BUILDS_PRONTO&&!window.__BJW){window.__BJW=1;$("out").innerHTML=`<p class="hint" style="padding:16px">${L("A carregar as builds dos jogadores…","Loading player builds…")}</p>`;window.BUILDS_PRONTO.then(()=>run());return}
+  if(!window.__DADOS_OK&&window.BUILDS_PRONTO&&!window.__BJW){window.__BJW=1;$("out").innerHTML=`<p class="hint" style="padding:16px">${L("A carregar as builds dos jogadores…","Loading player builds…")}</p>`;window.BUILDS_PRONTO.then(()=>run());return}
   if(!$("god").value||!pick($("role"))){$("out").innerHTML=`<p class="empty">${L(`Escolha ${!$("god").value&&!pick($("role"))?"o deus e o role":!$("god").value?"o deus":"o role"} antes de recomendar.`,`Choose ${!$("god").value&&!pick($("role"))?"the god and the role":!$("god").value?"the god":"the role"} before recommending.`)}</p>`;return}
   const opt={god:$("god").value,aspeto:$("aspeto").checked,role:pick($("role")),modo:pick($("modo")),objetivo:{Dano:"dano","Resistência":"resistencia"}[pick($("obj"))],
     aliados:curSlots().filter(x=>x.k!==meKey()&&$("a-"+x.k).value).map(x=>{const id=$("a-"+x.k).value;return {id,role:x.role||mainRole(id),aspeto:$("aa-"+x.k).checked}}),
