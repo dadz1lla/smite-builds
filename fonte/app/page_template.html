@@ -172,6 +172,9 @@ article.build > p.hint{margin:6px 16px}
 const D=window.SMITE_DATA, E=new SmiteEngine(D);
 /* builds dos jogadores (SmiteBrain, build a build): ficheiro à parte, guardado pelo telemóvel para funcionar sem internet */
 window.BUILDS_PRONTO=fetch("builds.json").then(r=>r.ok?r.json():null).then(j=>{if(j&&j.B){E.setBuilds(j);window.BUILDS_INFO=j.lido_em}return !!j}).catch(()=>false);
+/* aquecimento: um cálculo escondido logo a seguir a abrir, para o primeiro "Recomendar build" já sair rápido (não mexe na página) */
+window.BUILDS_PRONTO.then(()=>{const f=()=>{try{const g=D.deuses.find(x=>x.id==="zeus")||D.deuses[0];const en=D.deuses.slice(0,5).filter(x=>x.id!==g.id).map(x=>({id:x.id}));
+  ["otimizado","dano","resistencia"].forEach(o=>E.recommend({god:g.id,role:"Mid",aspeto:false,objetivo:o,inimigos:en}))}catch(e){}};(window.requestIdleCallback||setTimeout)(f,{timeout:1500})});
 /* Idioma PT/EN: guardado neste browser; por omissão segue o idioma do telemóvel */
 let LANG=(()=>{try{const v=localStorage.getItem("lang");if(v==="pt"||v==="en")return v}catch(e){}return (navigator.language||"").toLowerCase().startsWith("pt")?"pt":"en"})();
 globalThis.SMITE_LANG=LANG;document.documentElement.lang=LANG==="en"?"en":"pt-PT";
