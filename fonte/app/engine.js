@@ -230,7 +230,7 @@
   }
   Engine.prototype.aggregate = function (items, path, ctx) {
     const t = Object.fromEntries(STAT_KEYS.map(k => [k, 0]));
-    const itemStats = { str: 0, int: 0, pp: 0, mp: 0, hp: 0 };
+    const itemStats = { str: 0, int: 0, ad: 0, pp: 0, mp: 0, hp: 0 };
     let pctAll = 0;
     const adaptInt = path === "inteligencia" || (path === "hibrido" && ctx.kit.int > ctx.kit.str);
     const addS = (s, up) => {
@@ -239,7 +239,7 @@
     };
     items.forEach(it => {
       addS(it.stats, 1);
-      ["str", "int", "pp", "mp", "hp"].forEach(k => itemStats[k] += it.stats[k] || 0);
+      ["str", "int", "ad", "pp", "mp", "hp"].forEach(k => itemStats[k] += it.stats[k] || 0);
       if (it.stats.adapt_str || it.stats.adapt_int) { if (adaptInt) itemStats.int += it.stats.adapt_int || 0; else itemStats.str += it.stats.adapt_str || 0; }
       if (it.stats.item_stats_pct) pctAll += it.stats.item_stats_pct;
       (it.efeitos || []).forEach(e => { if (e.t === "stats" && condOk(e, ctx)) addS(e.s, (e.up_role && e.up_role[ctx.role] != null ? e.up_role[ctx.role] : (e.up ?? 1)) * (e.cond === "cc_inimigo" ? Math.min(1.5, ctx.ccIn / 3) : 1)); });
@@ -328,7 +328,7 @@
       const hitVal = x => (x.base || 0) + (x.str || 0) / 100 * st.str + (x.int || 0) / 100 * st.int + (x.ad || 0) / 100 * adTot
         + (x.prot_itens || 0) / 100 * (st.itemStats.pp + st.itemStats.mp) + (x.prot_total || 0) / 100 * (st.pp + st.mp + (g.pp20 || 60) + (g.mp20 || 50))
         + (x.hp_self || 0) / 100 * ((g.hp20 || 2200) + st.hp) + (x.hp_itens || 0) / 100 * st.itemStats.hp
-        + (x.tgt_base || 0) / 100 * e.hpBase + (x.tgt_item || 0) / 100 * e.hpItem + (x.tgt_max || 0) / 100 * tm + (x.tgt_cur || 0) / 100 * tm * 0.7
+        + (x.tgt_base || 0) / 100 * e.hpBase + ((x.tgt_item || 0) + (x.tgt_item_por ? Math.floor(x.tgt_item_por.stats.reduce((a, k) => a + (st.itemStats[k] || 0), 0) / x.tgt_item_por.cada) * (x.tgt_item_por.mult || 1) : 0)) / 100 * e.hpItem + (x.tgt_max || 0) / 100 * tm + (x.tgt_cur || 0) / 100 * tm * 0.7
         + (x.tgt_max_por_str || 0) * st.str / 100 * tm
         + (x.ba_pct ? ((!kit.ranged || !x.ba_pct_ranged) ? x.ba_pct : x.ba_pct_ranged) / 100 * perHit : 0)
         + (x.ba_pct_por_as || 0) / 100 * perHit * AS;
